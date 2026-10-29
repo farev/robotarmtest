@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+*.pyc
+.mechy/mcp-*.json
+.mechy/runs/
+.mechy/viewer/
+.mechy/history-cache/
+# Mechy's skills and subagents, re-copied from the engine before every chat turn
+.claude/skills/
+.claude/agents/
+.agents/skills/
+.mechy/subagents/
+.mechy/installed-bundle.json
