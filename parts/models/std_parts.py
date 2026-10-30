@@ -54,7 +54,7 @@ for slug, p in PULLEYS.items():
     export_step(pul.part, str(HERE / f"{slug}.step"))
 
 # Ground steel rods (cut to length): 8 mm shoulder/elbow shafts, 5 mm intermediate shaft
-RODS = {"rod-8x100": (8.0, 100.0), "rod-8x113": (8.0, 113.0), "rod-5x52": (5.0, 52.0)}
+RODS = {"rod-8x100": (8.0, 100.0), "rod-8x124": (8.0, 124.0), "rod-5x52": (5.0, 52.0)}   # elbow: layout ROD_ELBOW_L
 for slug, (d, L) in RODS.items():
     with BuildPart() as r:
         Cylinder(d / 2, L, align=(Align.CENTER, Align.CENTER, Align.MIN))

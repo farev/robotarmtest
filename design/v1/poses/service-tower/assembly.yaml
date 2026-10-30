@@ -169,7 +169,7 @@ parts:
   kind: printed
   position:
   - 0.0
-  - -117.9
+  - -127.75
   - -0.0
   rotation:
   - -90.0
@@ -205,7 +205,7 @@ parts:
   kind: bought
   position:
   - -30.0
-  - -136.4
+  - -146.25
   - 92.2
   rotation:
   - 0.0
@@ -217,7 +217,7 @@ parts:
   kind: bought
   position:
   - -30.0
-  - -136.4
+  - -146.25
   - 92.2
   rotation:
   - 0.0
@@ -229,7 +229,7 @@ parts:
   kind: bought
   position:
   - -30.0
-  - -110.4
+  - -120.25
   - 92.2
   rotation:
   - 0.0
@@ -241,7 +241,7 @@ parts:
   kind: bought
   position:
   - -30.0
-  - -110.4
+  - -120.25
   - 92.2
   rotation:
   - 0.0
@@ -253,7 +253,7 @@ parts:
   kind: bought
   position:
   - 30.0
-  - -136.4
+  - -146.25
   - 92.2
   rotation:
   - 0.0
@@ -265,7 +265,7 @@ parts:
   kind: bought
   position:
   - 30.0
-  - -136.4
+  - -146.25
   - 92.2
   rotation:
   - 0.0
@@ -277,7 +277,7 @@ parts:
   kind: bought
   position:
   - 30.0
-  - -110.4
+  - -120.25
   - 92.2
   rotation:
   - 0.0
@@ -289,7 +289,7 @@ parts:
   kind: bought
   position:
   - 30.0
-  - -110.4
+  - -120.25
   - 92.2
   rotation:
   - 0.0

@@ -1,0 +1,108 @@
+{
+  "kind": "fea",
+  "variant": "v1",
+  "headline": {
+    "label": "Safety factor",
+    "value": 42.22,
+    "unit": "",
+    "target": 2.0,
+    "meets": true
+  },
+  "metrics": [
+    {
+      "label": "Max von Mises",
+      "value": "0.6 MPa",
+      "meets": true
+    },
+    {
+      "label": "Max deflection",
+      "value": "0.100 mm"
+    },
+    {
+      "label": "Stiffness at the tip",
+      "value": "136.5 N/mm"
+    },
+    {
+      "label": "Load",
+      "value": "10.0 N"
+    },
+    {
+      "label": "Mass",
+      "value": "86.4 g"
+    },
+    {
+      "label": "Part",
+      "value": "forearm"
+    },
+    {
+      "label": "Material",
+      "value": "PETG (printed)"
+    },
+    {
+      "label": "Elements",
+      "value": "36,568"
+    }
+  ],
+  "plots": [
+    "plots/stress_map.png",
+    "plots/stress_along.png"
+  ],
+  "part": "forearm",
+  "material": "PETG",
+  "load_n": 10.0,
+  "max_von_mises_mpa": 0.592,
+  "max_von_mises_with_clamp_mpa": 0.734,
+  "max_deflection_mm": 0.1003,
+  "tip_deflection_mm": -0.0733,
+  "stiffness_n_per_mm": 136.514,
+  "safety_factor": 42.218,
+  "mass_g": 86.4,
+  "elements": 36568,
+  "meta": {
+    "part": "forearm",
+    "material": "PETG",
+    "printed": true,
+    "qty_in_assembly": 1,
+    "cell_mm": 1.572,
+    "elements": 36568,
+    "nodes": 48571,
+    "voxel_volume_error_pct": 4.5,
+    "long_axis": "x",
+    "load_axis": "y",
+    "mount_end": "max",
+    "clamp_length_mm": 13.1,
+    "span_mm": 151.5,
+    "E_eff_gpa": 1.47,
+    "yield_eff_mpa": 25.0,
+    "mass_g": 86.4,
+    "mass_source": "print_list.csv est_grams (CAD shells + infill)",
+    "quick": false,
+    "load_note": "generic 10 N (~1 kg) at the far end: not recognised as an arm link (set --opt load_n)",
+    "deformation_scale": 130.4,
+    "estimates": [
+      "material PETG: typical datasheet values (E 2.1 GPa, yield 50 MPa)",
+      "FDM knockdown: stiffness x0.7 (walls + infill), strength x0.5 (layer lines, worst build direction); the part is modelled as a smeared isotropic solid",
+      "voxel model: 1.57 mm cubes, volume +4% vs the STL; fillets, small holes and threads are stair-stepped or lost",
+      "held rigidly over the 13 mm at the max end of the x axis (the end with more material, taken as the hub / mount; set --opt mount=min|max)",
+      "load: generic 10 N (~1 kg) at the far end: not recognised as an arm link (set --opt load_n), spread over the far 13 mm, along -y (the part's middle dimension: the plane it swings in)",
+      "linear elastic, small deflection; no buckling, fatigue or creep",
+      "peak stress excludes the nodes touching the idealised rigid clamp (a singular corner); with them it is 0.7 MPa"
+    ],
+    "assumptions": [
+      "material PETG: typical datasheet values (E 2.1 GPa, yield 50 MPa)",
+      "FDM knockdown: stiffness x0.7 (walls + infill), strength x0.5 (layer lines, worst build direction); the part is modelled as a smeared isotropic solid",
+      "voxel model: 1.57 mm cubes, volume +4% vs the STL; fillets, small holes and threads are stair-stepped or lost",
+      "held rigidly over the 13 mm at the max end of the x axis (the end with more material, taken as the hub / mount; set --opt mount=min|max)",
+      "load: generic 10 N (~1 kg) at the far end: not recognised as an arm link (set --opt load_n), spread over the far 13 mm, along -y (the part's middle dimension: the plane it swings in)",
+      "linear elastic, small deflection; no buckling, fatigue or creep",
+      "peak stress excludes the nodes touching the idealised rigid clamp (a singular corner); with them it is 0.7 MPa"
+    ]
+  },
+  "failures": {},
+  "scene": "scene.json",
+  "runtime_s": 46.67,
+  "run": {
+    "options": {},
+    "quick": false
+  }
+}

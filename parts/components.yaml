@@ -69,7 +69,7 @@ components:
     function: Fasteners
     status: owned
     price_note: Invention Studio stock
-    qty: 35
+    qty: 50                 # 39 used + spares
     specs: [M3, ~5.7 mm long, CAD hole 4.0 x 6.7 deep (ruthex / CNC Kitchen size)]
     datasheet: https://www.3djake.com/cnc-kitchen/threaded-inserts-m3-standard
     compat: unverified
@@ -80,7 +80,7 @@ components:
     status: owned
     price_note: Invention Studio stock
     qty: 1
-    specs: ["M3 SHCS x 6/8/10/12/30 (~57)", "M3 nuts x 7 (4 gripper, 2 carriage, 1 jam), M3 washers x 8 (J1 motor, 2 per screw), 1 M3 12 mm OD fender washer", "M2 x 8 + nuts x 2", "M5 x 25 wood screws x 4"]
+    specs: ["M3 SHCS x 6/8/10/12/30 (61: 15 x 10, 30 x 8, 14 x 12, 1 x 30, 1 x 6)", "M3 nuts x 7 (4 gripper, 2 carriage, 1 jam), M3 washers x 8 (J1 motor, 2 per screw), 1 M3 12 mm OD fender washer", "M2 x 8 + nuts x 2", "M5 x 25 wood screws x 4"]
     datasheet: unverified
     compat: unverified
     compat_note: lengths per docs/v1/build-notes.md §2
@@ -191,7 +191,7 @@ components:
     status: preferred
     price_usd: 6.49
     qty: 1
-    specs: [8 mm h8 (-0.005..-0.03), 150 mm, chrome-plated carbon steel, 2 pcs; cut to 100 and 113 mm]
+    specs: [8 mm h8 (-0.005..-0.03), 150 mm, chrome-plated carbon steel, 2 pcs; cut to 100 and 124 mm]
     vendor: Amazon
     url: https://www.amazon.com/dp/B0D7M8XBG4
     order: Amazon

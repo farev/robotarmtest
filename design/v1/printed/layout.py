@@ -150,9 +150,13 @@ TUR_PLATE_T = 6.0
 Z_TUR_TOP = Z_TUR_PLATE + TUR_PLATE_T
 
 # ---------------------------------------------------------------- Y stack (see module doc)
-FA_HUB_HALF = 15.0                       # forearm hub y in [-15, 15], 608 pockets at both ends
+FA_HUB_HALF = 15.0                       # forearm hub top end (+y), 608 pocket there
 BAND_W = 2 * FLANGE_T + TEETH_W          # 10.4 printed pulley band
-Y_E = -FA_HUB_HALF - BAND_W / 2          # elbow belt plane (-20.2)
+# The forearm channel floor (under the J4 motor) is the forearm's lowest face; the elbow 120T pulley is a
+# separate part bolted under it, so the elbow belt runs entirely below the channel (redline 2026-10-30:
+# the belt used to run through the channel walls and floor).
+FA_FLOOR_Y = -(NEMA_FACE / 2 + 0.7 + 3.0)   # -24.85: motor half-face + 0.7 gap + 3 mm floor
+Y_E = FA_FLOOR_Y - BAND_W / 2            # elbow belt plane (-30.05); belt top 2.2 mm below the floor
 Y_ELB_MOTOR_FACE = Y_E - PUL_BELT - 0.5 - 4.0  # elbow motor mounting face (cover plate inner face)
 COVER_T = 4.0
 Y_COVER_OUT = Y_ELB_MOTOR_FACE + COVER_T  # cover outer face (elbow pulley hub 0.5 beyond)
@@ -243,7 +247,12 @@ Z_SH = math.ceil(Z_TUR_TOP - PACK_LOW + 4.0)    # 4 mm clearance over the turret
 
 # ---------------------------------------------------------------- forearm, wrist, gripper
 FA_HALF = NEMA_FACE / 2 + 3.0         # forearm channel half-width around the J4 motor (z)
-FA_Y = (-FA_HUB_HALF - BAND_W, NEMA_FACE / 2 + 3.0)   # forearm y span (bed face = band face)
+FA_Y = (FA_FLOOR_Y, NEMA_FACE / 2 + 3.0)   # forearm y span (bed face = floor underside)
+EP_Y = (FA_FLOOR_Y - BAND_W, FA_FLOOR_Y)   # elbow-pulley-120t y span (bolted under the forearm hub)
+EP_BORE = 13.0                             # clears the 608 inner ring (OD ~12.1) and the upper-arm stop boss
+EP_SCREW_R = 15.5                          # 4 x M3 into inserts in the forearm hub underside
+ROD_ELBOW_L = math.ceil((FA_HUB_HALF + 1.2 + 8.0) - (Y_PACK_OUT - 8.0))   # collar-in outer face .. collar-out outer face
+ROD_SHOULDER_L = 100.0
 X_J4_FACE = L3                         # J4 motor mounting face (forearm frame x)
 FACE_PLATE_T = 4.0
 COUPLING_FACE = X_J4_FACE + NEMA_SHAFT_L + 1.0   # coupling flange face 1 mm proud of the shaft tip

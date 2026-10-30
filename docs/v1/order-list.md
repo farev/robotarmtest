@@ -7,7 +7,7 @@ the earliest free delivery is **Tuesday Nov 3**. Set ZIP 30332 at checkout and r
 | ✓ | Part | Qty | Price | Link |
 |---|---|---|---|---|
 | ☐ | 608-2RS bearings, 10 pcs (shoulder + elbow, need 4) | 1 | $4.99 | [B0CX8JPXDW](https://www.amazon.com/dp/B0CX8JPXDW) |
-| ☐ | 8 mm × 150 mm chrome rod, 2 pcs (cut 100 + 113) | 1 | $6.49 | [B0D7M8XBG4](https://www.amazon.com/dp/B0D7M8XBG4) |
+| ☐ | 8 mm × 150 mm chrome rod, 2 pcs (cut 100 + 124) | 1 | $6.49 | [B0D7M8XBG4](https://www.amazon.com/dp/B0D7M8XBG4) |
 | ☐ | 5 mm rigid flange coupling, 2 pcs (wrist) | 1 | $8.09 | [B07PLB2P4W](https://www.amazon.com/dp/B07PLB2P4W) |
 | ☐ | 22 mm E-stop, 1 NC latching | 1 | $9.99 | [B07MJPRMRL](https://www.amazon.com/dp/B07MJPRMRL) |
 | ☐ | Inline ATO fuse holder 16 AWG (10-pack) | 1 | $7.49 | [B0DG97B5HL](https://www.amazon.com/dp/B0DG97B5HL) |
@@ -42,7 +42,7 @@ If these arrive late, the base, turret, tower and upper arm can still be assembl
 | ☐ | WEN caliper (only if you have none) | $11.00 | [product 6316](https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6316&SINGLESTORE=true) |
 
 ## E. From the studio bins / around the shop (no purchase)
-- Heat-set inserts M3 × 5.7 (50), M3 socket heads (57: 15 × 10, 30 × 8, 10 × 12, 1 × 30, 1 × 6), 7 M3 nuts, 8 M3 washers,
+- Heat-set inserts M3 × 5.7 (50; 39 used), M3 socket heads (61: 15 × 10, 30 × 8, 14 × 12, 1 × 30, 1 × 6), 7 M3 nuts, 8 M3 washers,
   1 M3 fender washer, 2 × M2 × 8 + nuts, 4 × M5 wood screws (per-joint list: `build-notes.md` §2).
 - **Servo extension:** ~1 m of 3-core wire, soldered and heat-shrunk onto the MG90S lead. The other end goes to the LM2596
   output and Uno pin A3.

@@ -28,7 +28,7 @@ for slug, (t, odia, fl, hub) in {"gt2-20t-5mm": (20, 12.224, 16, 16), "gt2-60t-5
       [("outside diameter", odia, 0.1, "standard (timing_pulleys.csv)"), ("bore", 5.0, 0.05, "store listing [est]"),
        ("flange diameter", fl, 1.0, "estimate"), ("hub diameter", hub, 1.0, "estimate"), ("total length", 16.0, 1.0, "estimate")],
       f"{TABLE}/timing_pulleys.csv", "Envelope (hub, flanges, length) is an estimate until the scouted listing is read.")
-for slug, (dd, L) in {"rod-8x100": (8, 100), "rod-8x113": (8, 113), "rod-5x52": (5, 52)}.items():
+for slug, (dd, L) in {"rod-8x100": (8, 100), "rod-8x124": (8, 124), "rod-5x52": (5, 52)}.items():
     w(slug, f"{dd} mm ground steel rod, cut to {L} mm", "axis Z from z = 0", [("diameter", dd, 0.01, "h6 ground rod"),
       ("length", L, 0.5, "cut length from the CAD")], "design/v1/printed/layout.py")
 w("collar-8mm", "8 mm set-screw shaft collar", "axis Z, centred", [("bore", 8, 0.05, "listing"), ("outer diameter", 16, 1, "estimate"),

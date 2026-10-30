@@ -1,0 +1,119 @@
+{
+  "kind": "thermal",
+  "variant": "v1",
+  "headline": {
+    "label": "Max temperature",
+    "value": 58.2,
+    "unit": "\u00b0C",
+    "target": 55.0,
+    "meets": false
+  },
+  "metrics": [
+    {
+      "label": "Limit",
+      "value": "55 \u00b0C (PLA softening)",
+      "meets": false
+    },
+    {
+      "label": "Heat into the part",
+      "value": "0.46 W of the motor's 3.3 W"
+    },
+    {
+      "label": "Motor case",
+      "value": "58 \u00b0C"
+    },
+    {
+      "label": "Mean temperature",
+      "value": "29.3 \u00b0C"
+    },
+    {
+      "label": "After 45 min",
+      "value": "53.2 \u00b0C"
+    },
+    {
+      "label": "Time constant",
+      "value": "11 min"
+    },
+    {
+      "label": "Reaches the limit",
+      "value": "no"
+    },
+    {
+      "label": "Part",
+      "value": "shoulder-tower"
+    },
+    {
+      "label": "Elements",
+      "value": "32,224"
+    }
+  ],
+  "plots": [
+    "plots/heatup.png",
+    "plots/temperature_map.png"
+  ],
+  "part": "shoulder-tower",
+  "material": "PLA",
+  "power_w": 3.3075,
+  "heat_into_part_w": 0.4554,
+  "motor_case_c": 58.25,
+  "max_temp_c": 58.17,
+  "mean_temp_c": 29.34,
+  "limit_c": 55.0,
+  "time_constant_s": 676.2,
+  "duration_s": 2704.6,
+  "time_to_limit_s": null,
+  "elements": 32224,
+  "meta": {
+    "part": "shoulder-tower",
+    "material": "PLA",
+    "printed": true,
+    "qty_in_assembly": 1,
+    "cell_mm": 1.618,
+    "elements": 32224,
+    "nodes": 38704,
+    "voxel_volume_error_pct": 7.4,
+    "long_axis": "z",
+    "load_axis": "x",
+    "mount_end": "min",
+    "clamp_length_mm": 10.5,
+    "span_mm": 121.3,
+    "E_eff_gpa": 2.45,
+    "yield_eff_mpa": 30.0,
+    "mass_g": 78.7,
+    "mass_source": "print_list.csv est_grams (CAD shells + infill)",
+    "quick": false,
+    "power_note": "one motor holding: 2 phases x (1.05 A)^2 x 1.5 ohm = 3.3 W (driver at 70% of the 1.5 A rating, phase resistance typical 1.5 ohm)",
+    "h_w_m2k": 10.0,
+    "ambient_c": 25.0,
+    "k_eff_w_mk": 0.065,
+    "estimates": [
+      "material PLA: typical datasheet values (E 3.5 GPa, yield 60 MPa)",
+      "FDM knockdown: stiffness x0.7 (walls + infill), strength x0.5 (layer lines, worst build direction); the part is modelled as a smeared isotropic solid",
+      "voxel model: 1.62 mm cubes, volume +7% vs the STL; fillets, small holes and threads are stair-stepped or lost",
+      "heat: one motor holding: 2 phases x (1.05 A)^2 x 1.5 ohm = 3.3 W (driver at 70% of the 1.5 A rating, phase resistance typical 1.5 ohm); the motor is one lumped body (129 J/K) that sheds heat from its own case (h x 86 cm^2) and passes the rest into the part",
+      "motor face on a NEMA 17 square (1769 mm^2) of the part's largest flat face (normal -y), contact conductance 300 W/m^2 K",
+      "natural convection h = 10 W/m^2 K on every other exposed face, ambient 25 \u00b0C; no radiation (adds ~5 W/m^2 K, so real temperatures are somewhat lower)",
+      "printed conductivity 0.065 W/m K = solid 0.13 x fill 0.50",
+      "limit 55 \u00b0C: glass transition / heat deflection of PLA, where a loaded part creeps"
+    ],
+    "assumptions": [
+      "material PLA: typical datasheet values (E 3.5 GPa, yield 60 MPa)",
+      "FDM knockdown: stiffness x0.7 (walls + infill), strength x0.5 (layer lines, worst build direction); the part is modelled as a smeared isotropic solid",
+      "voxel model: 1.62 mm cubes, volume +7% vs the STL; fillets, small holes and threads are stair-stepped or lost",
+      "heat: one motor holding: 2 phases x (1.05 A)^2 x 1.5 ohm = 3.3 W (driver at 70% of the 1.5 A rating, phase resistance typical 1.5 ohm); the motor is one lumped body (129 J/K) that sheds heat from its own case (h x 86 cm^2) and passes the rest into the part",
+      "motor face on a NEMA 17 square (1769 mm^2) of the part's largest flat face (normal -y), contact conductance 300 W/m^2 K",
+      "natural convection h = 10 W/m^2 K on every other exposed face, ambient 25 \u00b0C; no radiation (adds ~5 W/m^2 K, so real temperatures are somewhat lower)",
+      "printed conductivity 0.065 W/m K = solid 0.13 x fill 0.50",
+      "limit 55 \u00b0C: glass transition / heat deflection of PLA, where a loaded part creeps"
+    ]
+  },
+  "failures": {
+    "too_hot": "58 \u00b0C >= 55 \u00b0C"
+  },
+  "scene": "scene.json",
+  "runtime_s": 17.43,
+  "run": {
+    "options": {},
+    "quick": false
+  }
+}

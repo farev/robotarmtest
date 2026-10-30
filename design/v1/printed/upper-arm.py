@@ -19,7 +19,8 @@ BEAM_X0 = 28.0                       # beam flanges start in front of the pack-c
 FLANGE = 3.0                         # beam flange thickness (z) and web = the -Y wall
 RIB_X = [62.0, 100.0]
 WEB_HOLES = []                       # no web holes: 10-36 mm holes beside a running belt are finger traps
-STOP_BOSS_D = 12.0                   # fixed stop on the forearm's left 608 inner ring
+STOP_BOSS_D = 11.0                   # fixed stop on the forearm's lower 608 inner ring (inner ring OD ~12.1),
+                                     # 1 mm radial clearance inside the elbow pulley's 13 mm bore
 # carriage clamp screws: CARR_SCREW_DX along CARR_DIR (layout.py, matches pack-carriage); heads inside the
 # pack, nuts in slots on the -Y face, so no key is needed under the 60T
 CARR_SCREWS = [(INT_XZ[0] + s * CARR_SCREW_DX * CARR_DIR[0], INT_XZ[1] + s * CARR_SCREW_DX * CARR_DIR[1]) for s in (-1, 1)]
@@ -71,8 +72,9 @@ with BuildPart() as ua:
     # elbow boss
     with Locations(Location((L2, Y_PACK_OUT, 0), (-90, 0, 0))):
         Cylinder(HUB_R, Y_UA_BEAM[1] - Y_PACK_OUT, align=(Align.CENTER, Align.CENTER, Align.MIN))
+    # stop boss reaches through the elbow pulley's 13 mm bore to the lower 608's inner ring
     with Locations(Location((L2, Y_UA_BEAM[1], 0), (-90, 0, 0))):
-        Cylinder(STOP_BOSS_D / 2, FA_Y[0] - Y_UA_BEAM[1], align=(Align.CENTER, Align.CENTER, Align.MIN))
+        Cylinder(STOP_BOSS_D / 2, FA_FLOOR_Y - Y_UA_BEAM[1], align=(Align.CENTER, Align.CENTER, Align.MIN))
     # cover-insert bosses: vertices of the pack outline inset by e, kept where the whole boss (+0.5) clears both
     # motor bodies over their slot travel, the hub and the plug notches; at least 25 mm apart
     # four in the motor-square corners of the outline (the motors' 5 mm corner chamfers leave room), one on the

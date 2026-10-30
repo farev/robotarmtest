@@ -72,20 +72,21 @@ def belt_step(name, c1, r1, c2, r2):
     from features import hull_sketch, circle_pts
     path = ROOT / "parts/models" / f"{name}.step"
     with BuildPart() as b:
+        k = 1.0 / math.cos(math.pi / 96)      # circumscribe the inner polygon: the belt never dips below the tooth tips
         with BuildSketch(Plane.XY.offset(-BELT_W / 2)) as s:
             add(hull_sketch(circle_pts(*c1, r1 + BELT_T, 96) + circle_pts(*c2, r2 + BELT_T, 96)))
-            add(hull_sketch(circle_pts(*c1, r1, 96) + circle_pts(*c2, r2, 96)), mode=Mode.SUBTRACT)
+            add(hull_sketch(circle_pts(*c1, r1 * k, 96) + circle_pts(*c2, r2 * k, 96)), mode=Mode.SUBTRACT)
         extrude(s.sketch, amount=BELT_W)
     export_step(b.part, str(path))
     return f"parts/models/{name}.step"
 
 
 PART_COLORS = {"printed": COLOR_MAIN, "accent": COLOR_ACCENT}
-ACCENT = {"turret-hub", "shoulder-pulley-80t", "gripper-finger-left", "gripper-finger-right"}
+ACCENT = {"turret-hub", "shoulder-pulley-80t", "elbow-pulley-120t", "gripper-finger-left", "gripper-finger-right"}
 PETG = {"base-deck", "upper-arm", "pack-cover", "forearm", "pack-carriage"}   # parts at a stepper body
 
 
-def build(q, service=None):
+def build(q, service=None, table=True):
     """service: None (normal pose), "j2" (belt-tensioning pose: J2 motor-screw key keep-outs) or
     "tower" (tower bolted to the turret before the arm goes on: no arm parts, foot-screw keep-outs)."""
     F = frames(q)
@@ -110,8 +111,9 @@ def build(q, service=None):
                           "kind": "bought", "position": pos, "rotation": rot, "color": "#ff00ff", "_frame": frame})
 
     # ---- table the base stands on (keep-out: nothing may go below z = 0)
-    parts.append({"id": "table-keepout", "model": "parts/models/table-keepout.step", "kind": "bought",
-                  "position": [0, 0, 0], "rotation": [0, 0, 0], "color": "#ff00ff", "_frame": "base"})
+    if table:                                   # every pose file; left out of the home file the viewer shows
+        parts.append({"id": "table-keepout", "model": "parts/models/table-keepout.step", "kind": "bought",
+                      "position": [0, 0, 0], "rotation": [0, 0, 0], "color": "#ff00ff", "_frame": "base"})
     # ---- base (world frame)
     for n in ("base-shell", "base-deck", "bearing-cap", "yaw-spacer-outer"):
         add_printed(n, "base")
@@ -168,16 +170,16 @@ def build(q, service=None):
     e3 = belt_step("belt-j3-gt2-520", (L2, 0), od(T_E_BIG) / 2, (ex, ez), od(20) / 2)
     add_bought("belt-j3", e3, "ua", T(0, Y_E, 0) @ BXZ, COLOR_BELT)
     # elbow shaft, collars, shim (UA frame)
-    add_bought("rod-elbow", "parts/models/rod-8x113.step", "ua", T(L2, Y_PACK_OUT - CW, 0) @ Z_TO_PY, COLOR_STEEL)
+    add_bought("rod-elbow", f"parts/models/rod-8x{ROD_ELBOW_L}.step", "ua", T(L2, Y_PACK_OUT - CW, 0) @ Z_TO_PY, COLOR_STEEL)
     add_bought("collar-elbow-in", "parts/models/collar-8mm.step", "ua", T(L2, Y_PACK_OUT - CW / 2, 0) @ Z_TO_PY, COLOR_STEEL)
     pos, rot = placed(F["ua"] @ T(L2, FA_HUB_HALF, 0) @ Z_TO_PY @ printed_local("bearing-shim"))
     parts.append({"id": "bearing-shim-3", "model": "design/v1/printed/bearing-shim.step", "kind": "printed",
                   "position": pos, "rotation": rot, "color": COLOR_MAIN})
     add_bought("collar-elbow-out", "parts/models/collar-8mm.step", "ua", T(L2, FA_HUB_HALF + SH + CW / 2, 0) @ Z_TO_PY, COLOR_STEEL)
     # ---- forearm (FA frame)
-    for n in ("forearm", "forearm-cover"):
+    for n in ("forearm", "forearm-cover", "elbow-pulley-120t"):
         add_printed(n, "fa")
-    add_bought("bearing-608-el-1", "parts/models/bearing-608.step", "fa", T(0, FA_Y[0] + W608 / 2, 0) @ Z_TO_PY)
+    add_bought("bearing-608-el-1", "parts/models/bearing-608.step", "fa", T(0, FA_FLOOR_Y + W608 / 2, 0) @ Z_TO_PY)
     add_bought("bearing-608-el-2", "parts/models/bearing-608.step", "fa", T(0, FA_HUB_HALF - W608 / 2, 0) @ Z_TO_PY)
     add_bought("motor-j4", "parts/models/nema17-42shdc.step", "fa", T(X_J4_FACE, 0, 0) @ Z_TO_PX @ R("z", 90))
     add_bought("hub-j4", "parts/models/flange-coupling-5mm.step", "fa", T(COUPLING_FACE, 0, 0) @ Z_TO_PX)
@@ -220,7 +222,7 @@ def build(q, service=None):
         ["belt-j1", "pulley-j1-20t"], ["belt-j1", "turret-hub"],                        # belt wraps its pulleys
         ["belt-s1", "pulley-j2-20t"], ["belt-s1", "pulley-s1-60t"],
         ["belt-s2", "pulley-s2-20t"], ["belt-s2", "shoulder-pulley-80t"],
-        ["belt-j3", "pulley-j3-20t"], ["belt-j3", "forearm"],
+        ["belt-j3", "pulley-j3-20t"], ["belt-j3", "elbow-pulley-120t"],                # (not the forearm: checked)
         ["rod-shoulder", "shoulder-tower"], ["rod-shoulder", "shoulder-pulley-80t"],    # snug 8.2 bores
         ["rod-shoulder", "bearing-608-sh-1"], ["rod-shoulder", "bearing-608-sh-2"],     # bearing on shaft
         ["rod-shoulder", "collar-shoulder-in"], ["rod-shoulder", "collar-shoulder-out"],
@@ -277,7 +279,7 @@ POSES = {
 
 if __name__ == "__main__":
     for name, (q, service) in POSES.items():
-        asm = build(q, service)
+        asm = build(q, service, table=name != "home")   # home pose is well above the table (checked in poses)
         out = HERE / "assembly.yaml" if name == "home" else HERE / "poses" / name / "assembly.yaml"
         out.parent.mkdir(parents=True, exist_ok=True)
         hdr = f"# generated by design/v1/make_assembly.py, pose {name} q = {q}\n"

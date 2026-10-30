@@ -168,8 +168,8 @@ parts:
   model: design/v1/printed/shoulder-pulley-80t.step
   kind: printed
   position:
-  - 58.95
-  - 102.1044
+  - 63.875
+  - 110.6347
   - -0.0
   rotation:
   - -90.0
@@ -204,8 +204,8 @@ parts:
   model: parts/models/rod-8x100.step
   kind: bought
   position:
-  - 65.2
-  - 112.9297
+  - 70.125
+  - 121.4601
   - 187.0
   rotation:
   - -90.0
@@ -216,8 +216,8 @@ parts:
   model: design/v1/printed/bearing-shim.step
   kind: printed
   position:
-  - 41.2
-  - 71.3605
+  - 46.125
+  - 79.8908
   - 187.0
   rotation:
   - -90.0
@@ -228,8 +228,8 @@ parts:
   model: parts/models/collar-8mm.step
   kind: bought
   position:
-  - 43.2
-  - 74.8246
+  - 48.125
+  - 83.3549
   - 187.0
   rotation:
   - -90.0
@@ -240,8 +240,8 @@ parts:
   model: design/v1/printed/bearing-shim.step
   kind: printed
   position:
-  - 18.2
-  - 31.5233
+  - 23.125
+  - 40.0537
   - 187.0
   rotation:
   - -90.0
@@ -252,8 +252,8 @@ parts:
   model: parts/models/collar-8mm.step
   kind: bought
   position:
-  - 15.6
-  - 27.02
+  - 20.525
+  - 35.5503
   - 187.0
   rotation:
   - -90.0
@@ -264,8 +264,8 @@ parts:
   model: design/v1/printed/upper-arm.step
   kind: printed
   position:
-  - 40.6
-  - 70.3213
+  - 45.525
+  - 78.8516
   - 187.0
   rotation:
   - -90.0
@@ -277,8 +277,8 @@ parts:
   model: design/v1/printed/pack-cover.step
   kind: printed
   position:
-  - 16.1
-  - 27.886
+  - 21.025
+  - 36.4164
   - 187.0
   rotation:
   - 90.0
@@ -290,8 +290,8 @@ parts:
   model: design/v1/printed/pack-carriage.step
   kind: printed
   position:
-  - 38.6
-  - 66.8572
+  - 43.525
+  - 75.3875
   - 187.0
   rotation:
   - -90.0
@@ -303,8 +303,8 @@ parts:
   model: parts/models/bearing-608.step
   kind: bought
   position:
-  - 38.85
-  - 67.2902
+  - 43.775
+  - 75.8205
   - 187.0
   rotation:
   - -90.0
@@ -315,8 +315,8 @@ parts:
   model: parts/models/bearing-608.step
   kind: bought
   position:
-  - 19.95
-  - 34.5544
+  - 24.875
+  - 43.0848
   - 187.0
   rotation:
   - -90.0
@@ -327,8 +327,8 @@ parts:
   model: parts/models/nema17-42shdc.step
   kind: bought
   position: &id003
-  - 17.7585
-  - 78.89
+  - 22.6835
+  - 87.4203
   - 139.2746
   rotation: &id004
   - 90.0
@@ -345,8 +345,8 @@ parts:
   model: parts/models/gt2-20t-5mm.step
   kind: bought
   position:
-  - 20.2585
-  - 83.2201
+  - 25.1835
+  - 91.7505
   - 139.2746
   rotation:
   - 90.0
@@ -357,8 +357,8 @@ parts:
   model: parts/models/rod-5x52.step
   kind: bought
   position:
-  - 59.0428
-  - 37.1567
+  - 63.9678
+  - 45.687
   - 154.4458
   rotation:
   - 90.0
@@ -369,8 +369,8 @@ parts:
   model: parts/models/bearing-625.step
   kind: bought
   position:
-  - 65.5428
-  - 48.415
+  - 70.4678
+  - 56.9454
   - 154.4458
   rotation:
   - -90.0
@@ -381,8 +381,8 @@ parts:
   model: parts/models/bearing-625.step
   kind: bought
   position:
-  - 60.0428
-  - 38.8887
+  - 64.9678
+  - 47.4191
   - 154.4458
   rotation:
   - -90.0
@@ -393,8 +393,8 @@ parts:
   model: parts/models/gt2-60t-5mm.step
   kind: bought
   position:
-  - 69.2928
-  - 54.9102
+  - 74.2178
+  - 63.4405
   - 154.4458
   rotation:
   - 90.0
@@ -405,8 +405,8 @@ parts:
   model: parts/models/gt2-20t-5mm.step
   kind: bought
   position:
-  - 77.7928
-  - 69.6326
+  - 82.7178
+  - 78.163
   - 154.4458
   rotation:
   - 90.0
@@ -417,8 +417,8 @@ parts:
   model: parts/models/nema17-42shdc.step
   kind: bought
   position: &id005
-  - 70.2909
-  - 1.2177
+  - 75.2159
+  - 9.7481
   - 178.3949
   rotation: &id006
   - 90.0
@@ -435,8 +435,8 @@ parts:
   model: parts/models/gt2-20t-5mm.step
   kind: bought
   position:
-  - 68.0409
-  - -2.6794
+  - 72.9659
+  - 5.8509
   - 178.3949
   rotation:
   - -90.0
@@ -447,8 +447,8 @@ parts:
   model: parts/models/belt-s1-gt2-200.step
   kind: bought
   position:
-  - 46.85
-  - 81.1466
+  - 51.775
+  - 89.6769
   - 187.0
   rotation:
   - 90.0
@@ -459,8 +459,8 @@ parts:
   model: parts/models/belt-s2-gt2-200.step
   kind: bought
   position:
-  - 55.35
-  - 95.869
+  - 60.275
+  - 104.3994
   - 187.0
   rotation:
   - 90.0
@@ -471,8 +471,8 @@ parts:
   model: parts/models/belt-j3-gt2-520.step
   kind: bought
   position:
-  - 10.1
-  - 17.4937
+  - 15.025
+  - 26.0241
   - 187.0
   rotation:
   - 90.0
@@ -480,11 +480,11 @@ parts:
   - 150.0
   color: '#222222'
 - id: rod-elbow
-  model: parts/models/rod-8x113.step
+  model: parts/models/rod-8x124.step
   kind: bought
   position:
-  - -38.0703
-  - 124.9792
+  - -33.1453
+  - 133.5095
   - 282.4594
   rotation:
   - -90.0
@@ -495,8 +495,8 @@ parts:
   model: parts/models/collar-8mm.step
   kind: bought
   position:
-  - -40.0703
-  - 121.5151
+  - -35.1453
+  - 130.0454
   - 282.4594
   rotation:
   - -90.0
@@ -531,8 +531,8 @@ parts:
   model: design/v1/printed/forearm.step
   kind: printed
   position:
-  - -69.9703
-  - 69.7268
+  - -70.2453
+  - 69.2504
   - 282.4594
   rotation:
   - -90.0
@@ -552,12 +552,24 @@ parts:
   - 45.0
   - 150.0
   color: '#E8E4DA'
+- id: elbow-pulley-120t
+  model: design/v1/printed/elbow-pulley-120t.step
+  kind: printed
+  position:
+  - -65.0453
+  - 78.2571
+  - 282.4594
+  rotation:
+  - -90.0
+  - 45.0
+  - 150.0
+  color: '#F26B21'
 - id: bearing-608-el-1
   model: parts/models/bearing-608.step
   kind: bought
   position:
-  - -71.7203
-  - 66.6957
+  - -71.9953
+  - 66.2194
   - 282.4594
   rotation:
   - -90.0
@@ -610,8 +622,8 @@ parts:
   model: parts/models/m3x8-shcs.step
   kind: bought
   position:
-  - 19.7585
-  - 82.3541
+  - 24.6835
+  - 90.8844
   - 117.3543
   rotation:
   - 90.0
@@ -622,8 +634,8 @@ parts:
   model: parts/models/m3x8-shcs.step
   kind: bought
   position:
-  - 38.7421
-  - 71.3939
+  - 43.6671
+  - 79.9243
   - 139.2746
   rotation:
   - 90.0
@@ -634,8 +646,8 @@ parts:
   model: parts/models/m3x8-shcs.step
   kind: bought
   position:
-  - 0.775
-  - 93.3142
+  - 5.7
+  - 101.8446
   - 139.2746
   rotation:
   - 90.0
@@ -646,8 +658,8 @@ parts:
   model: parts/models/m3x8-shcs.step
   kind: bought
   position:
-  - 19.7585
-  - 82.3541
+  - 24.6835
+  - 90.8844
   - 161.1949
   rotation:
   - 90.0
@@ -658,8 +670,8 @@ parts:
   model: parts/models/m3x12-shcs.step
   kind: bought
   position:
-  - 59.8047
-  - 45.7234
+  - 64.7297
+  - 54.2538
   - 167.9688
   rotation:
   - -90.0
@@ -670,8 +682,8 @@ parts:
   model: parts/models/m3x12-shcs.step
   kind: bought
   position:
-  - 66.0808
-  - 42.0999
+  - 71.0058
+  - 50.6303
   - 140.9228
   rotation:
   - -90.0
@@ -682,8 +694,8 @@ parts:
   model: parts/models/m3x12-shcs.step
   kind: bought
   position:
-  - 94.1808
-  - 103.1259
+  - 99.1058
+  - 111.6562
   - 92.2
   rotation:
   - 0.0
@@ -694,8 +706,8 @@ parts:
   model: parts/models/m3x12-shcs.step
   kind: bought
   position:
-  - 81.1808
-  - 80.6092
+  - 86.1058
+  - 89.1396
   - 92.2
   rotation:
   - 0.0
@@ -706,8 +718,8 @@ parts:
   model: parts/models/m3x12-shcs.step
   kind: bought
   position:
-  - 42.2192
-  - 133.1259
+  - 47.1442
+  - 141.6562
   - 92.2
   rotation:
   - 0.0
@@ -718,8 +730,8 @@ parts:
   model: parts/models/m3x12-shcs.step
   kind: bought
   position:
-  - 29.2192
-  - 110.6092
+  - 34.1442
+  - 119.1396
   - 92.2
   rotation:
   - 0.0
@@ -778,8 +790,8 @@ parts:
   model: parts/models/m3x30-shcs.step
   kind: bought
   position:
-  - 61.95
-  - 107.3005
+  - 66.875
+  - 115.8309
   - 221.0
   rotation:
   - 0.0
@@ -790,8 +802,8 @@ parts:
   model: parts/models/m3-key-keepout.step
   kind: bought
   position:
-  - 61.95
-  - 107.3005
+  - 66.875
+  - 115.8309
   - 221.0
   rotation:
   - 0.0
@@ -894,7 +906,7 @@ allow_contact:
 - - belt-j3
   - pulley-j3-20t
 - - belt-j3
-  - forearm
+  - elbow-pulley-120t
 - - rod-shoulder
   - shoulder-tower
 - - rod-shoulder

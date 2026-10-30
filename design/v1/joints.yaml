@@ -1,0 +1,207 @@
+note: '4-DOF belt arm: base yaw, shoulder, elbow (relative joints), wrist roll. Frames
+  from design/v1/make_assembly.py: shoulder axis 187 mm up, L2 135, elbow to coupling
+  face 145. Gripper fingers are fixed in the closed pose (no gripper joint).'
+joints:
+- id: yaw
+  label: Base yaw (J1)
+  type: revolute
+  parent: null
+  origin:
+  - 0
+  - 0
+  - 0
+  axis:
+  - 0
+  - 0
+  - 1
+  parts:
+  - turret-hub
+  - yaw-spacer-inner
+  - turret-clamp
+  - shoulder-tower
+  - shoulder-pulley-80t
+  - rod-shoulder
+  - bearing-shim
+  - collar-shoulder-in
+  - bearing-shim-2
+  - collar-shoulder-out
+  - screw-tower-foot-1
+  - screw-tower-foot-2
+  - screw-tower-foot-3
+  - screw-tower-foot-4
+  - screw-shaft-lock
+  - screw-shaft-lock-key-keepout
+  home: 0
+  limits:
+  - -150
+  - 150
+- id: shoulder
+  label: Shoulder (J2)
+  type: revolute
+  parent: yaw
+  origin:
+  - 0
+  - 0
+  - 187
+  axis:
+  - 0
+  - -1
+  - 0
+  parts:
+  - upper-arm
+  - pack-cover
+  - pack-carriage
+  - bearing-608-sh-1
+  - bearing-608-sh-2
+  - motor-j2
+  - plug-motor-j2-keepout
+  - pulley-j2-20t
+  - rod-intermediate
+  - bearing-625-1
+  - bearing-625-2
+  - pulley-s1-60t
+  - pulley-s2-20t
+  - motor-j3
+  - plug-motor-j3-keepout
+  - pulley-j3-20t
+  - belt-s1
+  - belt-s2
+  - belt-j3
+  - rod-elbow
+  - collar-elbow-in
+  - bearing-shim-3
+  - collar-elbow-out
+  - screw-j2-1
+  - screw-j2-2
+  - screw-j2-3
+  - screw-j2-4
+  - screw-carriage-1
+  - screw-carriage-2
+  home: 45
+  limits:
+  - -30
+  - 90
+- id: elbow
+  label: Elbow (J3)
+  type: revolute
+  parent: shoulder
+  origin:
+  - 95.4594
+  - 0
+  - 282.4594
+  axis:
+  - 0
+  - -1
+  - 0
+  parts:
+  - forearm
+  - forearm-cover
+  - bearing-608-el-1
+  - bearing-608-el-2
+  - motor-j4
+  - plug-motor-j4-keepout
+  - hub-j4
+  home: -90
+  limits:
+  - -135
+  - 120
+- id: wrist
+  label: Wrist roll (J4)
+  type: revolute
+  parent: elbow
+  origin:
+  - 197.9889
+  - 0
+  - 179.9299
+  axis:
+  - 0.70710678
+  - 0
+  - -0.70710678
+  parts:
+  - gripper-base
+  - gripper-finger-left
+  - gripper-finger-right
+  - servo-gripper
+  - servo-cable-keepout
+  home: 0
+  limits:
+  - -180
+  - 180
+poses:
+- name: elbow-up
+  values:
+    yaw: 0
+    shoulder: 30
+    elbow: 120
+    wrist: 0
+- name: folded
+  values:
+    yaw: 0
+    shoulder: 90
+    elbow: -135
+    wrist: 0
+- name: reach-table
+  values:
+    yaw: 0
+    shoulder: 0
+    elbow: -43
+    wrist: 0
+- name: shoulder-down
+  values:
+    yaw: 90
+    shoulder: -30
+    elbow: 8
+    wrist: 0
+- name: soft-limit
+  values:
+    yaw: 0
+    shoulder: 20
+    elbow: -84
+    wrist: 0
+- name: stretched
+  values:
+    yaw: 0
+    shoulder: 0
+    elbow: 0
+    wrist: 0
+- name: up
+  values:
+    yaw: 0
+    shoulder: 90
+    elbow: 0
+    wrist: 0
+- name: yaw-150
+  values:
+    yaw: 150
+    shoulder: 45
+    elbow: -90
+    wrist: 180
+assembly_sha256: ea7f717c99f8efcb8aaf6430f4f65bec7208074650cdb25a65c6ce20dfcfeb1e
+glb_sha256: eeb5d7a7d14a0d4a136a7fa1a7d089de1fd459aeae10c0805001257b89c4d985
+checked:
+  ok: true
+  poses:
+  - name: elbow-up
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: folded
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: reach-table
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: shoulder-down
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: soft-limit
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: stretched
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: up
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: yaw-150
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0

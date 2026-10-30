@@ -16,7 +16,7 @@ Payload target: 100 g (assumed). Ship-to: US (assumed).
 | J4 drive | buy | 5 mm rigid flange coupling, direct drive (roll needs < 0.05 N·m) |
 | Yaw bearing | buy | 2 × 6806-2RS (30 × 42 × 7) in the base tube |
 | Joint bearings | buy | 4 × 608-2RS (shoulder, elbow), 2 × 625 (J2 intermediate shaft) |
-| Shafts | buy | 8 mm ground rod cut 100 + 113 mm, 5 mm rod cut 52 mm, 4 × 8 mm shaft collars |
+| Shafts | buy | 8 mm ground rod cut 100 + 124 mm, 5 mm rod cut 52 mm, 4 × 8 mm shaft collars |
 | Gripper actuator | buy | MG90S metal-gear servo (design is built around it) |
 | Servo power | buy | 24 V → 6 V buck, ≥ 2 A (never the Uno 5 V pin) |
 | Power entry, switch, fuse | buy | 5.5 × 2.1 panel jack (12 mm hole), 16 mm latching switch on motor power, 7.5 A inline fuse |

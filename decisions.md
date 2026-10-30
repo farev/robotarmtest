@@ -1,5 +1,11 @@
 # Decisions
 
+## 2026-10-30: elbow belt clearance (user redline)
+- The elbow belt ran in the same plane as the forearm channel's floor and walls (no gap). Fix: the 120T elbow pulley is
+  now its own printed part under the forearm hub and the belt plane moved 9.85 mm outward (y −20.2 → −30.05), 2.2 mm
+  below the forearm floor. The upper-arm pack, tower and shoulder pulleys moved with it; elbow rod 113 → 124 mm.
+- Belts are now allowed to touch only their own pulley part, never a whole link; check_belts.py covers the rest.
+
 ## 2026-10-29 (evening): Invention Studio Store catalog (user capture, research/gt-invention-studio-store.md)
 - From the store: MG90S servo (Miuzei, $3.50) and the J1 300 mm closed belt ($2). Everything else stays on Amazon.
 - Not redesigned around the store's 6 mm-bore 20T/80T kit and 606 bearings: they fit only the J2 intermediate

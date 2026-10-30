@@ -40,10 +40,11 @@ If either differs, tell Mechy first: the pack depth, J1 pulley seat and wrist co
 | bearing-shim | 3 | |
 | upper-arm (PETG) | 1 | 5 (pack cover) |
 | pack-cover (PETG), pack-carriage (PETG) | 1 each | |
-| forearm (PETG) | 1 | 4 (cover) |
+| forearm (PETG) | 1 | 8 (4 cover, 4 elbow pulley — the latter on the floor underside) |
+| elbow-pulley-120t | 1 | |
 | forearm-cover | 1 | |
 | gripper-base, gripper-finger-left, gripper-finger-right | 1 each | 1 (idler axle) |
-Total 35 inserts (buy 50).
+Total 39 inserts (buy 50).
 
 ## 2. Screws (all M3 socket head cap screws, one 2.5 mm key; M2 only on the servo)
 | Joint | Screw | Qty | Engagement |
@@ -63,6 +64,7 @@ went. The design assumes 4.5 mm. Motor end caps are aluminium, where 4.5 mm (1.5
 | Tower foot → turret | M3 × 12 | 4 | 6 |
 | Tower shaft lock | M3 × 30 + M3 jam nut | 1 | runs onto the rod, ~4 mm shows; lock with the nut |
 | Fixed 80T → tower | M3 × 12 (counterbored 5.5 from the outer face) | 4 | 5.5 |
+| Elbow pulley → forearm hub | M3 × 12 (heads in the pulley's 3.3 mm counterbores) | 4 | 4.9 |
 | Carriage clamp | M3 × 12 + M3 nut held in the 5.8 slot on the wall's outer face | 2 | full nut + 0.6 |
 | Pack cover | M3 × 10 | 5 | 6 |
 | Forearm cover | M3 × 8 | 4 | 5 |
@@ -96,9 +98,12 @@ went. The design assumes 4.5 mm. Motor end caps are aluminium, where 4.5 mm (1.5
    slots run at right angles to the stage-1 belt, so this does not change the stage-1 tension.
 6. Elbow motor on the pack cover (plug up through the top notch), 20T on its shaft (hub toward the cover), close the
    cover with 5 screws.
-7. Forearm: press both elbow 608s, drop the J4 motor into the channel from the open top (plug up), face screws from
-   the front. Elbow rod (8 × 113) through the upper-arm boss and the forearm hub: collar on the −Y end, shim + collar
-   on the forearm side. Loop the GT2-520 belt, tension by sliding the elbow motor along its cover slots.
+7. Forearm: press both elbow 608s, then bolt the orange elbow-pulley-120t under the hub (4 × M3 × 12 into the floor
+   inserts; its face holds the lower 608 in). Drop the J4 motor into the channel from the open top (plug up), face
+   screws from the front. Loop the GT2-520 belt over the elbow pulley **before** the rod goes in. Elbow rod (8 × 124)
+   through the upper-arm boss, the pulley bore and the forearm hub: collar on the −Y end, shim + collar on the forearm
+   side. Tension the belt by sliding the elbow motor along its cover slots. The belt runs 2.2 mm below the forearm
+   floor.
 8. Gripper: on the bench, bolt the 5 mm flange coupling to gripper-base (4 × M3 × 8 put in from behind the flange,
    into nuts pressed into the plate's front pockets). Measure the coupling first: the holes must be on a 16 mm
    circle and the hub ≤ 10.5 mm across, or the round screw heads will not clear the hub. Then slide the coupling hub

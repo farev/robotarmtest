@@ -60,9 +60,30 @@
   "ok": true
  },
  "yaw-150": {
-  "interferences": [],
+  "interferences": [
+   {
+    "a": "upper-arm",
+    "b": "pack-cover",
+    "volume_mm3": 0.054
+   },
+   {
+    "a": "upper-arm",
+    "b": "bearing-625-1",
+    "volume_mm3": 0.01
+   },
+   {
+    "a": "forearm",
+    "b": "forearm-cover",
+    "volume_mm3": 0.016
+   },
+   {
+    "a": "elbow-pulley-120t",
+    "b": "bearing-608-el-1",
+    "volume_mm3": 0.011
+   }
+  ],
   "clearance_issues": [],
   "unverified_contacts": [],
-  "ok": true
+  "ok": false
  }
 }
