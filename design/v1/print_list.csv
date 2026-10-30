@@ -1,0 +1,21 @@
+part,qty,material,orientation,infill,est_grams,stl
+coupon-fits,1,PLA (same as the parts),as modelled,20%,45,printed/coupon-fits.stl
+coupon-yaw,1,PLA (same as the parts),as modelled,20%,60,printed/coupon-yaw.stl
+base-shell,1,PLA,as modelled,20%,157.0,printed/base-shell.stl
+base-deck,1,PETG,as modelled,20%,155.0,printed/base-deck.stl
+bearing-cap,1,PLA,as modelled,20%,6.2,printed/bearing-cap.stl
+yaw-spacer-outer,1,PLA,as modelled,20%,0.6,printed/yaw-spacer-outer.stl
+turret-hub,1,PLA,as modelled,20%,123.1,printed/turret-hub.stl
+yaw-spacer-inner,1,PLA,as modelled,20%,0.3,printed/yaw-spacer-inner.stl
+turret-clamp,1,PLA,as modelled,20%,1.3,printed/turret-clamp.stl
+shoulder-tower,1,PLA,as modelled,20%,78.7,printed/shoulder-tower.stl
+shoulder-pulley-80t,1,PLA,as modelled,20%,15.8,printed/shoulder-pulley-80t.stl
+bearing-shim,3,PLA,as modelled,20%,0.0,printed/bearing-shim.stl
+upper-arm,1,PETG,as modelled,20%,171.0,printed/upper-arm.stl
+pack-cover,1,PETG,as modelled,20%,27.9,printed/pack-cover.stl
+pack-carriage,1,PETG,as modelled,20%,6.9,printed/pack-carriage.stl
+forearm,1,PETG,as modelled,20%,86.4,printed/forearm.stl
+forearm-cover,1,PLA,as modelled,20%,8.6,printed/forearm-cover.stl
+gripper-base,1,PLA,as modelled,20%,8.8,printed/gripper-base.stl
+gripper-finger-left,1,PLA,as modelled,20%,4.3,printed/gripper-finger-left.stl
+gripper-finger-right,1,PLA,as modelled,20%,4.3,printed/gripper-finger-right.stl

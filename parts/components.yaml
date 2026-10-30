@@ -1,0 +1,376 @@
+components:
+  - name: 42SHDC3026-15B NEMA 17 stepper
+    function: Joint motors
+    status: owned
+    price_note: owned
+    qty: 4
+    specs: [4 owned, NEMA 17 42.3 mm face, 0.9 A/phase (user), "~0.34-0.40 N·m holding (sibling, unverified)", 4-wire bipolar, 5 mm shaft]
+    datasheet: unverified
+    url: https://3dprint.wiki/printers/anet/a8/steppermotor
+    model: parts/models/nema17-42shdc.step
+    model_source: datasheet
+    compat: unverified
+    note: >-
+      Model number from the user. No datasheet found for the -3026-15B variant; values come from the
+      42SHDC3025-24B sibling (Anet A8 motor, 42 x 42 x 40 mm, 0.9 A, 4.4 ohm, 0.4 N·m). Body length
+      (40 mm) and shaft length (24 mm) are ASSUMED until measured: they set the motor pack depth and
+      the pulley fit.
+  - name: Arduino Uno R3
+    function: Controller
+    status: owned
+    price_note: owned
+    qty: 1
+    specs: [ATmega328P, 5 V logic, USB-B, 68.6 x 53.3 mm]
+    datasheet: https://docs.arduino.cc/hardware/uno-rev3/
+    model: parts/models/uno-cnc-shield.step
+    model_source: datasheet
+    compat: unverified
+    note: Board named by the user (Arduino IDE / PlatformIO). Model built from the official Eagle file, stacked with the CNC shield.
+  - name: CNC Shield V3 (Protoneer-style clone)
+    function: Stepper driver board
+    status: owned
+    price_note: owned
+    qty: 1
+    specs: [4 driver sockets X/Y/Z/A, 12-36 V motor input, GRBL pin-out, stacks on the Uno]
+    datasheet: https://blog.protoneer.co.nz/arduino-cnc-shield/
+    model: parts/models/uno-cnc-shield.step
+    model_source: datasheet
+    compat: unverified
+    note: "Generic V3 clone assumed (user: 'CNC Shield V3'). 4 sockets = exactly the 4 steppers; A axis needs the clone's D12/D13 jumpers set for 4th-axis step/dir."
+  - name: A4988 stepper driver module (with heatsink)
+    function: Stepper drivers
+    status: owned
+    price_note: owned
+    qty: 4
+    specs: [8-35 V motor supply, up to 1 A without cooling / 2 A with, 1/16 microstep, Vref sets current]
+    datasheet: https://www.pololu.com/product/1182
+    compat: unverified
+    note: Quantity assumed 4 (one per socket). Sense resistor on clones is usually R100 (0.1 ohm); read it before setting Vref.
+  - name: 100 µF 50 V electrolytic capacitor
+    function: Motor supply decoupling
+    status: owned
+    price_note: owned
+    qty: 1
+    specs: [100 µF, 50 V]
+    datasheet: unverified
+    compat: unverified
+    note: Goes across the shield's 24 V terminal (the shield already has one per driver on most clones).
+  - name: 24 V 6 A DC power supply
+    function: Power supply
+    status: owned
+    price_note: owned
+    qty: 1
+    specs: [24 V DC, 6 A (144 W), barrel jack / terminal adapter]
+    datasheet: unverified
+    compat: unverified
+    note: Barrel plug size not stated; the base has an 11.3 mm hole for a 5.5 x 2.1 mm panel jack (assumed).
+  # ------------------------------------------------------------------ Invention Studio stock (user has access)
+  - name: M3 x 5.7 brass heat-set inserts
+    function: Fasteners
+    status: owned
+    price_note: Invention Studio stock
+    qty: 35
+    specs: [M3, ~5.7 mm long, CAD hole 4.0 x 6.7 deep (ruthex / CNC Kitchen size)]
+    datasheet: https://www.3djake.com/cnc-kitchen/threaded-inserts-m3-standard
+    compat: unverified
+    compat_note: if the studio's inserts are another size, print coupon row C and tell Mechy the hole that fits
+    note: Counts in docs/v1/build-notes.md §1.
+  - name: M3 / M2 / M5 screws, nuts and washers
+    function: Fasteners
+    status: owned
+    price_note: Invention Studio stock
+    qty: 1
+    specs: ["M3 SHCS x 6/8/10/12/30 (~57)", "M3 nuts x 7 (4 gripper, 2 carriage, 1 jam), M3 washers x 8 (J1 motor, 2 per screw), 1 M3 12 mm OD fender washer", "M2 x 8 + nuts x 2", "M5 x 25 wood screws x 4"]
+    datasheet: unverified
+    compat: unverified
+    compat_note: lengths per docs/v1/build-notes.md §2
+    note: >-
+      If the studio bins run short, the Invention Studio Store sells a 440-piece M3 machine screw assortment ($10,
+      product 6313); check it has 6-30 mm socket heads and nuts before relying on it.
+  # ------------------------------------------------------------------ to buy: Amazon (one pick per part)
+  # Listings checked 2026-10-29 by fetching each /dp/ page. Amazon showed no buy box and no Atlanta delivery date
+  # (cached pages, wrong ZIP), so "Saturday delivery" is NOT confirmed for any item: check it at checkout with
+  # ZIP 30332. Order sheet with links: docs/v1/order-list.md.
+  - name: 608-2RS bearings 8x22x7 (10-pack)
+    function: Bearings
+    status: preferred
+    qty: 1
+    specs: [8 x 22 x 7 mm, 2RS sealed, need 4]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B0CX8JPXDW
+    price_usd: 4.99
+    order: Amazon
+    datasheet: https://bearingsdirect.com/608-2rs-sealed-ball-bearing-8x22x7-mr608-2rs/
+    stock_checked: "2026-10-29 US (page: In Stock, $4.99; Prime Saturday Oct 31, otherwise Tue Nov 3)"
+    model: parts/models/bearing-608.step
+    compat: verified
+    compat_note: 8 x 22 x 7 is the standard 608 size; pockets 22.1, 8 mm shafts
+    note: Earlier picks B01M62EBAX and B07H84P2K1 are "Currently unavailable". Same day - any skate shop (608 = skateboard bearing).
+  - name: 625-2RS bearings 5x16x5 (10-pack)
+    function: Bearings
+    status: candidate
+    qty: 1
+    specs: [5 x 16 x 5 mm, 2RS, need 2]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B0BZ2Z5B4W
+    order: Amazon
+    datasheet: https://bearingsdirect.com/625-2rs-sealed-precision-mini-ball-bearing-5x16x5-mr625-2rs/
+    stock_checked: unverified
+    model: parts/models/bearing-625.step
+    compat: verified
+    compat_note: 5 x 16 x 5 standard; carriage pockets 16.1, 5 mm rod
+    note: >-
+      NOT available by Saturday: DOLUNTO shows $29.61, Nov 10-20; backup B08LTLKQ1P $32.29, Nov 10-19; B0815B5D5W Nov 17.
+      Look locally (3D-printer / RC hobby shops stock 625s for Voron/Prusa builds) or order and finish J2 when they arrive.
+  - name: 6806-2RS (61806-2RS) bearings 30x42x7 (pack)
+    function: Bearings
+    status: candidate
+    qty: 1
+    specs: [30 x 42 x 7 mm thin-section, 2RS, need 2]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B0G8ZDSXGP
+    price_usd: 5.03
+    order: Amazon
+    datasheet: https://bearingsdirect.com/6806-2rs-ball-bearing-30x42x7-sealed/
+    stock_checked: unverified   # page showed $5.03 for 2 pcs, no stock or delivery text
+    model: parts/models/bearing-6806.step
+    compat: verified
+    compat_note: 30 x 42 x 7 standard; yaw tube 42.1, spigot 29.85 (coupon-yaw)
+    note: >-
+      2-pack "Bottom Bracket Bearing 6806-2RS 30x42x7". The first pick (10-pack B0DFC7TRRH) is $45.23, Nov 10-19.
+      Fastest - a bike shop today: ask for two BB30 bottom-bracket bearings, 6806-2RS (30 x 42 x 7).
+  - name: GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)
+    function: Pulleys and belts
+    status: preferred
+    price_usd: 11.89
+    qty: 2
+    specs: [GT2 2 mm pitch, 60T and 20T both 5 mm bore, 2 x 200 mm closed belts, 6 mm; 2 kits = 4 x 20T + 4 x 60T + 4 belts]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B09V5C1F7C
+    order: Amazon
+    datasheet: https://www.amazon.com/dp/B09V5C1F7C
+    stock_checked: "2026-10-29 US (page: In Stock, $11.89; Prime Sunday Nov 1, otherwise Tue Nov 3)"
+    model: parts/models/gt2-20t-5mm.step
+    compat: unverified
+    compat_note: bore 5 mm on both pulleys (listing); envelope not listed (CAD 16 mm long, 20T OD 16, 60T flange 42)
+    note: >-
+      Covers all 4 motor/stage 20T pulleys, the stage-1 60T and both 200 mm belts (J2 stage 1 and 2). Arrives one day
+      after the deadline even with Prime; no faster 5 mm-bore 20T/60T listing found (B0B2LYC617 ships Nov 17-25).
+  - name: 2GT closed loop timing belt 6 mm x 300 mm
+    function: Pulleys and belts
+    status: preferred
+    price_usd: 2.0
+    qty: 1
+    specs: [GT2 2 mm pitch, 6 mm wide, 300 mm closed loop (150T), J1 base belt]
+    vendor: Invention Studio Store
+    url: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6296&SINGLESTORE=true
+    order: Invention Studio Store
+    datasheet: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6296&SINGLESTORE=true
+    stock_checked: "2026-10-29 US (user catalog capture: no stock warning; free pickup)"
+    model: parts/models/belt-j1-gt2-300.step
+    compat: verified
+    compat_note: store listing 2GT, 6 mm, 300 mm closed = the J1 loop the CAD is solved for (C 73.07)
+  - name: GT2 6 mm closed belt 520 mm
+    function: Pulleys and belts
+    status: candidate
+    qty: 1
+    specs: [GT2 2 mm pitch, 6 mm, 520 mm (260T) closed loop, 2-pack]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B01GZDU64U
+    order: Amazon
+    datasheet: unverified
+    stock_checked: unverified
+    model: parts/models/belt-j3-gt2-520.step
+    compat: unverified
+    compat_note: elbow centre distance 187.30 solved for 520; fallback 500 mm with L2 = 125 in layout.py
+    note: >-
+      NOT available by Saturday: this listing is $12.88, Nov 12-23; backup B018528Z38 (10-pack) is fastest Nov 4-6.
+      Without it the elbow (J3) cannot be driven; everything else can be assembled and tested first.
+  - name: 8 mm linear rod 150 mm (2-pack)
+    function: Shafts and couplings
+    status: preferred
+    price_usd: 6.49
+    qty: 1
+    specs: [8 mm h8 (-0.005..-0.03), 150 mm, chrome-plated carbon steel, 2 pcs; cut to 100 and 113 mm]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B0D7M8XBG4
+    order: Amazon
+    datasheet: https://www.amazon.com/dp/B0D7M8XBG4
+    stock_checked: "2026-10-29 US (page: Only 15 left; Prime Saturday Oct 31, Atlanta 30324)"
+    model: parts/models/rod-8x100.step
+    compat: verified
+    compat_note: 8 mm h8 rod; dead shafts in 8.2/8.3 bores and 608 bores; cut at the Invention Studio (hardened - use an abrasive wheel)
+  - name: 5 mm linear rod 100 mm
+    function: Shafts and couplings
+    status: candidate
+    qty: 1
+    specs: [5 mm, 100 mm, 2 pcs; cut to 52 mm]
+    vendor: Amazon
+    url: https://www.amazon.com/s?k=5mm+x+100mm+linear+rod
+    order: Amazon
+    datasheet: unverified
+    stock_checked: unverified
+    model: parts/models/rod-5x52.step
+    compat: unverified
+    compat_note: file a small flat for each pulley set screw
+    note: >-
+      NOT sourced: the earlier pick (B0FXF4RFMP) is $66.52 + $10.50, Nov 10-20 - do not buy it. Need one 5 mm
+      ground steel piece >= 52 mm (h6-h8). Fastest - ask the Invention Studio metal shop for 5 mm rod / drill rod,
+      or a hardware store's 5 mm steel dowel pin >= 55 mm long.
+  - name: 8 mm bore shaft collars (pack)
+    function: Shafts and couplings
+    status: preferred
+    price_usd: 7.29
+    qty: 1
+    specs: [uxcell, metric 8 mm bore, 14 mm OD, set screw, 10 pcs, need 4]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B0CQ2S44S4
+    order: Amazon
+    datasheet: https://www.amazon.com/dp/B0CQ2S44S4
+    stock_checked: "2026-10-29 US (page: Only 6 left, $7.29; Prime Sunday Nov 1, otherwise Tue Nov 3)"
+    model: parts/models/collar-8mm.step
+    compat: verified
+    compat_note: metric 8 mm bore on the 7.97-7.995 rod; 14 OD (CAD models 16) clears everywhere
+    note: >-
+      Replaced B0DQKVNBST - its only size is 5/16 in (7.94 mm), smaller than the 8 mm rod. Collars only locate the
+      rods axially (the tower's M3 shaft lock already holds the shoulder rod), so the arm can be assembled without them.
+  - name: 5 mm rigid flange coupling (22 mm flange)
+    function: Shafts and couplings
+    status: preferred
+    price_usd: 8.09
+    qty: 1
+    specs: [5 mm bore, 22 mm base, base height 2, hub 10 x 10, mounting hole distance 16, 2 pcs]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B07PLB2P4W
+    order: Amazon
+    datasheet: https://www.amazon.com/dp/B07PLB2P4W
+    stock_checked: "2026-10-29 US (page: Only 18 left in stock; delivery shown Sunday Nov 1, ZIP not Atlanta)"
+    model: parts/models/flange-coupling-5mm.step
+    compat: verified
+    compat_note: uxcell listing gives 22 base, 2 thick, 10 x 10 hub, 16 hole distance = the CAD model; gripper nuts behind the flange need hub <= 10.5
+    note: J4 wrist coupling. Whether the flange holes are tapped is not stated; the design uses through-screws + nuts either way.
+  - name: MG90S metal-gear micro servo (180 deg)
+    function: Gripper servo
+    status: preferred
+    price_usd: 3.5
+    qty: 1
+    specs: [Miuzei MG90S, 9 g class, metal gears, 4.8-6.6 V, horns included]
+    vendor: Invention Studio Store
+    url: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6265&SINGLESTORE=true
+    order: Invention Studio Store
+    datasheet: https://www.towerpro.com.tw/product/mg90s-3/
+    stock_checked: "2026-10-29 US (user catalog capture: no stock warning; free pickup)"
+    model: parts/models/mg90s.step
+    compat: unverified
+    compat_note: clone dims vary +-0.5 mm; gripper cut-out has 0.3 per side
+  - name: LM2596 buck converter (set to 6.0 V)
+    function: Gripper servo supply
+    status: preferred
+    qty: 1
+    specs: [4-40 V in, adjustable out, 3 A peak / ~2 A continuous, ~43 x 21 mm]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B08L5VRBZS
+    order: Amazon
+    datasheet: https://www.ti.com/lit/ds/symlink/lm2596.pdf
+    price_usd: 6.99
+    stock_checked: "2026-10-29 US (page: In Stock, $6.99; Prime Saturday Oct 31)"
+    compat: verified
+    compat_note: 24 V in within 40 V; set 6.0 V with a meter before connecting the MG90S (4.8-6.6 V)
+    note: >-
+      Pick (ATNSINC 4-pack; listing 3-40 V in, 1.5-35 V out, 2 A continuous / 3 A max). Factory-set high: turn the
+      trimmer 15-20 turns down and set 6.0 V with a meter before connecting the servo. Double-sided tape inside the base.
+  - name: 5.5 x 2.1 mm panel-mount DC jack (DC-022B)
+    function: Power entry and protection
+    status: rejected
+    qty: 1
+    specs: [5.5 x 2.1 mm, 11 mm thread (fits the 11.3 mm hole), solder lugs]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B08D11S5ZH
+    order: Amazon
+    datasheet: unverified
+    stock_checked: unverified
+    compat: unverified
+    compat_note: check your PSU plug is 5.5 x 2.1 (some are 5.5 x 2.5)
+    note: >-
+      Dropped: the listing ships Nov 17-27 and these jacks are rated 0.5-3 A. Use the barrel-jack/terminal adapter
+      that came with your 24 V supply instead: plug the PSU into it inside the base (cable through the 11.3 mm rear
+      hole, knot or zip-tie it as strain relief) and wire its terminals to fuse -> E-stop -> shield.
+  - name: 22 mm mushroom emergency stop (NC latching)
+    function: Power entry and protection
+    status: preferred
+    price_usd: 9.99
+    qty: 1
+    specs: [COMOK ZB2-BE102C, 22 mm, 1 NC contact, latching twist-to-reset, 600 V 10 A (AC)]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B07MJPRMRL
+    order: Amazon
+    datasheet: https://www.amazon.com/dp/B07MJPRMRL
+    stock_checked: "2026-10-29 US (page: In Stock; delivery date shown was out of date)"
+    compat: unverified
+    compat_note: no DC rating listed; ZB2 contact blocks are routinely used at 24 V DC, real draw ~2-3 A (est)
+  - name: Inline ATO blade fuse holder (10-pack with 10 A and 15 A fuses)
+    function: Power entry and protection
+    status: preferred
+    price_usd: 7.49
+    qty: 1
+    specs: [SIM&NAT, 16 AWG, ATC/ATO standard blade, includes 10 x 10 A + 10 x 15 A fuses]
+    vendor: Amazon (or any auto parts store today)
+    url: https://www.amazon.com/dp/B0DG97B5HL
+    order: Amazon
+    datasheet: https://www.amazon.com/dp/B0DG97B5HL
+    stock_checked: "2026-10-29 US (page: In Stock; delivery date shown was out of date)"
+    compat: verified
+    compat_note: "fit a 7.5 A or 5 A ATO blade (auto-parts store, est. draw 2-3 A); the included 10 A fuses are only a fallback"
+    note: One holder needed; 32 V DC blade-fuse rating not stated on the page.
+  - name: Stepper extension cables 1 m (PH2.0 6-pin to 4-pin Dupont)
+    function: Wiring
+    status: preferred
+    price_usd: 7.99
+    qty: 1
+    specs: [1 m, XH2.54 4-pin to PH2.0 6-pin, 6 pcs, need 3 (J2, J3, J4)]
+    vendor: Amazon
+    url: https://www.amazon.com/dp/B0D57RRQVP
+    order: Amazon
+    datasheet: https://www.amazon.com/dp/B0D57RRQVP
+    stock_checked: "2026-10-29 US (page: In Stock, $7.99; Prime Saturday Oct 31)"
+    compat: unverified
+    compat_note: check your motors have the 6-pin PH2.0 socket (Anet-style 42SHDC motors do); if they have fixed leads, skip this line
+  - name: Servo lead extension (3-core wire, ~1 m)
+    function: Wiring
+    status: owned
+    price_note: Invention Studio stock (hookup wire, solder, heat-shrink)
+    qty: 1
+    specs: [3 x 22-26 AWG, ~1 m, solder + heat-shrink, one end to the LM2596 output, signal to Uno A3]
+    datasheet: unverified
+    compat: unverified
+    compat_note: extends the MG90S's ~25 cm lead from the wrist to the base; no connector purchase needed
+  - name: WEN 10761 digital caliper
+    function: Tools
+    status: candidate
+    price_usd: 11.0
+    qty: 1
+    specs: [150 mm digital caliper]
+    vendor: Invention Studio Store
+    url: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6316&SINGLESTORE=true
+    order: Invention Studio Store
+    datasheet: unverified
+    stock_checked: "2026-10-29 US (user catalog capture: no stock warning)"
+    compat: verified
+    compat_note: needed to measure the motors, the coupling and the coupons before printing
+    note: Only if you don't already have calipers (the studio may lend one).
+orders:
+  - vendor: Invention Studio Store
+    url: https://epay.gatech.edu/C20793_ustores/web/store_main.jsp?STOREID=324&SINGLESTORE=true
+    items: [MG90S servo $3.50, 2GT 300 mm closed belt $2.00, optional WEN caliper $11.00]
+    subtotal_usd: 5.5
+    note: Order online, free pickup at the Studio Store (Wepfer Design Commons). Prices from the user's catalog capture 2026-10-29.
+  - vendor: Amazon
+    url: https://www.amazon.com
+    items: [608-2RS, 8 mm rod, flange coupling, E-stop, fuse holder, LM2596, stepper cables, GT2 pulley kit x2, 8 mm collars]
+    subtotal_usd: 83.10
+    note: >-
+      Prime: 7 lines Saturday Oct 31, kit and collars Sunday Nov 1; without Prime, Tue Nov 3. Not in time from Amazon:
+      6806, 625, 520 mm belt, 5 mm rod (buy locally, see docs/v1/order-list.md section C). DC jack dropped.
+  - vendor: Georgia Tech Invention Studio
+    items: [heat-set inserts, M3/M2/M5 screws, nuts, washers]
+    note: User has access.

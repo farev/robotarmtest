@@ -1,0 +1,35 @@
+part: GT2 60T pulley, 5 mm bore, 6 mm belt
+model_source: datasheet
+source_url: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/timing_pulleys.csv
+datasheet: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/timing_pulleys.csv
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: axis Z, hub end face at z = 0, hub 0..7, teeth 8..15, belt centre z = 11.5
+critical_dims:
+- name: outside diameter
+  value_mm: 37.689
+  tol_mm: 0.1
+  source: standard (timing_pulleys.csv)
+  model_mm: 37.689
+- name: bore
+  value_mm: 5.0
+  tol_mm: 0.05
+  source: store listing [est]
+  model_mm: 5.0
+- name: flange diameter
+  value_mm: 42
+  tol_mm: 1.0
+  source: estimate
+  model_mm: 42
+- name: hub diameter
+  value_mm: 20
+  tol_mm: 1.0
+  source: estimate
+  model_mm: 20
+- name: total length
+  value_mm: 16.0
+  tol_mm: 1.0
+  source: estimate
+  model_mm: 16.0
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: Envelope (hub, flanges, length) is an estimate until the scouted listing is read.

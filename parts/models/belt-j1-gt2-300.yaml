@@ -1,0 +1,25 @@
+part: GT2 6 mm closed belt 300 mm
+model_source: datasheet
+source_url: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/timing_belt_closed_loops.csv
+datasheet: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/timing_belt_closed_loops.csv
+retrieved: '2026-10-29'
+generator: design/v1/make_assembly.py
+frame: belt centre plane at z = 0 of its frame; sketched around the pulley tooth tips
+critical_dims:
+- name: pitch length
+  value_mm: 300
+  tol_mm: 0.5
+  source: stock closed loop (timing_belt_closed_loops.csv)
+  model_mm: 300
+- name: width
+  value_mm: 6
+  tol_mm: 0.2
+  source: standard
+  model_mm: 6
+- name: thickness
+  value_mm: 1.4
+  tol_mm: 0.1
+  source: estimate
+  model_mm: 1.4
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

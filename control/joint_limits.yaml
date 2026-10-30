@@ -1,0 +1,25 @@
+# v1 arm: numbers for the firmware (from design/v1/printed/layout.py; re-read after any layout change)
+microsteps: 16
+steps_per_motor_rev: 3200          # 200 x 16
+joints:
+  - {name: J1 base yaw,    shield_axis: X, step_pin: 2,  dir_pin: 5, ratio: 6.0,  steps_per_deg: 53.333, limits_deg: [-150, 150]}
+  - {name: J2 shoulder,    shield_axis: Y, step_pin: 3,  dir_pin: 6, ratio: 12.0, steps_per_deg: 106.667, limits_deg: [-30, 90]}
+  - {name: J3 elbow,       shield_axis: Z, step_pin: 4,  dir_pin: 7, ratio: 6.0,  steps_per_deg: 53.333, limits_deg: [-135, 120]}
+  - {name: J4 wrist roll,  shield_axis: A, step_pin: 12, dir_pin: 13, ratio: 1.0, steps_per_deg: 8.889, limits_deg: [-180, 180]}
+enable_pin: 8                       # active low, shared by all four drivers
+gripper_servo: {pin: A3, supply: "6 V from the LM2596 buck (set before connecting), grounds common with the Uno"}
+endstops: {J1: 9, J2: 10, J3: 11}   # X-, Y-, Z- headers; mounts not in the v1 CAD yet
+joint_conventions: >-
+  All joints relative. J2 and J3 positive = raising the link (rotation about -Y with X forward, Z up).
+  J2 = 0 and J3 = 0: arm stretched horizontally forward. Motor direction signs must be set on the bench.
+kinematics_mm:
+  shoulder_axis: [0, 0, 187]        # above the table, on the yaw axis (tool plane y = 0)
+  L2_shoulder_to_elbow: 135
+  L3_elbow_to_pad_centre: 220       # elbow axis -> gripper pad centre along the forearm (coupling face 145 + pad 75)
+soft_limits:
+  - "TABLE LIMIT (always, every pose): pad-centre height h = 187 + 135*sin(J2) + 220*sin(J2 + J3) must stay >= 35 mm
+    (25 mm of pad hang and width + 10 mm margin). At J2 = 0 that means J3 >= -43 deg; at J2 = -30, J3 >= +8 deg.
+    Checked with the table modelled: poses reach-table (0, 0, -43), shoulder-down (90, -30, 8) and soft-limit
+    (0, 20, -84) are clear of the table and the base."
+  - "The table limit also keeps the forearm off the base: every base collision found (J2 -30 with J3 -45 / -60) breaks it."
+driver_current: {target_A: 0.6, vref_V_for_R100_sense: 0.48, note: "0.6 A while the motor-mount parts are PLA; 0.7 A (0.56 V) once they are PETG"}

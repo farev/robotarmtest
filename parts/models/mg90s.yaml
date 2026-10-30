@@ -1,0 +1,39 @@
+part: TowerPro MG90S micro servo (metal gear)
+model_source: datasheet
+source_url: https://www.towerpro.com.tw/product/mg90s-3/   # dimension table A-F + diagram (no maker STEP exists; none on the maker site)
+datasheet: https://www.towerpro.com.tw/product/mg90s-3/
+retrieved: "2026-10-29"
+generator: parts/models/mg90s.py
+frame: >-
+  origin on the output shaft axis at the TOP face of the mounting tabs (z = 0 is the tab upper surface);
+  output shaft and gear-top bump toward +Z; long axis along X; the shaft is at x = 0 and the shaft end of the body
+  is toward +X (body spans x -16.6 .. +6.2, body centre x = -5.2); tabs along X (x -21.45 .. +11.05);
+  body width along Y, centred (y +-6.2); body bottom at z = -21.0, case top z = +1.5, gear-boss top z = +7.4,
+  spline top z = +11.5. Cable exit keep-out in parts/models/mg90s-keepout.step (x 6.2..16.2, y +-3, z -21..-17).
+critical_dims:
+  - {name: body length, value_mm: 22.8, tol_mm: 0.3, source: TowerPro product table B (spec line 22.8x12.2x28.5), model_mm: 22.8}
+  - {name: body width, value_mm: 12.4, tol_mm: 0.3, source: TowerPro product table D (12.4; spec line says 12.2), model_mm: 12.4}
+  - {name: tab span, value_mm: 32.1, tol_mm: 0.6, source: TowerPro product table E (32.1); other sources 32.2-32.7, modelled at 32.5 to cover clones, model_mm: 32.5}
+  - {name: tab hole pitch, value_mm: 28.5, tol_mm: 0.3, source: estimate (not on TowerPro page; Hitec HS-5055MG drawing 28.5 and Kuman MG90S OpenSCAD model 28.6, same 9g footprint), model_mm: 28.5}
+  - {name: tab hole diameter, value_mm: 2.0, tol_mm: 0.2, source: estimate (Hitec HS-5055MG drawing 2.0 / 1.9; Kuman model 2.0), model_mm: 2.0}
+  - {name: tab thickness, value_mm: 2.5, tol_mm: 0.4, source: estimate (secondary spec 2.5; Kuman model 2.8; TowerPro diagram ~2), model_mm: 2.5}
+  - {name: tab top height, value_mm: 21.0, tol_mm: 0.5, source: TowerPro table F = 18.5 (tab underside, per diagram reference line; Kuman model 18.3) + tab thickness 2.5, model_mm: 21.0}
+  - {name: body height, value_mm: 22.5, tol_mm: 0.5, source: estimate (Kuman MG90S OpenSCAD model 22.5; not on TowerPro page), model_mm: 22.5}
+  - {name: shaft offset, value_mm: 6.2, tol_mm: 0.5, source: estimate (gear boss flush with body end = half of width; Hitec drawing 5.9-6.1, Kuman 6.35), model_mm: 6.2}
+  - {name: spline diameter, value_mm: 4.8, tol_mm: 0.2, source: request / vendor listings (21T spline ~4.8; Kuman model 4.8), model_mm: 4.8}
+  - {name: shaft top height, value_mm: 11.5, tol_mm: 0.5, source: TowerPro table A (32.5 bottom to spline top) minus tab top 21.0, model_mm: 11.5}
+  - {name: bump top height, value_mm: 28.4, tol_mm: 0.3, source: TowerPro table C (bottom to gear-boss top; spec line 28.5), model_mm: 28.4}
+  - {name: bump diameter, value_mm: 12.0, tol_mm: 0.5, source: estimate (boss as wide as the body; Kuman 12.7 turret), model_mm: 12.0}
+checked: "2026-10-29: 13 of 13 dims within tolerance (inspect holes + section measurements of mg90s.step); 7 of them rest on estimates or secondary sources"
+note: >-
+  Built from the TowerPro product table (A 32.5 total height, B 22.8, C 28.4, D 12.4, E 32.1, F 18.5), the TowerPro
+  diagram and, for what TowerPro does not publish, the Hitec HS-5055MG drawing (same 9g footprint) and the Kuman MG90S
+  OpenSCAD model (christophevg/3d-servo-model, hole pitch 28.6, tab underside 18.3, wing 2.8, case 22.5, boss top ~28.46).
+  Interpretation of letters: A/C are heights to spline top / gear-boss top, F is the tab UNDERSIDE (diagram reference
+  line sits on the tab's lower edge and Kuman agrees); if a caliper shows the tab top at 18.5 instead, tab top height
+  is 18.5 and body height likely 22.5 still. Tab holes are drawn as slotted keyholes on the TowerPro diagram; modelled
+  as plain round holes. Second gear boss (dia 6, centre x -6.4, same top height as the main boss) and the bridge
+  between them are estimated from the diagram. Spline modelled as a plain cylinder (21T teeth, 4.8 mm OD).
+  Cable: leaves the +X (shaft) end face at the bottom per the TowerPro and Hitec drawings; keep-out block 10 x 6 x 4 mm
+  is an estimate. Clones vary by up to ~0.5 mm; leave >= 0.5 mm clearance per side in printed pockets. Re-measure with
+  calipers when the servo arrives (tab top height, case top height, tab thickness, hole pitch, cable end).

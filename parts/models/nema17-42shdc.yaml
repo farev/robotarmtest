@@ -1,0 +1,18 @@
+part: 42SHDC3026-15B NEMA 17 stepper
+model_source: datasheet
+source_url: https://3dprint.wiki/printers/anet/a8/steppermotor
+datasheet: unverified   # no datasheet found for 42SHDC3026-15B; values from the 42SHDC3025-24B sibling and the NEMA 17 standard
+retrieved: "2026-10-29"
+generator: parts/models/nema17-42shdc.py
+frame: origin at the centre of the mounting face, body toward -Z, shaft along +Z, D-flat facing +X, connector on the +X side face near the back
+critical_dims:
+  - {name: face square, value_mm: 42.3, tol_mm: 0.2, source: NEMA 17 standard (42SHDC3025-24B listing 42 x 42), model_mm: 42.3}
+  - {name: hole pitch, value_mm: 31.0, tol_mm: 0.1, source: NEMA 17 standard, model_mm: 31.0}
+  - {name: hole thread depth, value_mm: 4.5, tol_mm: 0.5, source: estimate (typical NEMA 17 drawing), model_mm: 4.5}
+  - {name: pilot diameter, value_mm: 22.0, tol_mm: 0.05, source: NEMA 17 standard, model_mm: 22.0}
+  - {name: pilot height, value_mm: 2.0, tol_mm: 0.1, source: NEMA 17 standard, model_mm: 2.0}
+  - {name: shaft diameter, value_mm: 5.0, tol_mm: 0.05, source: NEMA 17 standard, model_mm: 5.0}
+  - {name: body length, value_mm: 40.0, tol_mm: 0.5, source: estimate (sibling 42SHDC3025-24B is 42 x 42 x 40; user to measure), model_mm: 40.0}
+  - {name: shaft length, value_mm: 24.0, tol_mm: 0.5, source: estimate (user to measure from the mounting face), model_mm: 24.0}
+checked: "2026-10-29: 6 of 8 critical dims within tolerance (inspect: 42.3 square, 31.0 pitch, 2.5 holes 4.5 deep, 64 overall = 40 + 24); body and shaft length are estimates"
+note: Rated 0.9 A/phase (user). Holding torque 0.34-0.40 N·m and 4.4 ohm per the sibling 42SHDC3025-24B listings, unverified for this model; design uses 0.34 N·m.

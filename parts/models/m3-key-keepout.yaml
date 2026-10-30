@@ -1,0 +1,20 @@
+part: 'keep-out: 2.5 mm hex key access'
+model_source: datasheet
+source_url: estimate
+datasheet: estimate
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: screw frame; from the head top, 60 mm
+critical_dims:
+- name: diameter
+  value_mm: 6.5
+  tol_mm: 0.5
+  source: assembly skill (head 5.5 + 1)
+  model_mm: 6.5
+- name: length
+  value_mm: 60.0
+  tol_mm: 1
+  source: assembly skill
+  model_mm: 60.0
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

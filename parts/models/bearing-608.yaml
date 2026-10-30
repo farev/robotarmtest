@@ -1,0 +1,25 @@
+part: 608-2RS deep groove ball bearing
+model_source: datasheet
+source_url: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/bearings_deep_groove.csv
+datasheet: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/bearings_deep_groove.csv
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: axis Z, centred (z = -B/2..B/2)
+critical_dims:
+- name: bore
+  value_mm: 8
+  tol_mm: 0.01
+  source: standard
+  model_mm: 8
+- name: outer diameter
+  value_mm: 22
+  tol_mm: 0.01
+  source: standard
+  model_mm: 22
+- name: width
+  value_mm: 7
+  tol_mm: 0.1
+  source: standard
+  model_mm: 7
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

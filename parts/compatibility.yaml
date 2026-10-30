@@ -1,0 +1,137 @@
+checked: "2026-10-29"
+checks:
+  - between: [42SHDC3026-15B NEMA 17 stepper, A4988 stepper driver module (with heatsink)]
+    interface: phase current
+    claim: "Motor rated 0.9 A/phase (user); A4988 carrier gives ~1 A per phase without extra cooling; set 0.7 A (Vref 0.56 V with R100 sense resistors)"
+    evidence: [user stated 0.9 A per phase, https://www.pololu.com/product/1182]
+    status: verified
+  - between: [24 V 6 A DC power supply, CNC Shield V3 (Protoneer-style clone)]
+    interface: supply voltage
+    claim: "Shield motor input 12-36 V; supply 24 V"
+    evidence: [user stated 24 V, https://blog.protoneer.co.nz/arduino-cnc-shield/]
+    status: verified
+  - between: [24 V 6 A DC power supply, A4988 stepper driver module (with heatsink)]
+    interface: supply voltage
+    claim: "A4988 motor supply 8-35 V; supply 24 V"
+    evidence: [user stated 24 V, https://www.pololu.com/product/1182]
+    status: verified
+  - between: [CNC Shield V3 (Protoneer-style clone), system]
+    interface: driver channels
+    claim: "Shield has 4 driver sockets (X, Y, Z, A); the arm has 4 steppers (A axis needs the D12/D13 jumpers)"
+    evidence: https://blog.protoneer.co.nz/arduino-cnc-shield/
+    status: verified
+  - between: [Arduino Uno R3, CNC Shield V3 (Protoneer-style clone)]
+    interface: stacking and logic
+    claim: "Shield is an Uno-footprint shield with 5 V logic step/dir pins"
+    evidence: https://blog.protoneer.co.nz/arduino-cnc-shield/
+    status: verified
+  - between: [24 V 6 A DC power supply, system]
+    interface: supply current
+    claim: "4 steppers at 0.7 A chopper current draw well under 6 A from 24 V (est 1.5-3 A peak) plus the servo regulator"
+    evidence: user stated 6 A
+    status: unverified   # estimate; measure once running
+  - between: [Inline ATO blade fuse holder (10-pack with 10 A and 15 A fuses), 24 V 6 A DC power supply]
+    interface: fuse rating
+    claim: "Holder 16 AWG ATC/ATO with 10 A fuses (listing) on a 24 V 6 A supply: above the PSU limit, within 16 AWG; blade fuses are 32 V DC parts but the listing does not state it"
+    evidence: [user stated 24 V 6 A, https://www.amazon.com/dp/B0DG97B5HL]
+    status: unverified   # 32 V rating not on the listing
+  - between: [22 mm mushroom emergency stop (NC latching), 24 V 6 A DC power supply]
+    interface: switch rating
+    claim: "COMOK ZB2-BE102C: 1 NC, latching, 600 V 10 A (no DC rating listed); must break 24 V DC at ~2-3 A (est)"
+    evidence: https://www.amazon.com/dp/B07MJPRMRL
+    status: unverified   # DC rating not stated
+  - between: [5.5 x 2.1 mm panel-mount DC jack (DC-022B), 24 V 6 A DC power supply]
+    interface: connector
+    claim: "Jack 5.5 x 2.1 mm; the PSU plug size is not stated by the user"
+    evidence: https://www.amazon.com/s?k=DC-022B+5.5x2.1+panel+mount+jack
+    status: unverified   # user to read the PSU plug size
+  - between: [LM2596 buck converter (set to 6.0 V), 24 V 6 A DC power supply]
+    interface: input voltage
+    claim: "LM2596 input up to 40 V; supply 24 V"
+    evidence: https://www.ti.com/lit/ds/symlink/lm2596.pdf
+    status: verified
+  - between: [LM2596 buck converter (set to 6.0 V), MG90S metal-gear micro servo (180 deg)]
+    interface: servo supply
+    claim: "Set to 6.0 V (adjustable); MG90S 4.8-6.6 V, ~0.8 A stall at 6 V; LM2596 3 A switch"
+    evidence: [https://www.ti.com/lit/ds/symlink/lm2596.pdf, https://www.towerpro.com.tw/product/mg90s-3/]
+    status: verified
+  - between: [MG90S metal-gear micro servo (180 deg), Arduino Uno R3]
+    interface: control signal
+    claim: "Servo takes 50 Hz 1-2 ms PWM; Uno Servo library drives any digital pin at 5 V logic; grounds tied"
+    evidence: [https://www.towerpro.com.tw/product/mg90s-3/, https://docs.arduino.cc/hardware/uno-rev3/]
+    status: verified
+  - between: [MG90S metal-gear micro servo (180 deg), system]
+    interface: servo pocket fit
+    claim: "Gripper cut-out sized from the TowerPro MG90S drawing (22.8 x 12.4, 28.5 tab pitch) + 0.3 per side; clones vary"
+    evidence: https://www.towerpro.com.tw/product/mg90s-3/
+    status: unverified   # caliper the servo on arrival
+  - between: [608-2RS bearings 8x22x7 (10-pack), 8 mm linear rod 150 mm (2-pack)]
+    interface: bore and shaft
+    claim: "608 bore 8 mm (standard); rod 8 mm"
+    evidence: [https://bearingsdirect.com/608-2rs-sealed-ball-bearing-8x22x7-mr608-2rs/, "https://www.amazon.com/s?k=8mm+x+150mm+linear+rod+2+pack"]
+    status: unverified   # rod listing not opened
+  - between: [625-2RS bearings 5x16x5 (10-pack), 5 mm linear rod 100 mm]
+    interface: bore and shaft
+    claim: "625 bore 5 mm (standard); rod 5 mm"
+    evidence: [https://bearingsdirect.com/625-2rs-sealed-precision-mini-ball-bearing-5x16x5-mr625-2rs/, "https://www.amazon.com/s?k=5mm+x+100mm+linear+rod+shaft"]
+    status: unverified
+  - between: [GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore), 5 mm linear rod 100 mm]
+    interface: bore and shaft
+    claim: "Kit listing: 'Both Bore size is 5mm' (60T and 20T); rod 5 mm (rod page not loaded)"
+    evidence: [https://www.amazon.com/dp/B09V5C1F7C, https://www.amazon.com/dp/B0FXF4RFMP]
+    status: unverified   # rod listing not verified
+  - between: [GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore), 42SHDC3026-15B NEMA 17 stepper]
+    interface: bore and shaft
+    claim: "20T bore 5 mm (kit listing); motor shaft 5 mm D-cut (NEMA 17 standard, motor datasheet not found); 24 mm shaft assumed for the hub-up J1 pulley"
+    evidence: https://www.amazon.com/dp/B09V5C1F7C
+    status: unverified   # user to measure shaft diameter and length
+  - between: [5 mm rigid flange coupling (22 mm flange), 42SHDC3026-15B NEMA 17 stepper]
+    interface: bore and shaft
+    claim: "uxcell coupling bore 5 mm, base 22 x 2, hub 10 x 10, hole distance 16 (listing) = CAD; J4 shaft 5 mm assumed"
+    evidence: https://www.amazon.com/dp/B07PLB2P4W
+    status: unverified   # motor shaft not measured
+  - between: [GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore), system]
+    interface: belt profile and length
+    claim: "Kit belts 200 mm x 6 mm GT2 closed (listing); 200 mm loop equals both J2 stage centre distances (C 58.62, 46.04); 2 kits give 4 belts"
+    evidence: https://www.amazon.com/dp/B09V5C1F7C
+    status: verified
+  - between: [2GT closed loop timing belt 6 mm x 300 mm, GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)]
+    interface: belt profile and length
+    claim: "Store belt 2GT (GT2) 2 mm pitch, 6 mm wide, 300 mm closed; J1 centre distance 73.07 solved for a 300 mm loop; printed 120T band is 8 mm wide"
+    evidence: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6296&SINGLESTORE=true
+    status: verified
+  - between: [GT2 6 mm closed belt 520 mm, system]
+    interface: belt length
+    claim: "Elbow centre distance 187.30 mm solved for a 520 mm loop"
+    evidence: https://www.amazon.com/clp/B08DNP8F7Q
+    status: unverified
+  - between: [6806-2RS (61806-2RS) bearings 30x42x7 (pack), system]
+    interface: printed fit
+    claim: "Bearing 30 x 42 x 7; pocket 42.1 and spigot 29.85 to confirm with coupon-yaw"
+    evidence: https://bearingsdirect.com/6806-2rs-ball-bearing-30x42x7-sealed/
+    status: unverified
+  - between: [M3 x 5.7 brass heat-set inserts, system]
+    interface: insert hole
+    claim: "CAD holes 4.0 x 6.7 deep with >= 2 mm walls (CNC Kitchen / ruthex M3 x 5.7 size); studio inserts not identified"
+    evidence: https://www.3djake.com/cnc-kitchen/threaded-inserts-m3-standard
+    status: unverified   # coupon row C
+  - between: [8 mm bore shaft collars (pack), system]
+    interface: collar envelope
+    claim: "Listing 8 x 14 x 8 mm (ID x OD x width); CAD models 16 x 8 and every collar position clears up to ~20 mm OD"
+    evidence: https://www.amazon.com/dp/B0DQKVNBST
+    status: verified
+  - between: [42SHDC3026-15B NEMA 17 stepper, system]
+    interface: joint torque J2
+    claim: "J2 gravity 1.18 N·m (CAD masses, 100 g payload, stretched) / 12:1 / 0.90 eff = 0.11 N·m at the motor, 32 % of 0.34 N·m holding"
+    evidence: user stated model number
+    status: unverified   # holding torque from the sibling model
+  - between: [42SHDC3026-15B NEMA 17 stepper, system]
+    interface: joint torque J3
+    claim: "J3 gravity 0.57 N·m / 6:1 / 0.95 = 0.10 N·m at the motor, 29 % of 0.34 N·m holding"
+    evidence: user stated model number
+    status: unverified
+  - between: [Arduino Uno R3, system]
+    interface: enclosure fit
+    claim: "Base standoffs and USB-B window placed from the official Uno Eagle file"
+    evidence: https://docs.arduino.cc/hardware/uno-rev3/
+    status: verified

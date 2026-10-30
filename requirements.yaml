@@ -1,1 +1,9 @@
-{}
+product: robot arm
+axes: [base yaw, shoulder, elbow, wrist roll]
+gripper: servo (to buy; v1 designed for MG90S)
+payload_g: 100            # assumed
+printer: {name: Bambu Lab X1E, bed_mm: [256, 256, 256], nozzle_mm: 0.4}
+material: PLA preferred (PETG on the 4 motor-clamping parts, see decisions.md)
+max_part: fits the printer bed in one piece
+owned: [4 x 42SHDC3026-15B NEMA 17 (0.9 A), Arduino Uno, CNC Shield V3, A4988 drivers, 100 uF 50 V cap, 24 V 6 A PSU]
+country: US               # assumed for sourcing

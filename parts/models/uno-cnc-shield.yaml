@@ -1,0 +1,58 @@
+part: Arduino Uno R3 + CNC Shield V3 with 4x A4988 (heatsinks)
+model_source: datasheet
+source_url: https://docs.arduino.cc/static/6bb7a3ca51ebee82a252f60c0b418787/A000066-cad-files.zip   # official Arduino UNO-TH_Rev3e.brd (Eagle) for the Uno; CNC shield layout from https://github.com/cmsteinBR/sb-cnc-shield (open-source Protoneer-derived clone, KiCad)
+datasheet: https://docs.arduino.cc/hardware/uno-rev3/
+retrieved: "2026-10-29"
+generator: parts/models/uno-cnc-shield.py
+frame: >
+  origin at the Uno PCB lower-left corner on the BOTTOM face of the Uno PCB (z=0 = PCB underside,
+  components toward +Z). X along the 68.58 mm edge, Y along the 53.34 mm edge (Arduino Eagle board
+  coordinates, same orientation as the official board file: USB-B at upper left, DC jack at lower
+  left, header rows IOH/IOL on the y=50.8 edge, POWER/AD headers on the y=2.54 edge). USB-B and DC
+  jack are on the x=0 edge and overhang to negative x. The shield sits above the Uno, drivers above
+  the shield, tallest point is the heatsinks.
+critical_dims:
+  - {name: uno pcb length, value_mm: 68.58, tol_mm: 0.2, source: Arduino UNO-TH_Rev3e.brd (Dimension layer), model_mm: 68.58}
+  - {name: uno pcb width, value_mm: 53.34, tol_mm: 0.2, source: Arduino UNO-TH_Rev3e.brd (Dimension layer), model_mm: 53.34}
+  - {name: uno pcb thickness, value_mm: 1.6, tol_mm: 0.2, source: estimate (standard 1.6 mm FR4; not in the Eagle file), model_mm: 1.6}
+  - {name: mount hole diameter, value_mm: 3.2, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 3.2}
+  - {name: mount hole 1 x, value_mm: 13.97, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 13.97}
+  - {name: mount hole 1 y, value_mm: 2.54, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 2.54}
+  - {name: mount hole 2 x, value_mm: 15.24, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 15.24}
+  - {name: mount hole 2 y, value_mm: 50.8, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 50.8}
+  - {name: mount hole 3 x, value_mm: 66.04, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 66.04}
+  - {name: mount hole 3 y, value_mm: 7.62, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 7.62}
+  - {name: mount hole 4 x, value_mm: 66.04, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 66.04}
+  - {name: mount hole 4 y, value_mm: 35.56, tol_mm: 0.1, source: Arduino UNO-TH_Rev3e.brd, model_mm: 35.56}
+  - {name: usb-b center y, value_mm: 38.1, tol_mm: 0.3, source: Arduino UNO-TH_Rev3e.brd (X2 PN61729 placement), model_mm: 38.1}
+  - {name: usb-b width, value_mm: 12.0, tol_mm: 0.3, source: estimate (USB-B receptacle standard 12.0; Eagle footprint outline 11.8), model_mm: 12.0}
+  - {name: usb-b height, value_mm: 10.9, tol_mm: 0.5, source: estimate (USB-B receptacle standard, above PCB top), model_mm: 10.9}
+  - {name: usb-b overhang, value_mm: 6.34, tol_mm: 0.5, source: Arduino UNO-TH_Rev3e.brd (footprint outline front face beyond x=0), model_mm: 6.34}
+  - {name: dc jack center y, value_mm: 7.798, tol_mm: 0.3, source: Arduino UNO-TH_Rev3e.brd (X1 POWERSUPPLY_DC-21MM placement), model_mm: 7.798}
+  - {name: dc jack width, value_mm: 9.0, tol_mm: 0.3, source: Arduino UNO-TH_Rev3e.brd (footprint outline 8.99), model_mm: 8.999}
+  - {name: dc jack height, value_mm: 11.0, tol_mm: 0.5, source: estimate (typical 2.1 mm barrel jack, above PCB top), model_mm: 11.0}
+  - {name: dc jack overhang, value_mm: 1.803, tol_mm: 0.5, source: Arduino UNO-TH_Rev3e.brd (footprint outline front face beyond x=0), model_mm: 1.803}
+  - {name: shield pcb height, value_mm: 12.6, tol_mm: 1.0, source: estimate (1.6 Uno PCB + 8.5 Uno socket + 2.5 shield male-header plastic; measure on the real stack), model_mm: 12.6}
+  - {name: shield pcb thickness, value_mm: 1.6, tol_mm: 0.2, source: estimate, model_mm: 1.6}
+  - {name: stack max height, value_mm: 32.8, tol_mm: 2.0, source: estimate (shield top 14.2 + 8.5 socket + 2.5 plastic + 1.6 module + 1.0 chip + 5.0 heatsink; measure on the real stack), model_mm: 32.8}
+  - {name: shield power terminal x, value_mm: 9.906, tol_mm: 1.0, source: estimate (StaticBoards CNC shield KiCad layout, Protoneer-derived; not a Protoneer drawing), model_mm: 9.906}
+  - {name: shield power terminal y, value_mm: 3.937, tol_mm: 1.0, source: estimate (StaticBoards CNC shield KiCad layout, Protoneer-derived; not a Protoneer drawing), model_mm: 3.937}
+  - {name: shield power terminal entry, value_mm: 0.0, tol_mm: 0.0, source: estimate (wire entry faces -Y, the y=0 long edge, same side as the Uno POWER/analog headers), model_mm: 0.0}
+checked: "2026-10-29: 16 of 16 datasheet-sourced dims within tolerance (inspect: holes dia 3.2 at the 4 listed centres, bbox x -6.34..68.58, y 0..53.34, z 0..32.8; connector and terminal extents measured from solid bounding boxes). 10 dims are estimates (model equals the estimate), see note."
+note: >
+  Uno outline (with the right-edge chamfers and 1 mm rounded corners), the 4 holes (3.2 dia),
+  header positions (IOH 17.5..42.9, IOL 44.5..64.8 on y=50.8; POWER 26.7..47.0, AD 49.5..64.8 on
+  y=2.54) and the USB-B / DC jack placements are exact from the official Arduino Eagle file;
+  connector HEIGHTS and widths are not in that file and are standard-part estimates (USB-B 12.0 x
+  10.9, barrel jack 9.0 x 11.0). USB-B spans y 32.1..44.1, x -6.34..9.41; DC jack spans y
+  3.30..12.30, x -1.80..11.68. The jack top (z=12.6) equals the modelled shield underside: on real
+  stacks the jack/USB top can touch the shield, so leave clearance for tape or a shield offset.
+  The shield: no Protoneer-published V3.xx drawing was found (blog.protoneer.co.nz unreachable); the
+  shield is modelled with the Uno outline (retail listings say 68-69 x 53-54 mm) and driver sockets
+  (module centres x 23.5/45.6, y 15.9/36.2, long axis along Y, pin rows 12.7 apart along X) and
+  the 2-pin 5.08 mm VMOT terminal taken from the open StaticBoards CNC shield KiCad layout, which
+  reproduces the Protoneer arrangement; actual clones can differ by 1 mm or more. Heights of
+  sockets (8.5), male-header plastic (2.5), A4988 module (15.24 x 20.32 x 1.6), chip (1.0) and
+  9x9x5 heatsinks are estimates; heatsink centred on the module, not on the true chip position.
+  Driver axis labels (X/Y/Z/A) are not modelled. Shield mounting holes, pins below the PCBs,
+  electrolytic caps, microstep jumpers, motor headers and the pot are not modelled.

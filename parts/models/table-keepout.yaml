@@ -1,0 +1,20 @@
+part: 'keep-out: table top under the base'
+model_source: datasheet
+source_url: estimate
+datasheet: estimate
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: z = 0 is the table surface, slab z -20..0, axis on the yaw axis
+critical_dims:
+- name: radius
+  value_mm: 400.0
+  tol_mm: 1
+  source: chosen > arm reach
+  model_mm: 400.0
+- name: thickness
+  value_mm: 20.0
+  tol_mm: 1
+  source: chosen
+  model_mm: 20.0
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

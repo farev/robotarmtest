@@ -1,0 +1,30 @@
+part: M3 x 10 ISO 4762 socket head cap screw
+model_source: datasheet
+source_url: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/fasteners_iso4762_shcs.csv
+datasheet: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/fasteners_iso4762_shcs.csv
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: head underside at z = 0, head +Z, shank -Z
+critical_dims:
+- name: head diameter
+  value_mm: 5.5
+  tol_mm: 0.1
+  source: standard
+  model_mm: 5.5
+- name: head height
+  value_mm: 3.0
+  tol_mm: 0.1
+  source: standard
+  model_mm: 3.0
+- name: length
+  value_mm: 10
+  tol_mm: 0.2
+  source: standard
+  model_mm: 10
+- name: shank (minor) diameter
+  value_mm: 2.46
+  tol_mm: 0.05
+  source: ISO 724 d1
+  model_mm: 2.46
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

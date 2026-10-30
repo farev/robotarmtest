@@ -1,0 +1,20 @@
+part: 8 mm ground steel rod, cut to 100 mm
+model_source: datasheet
+source_url: design/v1/printed/layout.py
+datasheet: design/v1/printed/layout.py
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: axis Z from z = 0
+critical_dims:
+- name: diameter
+  value_mm: 8
+  tol_mm: 0.01
+  source: h6 ground rod
+  model_mm: 8
+- name: length
+  value_mm: 100
+  tol_mm: 0.5
+  source: cut length from the CAD
+  model_mm: 100
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

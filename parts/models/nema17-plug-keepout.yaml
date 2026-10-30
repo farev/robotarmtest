@@ -1,0 +1,20 @@
+part: 'keep-out: 42SHDC plug and cable bend'
+model_source: datasheet
+source_url: estimate
+datasheet: estimate
+retrieved: '2026-10-29'
+generator: parts/models/nema17-plug-keepout.py
+frame: motor frame of nema17-42shdc.step
+critical_dims:
+- name: plug width
+  value_mm: 18
+  tol_mm: 1
+  source: estimate
+  model_mm: 18
+- name: cable straight length
+  value_mm: 18
+  tol_mm: 2
+  source: estimate
+  model_mm: 18
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

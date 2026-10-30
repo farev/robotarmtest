@@ -1,0 +1,19 @@
+J2:
+  joint_torque_Nm: 1.18
+  ratio: 12.0
+  motor_torque_Nm: 0.109
+  share_of_holding: 0.32
+  safety_factor_vs_50pct_rule: 1.56
+J3:
+  joint_torque_Nm: 0.569
+  ratio: 6.0
+  motor_torque_Nm: 0.1
+  share_of_holding: 0.29
+  safety_factor_vs_50pct_rule: 1.7
+moving_mass_g: 1426.0
+total_mass_g: 2307.0
+assumptions:
+  fill: 0.45
+  payload_g: 100.0
+  holding_Nm: 0.34
+  pose: stretched horizontal

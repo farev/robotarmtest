@@ -1,0 +1,68 @@
+{
+ "home": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "elbow-up": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "folded": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "reach-table": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "service-j2": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "service-tower": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "shoulder-down": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "soft-limit": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "stretched": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "up": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ },
+ "yaw-150": {
+  "interferences": [],
+  "clearance_issues": [],
+  "unverified_contacts": [],
+  "ok": true
+ }
+}

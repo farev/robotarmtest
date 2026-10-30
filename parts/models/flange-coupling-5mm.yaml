@@ -1,0 +1,40 @@
+part: 5 mm rigid flange coupling (generic, Amazon)
+model_source: datasheet
+source_url: https://vxb.com/products/4-pack-5mm-rigid-flange-shaft-couplings-with-8-scr
+datasheet: https://vxb.com/products/4-pack-5mm-rigid-flange-shaft-couplings-with-8-scr
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: axis Z, flange face at z = 0, hub toward -Z, holes at 45/135/225/315 deg
+critical_dims:
+- name: bore
+  value_mm: 5.0
+  tol_mm: 0.05
+  source: listing
+  model_mm: 5.0
+- name: flange diameter
+  value_mm: 22.0
+  tol_mm: 0.5
+  source: VXB / Handsontec listings
+  model_mm: 22.0
+- name: flange thickness
+  value_mm: 2.0
+  tol_mm: 0.5
+  source: VXB sister listing
+  model_mm: 2.0
+- name: hole circle radius
+  value_mm: 8.0
+  tol_mm: 0.3
+  source: WHEELTEC listing (16 mm PCD)
+  model_mm: 8.0
+- name: hub diameter
+  value_mm: 10.0
+  tol_mm: 1.0
+  source: VXB listing
+  model_mm: 10.0
+- name: hub length
+  value_mm: 10.0
+  tol_mm: 1.0
+  source: VXB listing
+  model_mm: 10.0
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: 'Generic part: measure the flange hole circle when it arrives; gripper-base holes are 3.6 so +-0.3 is tolerated.'

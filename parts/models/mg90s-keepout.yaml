@@ -1,0 +1,25 @@
+part: 'keep-out: MG90S cable exit'
+model_source: datasheet
+source_url: estimate
+datasheet: estimate
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: mg90s.step frame (see mg90s.yaml)
+critical_dims:
+- name: length
+  value_mm: 10.0
+  tol_mm: 1
+  source: estimate
+  model_mm: 10.0
+- name: width
+  value_mm: 6.0
+  tol_mm: 1
+  source: estimate
+  model_mm: 6.0
+- name: height
+  value_mm: 4.0
+  tol_mm: 1
+  source: estimate
+  model_mm: 4.0
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "side-0f709d3217ea-q",
+    "role": "user",
+    "text": "For what motor thickness did we design?",
+    "status": "complete",
+    "created": 1793324667.3626082,
+    "updated": 1793324667.3626082
+  },
+  {
+    "id": "side-0f709d3217ea-a",
+    "role": "assistant",
+    "text": "**Motor thickness:** The design assumes a NEMA 17 (42 mm) motor with a **40 mm body length**. It also assumes a 24 mm shaft length. Both are assumptions, not measured values. `parts/components.yaml` (line 16) says they stay assumed until someone measures a real motor, and `docs/v1/build-notes.md` says to measure one before you print. The motor pack depth in the CAD depends on the 40 mm figure.\n\n**Finalized Amazon list:** There isn't one yet. The main chat says the review is still running. The list lives in `parts/components.yaml`, which has the parts, picks, prices and links. The in-progress review notes are in `.mechy/reviews/2026-10-29-pre-order.md`. Mechy will say when the list is final.",
+    "status": "complete",
+    "created": 1793324672.2824671,
+    "updated": 1793324672.577321
+  },
+  {
+    "id": "side-79b7a18adf87-q",
+    "role": "user",
+    "text": "would the design work for a diffrent body lenth? I haven\u2019t measured it but it should be around 40mm the motors came out of a 3D pritner",
+    "status": "complete",
+    "created": 1793324809.3477938,
+    "updated": 1793324809.347796
+  },
+  {
+    "id": "side-79b7a18adf87-a",
+    "role": "assistant",
+    "text": "Probably yes, if the real length is close to 40 mm. This comes from the design review, not from a test with a different length.\n\n- **What the length controls:** The review in `.mechy/reviews/2026-10-29-design.md` (line 68) says the 40 mm body length sets the 1 mm axial gap in the motor pack. The 24 mm shaft length sets how far the J1 pulley seat reaches and how deep the J4 hub engages. At the moment 4 mm of shaft sits in the hub.\n- **Small differences:** Standard NEMA 17 motors from printers usually run 34\u201340 mm. A few tenths of a millimetre either way should be absorbed by the 1 mm gap. A motor 1\u20132 mm longer could make the pack tight.\n- **Shorter motors:** A 34 mm motor would leave the pack loose. The gap and the shaft engagement would both be off, so you'd need to change the CAD.\n- **Shaft length:** Check this as well as body length. The J1 pulley seat needs at least 23 mm of shaft above the motor face, and the J4 hub needs enough shaft to grip.\n\nBefore you print the upper arm, pack-cover and forearm, measure body length and shaft length with calipers. If they differ from 40 and 24 by more than about 1 mm, tell the main chat the real numbers and it can update the CAD.",
+    "status": "complete",
+    "created": 1793324815.760308,
+    "updated": 1793324815.9660978
+  }
+]

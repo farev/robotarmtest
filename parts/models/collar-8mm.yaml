@@ -1,0 +1,25 @@
+part: 8 mm set-screw shaft collar
+model_source: datasheet
+source_url: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/couplings.csv
+datasheet: /Users/fabianarevalo/Documents/Mechy/engine/mechy/data/standard_parts/couplings.csv
+retrieved: '2026-10-29'
+generator: parts/models/std_parts.py
+frame: axis Z, centred
+critical_dims:
+- name: bore
+  value_mm: 8
+  tol_mm: 0.05
+  source: listing
+  model_mm: 8
+- name: outer diameter
+  value_mm: 16
+  tol_mm: 1
+  source: estimate
+  model_mm: 16
+- name: width
+  value_mm: 8
+  tol_mm: 0.5
+  source: estimate
+  model_mm: 8
+checked: '2026-10-29: modelled from the listed values; inspect bbox matches'
+note: ''
