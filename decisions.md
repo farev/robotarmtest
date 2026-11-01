@@ -42,3 +42,10 @@
 - Review 2 fixes: carriage nut slots 5.8 wide (nut can't turn) and the screw 0.6 past the nut; J1 motor turned 45°
   so its screws are reachable with the belt on; tower window closed (finger trap); key keep-outs at Ø6.5;
   gripper flange screws from behind into captive nuts; soft-limit pose J2 -30 / J3 -45 checked.
+
+- 2026-10-30: Correct requirements to 600 g and gate new CAD on capacity screening and user concept selection (why: explicit payload answer supersedes 100 g; existing performance is not verified at 600 g). [evidence](.mechy/digest.md)
+
+- 2026-10-30: Add an independent Uno built-in LED blink test using board id uno; default to 1 second on/off and a serial heartbeat (why: the user explicitly requests a board test, independent of the arm firmware handled by their friend). [evidence](inbox/20261030-102718.md)
+
+- 2026-10-30: Supersede queued demo tasks T101-T104 and blocked T108 with T111 inventory completion, T112 missing prior art and T113 concept selection (why: baseline T105 is absent, T106 lacks a completion summary, and 600 g screening fails; no heavy CAD before selection). [evidence](research/payload-600g/summary.md)
+- 2026-10-30: Schedule T110 to recheck the connected Uno and restore the existing blink only if needed (why: the new inbox request postdates the completed T109 test; reuse its verified defaults). [evidence](inbox/20261030-111114.md)

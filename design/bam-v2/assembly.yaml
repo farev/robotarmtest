@@ -1,0 +1,600 @@
+scope: New base solids only. Full upper geometry and rig are in arm.glb; upper hardware
+  is in upper_hardware.yaml.
+min_clearance_mm: 0.1
+parts:
+- id: yaw-base-housing
+  model: design/bam-v2/printed/yaw-base-housing.step
+  kind: printed
+  joint_node: base
+  position:
+  - 0
+  - 0
+  - 2.696999999999999
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#465466'
+  material: PETG
+- id: yaw-bearing-spindle
+  model: design/bam-v2/printed/yaw-bearing-spindle.step
+  kind: printed
+  joint_node: turntable
+  position:
+  - 0
+  - 0
+  - 21.197
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#4fd1c5'
+  material: PETG
+- id: yaw-turntable-adapter
+  model: design/bam-v2/printed/yaw-turntable-adapter.step
+  kind: printed
+  joint_node: turntable
+  position:
+  - 0
+  - 0
+  - 25.697
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#4fd1c5'
+  material: PETG
+- id: yaw-bearing-cover
+  model: design/bam-v2/printed/yaw-bearing-cover.step
+  kind: printed
+  joint_node: base
+  position:
+  - 0
+  - 0
+  - 24.096999999999998
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#465466'
+  material: PETG
+- id: yaw-motor-direct
+  model: parts/models/nema17-42shdc.step
+  kind: bought
+  joint_node: base
+  position:
+  - 0
+  - 0
+  - -7.303000000000001
+  rotation:
+  - 0
+  - 0
+  - 180
+  color: '#2e3036'
+- id: yaw-motor-plug-keepout
+  model: parts/models/nema17-plug-keepout.step
+  kind: bought
+  joint_node: base
+  position:
+  - 0
+  - 0
+  - -7.303000000000001
+  rotation:
+  - 0
+  - 0
+  - 180
+  color: '#ff5a5a'
+  note: keep-out volume for the motor plug and cable bend, not a purchased part
+- id: yaw-flange-coupling
+  model: parts/models/flange-coupling-5mm.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 0
+  - 0
+  - 21.197
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: yaw-thrust-bearing
+  model: design/bam-v2/models/bearing-51105.step
+  kind: bought
+  joint_node: base
+  position:
+  - 0
+  - 0
+  - 2.696999999999999
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: motor-m3x10-1
+  model: design/bam-v2/models/m3x10-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - -15.5
+  - -15.5
+  - -1.8030000000000008
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: motor-m3x10-2
+  model: design/bam-v2/models/m3x10-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - -15.5
+  - 15.5
+  - -1.8030000000000008
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: motor-m3x10-3
+  model: design/bam-v2/models/m3x10-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - 15.5
+  - -15.5
+  - -1.8030000000000008
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: motor-m3x10-4
+  model: design/bam-v2/models/m3x10-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - 15.5
+  - 15.5
+  - -1.8030000000000008
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3x25-1
+  model: design/bam-v2/models/m3x25-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - 33.8
+  - 0.0
+  - 20.796999999999997
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3-insert-1
+  model: design/bam-v2/models/m3-heatset-insert.step
+  kind: bought
+  joint_node: base
+  position:
+  - 33.8
+  - 0.0
+  - 2.696999999999999
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3x25-2
+  model: design/bam-v2/models/m3x25-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - 2.069653090559027e-15
+  - 33.8
+  - 20.796999999999997
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3-insert-2
+  model: design/bam-v2/models/m3-heatset-insert.step
+  kind: bought
+  joint_node: base
+  position:
+  - 2.069653090559027e-15
+  - 33.8
+  - 2.696999999999999
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3x25-3
+  model: design/bam-v2/models/m3x25-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - -33.8
+  - 4.139306181118054e-15
+  - 20.796999999999997
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3-insert-3
+  model: design/bam-v2/models/m3-heatset-insert.step
+  kind: bought
+  joint_node: base
+  position:
+  - -33.8
+  - 4.139306181118054e-15
+  - 2.696999999999999
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3x25-4
+  model: design/bam-v2/models/m3x25-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - -6.2089592716770796e-15
+  - -33.8
+  - 20.796999999999997
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: cover-m3-insert-4
+  model: design/bam-v2/models/m3-heatset-insert.step
+  kind: bought
+  joint_node: base
+  position:
+  - -6.2089592716770796e-15
+  - -33.8
+  - 2.696999999999999
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: anchor-m4x12-1
+  model: design/bam-v2/models/m4x12-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - 37.123106012293746
+  - 37.12310601229374
+  - -48.303
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: anchor-m4x12-2
+  model: design/bam-v2/models/m4x12-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - -37.12310601229374
+  - 37.123106012293746
+  - -48.303
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: anchor-m4x12-3
+  model: design/bam-v2/models/m4x12-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - -37.12310601229375
+  - -37.12310601229374
+  - -48.303
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: anchor-m4x12-4
+  model: design/bam-v2/models/m4x12-shcs.step
+  kind: bought
+  joint_node: base
+  position:
+  - 37.12310601229374
+  - -37.12310601229375
+  - -48.303
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3x10-csk-1
+  model: design/bam-v2/models/m3x10-csk.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 5.656854249492381
+  - 5.65685424949238
+  - 25.547
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3-nut-1
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 5.656854249492381
+  - 5.65685424949238
+  - 19.197
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3x10-csk-2
+  model: design/bam-v2/models/m3x10-csk.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -5.65685424949238
+  - 5.656854249492381
+  - 25.547
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3-nut-2
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -5.65685424949238
+  - 5.656854249492381
+  - 19.197
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3x10-csk-3
+  model: design/bam-v2/models/m3x10-csk.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -5.6568542494923815
+  - -5.65685424949238
+  - 25.547
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3-nut-3
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -5.6568542494923815
+  - -5.65685424949238
+  - 19.197
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3x10-csk-4
+  model: design/bam-v2/models/m3x10-csk.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 5.656854249492379
+  - -5.6568542494923815
+  - 25.547
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: coupling-m3-nut-4
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 5.656854249492379
+  - -5.6568542494923815
+  - 19.197
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3x12-1
+  model: design/bam-v2/models/m3x12-shcs.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -13.5
+  - -13.5
+  - 28.197
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3-nut-1
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -13.5
+  - -13.5
+  - 19.097
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3x12-2
+  model: design/bam-v2/models/m3x12-shcs.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -13.5
+  - 13.5
+  - 28.197
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3-nut-2
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - -13.5
+  - 13.5
+  - 19.097
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3x12-3
+  model: design/bam-v2/models/m3x12-shcs.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 13.5
+  - -13.5
+  - 28.197
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3-nut-3
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 13.5
+  - -13.5
+  - 19.097
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3x12-4
+  model: design/bam-v2/models/m3x12-shcs.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 13.5
+  - 13.5
+  - 28.197
+  rotation:
+  - 0
+  - 0
+  - 0
+  color: '#b4b8be'
+- id: body-m3-nut-4
+  model: design/bam-v2/models/m3-nut.step
+  kind: bought
+  joint_node: turntable
+  position:
+  - 13.5
+  - 13.5
+  - 19.097
+  rotation:
+  - 180
+  - 0
+  - 0
+  color: '#b4b8be'
+allow_contact:
+- - motor-m3x10-1
+  - yaw-motor-direct
+- - motor-m3x10-2
+  - yaw-motor-direct
+- - motor-m3x10-3
+  - yaw-motor-direct
+- - motor-m3x10-4
+  - yaw-motor-direct
+- - cover-m3x25-1
+  - cover-m3-insert-1
+- - cover-m3-insert-1
+  - yaw-base-housing
+- - cover-m3x25-2
+  - cover-m3-insert-2
+- - cover-m3-insert-2
+  - yaw-base-housing
+- - cover-m3x25-3
+  - cover-m3-insert-3
+- - cover-m3-insert-3
+  - yaw-base-housing
+- - cover-m3x25-4
+  - cover-m3-insert-4
+- - cover-m3-insert-4
+  - yaw-base-housing
+- - coupling-m3x10-csk-1
+  - coupling-m3-nut-1
+- - coupling-m3x10-csk-2
+  - coupling-m3-nut-2
+- - coupling-m3x10-csk-3
+  - coupling-m3-nut-3
+- - coupling-m3x10-csk-4
+  - coupling-m3-nut-4
+- - body-m3x12-1
+  - body-m3-nut-1
+- - body-m3x12-2
+  - body-m3-nut-2
+- - body-m3x12-3
+  - body-m3-nut-3
+- - body-m3x12-4
+  - body-m3-nut-4
+allow_contact_reasons:
+- M3 screw into the motor tapped hole; 4.5 mm nominal engagement, actual thread depth
+  unverified.
+- M3 screw into the motor tapped hole; 4.5 mm nominal engagement, actual thread depth
+  unverified.
+- M3 screw into the motor tapped hole; 4.5 mm nominal engagement, actual thread depth
+  unverified.
+- M3 screw into the motor tapped hole; 4.5 mm nominal engagement, actual thread depth
+  unverified.
+- M3 thread in the heat-set insert.
+- Heat-set insert knurl (4.6 mm) melted into its 4.0 mm hole by design.
+- M3 thread in the heat-set insert.
+- Heat-set insert knurl (4.6 mm) melted into its 4.0 mm hole by design.
+- M3 thread in the heat-set insert.
+- Heat-set insert knurl (4.6 mm) melted into its 4.0 mm hole by design.
+- M3 thread in the heat-set insert.
+- Heat-set insert knurl (4.6 mm) melted into its 4.0 mm hole by design.
+- Nominal thread engagement.
+- Nominal thread engagement.
+- Nominal thread engagement.
+- Nominal thread engagement.
+- Nominal M3 thread; 0.5 mm beyond the captive nut.
+- Nominal M3 thread; 0.5 mm beyond the captive nut.
+- Nominal M3 thread; 0.5 mm beyond the captive nut.
+- Nominal M3 thread; 0.5 mm beyond the captive nut.
+unverified:
+- motor and coupling dimensions
+- printed journal wear and cover lip strength
+- yaw endstop mount/cam must be redesigned; old socket mount removed
+- upper vendor meshes have no STEP solids; not covered by this boolean check

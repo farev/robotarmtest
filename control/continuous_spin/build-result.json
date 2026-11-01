@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "sketch": "control/continuous_spin",
+  "board": "uno",
+  "tool": "hw_build",
+  "ok": true,
+  "ram_bytes": 331,
+  "ram_total": 2048,
+  "flash_bytes": 5510,
+  "flash_total": 32256,
+  "warnings_in_successful_build_log": 0,
+  "hardware_tested": false,
+  "usb_boards_detected": 1,
+  "notes": "A revision compiled successfully with hw_build; host pin simulation passed. No flashing or serial commands sent to hardware.",
+  "revision": "independent-a-axis",
+  "usb_board": "uno",
+  "usb_port": "/dev/cu.usbmodem2101",
+  "host_pin_simulation": "passed: A step output, safe boot/stop, status, invalid commands, XYZA regression and lowercase A"
+}

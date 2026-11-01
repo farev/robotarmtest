@@ -11,3 +11,7 @@ __pycache__/
 .agents/skills/
 .mechy/subagents/
 .mechy/installed-bundle.json
+
+# PlatformIO build output
+.pio/
+.mechy/pio/

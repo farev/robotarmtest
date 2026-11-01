@@ -1,0 +1,151 @@
+---
+schema_version: 1
+variant: v1
+configuration: v1
+registry: design/configs.yaml
+selection:
+  part.base-shell: v1
+  part.base-deck: v1
+  part.bearing-cap: v1
+  part.yaw-spacer-outer: v1
+  part.motor-j1: v1
+  part.bearing-6806-upper: v1
+  part.bearing-6806-lower: v1
+  part.uno-cnc-shield: v1
+  part.turret-hub: v1
+  part.yaw-spacer-inner: v1
+  part.turret-clamp: v1
+  part.shoulder-tower: v1
+  part.shoulder-pulley-80t: v1
+  part.pulley-j1-20t: v1
+  part.belt-j1: v1
+  part.rod-shoulder: v1
+  part.bearing-shim: v1
+  part.collar-shoulder-in: v1
+  part.bearing-shim-2: v1
+  part.collar-shoulder-out: v1
+  part.upper-arm: v1
+  part.pack-cover: v1
+  part.pack-carriage: v1
+  part.bearing-608-sh-1: v1
+  part.bearing-608-sh-2: v1
+  part.motor-j2: v1
+  part.pulley-j2-20t: v1
+  part.rod-intermediate: v1
+  part.bearing-625-1: v1
+  part.bearing-625-2: v1
+  part.pulley-s1-60t: v1
+  part.pulley-s2-20t: v1
+  part.motor-j3: v1
+  part.pulley-j3-20t: v1
+  part.belt-s1: v1
+  part.belt-s2: v1
+  part.belt-j3: v1
+  part.rod-elbow: v1
+  part.collar-elbow-in: v1
+  part.bearing-shim-3: v1
+  part.collar-elbow-out: v1
+  part.forearm: v1
+  part.forearm-cover: v1
+  part.bearing-608-el-1: v1
+  part.bearing-608-el-2: v1
+  part.motor-j4: v1
+  part.hub-j4: v1
+  part.screw-j2-1: v1
+  part.screw-j2-2: v1
+  part.screw-j2-3: v1
+  part.screw-j2-4: v1
+  part.screw-carriage-1: v1
+  part.screw-carriage-2: v1
+  part.screw-tower-foot-1: v1
+  part.screw-tower-foot-2: v1
+  part.screw-tower-foot-3: v1
+  part.screw-tower-foot-4: v1
+  part.screw-j1-1: v1
+  part.screw-j1-2: v1
+  part.screw-j1-3: v1
+  part.screw-j1-4: v1
+  part.screw-shaft-lock: v1
+  part.gripper-base: v1
+  part.gripper-finger-left: v1
+  part.gripper-finger-right: v1
+  part.servo-gripper: v1
+  part.coupon-fits: v1
+  material.coupon-fits: PLA
+  part.coupon-yaw: v1
+  material.coupon-yaw: PLA
+  material.base-shell: PLA
+  material.base-deck: PETG
+  material.bearing-cap: PLA
+  material.yaw-spacer-outer: PLA
+  material.turret-hub: PLA
+  material.yaw-spacer-inner: PLA
+  material.turret-clamp: PLA
+  material.shoulder-tower: PLA
+  material.shoulder-pulley-80t: PLA
+  material.bearing-shim: PLA
+  material.upper-arm: PETG
+  material.pack-cover: PETG
+  material.pack-carriage: PETG
+  material.forearm: PETG
+  material.forearm-cover: PLA
+  material.gripper-base: PLA
+  material.gripper-finger-left: PLA
+  material.gripper-finger-right: PLA
+  component.01: manifest
+  component.02: manifest
+  component.03: manifest
+  component.04: manifest
+  component.05: manifest
+  component.06: manifest
+  component.07: manifest
+  component.08: manifest
+  component.09: manifest
+  component.10: manifest
+  component.11: manifest
+  component.12: manifest
+  component.13: manifest
+  component.14: manifest
+  component.15: manifest
+  component.16: manifest
+  component.17: manifest
+  component.18: manifest
+  component.19: manifest
+  component.20: manifest
+  component.21: 
+  component.22: manifest
+  component.23: manifest
+  component.24: manifest
+  component.25: manifest
+  component.26: 
+  addon.power-adapter: supplied
+  addon.homing: lever
+  addon.fuse: 7.5A
+  addon.usb: usb-a-b
+  addon.base-fixing: wood-screws
+  addon.cable-wrap: 
+  addon.heat-shrink: stock
+  addon.threadlocker: plastic-safe
+  addon.insert-tool: 
+  addon.hex-keys: 
+  addon.rod-cutting: 
+  addon.gripper: mg90s-claw
+  addon.finish: black
+  fastener.M3x6: studio-stock
+  fastener.M3x8: studio-stock
+  fastener.M3x10: studio-stock
+  fastener.M3x12: studio-stock
+  fastener.M3x30: studio-stock
+  fastener.M3-nut: studio-stock
+  fastener.M3-washer: studio-stock
+  fastener.M3-fender-washer-12mm-OD: studio-stock
+  fastener.M2x8: studio-stock
+  fastener.M2-nut: studio-stock
+purpose: viewing_only
+approved: false
+payload_kg: 0.6
+capacity_verified: false
+new_concept_selected: false
+finish: black
+note: Recorded manifest picks; null means unresolved or not selected. CAD colors and
+  geometry unchanged.

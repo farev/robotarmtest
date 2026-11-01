@@ -1,0 +1,29 @@
+item,qty,spec,used_for,source,est_unit_usd
+Arduino Uno R3,1,"ATmega328P, USB-B (user's)",controller,user's stock / BAM bom,12.0
+CNC Shield V3,1,"Protoneer-style, 4 driver sockets X/Y/Z/A (user's)",controller,user's stock / BAM bom,5.0
+A4988 stepper driver,3,with heatsink; Vref for ~0.8 A (user's),"X=upper, Y=lower, Z=yaw motors (vendor pinout_uno.h)",user's stock / BAM bom,2.0
+A4988 stepper driver (spare),1,A socket,open decision: vendor rail module or wrist servo,user's stock / BAM bom,2.0
+NEMA 17 stepper 42SHDC3026-15B,3,"bipolar 4-wire, 0.9 A/phase, ~0.30 N·m holding (ASSUMED)","base yaw, lower arm, upper arm",user's stock / BAM bom,12.0
+NEMA 17 stepper 42SHDC3026-15B (spare),1,4th motor owned,open decision: rail or wrist servo,user's stock / BAM bom,12.0
+Power supply 24 V 6 A,1,user's; A4988 VMOT <= 35 V so 24 V is fine,motor power,user's stock / BAM bom,18.0
+Electrolytic capacitor 100 uF 50 V,1,across the shield's motor power input (user's),,user's stock / BAM bom,0.3
+GT2 pulley 20T,3,"6 mm belt, 5 mm bore",one per driven motor,user's stock / BAM bom,1.5
+GT2 closed belt 200 mm,3,6 mm wide closed loop,arm joints (vendor),user's stock / BAM bom,2.0
+51105 thrust bearing,1,25x42x11,base socket,user's stock / BAM bom,3.0
+F624ZZ flanged bearing,6,4x13x5,"lever, main body pivots",user's stock / BAM bom,0.4
+F686ZZ flanged bearing,12,6x13x5,"shank, triplate, manipulator pivots",user's stock / BAM bom,0.4
+Endstop microswitch,3,NO to GND,X/Y/Z homing (vendor),user's stock / BAM bom,0.5
+Servo MG90S (gripper toolhead),1,9 g metal gear; only with toolhead: gripper,gripper,user's stock / BAM bom,3.0
+M2x10 screw + nut,6,,endstops,user's stock / BAM bom,0.1
+M3x6 screw,36,,arm fasteners,user's stock / BAM bom,0.1
+M3 nut,8,,,user's stock / BAM bom,0.05
+M4x10 screw,6,,arm,user's stock / BAM bom,0.1
+M4x16 screw,8,,arm,user's stock / BAM bom,0.1
+M4x20 screw,6,,arm,user's stock / BAM bom,0.1
+M4 nut,14,,arm,user's stock / BAM bom,0.05
+M6x20 screw,1,,arm,user's stock / BAM bom,0.2
+M6x40 screw,2,,arm,user's stock / BAM bom,0.2
+M6x50 screw,1,,arm,user's stock / BAM bom,0.2
+M6 nut,4,,arm,user's stock / BAM bom,0.05
+Stepper cable,3,"4-wire, 1 m",motor wiring,user's stock / BAM bom,1.5
+Silicone wire 18 AWG,2,"red/black, 1 m",supply to shield,user's stock / BAM bom,1.0

@@ -1,0 +1,25 @@
+{
+  "glb": {
+    "nodes": 140,
+    "meshes": 128,
+    "triangles": 255804,
+    "bytes": 7789888
+  },
+  "removed_base_meshes": [
+    "NEMA_17_(yaw)",
+    "GT2_20T_pulley",
+    "gripper",
+    "yaw_90T_gear",
+    "socket",
+    "yaw_endstop",
+    "gripper_2",
+    "gripper_2",
+    "gripper_motor_(28BYJ;_ref_arm_uses_a_servo)",
+    "gripper_motor_(28BYJ;_ref_arm_uses_a_servo)_2",
+    "gripper_2",
+    "gripper_2"
+  ],
+  "upper_meshes_preserved": 32,
+  "mjcf_valid": true,
+  "variant": "bam-v2"
+}

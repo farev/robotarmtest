@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="740" viewBox="0 0 1100 740">
+<title>42SHDC3026-15B motor datum measurement handoff</title><desc>Blank measurement diagram, not a dimensional drawing. Measure all four owned motors; no nominal NEMA17 fit assumed.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M7 3.5 L0 0 L0 7 Z" fill="#00847c"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#172b42}.title{font-size:27px;font-weight:bold}.head{font-size:20px;font-weight:bold}.body{font-size:17px}.small{font-size:15px}.shape{stroke:#365873;stroke-width:3;fill:#e3ebf4}.dim{stroke:#00847c;stroke-width:2;marker-start:url(#arrow);marker-end:url(#arrow)}.guide{stroke:#8396a7;stroke-width:1;stroke-dasharray:5 4}</style>
+<rect width="1100" height="740" fill="#f3f6fa"/><text x="30" y="42" class="title">Measure the owned motor · do not assume NEMA17 fit</text><text x="30" y="72" class="body">42SHDC3026-15B • repeat for M1, M2, M3, M4 • blank values are UNKNOWN • schematic, not to scale</text>
+<rect x="25" y="95" width="490" height="365" rx="12" fill="white"/><rect x="530" y="95" width="545" height="365" rx="12" fill="white"/>
+<text x="45" y="126" class="head">Front view · datum B = shaft axis</text>
+<rect x="125" y="183" width="180" height="180" rx="13" class="shape"/>
+<circle cx="215" cy="273" r="53" fill="white" stroke="#365873" stroke-width="3"/><circle cx="215" cy="273" r="17" fill="#d5a765" stroke="#365873" stroke-width="2"/>
+<g fill="white" stroke="#365873" stroke-width="3"><circle cx="148" cy="206" r="8"/><circle cx="282" cy="206" r="8"/><circle cx="148" cy="340" r="8"/><circle cx="282" cy="340" r="8"/></g>
+<path d="M100 273 H330 M215 155 V390" class="guide"/><path d="M148 206 V153 M282 206 V153 M148 158 H282" class="dim"/>
+<text x="171" y="148" class="small">bolt pitch X</text><path d="M335 206 V340" class="dim"/><text x="348" y="269" class="small">pitch Y</text>
+<path d="M125 399 H305" class="dim"/><text x="151" y="426" class="small">body width W</text><path d="M90 183 V363" class="dim"/><text x="42" y="282" class="small">H</text>
+<path d="M236 258 L374 204" stroke="#365873" fill="none"/><text x="363" y="185" class="small">shaft Ø d</text><path d="M247 314 L367 354" stroke="#365873" fill="none"/><text x="350" y="378" class="small">pilot Ø P</text>
+<text x="550" y="126" class="head">Side view · A = front face; C = connector side</text>
+<rect x="626" y="200" width="205" height="140" class="shape"/><rect x="831" y="236" width="12" height="68" class="shape"/><rect x="843" y="261" width="110" height="19" fill="#d5a765" stroke="#365873" stroke-width="3"/>
+<path d="M894 262 H946" stroke="#365873" stroke-width="5"/><rect x="653" y="179" width="45" height="21" fill="#e69738" stroke="#365873" stroke-width="2"/>
+<path d="M830 163 V381 M604 271 H990" class="guide"/>
+<text x="816" y="156" class="head">A</text><text x="659" y="163" class="small">C</text><text x="982" y="265" class="small">B</text>
+<path d="M626 374 H831" class="dim"/><text x="678" y="400" class="small">body length L</text><path d="M831 354 H953" class="dim"/><text x="869" y="383" class="small">projection S</text>
+<path d="M895 224 H953" class="dim"/><text x="893" y="204" class="small">flat length F</text>
+<text x="550" y="430" class="small">Also: pilot height, flat depth, rear shaft, cable bend / plug keepout</text>
+<rect x="25" y="477" width="1050" height="230" rx="12" fill="#e3ebf4"/>
+<text x="44" y="508" class="head">Measurement record · copy for each motor</text>
+<text x="44" y="538" class="body">ID: ____   W/H/L: ____ / ____ / ____   bolt X/Y: ____ / ____   thread / depth: ____ / ____</text>
+<text x="44" y="568" class="body">shaft d/S/F: ____ / ____ / ____   pilot Ø / height: ____ / ____   mass: ____ kg</text>
+<text x="44" y="598" class="body">Instrument / uncertainty: ____   phase pairs / resistance: ____   connector keepout: ____</text>
+<text x="44" y="635" class="small">Record lengths in metres; if calipers show mm, convert and retain the original reading. Photograph label and views.</text>
+<text x="44" y="661" class="small">Fit handoff: pulley bore + shaft engagement + setscrew position + mounting screw depth + cable clearance.</text>
+<text x="44" y="687" class="small">Torque, speed, current calibration and temperature need separate evidence. No motor has been measured in this task.</text>
+</svg>

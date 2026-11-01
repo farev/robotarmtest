@@ -1,0 +1,5 @@
+id: T103-sim-pick-cycle
+role: sim
+provider: demo
+goal: "Re-run the pick-and-place cycle with the lighter forearm."
+depends_on: ["T102-cad-forearm-lighten"]

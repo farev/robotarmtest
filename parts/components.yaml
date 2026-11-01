@@ -27,6 +27,7 @@ components:
     compat: unverified
     note: Board named by the user (Arduino IDE / PlatformIO). Model built from the official Eagle file, stacked with the CNC shield.
   - name: CNC Shield V3 (Protoneer-style clone)
+    image: parts/images/owned-cnc-shield-setup.jpg
     function: Stepper driver board
     status: owned
     price_note: owned
@@ -38,6 +39,7 @@ components:
     compat: unverified
     note: "Generic V3 clone assumed (user: 'CNC Shield V3'). 4 sockets = exactly the 4 steppers; A axis needs the clone's D12/D13 jumpers set for 4th-axis step/dir."
   - name: A4988 stepper driver module (with heatsink)
+    image: parts/images/owned-cnc-shield-setup.jpg
     function: Stepper drivers
     status: owned
     price_note: owned
@@ -45,7 +47,7 @@ components:
     specs: [8-35 V motor supply, up to 1 A without cooling / 2 A with, 1/16 microstep, Vref sets current]
     datasheet: https://www.pololu.com/product/1182
     compat: unverified
-    note: Quantity assumed 4 (one per socket). Sense resistor on clones is usually R100 (0.1 ohm); read it before setting Vref.
+    note: Photo IMG_1572 shows 4 installed driver modules with heatsinks; A4988 identification remains from the project brief because the chips are covered. Sense resistance and current setting remain unverified; read the resistors before setting Vref.
   - name: 100 µF 50 V electrolytic capacitor
     function: Motor supply decoupling
     status: owned

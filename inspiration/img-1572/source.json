@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "kind": "image",
+  "key": "inspiration/IMG_1572.HEIC",
+  "slug": "img-1572",
+  "input": "inspiration/IMG_1572.HEIC",
+  "title": "IMG_1572",
+  "url": null,
+  "duration_s": null,
+  "license": null,
+  "path": "inspiration/IMG_1572.HEIC",
+  "width": 1536,
+  "height": 2048,
+  "original_format": "JPEG",
+  "image": "inspiration/img-1572/image.jpg",
+  "thumb": "inspiration/img-1572/thumb.jpg",
+  "note": "inspiration/notes/img-1572.md",
+  "note_sha256": "215322cbc003f52d64c0864ca4ea43d6a74d6c05839c4feb50c622bde91bfee2",
+  "warnings": []
+}

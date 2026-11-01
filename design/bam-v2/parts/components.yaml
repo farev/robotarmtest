@@ -1,0 +1,51 @@
+scope: bam-v2 delta only; shared v1 gallery is unchanged
+components:
+- name: 42SHDC3026-15B NEMA 17 stepper
+  status: owned
+  qty: 1
+  function: Yaw drive
+  model: ../../parts/models/nema17-42shdc.step
+  datasheet: unverified
+  compat: unverified
+  compat_note: Exact shaft length, pilot, thread depth and torque curve not measured.
+- name: 5 mm flange coupling
+  status: candidate
+  qty: 1
+  function: Direct yaw torque coupling
+  url: https://vxb.com/products/4-pack-5mm-rigid-flange-shaft-couplings-with-8-scr
+  datasheet: https://vxb.com/products/4-pack-5mm-rigid-flange-shaft-couplings-with-8-scr
+  stock_checked: unverified
+  compat: unverified
+  compat_note: 16 mm PCD and 2 mm flange thickness not stated on exact listing.
+  note: 'Page opened 2026-10-30: 4-pack $39.99, US shipping advertised; explicit available
+    quantity not verified. No purchase selected.'
+- name: 51105 thrust bearing
+  status: candidate
+  qty: 1
+  function: Yaw axial support
+  stock_checked: unverified
+  datasheet: unverified
+  compat: unverified
+  specs:
+  - 25 x 42 x 11 mm handbook-typical envelope
+  - axial load only
+  note: Retained from original bam-v2 BOM; ownership and exact bearing supplier not
+    verified.
+- name: Direct-drive base fasteners
+  status: candidate
+  qty: 1
+  function: Fasteners
+  stock_checked: unverified
+  datasheet: unverified
+  compat: unverified
+  specs:
+  - 4 M3x10 SHCS
+  - 4 M3x10 countersunk
+  - 4 M3x12 SHCS
+  - 4 M3x8 SHCS
+  - 4 M3 heat-set inserts
+  - 8 M3 nuts
+  - 4 bench anchors, support-dependent
+  note: Variant delta; upper hardware quantities and what the CAD shows are in bom.csv
+    (modeled_in_cad). Nominal ISO screw/nut solids checked, purchased tolerances unverified.
+orders: []

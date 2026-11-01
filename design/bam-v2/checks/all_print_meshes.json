@@ -1,0 +1,244 @@
+{
+  "arm_main_body": {
+    "extents_mm": [
+      71.0,
+      52.0,
+      83.003
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 22064,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_gear_body": {
+    "extents_mm": [
+      56.79,
+      6.5,
+      56.809
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 49028,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_endstop_bracket": {
+    "extents_mm": [
+      14.0,
+      52.0,
+      50.363
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 6310,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_stabilizer": {
+    "extents_mm": [
+      3.0,
+      52.0,
+      18.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 2044,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_lever": {
+    "extents_mm": [
+      55.829,
+      8.0,
+      37.891
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 4216,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_lower_shank_140": {
+    "extents_mm": [
+      161.411,
+      30.5,
+      25.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 4786,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_upper_shank_140": {
+    "extents_mm": [
+      196.0,
+      20.0,
+      15.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 3960,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_pleuel_140": {
+    "extents_mm": [
+      136.112,
+      103.328,
+      6.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 3102,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_pleuel_bend_lower_140": {
+    "extents_mm": [
+      124.534,
+      6.0,
+      117.58
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 3112,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_pleuel_bend_upper_140": {
+    "extents_mm": [
+      147.828,
+      6.0,
+      83.406
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 3120,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_triplate": {
+    "extents_mm": [
+      57.0,
+      9.5,
+      36.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 3654,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "arm_manipulator": {
+    "extents_mm": [
+      40.0,
+      43.0,
+      32.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 3168,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "tool_shank_calibrator_140": {
+    "extents_mm": [
+      156.0,
+      164.0,
+      12.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 1,
+    "triangles": 1628,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "yaw-base-housing": {
+    "extents_mm": [
+      114.947,
+      115.973,
+      55.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 17562,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "yaw-bearing-spindle": {
+    "extents_mm": [
+      56.0,
+      56.0,
+      23.5
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 3046,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "yaw-turntable-adapter": {
+    "extents_mm": [
+      46.0,
+      46.0,
+      4.5
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 4736,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "yaw-bearing-cover": {
+    "extents_mm": [
+      77.0,
+      77.0,
+      21.4
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 4928,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "yaw-fits-coupon": {
+    "extents_mm": [
+      136.0,
+      74.0,
+      9.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 4412,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "gripper-base": {
+    "extents_mm": [
+      60.0,
+      50.0,
+      10.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 5736,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "gripper-finger": {
+    "extents_mm": [
+      30.0,
+      24.617,
+      24.7
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 4852,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "gripper-drive-disc": {
+    "extents_mm": [
+      20.0,
+      20.0,
+      5.0
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 6436,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  },
+  "gripper-screw-retainer": {
+    "extents_mm": [
+      12.0,
+      12.0,
+      2.5
+    ],
+    "fits_bed_xyz": true,
+    "boundary_or_nonmanifold_edges": 0,
+    "triangles": 2064,
+    "scope": "mesh/bed screening only; does not establish wall thickness or print release"
+  }
+}

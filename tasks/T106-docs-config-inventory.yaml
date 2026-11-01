@@ -1,0 +1,19 @@
+id: T106-docs-config-inventory
+role: docs
+provider: codex
+tier: fast
+goal: Record answered constraints and the existing v1 part combination in the configuration registry.
+brief: |
+  Limit this inventory pass to 20 minutes; no geometry changes or purchases.
+  Payload is 600 g, remaining parts budget under $100, builder a professional engineer, finish black and MG90S two-finger claw selected.
+  Reconcile requirements with the digest, preserving PLA preference and documented motor-clamp material exceptions without certifying thermal performance.
+  Create slots and evidenced choices for every swappable component, material and add-on from existing manifests; record v1 picks under built.
+  Initialize selection to v1 for viewing only, not approval at 600 g; label unresolved mappings and do not invent alternatives.
+  Log minor defaults; leave concept, motor-fit and budget trade-offs open. Friend handles firmware.
+  Open the note with What/Where and end with Not verified and Open decisions lists.
+scout: false
+inputs: [.mechy/digest.md, requirements.yaml, decisions.md, parts/components.yaml, parts/compatibility.yaml, parts/build_plan.md, design/v1/assembly.yaml, design/v1/print_list.csv]
+tools: [progress_report, assumption_log]
+outputs: [requirements.yaml, design/configs.yaml, design/selection.yaml, tasks/summaries/T106-docs-config-inventory.md]
+depends_on: []
+done_when: Answered constraints are recorded and every identifiable swappable v1 part has a slot and built pick with unresolved mappings explicitly listed and no new concept selected.

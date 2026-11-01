@@ -1,0 +1,11 @@
+{
+  "provider": "claude",
+  "session_id": "01a18d6f-06d7-7d10-80df-85d58ae2bc12",
+  "status": "error",
+  "request": "20261030-172552.md",
+  "completed": [
+    "20261030-113025.md",
+    "20261030-113326.md",
+    "20261030-172552.md"
+  ]
+}

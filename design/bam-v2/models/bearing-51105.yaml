@@ -1,0 +1,21 @@
+part: 51105 thrust bearing
+model_source: handbook dimensions, unverified supplier
+frame: 'axis Z; housing-washer bottom face z=0; washers, cage and 12 balls (generator:
+  design/bam-v2/hardware.py)'
+source_url: https://www.skf.com/group/products/rolling-bearings/ball-bearings/thrust-ball-bearings
+source_file: /Users/Carlo/Empire/mechy/engine/mechy/data/standard_parts/bearings_thrust.csv
+critical_dims:
+- name: bore
+  value_mm: 25
+  model_mm: 25
+  source: handbook_typical
+- name: outer diameter
+  value_mm: 42
+  model_mm: 42
+  source: handbook_typical
+- name: height
+  value_mm: 11
+  model_mm: 11
+  source: handbook_typical
+note: 0.056 kg from same table. Exact supplier variant, race dimensions and load rating
+  not verified.

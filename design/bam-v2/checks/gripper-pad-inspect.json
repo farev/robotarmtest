@@ -1,0 +1,54 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-pad.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -13.0,
+      0.0,
+      0.0
+    ],
+    "max": [
+      13.0,
+      22.0,
+      6.5
+    ],
+    "size": [
+      26.0,
+      22.0,
+      6.5
+    ]
+  },
+  "volume_mm3": 3434.18,
+  "holes": [
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -7.0,
+        11.0,
+        1.5
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        7.0,
+        11.0,
+        1.5
+      ],
+      "depth_mm": 3.0
+    }
+  ],
+  "partial_arcs": []
+}

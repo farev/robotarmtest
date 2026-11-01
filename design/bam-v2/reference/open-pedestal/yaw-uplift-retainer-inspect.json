@@ -1,0 +1,152 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/BAM Direct Drive Prebake/design/bam-v2/printed/yaw-uplift-retainer.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -45.0,
+      -45.0,
+      0.0
+    ],
+    "max": [
+      45.0,
+      45.0,
+      21.0
+    ],
+    "size": [
+      90.0,
+      90.0,
+      21.0
+    ]
+  },
+  "volume_mm3": 14765.49,
+  "holes": [
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        35.5,
+        1.65
+      ],
+      "depth_mm": 3.3
+    },
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -35.5,
+        0.0,
+        1.65
+      ],
+      "depth_mm": 3.3
+    },
+    {
+      "diameter_mm": 50.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "depth_mm": 2.0
+    },
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        35.5,
+        0.0,
+        1.65
+      ],
+      "depth_mm": 3.3
+    },
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        -35.5,
+        1.65
+      ],
+      "depth_mm": 3.3
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        35.5,
+        12.15
+      ],
+      "depth_mm": 17.7
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -35.5,
+        0.0,
+        12.15
+      ],
+      "depth_mm": 17.7
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        35.5,
+        0.0,
+        12.15
+      ],
+      "depth_mm": 17.7
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        -35.5,
+        12.15
+      ],
+      "depth_mm": 17.7
+    }
+  ],
+  "partial_arcs": []
+}

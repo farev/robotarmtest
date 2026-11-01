@@ -1,0 +1,19 @@
+id: "T110-controls-uno-blink-check"
+role: "controls"
+provider: "claude"
+tier: "fast"
+goal: "Verify the connected Uno is blinking and restore the verified blink firmware if needed."
+brief: |
+  Finish within 15 minutes; this responds to inbox/20261030-111114.md, later than the completed T109 test.
+  Planner detected board uno, Uno R3, /dev/cu.usbmodem2101, serial 75131313832351018082; recheck identity before any upload.
+  Reuse firmware/uno-blink: built-in LED, 1 s on/off, 115200 baud, D8 HIGH and no motor step pulses; friend owns arm firmware.
+  First capture live serial for at least three full cycles; if absent or wrong, copy source/config into firmware/uno-blink-check/, compile, flash and repeat checks.
+  Preserve T109 artifacts and results; inspect D13 shield pin sharing before flashing and do not add motor motion.
+  Write fresh verification evidence and a clear user-facing LED location/timing note; serial proves execution, not visible light.
+  Open summary with What/Where, include Expected/Got/PASS-FAIL table and commands, end with Not verified and Open decisions.
+scout: false
+inputs: ["inbox/20261030-111114.md", "firmware/uno-blink/summary.md", "firmware/uno-blink/src/main.cpp", "firmware/uno-blink/platformio.ini", "firmware/uno-blink/README.md", "hw/motors.yaml", "hw/drivers.yaml"]
+tools: ["progress_report", "hw.boards", "hw.read", "hw.build", "hw.flash"]
+outputs: ["firmware/uno-blink-check/summary.md", "firmware/uno-blink-check/README.md"]
+depends_on: []
+done_when: "The matching Uno produces at least three verified ON/OFF cycles and the fresh summary records whether reflash was needed and leaves physical light observation explicitly unverified."

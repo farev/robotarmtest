@@ -1,0 +1,297 @@
+{
+  "yaw-base-housing": {
+    "fits_bed": true,
+    "fitting_orientations": [
+      {
+        "axes": "xyz",
+        "size_mm": [
+          114.95,
+          116.0,
+          55.0
+        ]
+      },
+      {
+        "axes": "xzy",
+        "size_mm": [
+          114.95,
+          55.0,
+          116.0
+        ]
+      },
+      {
+        "axes": "yxz",
+        "size_mm": [
+          116.0,
+          114.95,
+          55.0
+        ]
+      },
+      {
+        "axes": "yzx",
+        "size_mm": [
+          116.0,
+          55.0,
+          114.95
+        ]
+      },
+      {
+        "axes": "zxy",
+        "size_mm": [
+          55.0,
+          114.95,
+          116.0
+        ]
+      },
+      {
+        "axes": "zyx",
+        "size_mm": [
+          55.0,
+          116.0,
+          114.95
+        ]
+      }
+    ],
+    "min_wall_mm": 1.3,
+    "thin_walls": false,
+    "overhang_area_mm2": 255.23,
+    "small_holes": [],
+    "slicer": "sliced ok",
+    "ok": false
+  },
+  "yaw-bearing-cover": {
+    "fits_bed": true,
+    "fitting_orientations": [
+      {
+        "axes": "xyz",
+        "size_mm": [
+          77.0,
+          77.0,
+          21.4
+        ]
+      },
+      {
+        "axes": "xzy",
+        "size_mm": [
+          77.0,
+          21.4,
+          77.0
+        ]
+      },
+      {
+        "axes": "yxz",
+        "size_mm": [
+          77.0,
+          77.0,
+          21.4
+        ]
+      },
+      {
+        "axes": "yzx",
+        "size_mm": [
+          77.0,
+          21.4,
+          77.0
+        ]
+      },
+      {
+        "axes": "zxy",
+        "size_mm": [
+          21.4,
+          77.0,
+          77.0
+        ]
+      },
+      {
+        "axes": "zyx",
+        "size_mm": [
+          21.4,
+          77.0,
+          77.0
+        ]
+      }
+    ],
+    "min_wall_mm": 1.2,
+    "thin_walls": false,
+    "overhang_area_mm2": 72.37,
+    "small_holes": [],
+    "slicer": "sliced ok",
+    "ok": false
+  },
+  "yaw-bearing-spindle": {
+    "fits_bed": true,
+    "fitting_orientations": [
+      {
+        "axes": "xyz",
+        "size_mm": [
+          56.0,
+          56.0,
+          23.5
+        ]
+      },
+      {
+        "axes": "xzy",
+        "size_mm": [
+          56.0,
+          23.5,
+          56.0
+        ]
+      },
+      {
+        "axes": "yxz",
+        "size_mm": [
+          56.0,
+          56.0,
+          23.5
+        ]
+      },
+      {
+        "axes": "yzx",
+        "size_mm": [
+          56.0,
+          23.5,
+          56.0
+        ]
+      },
+      {
+        "axes": "zxy",
+        "size_mm": [
+          23.5,
+          56.0,
+          56.0
+        ]
+      },
+      {
+        "axes": "zyx",
+        "size_mm": [
+          23.5,
+          56.0,
+          56.0
+        ]
+      }
+    ],
+    "min_wall_mm": 2.0,
+    "thin_walls": false,
+    "overhang_area_mm2": 68.81,
+    "small_holes": [],
+    "slicer": "sliced ok",
+    "ok": false
+  },
+  "yaw-fits-coupon": {
+    "fits_bed": true,
+    "fitting_orientations": [
+      {
+        "axes": "xyz",
+        "size_mm": [
+          136.0,
+          74.0,
+          9.0
+        ]
+      },
+      {
+        "axes": "xzy",
+        "size_mm": [
+          136.0,
+          9.0,
+          74.0
+        ]
+      },
+      {
+        "axes": "yxz",
+        "size_mm": [
+          74.0,
+          136.0,
+          9.0
+        ]
+      },
+      {
+        "axes": "yzx",
+        "size_mm": [
+          74.0,
+          9.0,
+          136.0
+        ]
+      },
+      {
+        "axes": "zxy",
+        "size_mm": [
+          9.0,
+          136.0,
+          74.0
+        ]
+      },
+      {
+        "axes": "zyx",
+        "size_mm": [
+          9.0,
+          74.0,
+          136.0
+        ]
+      }
+    ],
+    "min_wall_mm": 4.0,
+    "thin_walls": false,
+    "overhang_area_mm2": 0.0,
+    "small_holes": [],
+    "slicer": "sliced ok",
+    "ok": true
+  },
+  "yaw-turntable-adapter": {
+    "fits_bed": true,
+    "fitting_orientations": [
+      {
+        "axes": "xyz",
+        "size_mm": [
+          46.0,
+          46.0,
+          4.5
+        ]
+      },
+      {
+        "axes": "xzy",
+        "size_mm": [
+          46.0,
+          4.5,
+          46.0
+        ]
+      },
+      {
+        "axes": "yxz",
+        "size_mm": [
+          46.0,
+          46.0,
+          4.5
+        ]
+      },
+      {
+        "axes": "yzx",
+        "size_mm": [
+          46.0,
+          4.5,
+          46.0
+        ]
+      },
+      {
+        "axes": "zxy",
+        "size_mm": [
+          4.5,
+          46.0,
+          46.0
+        ]
+      },
+      {
+        "axes": "zyx",
+        "size_mm": [
+          4.5,
+          46.0,
+          46.0
+        ]
+      }
+    ],
+    "min_wall_mm": 2.0,
+    "thin_walls": false,
+    "overhang_area_mm2": 11.78,
+    "small_holes": [],
+    "slicer": "sliced ok",
+    "ok": false
+  }
+}

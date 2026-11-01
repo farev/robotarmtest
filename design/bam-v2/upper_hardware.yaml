@@ -1,0 +1,1100 @@
+scope: 'Hardware added to the preserved upper arm. Origins are in the vendor STEP
+  frame; axes columns are the local x/y/z of each model. Screw frames: head bearing
+  face at z=0, shank toward -z. Bearing frames: flange face at z=0, ring toward +z.
+  Nut frames: bearing face at z=0.'
+renamed_vendor_meshes:
+- index: 16
+  old: bearing_F624ZZ
+  new: bearing_F686ZZ_shoulder_1
+  recolored: true
+- index: 17
+  old: bearing_F624ZZ_2
+  new: bearing_F686ZZ_shoulder_2
+  recolored: true
+- index: 21
+  old: bearing_F624ZZ_2
+  new: bearing_F686ZZ_shoulder_3
+  recolored: true
+- index: 23
+  old: gripper_2
+  new: bearing_F686ZZ_wrist_1
+  recolored: true
+- index: 27
+  old: bearing_F624ZZ_2
+  new: bearing_F686ZZ_shoulder_4
+  recolored: true
+parts:
+- id: shoulder-axle-m6x50
+  model: design/bam-v2/models/m6x50-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -27.0
+  - 62.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M6x50 socket head screw
+  note: head in main-body counterbore; carries both 90T pulleys, lower shank and lever
+- id: shoulder-axle-nut
+  model: design/bam-v2/models/m6-nut.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -71.0
+  - 62.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M6 nut
+  note: opposite main-body counterbore
+- id: elbow-axle-m6x40
+  model: design/bam-v2/models/m6x40-shcs.step
+  kind: fastener
+  joint_node: upper_arm
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 11.685
+  - -39.0
+  - 143.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M6x40 socket head screw
+  note: clamped in the lower-shank fork; upper shank and triplate turn on it
+- id: elbow-axle-nut
+  model: design/bam-v2/models/m6-nut.step
+  kind: fastener
+  joint_node: upper_arm
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 11.685
+  - -71.6
+  - 143.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M6 nut
+  note: outside the triplate
+- id: wrist-axle-m6x40
+  model: design/bam-v2/models/m6x40-shcs.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 119.541
+  - -66.0
+  - 196.348
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M6x40 socket head screw
+  note: head in manipulator counterbore; upper shank turns on it
+- id: wrist-axle-nut
+  model: design/bam-v2/models/m6-nut.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 119.541
+  - -34.0
+  - 196.348
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M6 nut
+  note: outside the manipulator cheek
+- id: lever-pin-m4x20
+  model: design/bam-v2/models/m4x20-shcs.step
+  kind: fastener
+  joint_node: lever
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 64.048
+  - -49.6
+  - 44.965
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M4x20 socket head screw
+  note: lever to pleuel; clamps the pleuel bearing inner ring
+- id: lever-pin-nut
+  model: design/bam-v2/models/m4-nut.step
+  kind: fastener
+  joint_node: lever
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 64.048
+  - -35.5
+  - 44.965
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M4 nut
+  note: on the lever face
+- id: pleuel-pin-m4x16
+  model: design/bam-v2/models/m4x16-shcs.step
+  kind: fastener
+  joint_node: forearm
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - -24.381
+  - -43.4
+  - 126.084
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M4x16 socket head screw
+  note: pleuel to upper shank; threads into the 3.76 mm upper-shank hole
+- id: bend-lower-pin-m4x10
+  model: design/bam-v2/models/m4x10-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 70.0
+  - -81.1
+  - 74.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M4x10 socket head screw
+  note: lower levelling link to main body; threads into the 3.86 mm main-body hole
+- id: triplate-lower-pin-m4x20
+  model: design/bam-v2/models/m4x20-shcs.step
+  kind: fastener
+  joint_node: triplate
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - -18.315
+  - -81.1
+  - 155.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M4x20 socket head screw
+  note: lower levelling link to triplate
+- id: triplate-lower-pin-nut
+  model: design/bam-v2/models/m4-nut.step
+  kind: fastener
+  joint_node: triplate
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - -18.315
+  - -67.5
+  - 155.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M4 nut
+  note: 'in the triplate 8 mm pocket (nut corners 8.08 mm: light press)'
+- id: triplate-upper-pin-m4x16
+  model: design/bam-v2/models/m4x16-shcs.step
+  kind: fastener
+  joint_node: triplate
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 26.685
+  - -77.6
+  - 163.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M4x16 socket head screw
+  note: upper levelling link to triplate
+- id: triplate-upper-pin-nut
+  model: design/bam-v2/models/m4-nut.step
+  kind: fastener
+  joint_node: triplate
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 26.685
+  - -67.5
+  - 163.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M4 nut
+  note: in the triplate 8 mm pocket (light press)
+- id: manipulator-pin-m4x20
+  model: design/bam-v2/models/m4x20-shcs.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 134.53
+  - -77.6
+  - 216.371
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M4x20 socket head screw
+  note: upper levelling link to manipulator
+- id: manipulator-pin-nut
+  model: design/bam-v2/models/m4-nut.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 134.53
+  - -62.0
+  - 216.371
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M4 nut
+  note: in the manipulator pocket
+- id: bearing_F686ZZ_lever
+  model: design/bam-v2/models/f686zz.step
+  kind: bearing
+  joint_node: lever
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -43.1
+  - 62.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: F686ZZ flanged bearing
+  note: lever seat, shoulder axle
+- id: bearing_F686ZZ_triplate
+  model: design/bam-v2/models/f686zz.step
+  kind: bearing
+  joint_node: triplate
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 11.685
+  - -71.1
+  - 143.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: F686ZZ flanged bearing
+  note: triplate seat, elbow axle
+- id: bearing_F686ZZ_wrist_2
+  model: design/bam-v2/models/f686zz.step
+  kind: bearing
+  joint_node: forearm
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 119.541
+  - -42.4
+  - 196.348
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: F686ZZ flanged bearing
+  note: upper-shank seat, wrist axle
+- id: bearing_F624ZZ_pleuel_lever
+  model: design/bam-v2/models/f624zz.step
+  kind: bearing
+  joint_node: pleuel
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 64.048
+  - -49.5
+  - 44.965
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: F624ZZ flanged bearing
+  note: pleuel seat at the lever
+- id: bearing_F624ZZ_pleuel_shank
+  model: design/bam-v2/models/f624zz.step
+  kind: bearing
+  joint_node: pleuel
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - -24.381
+  - -43.5
+  - 126.084
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: F624ZZ flanged bearing
+  note: pleuel seat at the upper shank
+- id: bearing_F624ZZ_bend_lower_body
+  model: design/bam-v2/models/f624zz.step
+  kind: bearing
+  joint_node: bend_lower
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 70.0
+  - -81.0
+  - 74.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: F624ZZ flanged bearing
+  note: lower levelling link at the main body
+- id: bearing_F624ZZ_bend_lower_triplate
+  model: design/bam-v2/models/f624zz.step
+  kind: bearing
+  joint_node: bend_lower
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - -18.315
+  - -81.0
+  - 155.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: F624ZZ flanged bearing
+  note: lower levelling link at the triplate
+- id: bearing_F624ZZ_bend_upper_triplate
+  model: design/bam-v2/models/f624zz.step
+  kind: bearing
+  joint_node: bend_upper
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 26.685
+  - -77.5
+  - 163.744
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: F624ZZ flanged bearing
+  note: upper levelling link at the triplate
+- id: bearing_F624ZZ_bend_upper_manipulator
+  model: design/bam-v2/models/f624zz.step
+  kind: bearing
+  joint_node: bend_upper
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 134.53
+  - -77.5
+  - 216.371
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: F624ZZ flanged bearing
+  note: upper levelling link at the manipulator
+- id: shim-shoulder-1
+  model: design/bam-v2/models/shim-6x12x0.5.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -69.0
+  - 62.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: Shim ring DIN 988 6x12x0.5
+  note: main-body cheek to the lower 90T pulley bearing inner ring (0.5 mm gap)
+- id: shim-shoulder-2
+  model: design/bam-v2/models/shim-6x12x0.5.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -44.0
+  - 62.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: Shim ring DIN 988 6x12x0.5
+  note: lower-shank bearing to lever bearing inner rings (0.9 mm gap); they turn relative
+    to each other
+- id: shim-shoulder-3
+  model: design/bam-v2/models/shim-6x12x0.5.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -29.5
+  - 62.5
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: Shim ring DIN 988 6x12x0.5
+  note: upper 90T pulley bearing inner ring to the main-body cheek (0.5 mm gap)
+- id: shim-wrist-1
+  model: design/bam-v2/models/shim-6x12x0.5.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 119.541
+  - -57.1
+  - 196.348
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: Shim ring DIN 988 6x12x0.5
+  note: manipulator cheek to the upper-shank bearing inner ring (0.6 mm gap)
+- id: shim-wrist-2
+  model: design/bam-v2/models/shim-6x12x0.5.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 119.541
+  - -42.4
+  - 196.348
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: Shim ring DIN 988 6x12x0.5
+  note: upper-shank bearing inner ring to the manipulator cheek (0.5 mm gap)
+- id: motor-outer-m3x6-1
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 84.5
+  - -73.0
+  - 8.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: lower-arm motor to main body
+- id: motor-outer-m3x6-2
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 84.5
+  - -73.0
+  - 39.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: lower-arm motor to main body
+- id: motor-outer-m3x6-3
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 115.5
+  - -73.0
+  - 8.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: lower-arm motor to main body
+- id: motor-outer-m3x6-4
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 115.5
+  - -73.0
+  - 39.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: lower-arm motor to main body
+- id: motor-inner-m3x6-1
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 84.5
+  - -25.0
+  - 8.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: upper-arm motor to main body
+- id: motor-inner-m3x6-2
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 84.5
+  - -25.0
+  - 39.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: upper-arm motor to main body
+- id: motor-inner-m3x6-3
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 115.5
+  - -25.0
+  - 8.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: upper-arm motor to main body
+- id: motor-inner-m3x6-4
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 115.5
+  - -25.0
+  - 39.0
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - -0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: upper-arm motor to main body
+- id: stabilizer-m3x6-1
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 124.0
+  - -26.0
+  - 23.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: stabilizer to main body
+- id: stabilizer-m3x6-2
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 124.0
+  - -26.0
+  - 33.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: stabilizer to main body
+- id: stabilizer-m3x6-3
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 124.0
+  - -72.0
+  - 23.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: stabilizer to main body
+- id: stabilizer-m3x6-4
+  model: design/bam-v2/models/m3x6-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 124.0
+  - -72.0
+  - 33.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+  bom: M3x6 socket head screw
+  note: stabilizer to main body
+- id: endstop-bracket-m3x5-1
+  model: design/bam-v2/models/m3x5-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 76.0
+  - -72.0
+  - 27.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - 1.0
+    - -0.0
+  - - -1.0
+    - 0.0
+    - 0.0
+  bom: M3x5 socket head screw
+  note: endstop bracket to main body; 3.5 mm into the 3 mm pilot
+- id: endstop-bracket-m3x5-2
+  model: design/bam-v2/models/m3x5-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 76.0
+  - -72.0
+  - 37.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - 1.0
+    - -0.0
+  - - -1.0
+    - 0.0
+    - 0.0
+  bom: M3x5 socket head screw
+  note: endstop bracket to main body; 3.5 mm into the 3 mm pilot
+- id: endstop-bracket-m3x5-3
+  model: design/bam-v2/models/m3x5-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 76.0
+  - -26.0
+  - 27.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - 1.0
+    - -0.0
+  - - -1.0
+    - 0.0
+    - 0.0
+  bom: M3x5 socket head screw
+  note: endstop bracket to main body; 3.5 mm into the 3 mm pilot
+- id: endstop-bracket-m3x5-4
+  model: design/bam-v2/models/m3x5-shcs.step
+  kind: fastener
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 76.0
+  - -26.0
+  - 37.0
+  axes:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 0.0
+    - 1.0
+    - -0.0
+  - - -1.0
+    - 0.0
+    - 0.0
+  bom: M3x5 socket head screw
+  note: endstop bracket to main body; 3.5 mm into the 3 mm pilot
+- id: toolhead-m3x12-1
+  model: design/bam-v2/models/m3x12-shcs.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 146.5
+  - -34.5
+  - 190.3
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  bom: M3x12 socket head screw
+  note: gripper base to manipulator, from below
+- id: toolhead-m3x12-2
+  model: design/bam-v2/models/m3x12-shcs.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 146.5
+  - -49.5
+  - 190.3
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  bom: M3x12 socket head screw
+  note: gripper base to manipulator, from below
+- id: toolhead-m3x12-3
+  model: design/bam-v2/models/m3x12-shcs.step
+  kind: fastener
+  joint_node: hand
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 146.5
+  - -64.5
+  - 190.3
+  axes:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - -1.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - -1.0
+  bom: M3x12 socket head screw
+  note: gripper base to manipulator, from below
+- id: belt-shoulder-gt2-200
+  model: design/bam-v2/models/belt-gt2-6mm-20t-90t-c39.step
+  kind: belt
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -62.75
+  - 23.5
+  axes:
+  - - 1
+    - 0
+    - 0
+  - - 0
+    - 0
+    - 1
+  - - 0
+    - -1
+    - 0
+  bom: GT2 closed belt 200 mm
+  note: 20T motor pulley to printed 90T pulley, centres 39.0 mm; pitch length 200.7
+    mm
+- id: belt-elbow-gt2-200
+  model: design/bam-v2/models/belt-gt2-6mm-20t-90t-c39.step
+  kind: belt
+  joint_node: turntable
+  frame: vendor STEP frame, before link stretch/shift
+  origin_mm:
+  - 100.0
+  - -29.25
+  - 23.5
+  axes:
+  - - 1
+    - 0
+    - 0
+  - - 0
+    - 0
+    - 1
+  - - 0
+    - -1
+    - 0
+  bom: GT2 closed belt 200 mm
+  note: 20T motor pulley to printed 90T pulley, centres 39.0 mm; pitch length 200.7
+    mm

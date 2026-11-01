@@ -1,0 +1,12 @@
+id: continuous-spin-bench-test
+made_by: chat
+text: Continuous-spin sketch now supports START X/Y/Z/A. START A targets independent
+  A routing (STEP D12, DIR D13); actual A jumpers remain unverified and must match
+  before use. Uno R3 detected. Boots stopped, ramps to 200 pulses/s over about 2 seconds,
+  runs until STOP/reset. Microsteps and shaft RPM rema
+alternatives:
+- Configure A jumpers for independent D12/D13 operation
+- Adapt A mapping to its confirmed X/Y/Z clone routing
+- Use bounded joint motion instead of free-shaft rotation
+created: '2026-10-30T15:34:20+00:00'
+override: null

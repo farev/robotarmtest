@@ -1,0 +1,23 @@
+part,qty,material,orientation,est_grams,est_grams_total,infill,volume_cm3,stl,source
+arm_main_body,1,PLA,flat on the bed,29.0,29.0,25%,42.3,printed/arm_main_body.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_gear_body,2,PLA,flat on the bed,8.7,17.3,25%,11.2,printed/arm_gear_body.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_endstop_bracket,1,PLA,flat on the bed,3.7,3.7,25%,3.9,printed/arm_endstop_bracket.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_stabilizer,1,PLA,flat on the bed,2.6,2.6,25%,2.7,printed/arm_stabilizer.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_lever,1,PLA,flat on the bed,5.2,5.2,25%,7.6,printed/arm_lever.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_lower_shank_140,1,PLA,"flat, 140 mm",27.3,27.3,25%,40.7,printed/arm_lower_shank_140.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_upper_shank_140,1,PLA,"flat, 140 mm",19.6,19.6,25%,26.4,printed/arm_upper_shank_140.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_pleuel_140,1,PLA,flat,7.1,7.1,25%,8.7,printed/arm_pleuel_140.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_pleuel_bend_lower_140,1,PLA,flat,7.2,7.2,25%,8.9,printed/arm_pleuel_bend_lower_140.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_pleuel_bend_upper_140,1,PLA,flat; BAM-made part (CC BY 4.0): the vendor 140 mm kit has no upper levelling link,7.2,7.2,25%,8.9,printed/arm_pleuel_bend_upper_140.stl,BAM (CC BY 4.0)
+arm_triplate,1,PLA,flat,5.2,5.2,25%,7.1,printed/arm_triplate.stl,20sffactory Community Robot Arm (CC BY 4.0)
+arm_manipulator,1,PLA,flat,8.5,8.5,25%,13.0,printed/arm_manipulator.stl,20sffactory Community Robot Arm (CC BY 4.0)
+tool_shank_calibrator_140,1,PLA,flat; homing aid,7.3,7.3,25%,7.0,printed/tool_shank_calibrator_140.stl,20sffactory Community Robot Arm (CC BY 4.0)
+yaw-base-housing,1,PETG,as modeled; top mating face on bed,99.1,99.1,40%; 5 walls (estimate),130.0,printed/yaw-base-housing.stl,bam-v2 direct-drive generator; fit unverified
+yaw-bearing-spindle,1,PETG,as modeled; top mating face on bed,14.4,14.4,40%; 5 walls (estimate),18.9,printed/yaw-bearing-spindle.stl,bam-v2 direct-drive generator; fit unverified
+yaw-turntable-adapter,1,PETG,as modeled; top mating face on bed,5.3,5.3,40%; 5 walls (estimate),6.94,printed/yaw-turntable-adapter.stl,bam-v2 direct-drive generator; fit unverified
+yaw-bearing-cover,1,PETG,as modeled; top mating face on bed,14.9,14.9,40%; 5 walls (estimate),19.6,printed/yaw-bearing-cover.stl,bam-v2 direct-drive generator; fit unverified
+yaw-fits-coupon,2,PETG,as modeled; flat base on bed; two copies mate for running-fit test,27.6,55.2,40%; same settings as base,36.28,printed/yaw-fits-coupon.stl,"fit-test coupon, not an assembly part"
+gripper-base,1,PLA,flat on the bed (vendor file orientation),12.1,12.1,25%,19.15,printed/gripper-base.stl,20sffactory Community Robot Arm (CC BY 4.0): servo_gripperBase.stl
+gripper-finger,2,PLA,flat on the bed (vendor file orientation),4.5,9.0,25%,6.4,printed/gripper-finger.stl,20sffactory Community Robot Arm (CC BY 4.0): gripperFinger_by_ftobler.stl
+gripper-drive-disc,1,PLA,flat on the bed (vendor file orientation),1.0,1.0,25%,0.85,printed/gripper-drive-disc.stl,20sffactory Community Robot Arm (CC BY 4.0): servo_gripper_shaft.stl
+gripper-screw-retainer,1,PLA,flat on the bed (vendor file orientation),0.3,0.3,25%,0.23,printed/gripper-screw-retainer.stl,20sffactory Community Robot Arm (CC BY 4.0): gripper_screw_secure.stl

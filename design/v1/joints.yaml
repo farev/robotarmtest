@@ -1,0 +1,255 @@
+note: 4-axis arm plus mirrored gripper (1:1 gears). Origins and axes derive from inspected
+  STEP bores transformed by assembly placements. Arm limits follow control/joint_limits.yaml;
+  gripper 0–30 degrees is a provisional visualization range, not clearance-checked.
+  The snapshot generator keeps hub-j4 with the forearm; this rig preserves that snapshot
+  convention. Slider combinations are not collision-checked or constrained by the
+  firmware table-height rule.
+joints:
+- id: yaw
+  label: Base yaw
+  type: revolute
+  parent: null
+  origin:
+  - 0.0
+  - 0.0
+  - 54.5
+  axis:
+  - 0.0
+  - 0.0
+  - 1.0
+  parts:
+  - turret-hub
+  - yaw-spacer-inner
+  - turret-clamp
+  - shoulder-tower
+  - shoulder-pulley-80t
+  - rod-shoulder
+  - bearing-shim
+  - collar-shoulder-in
+  - bearing-shim-2
+  - collar-shoulder-out
+  - screw-tower-foot-1
+  - screw-tower-foot-2
+  - screw-tower-foot-3
+  - screw-tower-foot-4
+  - screw-shaft-lock
+  - screw-shaft-lock-key-keepout
+  home: 0
+  limits:
+  - -150
+  - 150
+- id: shoulder
+  label: Shoulder
+  type: revolute
+  parent: yaw
+  origin:
+  - 0.0
+  - -77.7
+  - 187.0
+  axis:
+  - 0.0
+  - -1.0
+  - -0.0
+  parts:
+  - upper-arm
+  - pack-cover
+  - pack-carriage
+  - bearing-608-sh-1
+  - bearing-608-sh-2
+  - motor-j2
+  - plug-motor-j2-keepout
+  - pulley-j2-20t
+  - rod-intermediate
+  - bearing-625-1
+  - bearing-625-2
+  - pulley-s1-60t
+  - pulley-s2-20t
+  - motor-j3
+  - plug-motor-j3-keepout
+  - pulley-j3-20t
+  - belt-s1
+  - belt-s2
+  - belt-j3
+  - rod-elbow
+  - collar-elbow-in
+  - bearing-shim-3
+  - collar-elbow-out
+  - screw-j2-1
+  - screw-j2-2
+  - screw-j2-3
+  - screw-j2-4
+  - screw-carriage-1
+  - screw-carriage-2
+  home: 45
+  limits:
+  - -30
+  - 90
+- id: elbow
+  label: Elbow
+  type: revolute
+  parent: shoulder
+  origin:
+  - 95.4594
+  - -21.9
+  - 282.4594
+  axis:
+  - -0.0
+  - -1.0
+  - -0.0
+  parts:
+  - forearm
+  - forearm-cover
+  - bearing-608-el-1
+  - bearing-608-el-2
+  - motor-j4
+  - plug-motor-j4-keepout
+  - hub-j4
+  home: -90
+  limits:
+  - -135
+  - 120
+- id: wrist
+  label: Wrist roll
+  type: revolute
+  parent: elbow
+  origin:
+  - 193.74725931
+  - -0.0
+  - 184.17154069
+  axis:
+  - 0.707106781187
+  - 0.0
+  - -0.707106781187
+  parts:
+  - gripper-base
+  - servo-gripper
+  - servo-cable-keepout
+  home: 0
+  limits:
+  - -180
+  - 180
+- id: gripper
+  label: Gripper opening
+  type: revolute
+  parent: wrist
+  origin:
+  - 221.6779424
+  - 15.0
+  - 169.67591691
+  axis:
+  - 0.707106781187
+  - -0.0
+  - 0.707106781187
+  parts:
+  - gripper-finger-left
+  home: 0
+  limits:
+  - 0
+  - 30
+- id: finger-right
+  label: Right finger
+  type: revolute
+  parent: wrist
+  origin:
+  - 221.6779424
+  - -15.0
+  - 169.67591691
+  axis:
+  - 0.707106781187
+  - -0.0
+  - 0.707106781187
+  parts:
+  - gripper-finger-right
+  home: 0
+  limits:
+  - -30
+  - 0
+  coupled:
+  - joint: gripper
+    ratio: -1
+poses:
+- name: elbow-up
+  values:
+    yaw: 0
+    shoulder: 30
+    elbow: 120
+    wrist: 0
+    gripper: 0
+- name: folded
+  values:
+    yaw: 0
+    shoulder: 90
+    elbow: -135
+    wrist: 0
+    gripper: 0
+- name: reach-table
+  values:
+    yaw: 0
+    shoulder: 0
+    elbow: -43
+    wrist: 0
+    gripper: 0
+- name: shoulder-down
+  values:
+    yaw: 90
+    shoulder: -30
+    elbow: 8
+    wrist: 0
+    gripper: 0
+- name: soft-limit
+  values:
+    yaw: 0
+    shoulder: 20
+    elbow: -84
+    wrist: 0
+    gripper: 0
+- name: stretched
+  values:
+    yaw: 0
+    shoulder: 0
+    elbow: 0
+    wrist: 0
+    gripper: 0
+- name: up
+  values:
+    yaw: 0
+    shoulder: 90
+    elbow: 0
+    wrist: 0
+    gripper: 0
+- name: yaw-150
+  values:
+    yaw: 150
+    shoulder: 45
+    elbow: -90
+    wrist: 180
+    gripper: 0
+assembly_sha256: ea7f717c99f8efcb8aaf6430f4f65bec7208074650cdb25a65c6ce20dfcfeb1e
+glb_sha256: eeb5d7a7d14a0d4a136a7fa1a7d089de1fd459aeae10c0805001257b89c4d985
+checked:
+  ok: true
+  poses:
+  - name: elbow-up
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: folded
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: reach-table
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: shoulder-down
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: soft-limit
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: stretched
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: up
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0
+  - name: yaw-150
+    max_pos_err_mm: 0.0001
+    max_rot_err_deg: 0.0

@@ -1,0 +1,10 @@
+id: T109-blink-defaults
+made_by: T109-controls-uno-blink
+text: 'Use task defaults: built-in LED, 1 s on/1 s off and 115200 baud. Limit connected
+  hardware to the Uno/CNC Shield/A4988 described in the task; no spindle attachment
+  is documented. Firmware holds D8 HIGH and STEP pins D2/D3/D4/D12 LOW.'
+alternatives:
+- Bare Uno with shield removed
+- Different heartbeat period
+created: '2026-10-30T14:29:18+00:00'
+override: null

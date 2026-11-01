@@ -1,0 +1,1681 @@
+{
+ "meta": {
+  "project": "Mechy Demo",
+  "variant": "bam-v2",
+  "date": "2026-10-30",
+  "params_hash": "b03a5e546b30",
+  "paper": "#FFFFFF",
+  "doc": "Build guide",
+  "footer": "mechy doc build bam-v2 \u00b7 mm \u00b7 third-angle"
+ },
+ "cover": {
+  "image": "img/cover.png",
+  "title": "Mechy Demo bam-v2",
+  "subtitle": "4-DOF belt-driven catching arm",
+  "stats": [
+   {
+    "l": "reach",
+    "v": "0.334 m",
+    "note": "computed"
+   },
+   {
+    "l": "printed parts",
+    "v": "21 pcs / 206 g",
+    "note": "estimate"
+   },
+   {
+    "l": "purchased parts",
+    "v": "28 lines / $131",
+    "note": "estimate"
+   },
+   {
+    "l": "assembly",
+    "v": "7 steps"
+   }
+  ],
+  "notes": [
+   "Belt-driven 4-DOF arm (base 5.625:1, shoulder 5.625:1, elbow 5.625:1, wrist 4.5:1); every motor sits low, joints turn on 608-2RS / 688-2RS bearings, GT2 closed belts.",
+   "Built from design/bam-v2/params.yaml by mechy cad build bam-v2; numbers on these sheets come from the project files named on each sheet.",
+   "Estimates are labelled. Read the last sheet (checks, not verified, open decisions) before buying."
+  ]
+ },
+ "reading_notes": [
+  "Sheets are A4 landscape. Part sheets are true to scale when printed at 100% (scale in the title block); dimensions are in mm.",
+  "Third-angle projection: TOP above FRONT, RIGHT beside it. The iso view is not to scale.",
+  "Assembly sheets: blue parts are added in that step (moved out a little for clarity).",
+  "Every number is computed, from a datasheet, or labelled an estimate; the source file is named on each sheet."
+ ],
+ "what_where": [
+  {
+   "what": "Design parameters",
+   "where": "design/bam-v2/params.yaml",
+   "rebuild": "edit, then the commands below"
+  },
+  {
+   "what": "Assembly CAD",
+   "where": "design/bam-v2/arm.step, arm.glb, arm.stl",
+   "rebuild": "mechy cad build bam-v2"
+  },
+  {
+   "what": "Printable parts",
+   "where": "design/bam-v2/stl/*.stl (19 files)",
+   "rebuild": "mechy cad build bam-v2"
+  },
+  {
+   "what": "Print list",
+   "where": "design/bam-v2/print_list.csv",
+   "rebuild": "mechy cad build bam-v2"
+  },
+  {
+   "what": "Bill of materials",
+   "where": "design/bam-v2/bom.csv",
+   "rebuild": "mechy cad build bam-v2"
+  },
+  {
+   "what": "Mass properties, belts, homing",
+   "where": "design/bam-v2/mass_props.json",
+   "rebuild": "mechy cad build bam-v2"
+  },
+  {
+   "what": "This guide",
+   "where": "docs/bam-v2/build_guide.pdf (.typ, .data.json, img/)",
+   "rebuild": "mechy doc build bam-v2"
+  },
+  {
+   "what": "Design report",
+   "where": "docs/bam-v2/report.pdf",
+   "rebuild": "mechy doc build bam-v2"
+  }
+ ],
+ "bom": {
+  "rows": [
+   {
+    "line": 1,
+    "item": "Arduino Uno R3",
+    "qty": 1,
+    "spec": "ATmega328P, USB-B (user's)",
+    "used_for": "controller",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 12.0,
+    "ext_usd": 12.0
+   },
+   {
+    "line": 2,
+    "item": "CNC Shield V3",
+    "qty": 1,
+    "spec": "Protoneer-style, 4 driver sockets X/Y/Z/A (user's)",
+    "used_for": "controller",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 5.0,
+    "ext_usd": 5.0
+   },
+   {
+    "line": 3,
+    "item": "A4988 stepper driver",
+    "qty": 3,
+    "spec": "with heatsink; Vref for ~0.8 A (user's)",
+    "used_for": "X=upper, Y=lower, Z=yaw motors (vendor pinout_uno.h)",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 2.0,
+    "ext_usd": 6.0
+   },
+   {
+    "line": 4,
+    "item": "A4988 stepper driver (spare)",
+    "qty": 1,
+    "spec": "A socket",
+    "used_for": "open decision: vendor rail module or wrist servo",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 2.0,
+    "ext_usd": 2.0
+   },
+   {
+    "line": 5,
+    "item": "NEMA 17 stepper 42SHDC3026-15B",
+    "qty": 3,
+    "spec": "bipolar 4-wire, 0.9 A/phase, ~0.30 N\u00b7m holding (ASSUMED)",
+    "used_for": "base yaw, lower arm, upper arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 12.0,
+    "ext_usd": 36.0
+   },
+   {
+    "line": 6,
+    "item": "NEMA 17 stepper 42SHDC3026-15B (spare)",
+    "qty": 1,
+    "spec": "4th motor owned",
+    "used_for": "open decision: rail or wrist servo",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 12.0,
+    "ext_usd": 12.0
+   },
+   {
+    "line": 7,
+    "item": "Power supply 24 V 6 A",
+    "qty": 1,
+    "spec": "user's; A4988 VMOT <= 35 V so 24 V is fine",
+    "used_for": "motor power",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 18.0,
+    "ext_usd": 18.0
+   },
+   {
+    "line": 8,
+    "item": "Electrolytic capacitor 100 uF 50 V",
+    "qty": 1,
+    "spec": "across the shield's motor power input (user's)",
+    "used_for": "",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.3,
+    "ext_usd": 0.3
+   },
+   {
+    "line": 9,
+    "item": "GT2 pulley 20T",
+    "qty": 3,
+    "spec": "6 mm belt, 5 mm bore",
+    "used_for": "one per driven motor",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 1.5,
+    "ext_usd": 4.5
+   },
+   {
+    "line": 10,
+    "item": "GT2 closed belt 200 mm",
+    "qty": 3,
+    "spec": "6 mm wide closed loop",
+    "used_for": "arm joints (vendor)",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 2.0,
+    "ext_usd": 6.0
+   },
+   {
+    "line": 11,
+    "item": "51105 thrust bearing",
+    "qty": 1,
+    "spec": "25x42x11",
+    "used_for": "base socket",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 3.0,
+    "ext_usd": 3.0
+   },
+   {
+    "line": 12,
+    "item": "F624ZZ flanged bearing",
+    "qty": 6,
+    "spec": "4x13x5",
+    "used_for": "lever, main body pivots",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.4,
+    "ext_usd": 2.4
+   },
+   {
+    "line": 13,
+    "item": "F686ZZ flanged bearing",
+    "qty": 12,
+    "spec": "6x13x5",
+    "used_for": "shank, triplate, manipulator pivots",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.4,
+    "ext_usd": 4.8
+   },
+   {
+    "line": 14,
+    "item": "Endstop microswitch",
+    "qty": 3,
+    "spec": "NO to GND",
+    "used_for": "X/Y/Z homing (vendor)",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.5,
+    "ext_usd": 1.5
+   },
+   {
+    "line": 15,
+    "item": "Servo MG90S (gripper toolhead)",
+    "qty": 1,
+    "spec": "9 g metal gear; only with toolhead: gripper",
+    "used_for": "gripper",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 3.0,
+    "ext_usd": 3.0
+   },
+   {
+    "line": 16,
+    "item": "M2x10 screw + nut",
+    "qty": 6,
+    "spec": "",
+    "used_for": "endstops",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.1,
+    "ext_usd": 0.6
+   },
+   {
+    "line": 17,
+    "item": "M3x6 screw",
+    "qty": 36,
+    "spec": "",
+    "used_for": "arm fasteners",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.1,
+    "ext_usd": 3.6
+   },
+   {
+    "line": 18,
+    "item": "M3 nut",
+    "qty": 8,
+    "spec": "",
+    "used_for": "",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.05,
+    "ext_usd": 0.4
+   },
+   {
+    "line": 19,
+    "item": "M4x10 screw",
+    "qty": 6,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.1,
+    "ext_usd": 0.6
+   },
+   {
+    "line": 20,
+    "item": "M4x16 screw",
+    "qty": 8,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.1,
+    "ext_usd": 0.8
+   },
+   {
+    "line": 21,
+    "item": "M4x20 screw",
+    "qty": 6,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.1,
+    "ext_usd": 0.6
+   },
+   {
+    "line": 22,
+    "item": "M4 nut",
+    "qty": 14,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.05,
+    "ext_usd": 0.7
+   },
+   {
+    "line": 23,
+    "item": "M6x20 screw",
+    "qty": 1,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.2,
+    "ext_usd": 0.2
+   },
+   {
+    "line": 24,
+    "item": "M6x40 screw",
+    "qty": 2,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.2,
+    "ext_usd": 0.4
+   },
+   {
+    "line": 25,
+    "item": "M6x50 screw",
+    "qty": 1,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.2,
+    "ext_usd": 0.2
+   },
+   {
+    "line": 26,
+    "item": "M6 nut",
+    "qty": 4,
+    "spec": "",
+    "used_for": "arm",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 0.05,
+    "ext_usd": 0.2
+   },
+   {
+    "line": 27,
+    "item": "Stepper cable",
+    "qty": 3,
+    "spec": "4-wire, 1 m",
+    "used_for": "motor wiring",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 1.5,
+    "ext_usd": 4.5
+   },
+   {
+    "line": 28,
+    "item": "Silicone wire 18 AWG",
+    "qty": 2,
+    "spec": "red/black, 1 m",
+    "used_for": "supply to shield",
+    "source": "user's stock / BAM bom",
+    "unit_usd": 1.0,
+    "ext_usd": 2.0
+   }
+  ],
+  "lines": 28,
+  "pieces": 138,
+  "total_usd": 131.3,
+  "source": "design/bam-v2/bom.csv",
+  "notes": [
+   "Quantities include the spares named in each spec. Unit prices are estimates for Amazon/AliExpress parts (not quotes).",
+   "Total = sum of qty x unit price over all 28 lines of design/bam-v2/bom.csv."
+  ]
+ },
+ "print": {
+  "rows": [
+   {
+    "part": "arm_socket",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "open side up",
+    "grams": 24.8,
+    "grams_total": 24.8,
+    "infill": "25%",
+    "volume_cm3": 41.1,
+    "stl": "stl/arm_socket.stl"
+   },
+   {
+    "part": "arm_rotategear",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "gear face down",
+    "grams": 11.4,
+    "grams_total": 11.4,
+    "infill": "25%",
+    "volume_cm3": 16.0,
+    "stl": "stl/arm_rotategear.stl"
+   },
+   {
+    "part": "arm_main_body",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat on the bed",
+    "grams": 29.0,
+    "grams_total": 29.0,
+    "infill": "25%",
+    "volume_cm3": 42.3,
+    "stl": "stl/arm_main_body.stl"
+   },
+   {
+    "part": "arm_gear_body",
+    "qty": 2,
+    "material": "PLA",
+    "orientation": "flat on the bed",
+    "grams": 8.7,
+    "grams_total": 17.3,
+    "infill": "25%",
+    "volume_cm3": 11.2,
+    "stl": "stl/arm_gear_body.stl"
+   },
+   {
+    "part": "arm_endstop_bracket",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat on the bed",
+    "grams": 3.7,
+    "grams_total": 3.7,
+    "infill": "25%",
+    "volume_cm3": 3.9,
+    "stl": "stl/arm_endstop_bracket.stl"
+   },
+   {
+    "part": "arm_stabilizer",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat on the bed",
+    "grams": 2.6,
+    "grams_total": 2.6,
+    "infill": "25%",
+    "volume_cm3": 2.7,
+    "stl": "stl/arm_stabilizer.stl"
+   },
+   {
+    "part": "arm_lever",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat on the bed",
+    "grams": 5.2,
+    "grams_total": 5.2,
+    "infill": "25%",
+    "volume_cm3": 7.6,
+    "stl": "stl/arm_lever.stl"
+   },
+   {
+    "part": "arm_lower_shank_140",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat, 140 mm",
+    "grams": 27.3,
+    "grams_total": 27.3,
+    "infill": "25%",
+    "volume_cm3": 40.7,
+    "stl": "stl/arm_lower_shank_140.stl"
+   },
+   {
+    "part": "arm_upper_shank_140",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat, 140 mm",
+    "grams": 19.6,
+    "grams_total": 19.6,
+    "infill": "25%",
+    "volume_cm3": 26.4,
+    "stl": "stl/arm_upper_shank_140.stl"
+   },
+   {
+    "part": "arm_pleuel_140",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat",
+    "grams": 7.1,
+    "grams_total": 7.1,
+    "infill": "25%",
+    "volume_cm3": 8.7,
+    "stl": "stl/arm_pleuel_140.stl"
+   },
+   {
+    "part": "arm_pleuel_bend_lower_140",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat",
+    "grams": 7.2,
+    "grams_total": 7.2,
+    "infill": "25%",
+    "volume_cm3": 8.9,
+    "stl": "stl/arm_pleuel_bend_lower_140.stl"
+   },
+   {
+    "part": "arm_pleuel_bend_upper_140",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat; BAM-made part (CC BY 4.0): the vendor 140 mm kit has no upper levelling link",
+    "grams": 7.2,
+    "grams_total": 7.2,
+    "infill": "25%",
+    "volume_cm3": 8.9,
+    "stl": "stl/arm_pleuel_bend_upper_140.stl"
+   },
+   {
+    "part": "arm_triplate",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat",
+    "grams": 5.2,
+    "grams_total": 5.2,
+    "infill": "25%",
+    "volume_cm3": 7.1,
+    "stl": "stl/arm_triplate.stl"
+   },
+   {
+    "part": "arm_manipulator",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat",
+    "grams": 8.5,
+    "grams_total": 8.5,
+    "infill": "25%",
+    "volume_cm3": 13.0,
+    "stl": "stl/arm_manipulator.stl"
+   },
+   {
+    "part": "tool_shank_calibrator_140",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat; homing aid",
+    "grams": 7.3,
+    "grams_total": 7.3,
+    "infill": "25%",
+    "volume_cm3": 7.0,
+    "stl": "stl/tool_shank_calibrator_140.stl"
+   },
+   {
+    "part": "grip_base",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "for the MG90S / 9 g servo",
+    "grams": 12.1,
+    "grams_total": 12.1,
+    "infill": "25%",
+    "volume_cm3": 19.2,
+    "stl": "stl/grip_base.stl"
+   },
+   {
+    "part": "grip_finger",
+    "qty": 2,
+    "material": "PLA",
+    "orientation": "flat",
+    "grams": 4.5,
+    "grams_total": 9.0,
+    "infill": "25%",
+    "volume_cm3": 6.4,
+    "stl": "stl/grip_finger.stl"
+   },
+   {
+    "part": "grip_shaft",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat",
+    "grams": 1.0,
+    "grams_total": 1.0,
+    "infill": "25%",
+    "volume_cm3": 0.9,
+    "stl": "stl/grip_shaft.stl"
+   },
+   {
+    "part": "grip_screw_secure",
+    "qty": 1,
+    "material": "PLA",
+    "orientation": "flat",
+    "grams": 0.3,
+    "grams_total": 0.3,
+    "infill": "25%",
+    "volume_cm3": 0.2,
+    "stl": "stl/grip_screw_secure.stl"
+   }
+  ],
+  "stls": 19,
+  "pieces": 21,
+  "grams": 205.8,
+  "source": "design/bam-v2/print_list.csv",
+  "settings": [
+   {
+    "k": "material",
+    "v": "PLA"
+   },
+   {
+    "k": "infill",
+    "v": "25% (grid or gyroid)"
+   },
+   {
+    "k": "walls / top / bottom",
+    "v": "0.8 mm per face (2 perimeters of a 0.4 mm nozzle)"
+   },
+   {
+    "k": "layer height",
+    "v": "0.2 mm (suggested; the CAD does not depend on it)"
+   },
+   {
+    "k": "supports",
+    "v": "none expected in the listed orientation (check the bearing bores)"
+   },
+   {
+    "k": "nozzle / bed",
+    "v": "PETG: about 235 / 80 C (typical; use your filament's values)"
+   }
+  ],
+  "notes": [
+   "Grams are computed from each STL's volume x PLA density x a shell/infill factor (estimate until weighed).",
+   "Orientation is chosen for strength along the load path and bearing-seat roundness; keep it."
+  ]
+ },
+ "parts": [
+  {
+   "part": "arm_socket",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "open side up",
+   "grams": 24.8,
+   "grams_total": 24.8,
+   "infill": "25%",
+   "volume_cm3": 41.1,
+   "stl": "stl/arm_socket.stl",
+   "ref": "arm_socket",
+   "drawing": "img/part_arm_socket.svg",
+   "dims_mm": [
+    95.2,
+    67.3,
+    27.0
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, open side up. The dashed BED line is the print bed.",
+    "Overall size 95.2 x 67.3 x 27.0 mm in the print orientation (measured from the STL).",
+    "Mass 24.8 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_rotategear",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "gear face down",
+   "grams": 11.4,
+   "grams_total": 11.4,
+   "infill": "25%",
+   "volume_cm3": 16.0,
+   "stl": "stl/arm_rotategear.stl",
+   "ref": "arm_rotategear",
+   "drawing": "img/part_arm_rotategear.svg",
+   "dims_mm": [
+    56.8,
+    56.8,
+    10.0
+   ],
+   "scale": "1:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, gear face down. The dashed BED line is the print bed.",
+    "Overall size 56.8 x 56.8 x 10.0 mm in the print orientation (measured from the STL).",
+    "Mass 11.4 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_main_body",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat on the bed",
+   "grams": 29.0,
+   "grams_total": 29.0,
+   "infill": "25%",
+   "volume_cm3": 42.3,
+   "stl": "stl/arm_main_body.stl",
+   "ref": "arm_main_body",
+   "drawing": "img/part_arm_main_body.svg",
+   "dims_mm": [
+    71.0,
+    52.0,
+    83.0
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat on the bed. The dashed BED line is the print bed.",
+    "Overall size 71.0 x 52.0 x 83.0 mm in the print orientation (measured from the STL).",
+    "Mass 29.0 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_gear_body",
+   "qty": 2,
+   "material": "PLA",
+   "orientation": "flat on the bed",
+   "grams": 8.7,
+   "grams_total": 17.3,
+   "infill": "25%",
+   "volume_cm3": 11.2,
+   "stl": "stl/arm_gear_body.stl",
+   "ref": "arm_gear_body",
+   "drawing": "img/part_arm_gear_body.svg",
+   "dims_mm": [
+    56.8,
+    6.5,
+    56.8
+   ],
+   "scale": "1:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 2 x in PLA, flat on the bed. The dashed BED line is the print bed.",
+    "Overall size 56.8 x 6.5 x 56.8 mm in the print orientation (measured from the STL).",
+    "Mass 8.7 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_endstop_bracket",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat on the bed",
+   "grams": 3.7,
+   "grams_total": 3.7,
+   "infill": "25%",
+   "volume_cm3": 3.9,
+   "stl": "stl/arm_endstop_bracket.stl",
+   "ref": "arm_endstop_bracket",
+   "drawing": "img/part_arm_endstop_bracket.svg",
+   "dims_mm": [
+    14.0,
+    52.0,
+    50.4
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat on the bed. The dashed BED line is the print bed.",
+    "Overall size 14.0 x 52.0 x 50.4 mm in the print orientation (measured from the STL).",
+    "Mass 3.7 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_stabilizer",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat on the bed",
+   "grams": 2.6,
+   "grams_total": 2.6,
+   "infill": "25%",
+   "volume_cm3": 2.7,
+   "stl": "stl/arm_stabilizer.stl",
+   "ref": "arm_stabilizer",
+   "drawing": "img/part_arm_stabilizer.svg",
+   "dims_mm": [
+    3.0,
+    52.0,
+    18.0
+   ],
+   "scale": "1:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat on the bed. The dashed BED line is the print bed.",
+    "Overall size 3.0 x 52.0 x 18.0 mm in the print orientation (measured from the STL).",
+    "Mass 2.6 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_lever",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat on the bed",
+   "grams": 5.2,
+   "grams_total": 5.2,
+   "infill": "25%",
+   "volume_cm3": 7.6,
+   "stl": "stl/arm_lever.stl",
+   "ref": "arm_lever",
+   "drawing": "img/part_arm_lever.svg",
+   "dims_mm": [
+    55.8,
+    8.0,
+    37.9
+   ],
+   "scale": "2:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat on the bed. The dashed BED line is the print bed.",
+    "Overall size 55.8 x 8.0 x 37.9 mm in the print orientation (measured from the STL).",
+    "Mass 5.2 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_lower_shank_140",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat, 140 mm",
+   "grams": 27.3,
+   "grams_total": 27.3,
+   "infill": "25%",
+   "volume_cm3": 40.7,
+   "stl": "stl/arm_lower_shank_140.stl",
+   "ref": "arm_lower_shank_140",
+   "drawing": "img/part_arm_lower_shank_140.svg",
+   "dims_mm": [
+    161.4,
+    30.5,
+    25.0
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat, 140 mm. The dashed BED line is the print bed.",
+    "Overall size 161.4 x 30.5 x 25.0 mm in the print orientation (measured from the STL).",
+    "Mass 27.3 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_upper_shank_140",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat, 140 mm",
+   "grams": 19.6,
+   "grams_total": 19.6,
+   "infill": "25%",
+   "volume_cm3": 26.4,
+   "stl": "stl/arm_upper_shank_140.stl",
+   "ref": "arm_upper_shank_140",
+   "drawing": "img/part_arm_upper_shank_140.svg",
+   "dims_mm": [
+    196.0,
+    20.0,
+    15.0
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat, 140 mm. The dashed BED line is the print bed.",
+    "Overall size 196.0 x 20.0 x 15.0 mm in the print orientation (measured from the STL).",
+    "Mass 19.6 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_pleuel_140",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat",
+   "grams": 7.1,
+   "grams_total": 7.1,
+   "infill": "25%",
+   "volume_cm3": 8.7,
+   "stl": "stl/arm_pleuel_140.stl",
+   "ref": "arm_pleuel_140",
+   "drawing": "img/part_arm_pleuel_140.svg",
+   "dims_mm": [
+    136.1,
+    103.3,
+    6.0
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat. The dashed BED line is the print bed.",
+    "Overall size 136.1 x 103.3 x 6.0 mm in the print orientation (measured from the STL).",
+    "Mass 7.1 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_pleuel_bend_lower_140",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat",
+   "grams": 7.2,
+   "grams_total": 7.2,
+   "infill": "25%",
+   "volume_cm3": 8.9,
+   "stl": "stl/arm_pleuel_bend_lower_140.stl",
+   "ref": "arm_pleuel_bend_lower_140",
+   "drawing": "img/part_arm_pleuel_bend_lower_140.svg",
+   "dims_mm": [
+    124.5,
+    6.0,
+    117.6
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat. The dashed BED line is the print bed.",
+    "Overall size 124.5 x 6.0 x 117.6 mm in the print orientation (measured from the STL).",
+    "Mass 7.2 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_pleuel_bend_upper_140",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat; BAM-made part (CC BY 4.0): the vendor 140 mm kit has no upper levelling link",
+   "grams": 7.2,
+   "grams_total": 7.2,
+   "infill": "25%",
+   "volume_cm3": 8.9,
+   "stl": "stl/arm_pleuel_bend_upper_140.stl",
+   "ref": "arm_pleuel_bend_upper_140",
+   "drawing": "img/part_arm_pleuel_bend_upper_140.svg",
+   "dims_mm": [
+    147.8,
+    6.0,
+    83.4
+   ],
+   "scale": "1:2",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat; BAM-made part (CC BY 4.0): the vendor 140 mm kit has no upper levelling link. The dashed BED line is the print bed.",
+    "Overall size 147.8 x 6.0 x 83.4 mm in the print orientation (measured from the STL).",
+    "Mass 7.2 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_triplate",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat",
+   "grams": 5.2,
+   "grams_total": 5.2,
+   "infill": "25%",
+   "volume_cm3": 7.1,
+   "stl": "stl/arm_triplate.stl",
+   "ref": "arm_triplate",
+   "drawing": "img/part_arm_triplate.svg",
+   "dims_mm": [
+    57.0,
+    9.5,
+    36.0
+   ],
+   "scale": "2:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat. The dashed BED line is the print bed.",
+    "Overall size 57.0 x 9.5 x 36.0 mm in the print orientation (measured from the STL).",
+    "Mass 5.2 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "arm_manipulator",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat",
+   "grams": 8.5,
+   "grams_total": 8.5,
+   "infill": "25%",
+   "volume_cm3": 13.0,
+   "stl": "stl/arm_manipulator.stl",
+   "ref": "arm_manipulator",
+   "drawing": "img/part_arm_manipulator.svg",
+   "dims_mm": [
+    40.0,
+    43.0,
+    32.0
+   ],
+   "scale": "1:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat. The dashed BED line is the print bed.",
+    "Overall size 40.0 x 43.0 x 32.0 mm in the print orientation (measured from the STL).",
+    "Mass 8.5 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "tool_shank_calibrator_140",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat; homing aid",
+   "grams": 7.3,
+   "grams_total": 7.3,
+   "infill": "25%",
+   "volume_cm3": 7.0,
+   "stl": "stl/tool_shank_calibrator_140.stl",
+   "ref": "tool_shank_calibrator_140",
+   "drawing": "img/part_tool_shank_calibrator_140.svg",
+   "dims_mm": [
+    156.0,
+    164.0,
+    12.0
+   ],
+   "scale": "1:2.5",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat; homing aid. The dashed BED line is the print bed.",
+    "Overall size 156.0 x 164.0 x 12.0 mm in the print orientation (measured from the STL).",
+    "Mass 7.3 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "grip_base",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "for the MG90S / 9 g servo",
+   "grams": 12.1,
+   "grams_total": 12.1,
+   "infill": "25%",
+   "volume_cm3": 19.2,
+   "stl": "stl/grip_base.stl",
+   "ref": "grip_base",
+   "drawing": "img/part_grip_base.svg",
+   "dims_mm": [
+    60.0,
+    50.0,
+    10.0
+   ],
+   "scale": "1:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, for the MG90S / 9 g servo. The dashed BED line is the print bed.",
+    "Overall size 60.0 x 50.0 x 10.0 mm in the print orientation (measured from the STL).",
+    "Mass 12.1 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "grip_finger",
+   "qty": 2,
+   "material": "PLA",
+   "orientation": "flat",
+   "grams": 4.5,
+   "grams_total": 9.0,
+   "infill": "25%",
+   "volume_cm3": 6.4,
+   "stl": "stl/grip_finger.stl",
+   "ref": "grip_finger",
+   "drawing": "img/part_grip_finger.svg",
+   "dims_mm": [
+    30.0,
+    24.6,
+    24.7
+   ],
+   "scale": "1:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 2 x in PLA, flat. The dashed BED line is the print bed.",
+    "Overall size 30.0 x 24.6 x 24.7 mm in the print orientation (measured from the STL).",
+    "Mass 4.5 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "grip_shaft",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat",
+   "grams": 1.0,
+   "grams_total": 1.0,
+   "infill": "25%",
+   "volume_cm3": 0.9,
+   "stl": "stl/grip_shaft.stl",
+   "ref": "grip_shaft",
+   "drawing": "img/part_grip_shaft.svg",
+   "dims_mm": [
+    20.0,
+    20.0,
+    5.0
+   ],
+   "scale": "2:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat. The dashed BED line is the print bed.",
+    "Overall size 20.0 x 20.0 x 5.0 mm in the print orientation (measured from the STL).",
+    "Mass 1.0 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  },
+  {
+   "part": "grip_screw_secure",
+   "qty": 1,
+   "material": "PLA",
+   "orientation": "flat",
+   "grams": 0.3,
+   "grams_total": 0.3,
+   "infill": "25%",
+   "volume_cm3": 0.2,
+   "stl": "stl/grip_screw_secure.stl",
+   "ref": "grip_screw_secure",
+   "drawing": "img/part_grip_screw_secure.svg",
+   "dims_mm": [
+    12.0,
+    12.0,
+    2.5
+   ],
+   "scale": "5:1",
+   "step": "-",
+   "step_title": "-",
+   "notes": [
+    "Print 1 x in PLA, flat. The dashed BED line is the print bed.",
+    "Overall size 12.0 x 12.0 x 2.5 mm in the print orientation (measured from the STL).",
+    "Mass 0.3 g each is computed from volume x density x shell/infill factor (estimate until weighed)."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "n": 1,
+   "id": "prep",
+   "title": "Prepare the printed parts",
+   "image": null,
+   "caption": "",
+   "printed": [],
+   "hardware": [],
+   "instructions": [
+    "Print every part in the print list (21 pieces, about 206 g PLA) in the listed orientation.",
+    "Clean every bearing bore (F624ZZ / F686ZZ press fits) with a drill bit until a bearing presses in by hand; do not hammer printed seats.",
+    "Print the 140 mm shank calibrator too - it sets the homing steps in the last step."
+   ],
+   "parts": [],
+   "bom_items": []
+  },
+  {
+   "n": 2,
+   "id": "base",
+   "title": "Socket and base yaw drive",
+   "image": "img/step_02_base.png",
+   "caption": "BLUE = ADDED IN THIS STEP \u00b7 GREY = ALREADY ASSEMBLED \u00b7 ARM IN THE READY POSE",
+   "printed": [
+    [
+     "robot_belt_arm socket.stl",
+     1
+    ]
+   ],
+   "hardware": [
+    [
+     "NEMA 17 (yaw)",
+     1
+    ],
+    [
+     "GT2 20T pulley",
+     1
+    ],
+    [
+     "yaw endstop",
+     1
+    ],
+    [
+     "51105 thrust bearing",
+     1
+    ],
+    [
+     "Endstop microswitch",
+     3
+    ],
+    [
+     "M2x10 screw + nut",
+     6
+    ]
+   ],
+   "instructions": [
+    "Seat the 51105 thrust bearing in the socket and press the socket into its stand.",
+    "Mount the yaw NEMA 17 inside the socket with its 20T pulley (set screw on the flat).",
+    "Fit the Z endstop microswitch and wire it to the shield's Z limit header (D11)."
+   ],
+   "parts": [
+    "GT2_20T_pulley",
+    "NEMA_17_(yaw)",
+    "socket",
+    "yaw_endstop"
+   ],
+   "bom_items": [
+    "51105 thrust bearing",
+    "Endstop microswitch",
+    "M2x10 screw + nut"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "turntable",
+   "title": "Main body, motors and belts",
+   "image": "img/step_03_turntable.png",
+   "caption": "BLUE = ADDED IN THIS STEP (MOVED OUT FOR CLARITY) \u00b7 GREY = ALREADY ASSEMBLED \u00b7 ARM IN THE READY POSE",
+   "printed": [
+    [
+     "robot_belt_arm rotategear.stl",
+     1
+    ],
+    [
+     "robot_belt_arm main_body.stl",
+     1
+    ],
+    [
+     "robot_belt_arm stabilizer.stl",
+     1
+    ]
+   ],
+   "hardware": [
+    [
+     "NEMA 17",
+     2
+    ],
+    [
+     "GT2 20T pulley",
+     2
+    ],
+    [
+     "endstop bracket",
+     1
+    ],
+    [
+     "bearing F624ZZ",
+     4
+    ],
+    [
+     "GT2 pulley 20T",
+     3
+    ],
+    [
+     "GT2 closed belt 200 mm",
+     3
+    ]
+   ],
+   "instructions": [
+    "Loop the base GT2 belt over the rotategear and lower the main body onto the 51105.",
+    "Mount the two arm NEMA 17s on the main body (Y = lower shank, X = upper/lever), 20T pulleys on both, belts looped but not tensioned.",
+    "Bolt on the endstop bracket and stabilizer; fit the Y and X endstop switches."
+   ],
+   "parts": [
+    "GT2_20T_pulley_2",
+    "NEMA_17",
+    "NEMA_17_2",
+    "bearing_F624ZZ",
+    "bearing_F624ZZ_2",
+    "endstop_bracket",
+    "main_body",
+    "stabilizer",
+    "yaw_90T_gear"
+   ],
+   "bom_items": [
+    "GT2 closed belt 200 mm",
+    "GT2 pulley 20T"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "arm",
+   "title": "Linkage: shanks, lever, pleuel and levelling links",
+   "image": "img/step_04_arm.png",
+   "caption": "BLUE = ADDED IN THIS STEP (MOVED OUT FOR CLARITY) \u00b7 GREY = ALREADY ASSEMBLED \u00b7 ARM IN THE READY POSE",
+   "printed": [
+    [
+     "robot_belt_arm gear_body.stl",
+     2
+    ],
+    [
+     "robot_belt_arm pleuel.stl",
+     1
+    ],
+    [
+     "robot_belt_arm lower_shank.stl",
+     1
+    ],
+    [
+     "robot_belt_arm pleuel_bend_upper.stl",
+     1
+    ],
+    [
+     "robot_belt_arm pleuel_bend_lower.stl",
+     1
+    ],
+    [
+     "robot_belt_arm triplate.stl",
+     1
+    ],
+    [
+     "robot_belt_arm lever.stl",
+     1
+    ],
+    [
+     "robot_arm upper_shank.stl",
+     1
+    ]
+   ],
+   "hardware": [
+    [
+     "screw",
+     8
+    ],
+    [
+     "bearing F686ZZ",
+     2
+    ],
+    [
+     "F624ZZ flanged bearing",
+     6
+    ],
+    [
+     "F686ZZ flanged bearing",
+     12
+    ],
+    [
+     "M3x6 screw",
+     36
+    ],
+    [
+     "M3 nut",
+     8
+    ],
+    [
+     "M4x10 screw",
+     6
+    ],
+    [
+     "M4x16 screw",
+     8
+    ],
+    [
+     "M4x20 screw",
+     6
+    ],
+    [
+     "M4 nut",
+     14
+    ],
+    [
+     "M6x20 screw",
+     1
+    ],
+    [
+     "M6x40 screw",
+     2
+    ],
+    [
+     "M6x50 screw",
+     1
+    ],
+    [
+     "M6 nut",
+     4
+    ]
+   ],
+   "instructions": [
+    "Shoulder S: lower shank + lower 90T gear + lever + upper 90T gear share the S axis (F624ZZ bearings). Free rotation, no play.",
+    "Pleuel: lever end L to the upper shank's drive pin (F624ZZ); it must stay parallel to the lower shank.",
+    "Elbow E: lower shank + upper shank + triplate on one axis (F686ZZ).",
+    "Lower levelling link: B0 on the main body to the triplate's rear pin; upper levelling link (BAM part) triplate T2 to the manipulator T3.",
+    "Wrist W: manipulator on the upper shank end (F686ZZ). The linkage keeps it level."
+   ],
+   "parts": [
+    "90T_gear_(lower)",
+    "90T_gear_(upper)",
+    "bearing_F686ZZ",
+    "bearing_F686ZZ_2",
+    "lever",
+    "lower_levelling_link_140",
+    "lower_shank_140",
+    "pleuel_140",
+    "screw",
+    "screw_2",
+    "triplate",
+    "upper_levelling_link_140_(BAM-made)",
+    "upper_shank_140"
+   ],
+   "bom_items": [
+    "F624ZZ flanged bearing",
+    "F686ZZ flanged bearing",
+    "M3 nut",
+    "M3x6 screw",
+    "M4 nut",
+    "M4x10 screw",
+    "M4x16 screw",
+    "M4x20 screw",
+    "M6 nut",
+    "M6x20 screw",
+    "M6x40 screw",
+    "M6x50 screw"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "toolhead",
+   "title": "Toolhead",
+   "image": "img/step_05_toolhead.png",
+   "caption": "BLUE = ADDED IN THIS STEP (MOVED OUT FOR CLARITY) \u00b7 GREY = ALREADY ASSEMBLED \u00b7 ARM IN THE READY POSE",
+   "printed": [
+    [
+     "toolheads_stl/gripper_stl_by_ftobler/gripperFinger_by_ftobler.stl",
+     2
+    ],
+    [
+     "gripper",
+     3
+    ],
+    [
+     "toolheads_stl/gripper_stl_by_ftobler/gripper_shaft.stl",
+     1
+    ],
+    [
+     "toolheads_stl/gripper_stl_by_ftobler/gripperBase_by_ftobler.stl",
+     1
+    ],
+    [
+     "robot_belt_arm manipulator.stl",
+     1
+    ]
+   ],
+   "hardware": [
+    [
+     "gripper motor (28BYJ; ref_arm uses a servo)",
+     1
+    ],
+    [
+     "Servo MG90S (gripper toolhead)",
+     1
+    ]
+   ],
+   "instructions": [
+    "Cup: bolt the cup flange to the manipulator plate (M3 into the printed flange; the cup opening points straight up).",
+    "Stick the foam liner ring inside the cup wall."
+   ],
+   "parts": [
+    "gripper",
+    "gripper_2",
+    "gripper_motor_(28BYJ;_ref_arm_uses_a_servo)",
+    "gripper_motor_(28BYJ;_ref_arm_uses_a_servo)_2",
+    "manipulator"
+   ],
+   "bom_items": [
+    "Servo MG90S (gripper toolhead)"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "electronics",
+   "title": "Electronics",
+   "image": null,
+   "caption": "",
+   "printed": [],
+   "hardware": [
+    [
+     "Arduino Uno R3",
+     1
+    ],
+    [
+     "CNC Shield V3",
+     1
+    ],
+    [
+     "A4988 stepper driver",
+     3
+    ],
+    [
+     "A4988 stepper driver (spare)",
+     1
+    ],
+    [
+     "Power supply 24 V 6 A",
+     1
+    ],
+    [
+     "Electrolytic capacitor 100 uF 50 V",
+     1
+    ],
+    [
+     "Stepper cable",
+     3
+    ],
+    [
+     "Silicone wire 18 AWG",
+     2
+    ]
+   ],
+   "instructions": [
+    "Plug the three A4988 drivers into X/Y/Z (EN to EN), set MS1/MS2/MS3 jumpers for the chosen microsteps and Vref BEFORE connecting the belts (wiring sheet).",
+    "Motors: X = upper arm, Y = lower arm, Z = yaw. Endstops to the matching limit headers.",
+    "100 uF capacitor across the shield's motor power input, 24 V supply, Arduino on USB. Never unplug a motor with the supply on.",
+    "Flash the generated firmware (flashing steps on the wiring sheet)."
+   ],
+   "parts": [],
+   "bom_items": [
+    "A4988 stepper driver",
+    "A4988 stepper driver (spare)",
+    "Arduino Uno R3",
+    "CNC Shield V3",
+    "Electrolytic capacitor 100 uF 50 V",
+    "Power supply 24 V 6 A",
+    "Silicone wire 18 AWG",
+    "Stepper cable"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "home",
+   "title": "Home and calibrate",
+   "image": "img/step_07_home.png",
+   "caption": "BLUE = BELTS TO TENSION \u00b7 ARM IN THE READY POSE",
+   "printed": [],
+   "hardware": [],
+   "instructions": [
+    "Mount the shank calibrator and set X_HOME_STEPS / Y_HOME_STEPS / Z_HOME_STEPS per the control README (the generated values are estimates until calibrated).",
+    "Home order: shoulder, elbow, base (the wrist is passive - the linkage levels it).",
+    "Send HOME with a hand on the power switch; each joint must stop cleanly at its endstop."
+   ],
+   "parts": [],
+   "bom_items": []
+  }
+ ],
+ "belts": [
+  {
+   "joint": "base",
+   "pulleys": "20T-90T",
+   "centre_mm": 0.0,
+   "computed_mm": 200.0,
+   "standard_mm": 200.0,
+   "note": "vendor GT2 200 mm closed loop"
+  },
+  {
+   "joint": "shoulder",
+   "pulleys": "20T-90T",
+   "centre_mm": 0.0,
+   "computed_mm": 200.0,
+   "standard_mm": 200.0,
+   "note": "vendor"
+  },
+  {
+   "joint": "elbow",
+   "pulleys": "20T-90T",
+   "centre_mm": 0.0,
+   "computed_mm": 200.0,
+   "standard_mm": 200.0,
+   "note": "vendor"
+  }
+ ],
+ "tension_notes": [
+  "base: slide the motor in its slots until the 200.0 mm belt deflects about 2.0 mm under a light finger press mid-span (about 1/64 of the span, a common GT2 rule of thumb; estimate), then tighten.",
+  "shoulder: slide the motor in its slots until the 200.0 mm belt deflects about 2.0 mm under a light finger press mid-span (about 1/64 of the span, a common GT2 rule of thumb; estimate), then tighten.",
+  "elbow: slide the motor in its slots until the 200.0 mm belt deflects about 2.0 mm under a light finger press mid-span (about 1/64 of the span, a common GT2 rule of thumb; estimate), then tighten.",
+  "Link belts (520 mm): stock loops sized exactly to the 220 mm centre distance; take up slack with the slotted shaft holes (+-3 mm) before clamping the collars.",
+  "Home in this order: shoulder, elbow, base, wrist. Send HOME with a hand on the power switch and check each joint stops at its sensor (table on the belts and homing sheet)."
+ ],
+ "slide": null,
+ "homing": [
+  {
+   "joint": "base",
+   "sensor": "endstop microswitch (vendor, on the socket)",
+   "mount": "socket",
+   "trigger": "rotategear tab",
+   "homes": "q0 at the Z endstop; calibrate with Z_HOME_STEPS",
+   "home_deg": 0.0,
+   "coordinate": "q0"
+  },
+  {
+   "joint": "shoulder",
+   "sensor": "endstop microswitch (vendor)",
+   "mount": "main body",
+   "trigger": "lower shank",
+   "homes": "a1 = q1 at the Y endstop; recalibrate with tool_shank_calibrator_140",
+   "home_deg": 137.4,
+   "coordinate": "a1 = q1"
+  },
+  {
+   "joint": "elbow",
+   "sensor": "endstop microswitch (vendor)",
+   "mount": "main body",
+   "trigger": "lever",
+   "homes": "a2 = q1+q2 at the X endstop; recalibrate with the calibrator",
+   "home_deg": 26.0,
+   "coordinate": "a2 = q1+q2"
+  },
+  {
+   "joint": "wrist",
+   "sensor": "none (passive joint: the linkage holds q3 = -(q1+q2))",
+   "mount": "-",
+   "trigger": "-",
+   "homes": "not homed (no motor)",
+   "home_deg": 0.0,
+   "coordinate": "q3"
+  }
+ ],
+ "homing_order": [
+  "shoulder",
+  "elbow",
+  "base",
+  "wrist"
+ ],
+ "motor_notes": [
+  "belt pass-through: the elbow motor sets the forearm's absolute pitch q1+q2 and the wrist motor the hand's q1+q2+q3; moving the shoulder alone keeps forearm and cup pitch fixed",
+  "motor_angle = gear_ratio * (C @ q); steps = round(steps_per_rad * (C @ q)); q = C^-1 @ (motor_angle / gear_ratio); motor torque = (C^-T tau_joint) / gear_ratio",
+  "Steps per degree of the motor-side angle at 8 microsteps: base 25, shoulder 25, elbow 25, wrist 20"
+ ],
+ "control": {
+  "present": false,
+  "command": "mechy control gen bam-v2"
+ },
+ "checks": [
+  {
+   "check": "BOM total on this guide = bom.csv",
+   "expected": "$131.30",
+   "got": "$131.30",
+   "status": "PASS"
+  },
+  {
+   "check": "Every print-list part has an STL and a part sheet",
+   "expected": "19",
+   "got": "19 sheets, 0 missing STLs",
+   "status": "PASS"
+  },
+  {
+   "check": "Printed pieces: print list = CAD",
+   "expected": "21",
+   "got": "21",
+   "status": "PASS"
+  },
+  {
+   "check": "Every CAD part is installed in exactly one step",
+   "expected": "44",
+   "got": "31",
+   "status": "FAIL"
+  },
+  {
+   "check": "Every BOM line is used by a step",
+   "expected": "28 lines",
+   "got": "missing: NEMA 17 stepper 42SHDC3026-15B, NEMA 17 stepper 42SHDC3026-15B (spare)",
+   "status": "FAIL"
+  },
+  {
+   "check": "CAD outputs match params.yaml",
+   "expected": "b03a5e546b30",
+   "got": "mass_props.json b03a5e546b30",
+   "status": "PASS"
+  }
+ ],
+ "not_verified": [
+  {
+   "source": "design/bam-v2/summary.md",
+   "text": "belt tensioning and tooth skipping, printed-surface quality, joint stiffness/backlash, infill-based masses (estimate \u2014 weigh the parts), home sensor positions (estimates, calibrate). Open decisions: the 4th motor/driver \u2014 vendor rail module or a wrist servo (spare)."
+  }
+ ],
+ "open_decisions": [
+  {
+   "source": "check",
+   "text": "Every BOM line is used by a step: expected 28 lines, missing: NEMA 17 stepper 42SHDC3026-15B, NEMA 17 stepper 42SHDC3026-15B (spare). Fix before building."
+  },
+  {
+   "source": "check",
+   "text": "Every CAD part is installed in exactly one step: expected 44, 31. Fix before building."
+  },
+  {
+   "source": "design/bam-v2/summary.md",
+   "text": "the 4th motor/driver \u2014 vendor rail module or a wrist servo (spare)."
+  },
+  {
+   "source": "options/arm-600g-concept.yaml",
+   "text": "Choose a concept to develop for the 600 g arm. A is the conventional first option; A and B are the proposed CAD/simulation comparison pair, with C available if you prefer counterweights. No new CAD until your pick. All retain four owned motors, wrist roll, MG90S, black finish, X1E fit target and PETG exceptions. Grip, exact motor/step-rate capability and delivered cost below $100 remain unverified; choosing a concept does not approve fabrication or a budget increase."
+  },
+  {
+   "source": "control",
+   "text": "No firmware yet: run `mechy control gen bam-v2`."
+  }
+ ]
+}

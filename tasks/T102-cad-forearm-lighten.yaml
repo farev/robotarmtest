@@ -1,0 +1,5 @@
+id: T102-cad-forearm-lighten
+role: cad
+provider: demo
+goal: "Lighten the forearm by 20% without losing stiffness."
+depends_on: []

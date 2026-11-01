@@ -1,0 +1,8 @@
+{
+  "state": "failed",
+  "started": "2026-10-30T14:27:55+00:00",
+  "finished": "2026-10-30T14:29:06+00:00",
+  "summary": null,
+  "error": "summary missing: summary.md",
+  "pid": 32132
+}

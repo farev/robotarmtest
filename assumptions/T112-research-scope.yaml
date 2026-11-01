@@ -1,0 +1,10 @@
+id: T112-research-scope
+made_by: T112-research-arm-baselines
+text: Compare Moveo, Thor and PAROL6 as research baselines; keep concept selection
+  for T113. Treat missing dimensions, prices and owned-motor performance as unknown,
+  not nominal NEMA17 compatibility.
+alternatives:
+- Expand to servo-driven arms with different motors
+- Download and measure all vendor meshes after concept selection
+created: '2026-10-30T15:13:17+00:00'
+override: null

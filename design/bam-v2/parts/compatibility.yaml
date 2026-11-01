@@ -1,0 +1,94 @@
+checked: '2026-10-30'
+scope: bam-v2; geometry verification is distinct from purchased-part compatibility
+checks:
+- between:
+  - system
+  interface: viewer rig and upper geometry
+  status: verified
+  claim: 39 upper mesh instances and 17 upper print STL files unchanged; joint hierarchy/extras
+    unchanged; 103 pose transforms identical.
+  evidence: design/bam-v2/checks/regression.json
+- between:
+  - 42SHDC3026-15B NEMA 17 stepper
+  - 5 mm flange coupling
+  interface: shaft, bore and engagement
+  status: unverified
+  claim: Models use 5 mm shaft/bore and 7.5 mm engagement. Motor shaft length 24 mm
+    is an estimate; coupling PCD/thickness remain unverified.
+  evidence:
+  - parts/models/nema17-42shdc.yaml
+  - parts/models/flange-coupling-5mm.yaml
+  - https://vxb.com/products/4-pack-5mm-rigid-flange-shaft-couplings-with-8-scr
+- between:
+  - 42SHDC3026-15B NEMA 17 stepper
+  - Direct-drive base fasteners
+  interface: mounting pattern and threads
+  status: unverified
+  claim: 31 mm square model pattern; M3x10 engages 4.5 mm nominally. No margin if
+    actual tapped depth is less than 4.5 mm.
+  evidence:
+  - parts/models/nema17-42shdc.yaml
+  - design/bam-v2/printed/base_geometry.py
+- between:
+  - 51105 thrust bearing
+  - system
+  interface: bearing support, running journal and uplift
+  status: unverified
+  claim: Nominal 25/42/11 bearing envelope, 24.9 mm printed locating journal in 25.3
+    mm bore; thrust washer compression support and 0.5 mm uplift gap. Friction, radial-load
+    wear, bearing retention tolerances and printed lip strength not load-tested.
+  evidence:
+  - design/bam-v2/assembly.yaml
+  - design/bam-v2/checks/assembly.json
+  - /Users/Carlo/Empire/mechy/engine/mechy/data/standard_parts/bearings_thrust.csv
+- between:
+  - system
+  interface: homing
+  status: issue
+  claim: Original yaw switch/socket and gear trigger were removed with the belt base.
+    A new switch bracket/cam and home calibration are required before yaw homing.
+  evidence:
+  - design/bam-v2/build_result.json
+  - design/bam-v2/mass_props.json
+- between:
+  - system
+  interface: torque, payload and drive calibration
+  status: unverified
+  claim: Yaw ratio 1 is represented throughout. Motor check uses a generic curve;
+    600 g payload capacity and usable acceleration not verified. Existing control
+    firmware is not changed.
+  evidence:
+  - design/bam-v2/checks/motor_check.json
+  - design/bam-v2/loads.json
+  - requirements.yaml
+- between:
+  - system
+  interface: inherited shoulder/elbow pulley consistency
+  status: unverified
+  claim: Upper geometry/BOM retain 20T motor pulleys while inherited params specify
+    16T and 5.625:1. This pre-existing discrepancy was preserved to honor the upper-assembly
+    scope.
+  evidence:
+  - design/bam-v2/reference/belt-drive/params.yaml
+  - design/bam-v2/bom.csv
+- between:
+  - system
+  interface: new base clearance
+  status: verified
+  claim: No solid interference or unmeasurable contacts in 40 base solids (motor plug
+    keep-out included) at yaw 0, -150, 90, 150 deg. The home check flags 2 coupling
+    screw clearances at 0.1 mm; nominal gap for all four is (3.2 - 3.0)/2, at the
+    numerical threshold.
+  evidence:
+  - design/bam-v2/checks/assembly.json
+  - design/bam-v2/checks/yaw_poses.json
+- between:
+  - system
+  interface: upper-arm hardware placement
+  status: verified
+  claim: '46 added belts, bearings, axles, screws and nuts screened against every
+    arm mesh at 4 poses: 0 interferences, 2 shallow overlaps <= 0.2 mm (polygon tessellation
+    of round holes). Bearing seats measured from the vendor solids.'
+  evidence:
+  - design/bam-v2/checks/upper_hardware_screen.json
+  - design/bam-v2/upper_hardware.yaml

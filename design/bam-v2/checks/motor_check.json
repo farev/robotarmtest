@@ -1,0 +1,42 @@
+{
+  "variant": "bam-v2",
+  "joints": [
+    "base",
+    "shoulder",
+    "elbow",
+    "wrist"
+  ],
+  "gear_ratio": [
+    1.0,
+    5.625,
+    5.625,
+    4.5
+  ],
+  "microsteps": 8,
+  "max_motor_rps": [
+    2.5,
+    2.5,
+    2.5,
+    2.5
+  ],
+  "max_joint_speed_dps": [
+    900.0,
+    160.0,
+    160.0,
+    200.0
+  ],
+  "gravity_frac_of_holding_stretched": [
+    0.0,
+    0.202,
+    0.084,
+    0.006
+  ],
+  "time_90deg_s": [
+    0.578,
+    0.573,
+    0.57,
+    0.45
+  ],
+  "variant_parser_note": "Local name-parser extension for bam-v2; engine files untouched.",
+  "evidence_status": "estimate: inherited generic motor curve; not measured owned motor performance"
+}

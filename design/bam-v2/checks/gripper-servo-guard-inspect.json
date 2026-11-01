@@ -1,0 +1,115 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-servo-guard.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -19.65,
+      -9.6,
+      0.0
+    ],
+    "max": [
+      19.65,
+      9.6,
+      20.0
+    ],
+    "size": [
+      39.3,
+      19.2,
+      20.0
+    ]
+  },
+  "volume_mm3": 5016.42,
+  "holes": [
+    {
+      "diameter_mm": 2.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -14.25,
+        0.0,
+        1.0
+      ],
+      "depth_mm": 2.0
+    },
+    {
+      "diameter_mm": 2.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        14.25,
+        0.0,
+        1.0
+      ],
+      "depth_mm": 2.0
+    }
+  ],
+  "partial_arcs": [
+    {
+      "diameter_mm": 3.2,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        15.65,
+        5.6,
+        10.0
+      ],
+      "depth_mm": 20.0,
+      "sweep_deg": 90.0
+    },
+    {
+      "diameter_mm": 3.2,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -15.65,
+        5.6,
+        10.0
+      ],
+      "depth_mm": 20.0,
+      "sweep_deg": 90.0
+    },
+    {
+      "diameter_mm": 3.2,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -15.65,
+        -5.6,
+        10.0
+      ],
+      "depth_mm": 20.0,
+      "sweep_deg": 90.0
+    },
+    {
+      "diameter_mm": 3.2,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        15.65,
+        -5.6,
+        10.0
+      ],
+      "depth_mm": 20.0,
+      "sweep_deg": 90.0
+    }
+  ]
+}

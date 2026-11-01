@@ -1,0 +1,104 @@
+{
+  "kind": "fea",
+  "variant": "bam-v2",
+  "headline": {
+    "label": "Safety factor",
+    "value": 4.21,
+    "unit": "",
+    "target": 2.0,
+    "meets": true
+  },
+  "metrics": [
+    {
+      "label": "Max von Mises",
+      "value": "7.1 MPa",
+      "meets": true
+    },
+    {
+      "label": "Max deflection",
+      "value": "1.332 mm"
+    },
+    {
+      "label": "Stiffness at the tip",
+      "value": "14.0 N/mm"
+    },
+    {
+      "label": "Load",
+      "value": "16.9 N"
+    },
+    {
+      "label": "Mass",
+      "value": "27.3 g"
+    },
+    {
+      "label": "Part",
+      "value": "arm_lower_shank_140"
+    },
+    {
+      "label": "Material",
+      "value": "PLA (printed)"
+    },
+    {
+      "label": "Elements",
+      "value": "35,577"
+    }
+  ],
+  "plots": [
+    "plots/stress_map.png",
+    "plots/stress_along.png"
+  ],
+  "part": "arm_lower_shank_140",
+  "material": "PLA",
+  "load_n": 16.861,
+  "max_von_mises_mpa": 7.123,
+  "max_von_mises_with_clamp_mpa": 7.123,
+  "max_deflection_mm": 1.3325,
+  "tip_deflection_mm": -1.2081,
+  "stiffness_n_per_mm": 13.956,
+  "safety_factor": 4.211,
+  "mass_g": 27.3,
+  "elements": 35577,
+  "meta": {
+    "part": "arm_lower_shank_140",
+    "material": "PLA",
+    "printed": true,
+    "qty_in_assembly": 1,
+    "cell_mm": 1.052,
+    "elements": 35577,
+    "nodes": 45208,
+    "voxel_volume_error_pct": 1.6,
+    "long_axis": "x",
+    "load_axis": "y",
+    "mount_end": "max",
+    "clamp_length_mm": 13.0,
+    "span_mm": 150.1,
+    "E_eff_gpa": 2.45,
+    "yield_eff_mpa": 30.0,
+    "mass_g": 27.3,
+    "mass_source": "print_list.csv est_grams (CAD shells + infill)",
+    "quick": false,
+    "load_note": "shoulder motor stalled against a blocked tool: 0.45 N m holding x 5.625 gear = 2.53 N m at the joint, over the 150 mm span",
+    "deformation_scale": 9.7,
+    "estimates": [
+      "material PLA: typical datasheet values (E 3.5 GPa, yield 60 MPa)",
+      "FDM knockdown: stiffness x0.7 (walls + infill), strength x0.5 (layer lines, worst build direction); the part is modelled as a smeared isotropic solid",
+      "voxel model: 1.05 mm cubes, volume +2% vs the STL; fillets, small holes and threads are stair-stepped or lost",
+      "held rigidly over the 13 mm at the max end of the x axis (the end with more material, taken as the hub / mount; set --opt mount=min|max)",
+      "load: shoulder motor stalled against a blocked tool: 0.45 N m holding x 5.625 gear = 2.53 N m at the joint, over the 150 mm span, spread over the far 13 mm, along -y (the part's middle dimension: the plane it swings in)",
+      "linear elastic, small deflection; no buckling, fatigue or creep",
+      "peak stress excludes the nodes touching the idealised rigid clamp (a singular corner); with them it is 7.1 MPa"
+    ],
+    "assumptions": [
+      "material PLA: typical datasheet values (E 3.5 GPa, yield 60 MPa)",
+      "FDM knockdown: stiffness x0.7 (walls + infill), strength x0.5 (layer lines, worst build direction); the part is modelled as a smeared isotropic solid",
+      "voxel model: 1.05 mm cubes, volume +2% vs the STL; fillets, small holes and threads are stair-stepped or lost",
+      "held rigidly over the 13 mm at the max end of the x axis (the end with more material, taken as the hub / mount; set --opt mount=min|max)",
+      "load: shoulder motor stalled against a blocked tool: 0.45 N m holding x 5.625 gear = 2.53 N m at the joint, over the 150 mm span, spread over the far 13 mm, along -y (the part's middle dimension: the plane it swings in)",
+      "linear elastic, small deflection; no buckling, fatigue or creep",
+      "peak stress excludes the nodes touching the idealised rigid clamp (a singular corner); with them it is 7.1 MPa"
+    ]
+  },
+  "failures": {},
+  "scene": "scene.json",
+  "runtime_s": 10.16
+}

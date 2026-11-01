@@ -1,0 +1,40 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-crank-keeper.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -4.0,
+      -4.0,
+      0.0
+    ],
+    "max": [
+      4.0,
+      4.0,
+      1.7
+    ],
+    "size": [
+      8.0,
+      8.0,
+      1.7
+    ]
+  },
+  "volume_mm3": 76.43,
+  "holes": [
+    {
+      "diameter_mm": 2.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        0.85
+      ],
+      "depth_mm": 1.7
+    }
+  ],
+  "partial_arcs": []
+}

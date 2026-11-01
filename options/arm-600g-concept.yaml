@@ -1,0 +1,132 @@
+id: arm-600g-concept
+prompt: Choose a concept to develop for the 600 g arm. A is the conventional first
+  option; A and B are the proposed CAD/simulation comparison pair, with C available
+  if you prefer counterweights. No new CAD until your pick. All retain four owned
+  motors, wrist roll, MG90S, black finish, X1E fit target and PETG exceptions. Grip,
+  exact motor/step-rate capability and delivered cost below $100 remain unverified;
+  choosing a concept does not approve fabrication or a budget increase.
+options:
+- id: arm-600g-A
+  label: A — Conventional articulated belt arm
+  title: A — Conventional articulated belt arm
+  description: Moveo-derived supported serial arm (BCN3D, MIT). Three motors at base/yaw
+    platform; one local wrist-roll motor. 355 mm nominal reach, 0.783 kg pitch-moving
+    mass estimate. Estimated $82–127; budget compliance unverified.
+  image: research/concepts-600g/options.svg
+  evidence:
+  - research/concepts-600g/note.md
+  - research/arm-baseline/note.md
+  - research/payload-600g/note.md
+  registry: design/configs.yaml
+  preset: arm-600g-A
+  ratios:
+  - 6
+  - 80
+  - 48
+  - 1
+  pitch_demand_nm:
+  - 3.411557
+  - 1.746358
+  conditional_pitch_allowance_nm:
+  - 6.6096
+  - 3.569184
+  current_vector_sensitivity_nm:
+  - 4.673693
+  - 2.523794
+  peak_required_step_rate_hz: 2133.33
+  max_step_rate_hz: null
+  cost_estimate_usd:
+  - 82
+  - 127
+  pros:
+  - Conventional topology with permissively licensed base
+  - Retains 355 mm nominal reach
+  cons:
+  - Many belt stages and unverified running torque
+  - MG90S contact and direct-roll eccentricity unresolved
+  - Cost range crosses $100
+  status: unselected_conditional_screen_only
+- id: arm-600g-B
+  label: B — Base-driven parallelogram
+  title: B — Base-driven parallelogram
+  description: Original equal-crank linkage with Moveo-derived supports (MIT). Shoulder
+    and absolute forearm elevation driven at yaw platform; local wrist roll retained.
+    Estimated radial zone 145–335 mm, 0.843 kg moving. Estimated $91–141. Lower shoulder
+    drive torque than A, but reduced reach and more alignment work.
+  image: research/concepts-600g/options.svg
+  evidence:
+  - research/concepts-600g/note.md
+  - research/arm-baseline/note.md
+  - research/payload-600g/note.md
+  registry: design/configs.yaml
+  preset: arm-600g-B
+  ratios:
+  - 6
+  - 36
+  - 36
+  - 1
+  pitch_demand_nm:
+  - 1.711535
+  - 1.746358
+  conditional_pitch_allowance_nm:
+  - 2.97432
+  - 2.97432
+  current_vector_sensitivity_nm:
+  - 2.103162
+  - 2.103162
+  peak_required_step_rate_hz: 1600
+  max_step_rate_hz: null
+  cost_estimate_usd:
+  - 91
+  - 141
+  pros:
+  - About 50% lower shoulder actuator gravity demand than A's serial bound
+  - Both pitch drives remain at yaw platform
+  cons:
+  - Four-bar toggle/collision and loop-closure verification needed
+  - Estimated maximum reach falls to 335 mm
+  - Grip, roll and budget unverified
+  status: unselected_conditional_screen_only
+- id: arm-600g-C
+  label: C — Dead-load counterbalanced arm
+  title: C — Dead-load counterbalanced arm
+  description: Moveo-derived serial arm (MIT), with two adjustable rear counterweights.
+    355 mm nominal reach; 1.613 kg moving estimate, including 0.830 kg effective ballast
+    assemblies. Estimated $90–140. Balances arm dead weight, not payload; rear sweep
+    and inertia increase.
+  image: research/concepts-600g/options.svg
+  evidence:
+  - research/concepts-600g/note.md
+  - research/arm-baseline/note.md
+  - research/payload-600g/note.md
+  registry: design/configs.yaml
+  preset: arm-600g-C
+  ratios:
+  - 6
+  - 48
+  - 32
+  - 1
+  pitch_demand_nm:
+  - 2.088816
+  - 1.294478
+  conditional_pitch_allowance_nm:
+  - 3.96576
+  - 2.379456
+  current_vector_sensitivity_nm:
+  - 2.804216
+  - 1.682529
+  peak_required_step_rate_hz: 1422.22
+  max_step_rate_hz: null
+  cost_estimate_usd:
+  - 90
+  - 140
+  pros:
+  - Ideal dead-load compensation through the pitch workspace
+  - Lower reductions than A; retains nominal reach
+  cons:
+  - Adds about 0.830 kg plus rear swept volume
+  - Requires weighed and trimmed mass moments, guards and stronger support
+  - Grip, roll and budget unverified
+  status: unselected_conditional_screen_only
+chosen: null
+feedback: null

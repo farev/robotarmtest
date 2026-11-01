@@ -1,0 +1,5 @@
+id: T101-research-gripper
+role: research
+provider: demo
+goal: "Find two gripper designs the MG90S servo can drive."
+depends_on: []

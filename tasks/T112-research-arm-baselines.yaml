@@ -1,0 +1,20 @@
+id: "T112-research-arm-baselines"
+role: "research"
+provider: "codex"
+tier: "fast"
+goal: "Supply the missing comparison of three to five proven open-source arm designs for 600 g concept selection."
+brief: |
+  Finish within 20 minutes; T105 and research/arm-baseline are absent, so T108 could not run. Do not repeat T107 capacity analysis.
+  Intake has zero pending sources and no inspiration notes; recheck intake and complete any newly added TODO(research) notes before prior art.
+  Find 3-5 closest articulated or parallel-linkage open-source arms, conventional first; record author, licence, source, reach, payload, transmission and printable envelope.
+  Compare adaptations for four 42SHDC3026-15B motors, wrist roll, MG90S claw, X1E 256 mm cube, PLA/material exceptions and under-$100 remaining spend.
+  Use primary sources and the reference-library CSV value_type; label unknown motor torque, motor fit, current prices and all estimates. Preserve vendor originals if downloaded.
+  Carry forward T107 shoulder/elbow/grip failures; identify base-mounted drives and distal motor penalties, named real parts and evidence gaps without claiming 600 g compliance.
+  Include a small mechanism comparison SVG, verification table and motor measurement diagram; ask only a missing design-changing question, with no repeated answered questions.
+  Notes and summary start What/Where, then decision/numbers, and end Not verified and Open decisions; unresolved facts go to concept trade-offs.
+scout: false
+inputs: [".mechy/digest.md", "requirements.yaml", "inspiration/links.yaml", "research/payload-600g/summary.md", "research/payload-600g/note.md", "hw/motors.yaml", "hw/drivers.yaml"]
+tools: ["progress_report", "intake_pending", "intake_digest", "assumption_log", "question_ask"]
+outputs: ["research/arm-baseline/note.md", "research/arm-baseline/comparison.svg", "research/arm-baseline/motor-datum.svg", "research/arm-baseline/summary.md"]
+depends_on: []
+done_when: "Three to five licensed open-source baselines have sourced specifications and labelled unknowns, a comparison visual, motor-fit handoff and a verification table for concept selection."

@@ -1,0 +1,665 @@
+{
+  "-150": {
+    "parts": 40,
+    "min_clearance_mm": 0.1,
+    "part_info": [
+      {
+        "id": "yaw-base-housing",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-bearing-spindle",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-turntable-adapter",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-bearing-cover",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-motor-direct",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-motor-plug-keepout",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-flange-coupling",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-thrust-bearing",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      }
+    ],
+    "interferences": [],
+    "clearance_issues": [
+      {
+        "a": "yaw-flange-coupling",
+        "b": "coupling-m3x10-csk-1",
+        "distance_mm": 0.1
+      },
+      {
+        "a": "yaw-flange-coupling",
+        "b": "coupling-m3x10-csk-4",
+        "distance_mm": 0.1
+      }
+    ],
+    "unverified_contacts": [],
+    "ok": false
+  },
+  "90": {
+    "parts": 40,
+    "min_clearance_mm": 0.1,
+    "part_info": [
+      {
+        "id": "yaw-base-housing",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-bearing-spindle",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-turntable-adapter",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-bearing-cover",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-motor-direct",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-motor-plug-keepout",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-flange-coupling",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-thrust-bearing",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      }
+    ],
+    "interferences": [],
+    "clearance_issues": [
+      {
+        "a": "yaw-flange-coupling",
+        "b": "coupling-m3x10-csk-1",
+        "distance_mm": 0.1
+      },
+      {
+        "a": "yaw-flange-coupling",
+        "b": "coupling-m3x10-csk-4",
+        "distance_mm": 0.1
+      }
+    ],
+    "unverified_contacts": [],
+    "ok": false
+  },
+  "150": {
+    "parts": 40,
+    "min_clearance_mm": 0.1,
+    "part_info": [
+      {
+        "id": "yaw-base-housing",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-bearing-spindle",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-turntable-adapter",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-bearing-cover",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-motor-direct",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-motor-plug-keepout",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-flange-coupling",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "yaw-thrust-bearing",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "motor-m3x10-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3x25-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "cover-m3-insert-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "anchor-m4x12-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3x10-csk-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "coupling-m3-nut-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-1",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-2",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-3",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3x12-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      },
+      {
+        "id": "body-m3-nut-4",
+        "solids": 1,
+        "non_solid_bodies": 0
+      }
+    ],
+    "interferences": [],
+    "clearance_issues": [
+      {
+        "a": "yaw-flange-coupling",
+        "b": "coupling-m3x10-csk-1",
+        "distance_mm": 0.1
+      },
+      {
+        "a": "yaw-flange-coupling",
+        "b": "coupling-m3x10-csk-4",
+        "distance_mm": 0.1
+      }
+    ],
+    "unverified_contacts": [],
+    "ok": false
+  }
+}

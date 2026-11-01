@@ -1,0 +1,20 @@
+id: T108-concept-600g-options
+role: concept
+provider: codex
+tier: deep
+goal: Present a conventional open-source-based arm and one or two alternatives for user selection at the 600 g target.
+brief: |
+  Limit comparison to 20 minutes using T105 prior art and T107 capacity evidence; no repeat research or heavy CAD, so no outside-facts scout is needed.
+  Option one adapts the closest proven conventional articulated or parallel-linkage open-source arm with author/licence; compare one or two materially different alternatives, including current-layout adaptation if viable.
+  Respect four owned steppers, wrist roll, selected claw, black finish, X1E 256 mm cube, PLA preference/material exceptions and under-$100 remaining budget.
+  Compare reach, 600 g torque margins, grip limits, moving-motor mass penalty, named parts, estimated cost and build effort; expose infeasibility without lowering payload.
+  Produce numbered concept sketches and a numbers-backed table with source labels and verification checks; preserve any vendor downloads untouched and credit them.
+  Add presented combinations under configs presets with exactly the option ids; retain viewed selection until a pick and never list unbuilt concepts under built.
+  Call options_present with evidence and visuals; use question_ask only for missing answers preventing useful selection and leave dependent work gated until answered.
+  Open notes with What/Where; end with Not verified and Open decisions plus a handoff for chosen-concept CAD, verification, deep review/fixes and final STLs, print list, BOM, assembly order and rebuild commands.
+scout: false
+inputs: [.mechy/digest.md, requirements.yaml, decisions.md, research/arm-baseline/note.md, research/arm-baseline/motor-datum.svg, research/payload-600g/note.md, research/payload-600g/envelope.csv, research/payload-600g/envelope.svg, design/configs.yaml, design/selection.yaml, tasks/summaries/T106-docs-config-inventory.md]
+tools: [progress_report, assumption_log, question_ask, options_present]
+outputs: [research/concepts-600g/note.md, research/concepts-600g/options.svg, options/arm-600g-concept.yaml, design/configs.yaml, tasks/summaries/T108-concept-600g-options.md]
+depends_on: [T105-research-arm-baseline, T106-docs-config-inventory, T107-research-600g-feasibility]
+done_when: Two or three evidenced concepts with matching configuration presets are presented through options_present and the user-selection gate is pending or recorded before heavy CAD.

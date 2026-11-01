@@ -1,0 +1,54 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-wire-retainer-right.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -6.0,
+      -6.0,
+      0.0
+    ],
+    "max": [
+      6.0,
+      6.0,
+      2.5
+    ],
+    "size": [
+      12.0,
+      12.0,
+      2.5
+    ]
+  },
+  "volume_mm3": 228.38,
+  "holes": [
+    {
+      "diameter_mm": 3.4,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        2.0
+      ],
+      "depth_mm": 1.0
+    },
+    {
+      "diameter_mm": 6.2,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        0.75
+      ],
+      "depth_mm": 1.5
+    }
+  ],
+  "partial_arcs": []
+}

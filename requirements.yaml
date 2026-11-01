@@ -1,9 +1,55 @@
+---
 product: robot arm
-axes: [base yaw, shoulder, elbow, wrist roll]
-gripper: servo (to buy; v1 designed for MG90S)
-payload_g: 100            # assumed
-printer: {name: Bambu Lab X1E, bed_mm: [256, 256, 256], nozzle_mm: 0.4}
-material: PLA preferred (PETG on the 4 motor-clamping parts, see decisions.md)
+axes:
+- base yaw
+- shoulder
+- elbow
+- wrist roll
+gripper: MG90S two-finger claw (selected; capacity and clone fit unverified)
+payload_g: 600
+printer:
+  name: Bambu Lab X1E
+  bed_mm:
+  - 256
+  - 256
+  - 256
+  nozzle_mm: 0.4
+material: PLA preferred; preserve documented PETG motor-clamp exceptions; thermal
+  performance not certified
 max_part: fits the printer bed in one piece
-owned: [4 x 42SHDC3026-15B NEMA 17 (0.9 A), Arduino Uno, CNC Shield V3, A4988 drivers, 100 uF 50 V cap, 24 V 6 A PSU]
-country: US               # assumed for sourcing
+owned:
+- 4 x 42SHDC3026-15B NEMA 17 (0.9 A)
+- Arduino Uno
+- CNC Shield V3
+- A4988 drivers
+- 100 uF 50 V cap
+- 24 V 6 A PSU
+country: US
+payload_kg: 0.6
+remaining_parts_budget:
+  currency: USD
+  upper_bound_exclusive: 100
+  source: task card T106 answered constraints
+  compliance_verified: false
+builder: professional engineer
+finish: black
+firmware_owner: friend
+material_exceptions:
+  source: design/v1/print_list.csv and design/v1/assembly.yaml
+  manifest_petg_parts:
+  - base-deck
+  - upper-arm
+  - pack-cover
+  - pack-carriage
+  - forearm
+  conflict: Notes say 4 motor-clamping parts; manifests specify 5. Deadline PLA override
+    at 0.6 A is historical, not thermal validation.
+approval:
+  v1: viewing only; not approved for 600 g
+  new_cad_gate: capacity screening and user concept selection
+  open:
+  - concept
+  - motor fit
+  - remaining budget trade-offs
+answered_constraints_source: task card T106-docs-config-inventory; supplied project
+  digest

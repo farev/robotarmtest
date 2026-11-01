@@ -1,0 +1,5 @@
+id: T201-cad-direct-drive-base
+role: cad
+provider: claude
+goal: "Make the base direct drive: motor under the turntable, coupled straight to it."
+depends_on: []

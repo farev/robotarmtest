@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "variant": "bam-v2",
+  "ball_mass_kg": 0.057,
+  "belt_efficiency": 0.9,
+  "note": "Estimate using inherited generic motor curve, not measured 42SHDC3026-15B performance. 57 g legacy ball scenario; not a 600 g payload certification.",
+  "joints": [
+    {
+      "joint": "base",
+      "gear_ratio": 1.0,
+      "motor": "nema17",
+      "gravity_torque_joint_nm": 0.0,
+      "gravity_torque_pulley_nm": 0.0,
+      "gravity_torque_motor_nm": 0.0,
+      "holding_torque_nm": 0.45,
+      "torque_at_speed_nm": 0.38,
+      "usable_speed_rps": 2.5,
+      "joint_torque_available_nm": 0.441,
+      "safety_factor_static": null,
+      "safety_factor_at_speed": null,
+      "load_inertia_motor_kgm2": 0.01645,
+      "rotor_inertia_kgm2": 5.4e-06,
+      "drive_type": "direct",
+      "transmission_efficiency_estimate": 0.98
+    },
+    {
+      "joint": "shoulder",
+      "gear_ratio": 5.625,
+      "motor": "nema17",
+      "gravity_torque_joint_nm": 0.5112,
+      "gravity_torque_pulley_nm": 0.2975,
+      "gravity_torque_motor_nm": 0.0588,
+      "holding_torque_nm": 0.45,
+      "torque_at_speed_nm": 0.38,
+      "usable_speed_rps": 2.5,
+      "joint_torque_available_nm": 2.278,
+      "safety_factor_static": 7.66,
+      "safety_factor_at_speed": 6.47,
+      "load_inertia_motor_kgm2": 0.0001317,
+      "rotor_inertia_kgm2": 5.4e-06
+    },
+    {
+      "joint": "elbow",
+      "gear_ratio": 5.625,
+      "motor": "nema17",
+      "gravity_torque_joint_nm": 0.2137,
+      "gravity_torque_pulley_nm": 0.2007,
+      "gravity_torque_motor_nm": 0.0396,
+      "holding_torque_nm": 0.45,
+      "torque_at_speed_nm": 0.38,
+      "usable_speed_rps": 2.5,
+      "joint_torque_available_nm": 2.278,
+      "safety_factor_static": 11.35,
+      "safety_factor_at_speed": 9.59,
+      "load_inertia_motor_kgm2": 0.0001151,
+      "rotor_inertia_kgm2": 5.4e-06
+    },
+    {
+      "joint": "wrist",
+      "gear_ratio": 4.5,
+      "motor": "nema17",
+      "gravity_torque_joint_nm": 0.0131,
+      "gravity_torque_pulley_nm": 0.0,
+      "gravity_torque_motor_nm": 0.0,
+      "holding_torque_nm": 0.45,
+      "torque_at_speed_nm": 0.38,
+      "usable_speed_rps": 2.5,
+      "joint_torque_available_nm": 1.823,
+      "safety_factor_static": null,
+      "safety_factor_at_speed": null,
+      "load_inertia_motor_kgm2": 0.0,
+      "rotor_inertia_kgm2": 5.4e-06
+    }
+  ],
+  "belt_efficiency_applies_to": [
+    "shoulder",
+    "elbow"
+  ]
+}

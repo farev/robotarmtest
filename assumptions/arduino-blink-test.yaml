@@ -1,0 +1,10 @@
+id: arduino-blink-test
+made_by: T000-planner
+text: Use the Uno's built-in LED for a 1-second-on, 1-second-off test, with serial
+  heartbeat output; no external LED or motor motion is needed.
+alternatives:
+- Faster built-in LED blink
+- External LED test after confirming wiring
+- Serial-only heartbeat
+created: '2026-10-30T14:27:50+00:00'
+override: null

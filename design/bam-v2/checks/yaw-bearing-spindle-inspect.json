@@ -1,0 +1,110 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/yaw-bearing-spindle.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -28.0,
+      -28.0,
+      0.0
+    ],
+    "max": [
+      28.0,
+      28.0,
+      23.5
+    ],
+    "size": [
+      56.0,
+      56.0,
+      23.5
+    ]
+  },
+  "volume_mm3": 18900.68,
+  "holes": [
+    {
+      "diameter_mm": 22.4,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -13.5,
+        13.5,
+        1.05
+      ],
+      "depth_mm": 2.1
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        13.5,
+        13.5,
+        1.05
+      ],
+      "depth_mm": 2.1
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -13.5,
+        -13.5,
+        1.05
+      ],
+      "depth_mm": 2.1
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        13.5,
+        -13.5,
+        1.05
+      ],
+      "depth_mm": 2.1
+    },
+    {
+      "diameter_mm": 14.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        16.1
+      ],
+      "depth_mm": 14.8
+    }
+  ],
+  "partial_arcs": []
+}

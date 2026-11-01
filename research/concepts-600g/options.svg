@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+<title id="title">600 g arm concepts — selection before CAD</title>
+<desc id="desc">A conventional serial belt arm, B a remote parallelogram drive, C an arm with two dead-load counterweights. All use four owned motors and MG90S, and all remain unverified for grip, cost and motion.</desc>
+<defs>
+ <style>text{font-family:Arial,sans-serif;fill:#182433}.title{font-size:32px;font-weight:700}.sub{font-size:17px;fill:#526174}.head{font-size:23px;font-weight:700}.label{font-size:16px}.small{font-size:14px;fill:#526174}.metric{font-size:20px;font-weight:700}.link{stroke:#263646;stroke-width:20;stroke-linecap:round;fill:none}.joint{fill:#fff;stroke:#263646;stroke-width:5}.drive{fill:#dfeaf3;stroke:#426581;stroke-width:2}.belt{fill:none;stroke:#3781a5;stroke-width:3;stroke-dasharray:7 5}.cw{fill:#bf9056;stroke:#805b2d;stroke-width:2}.row{stroke:#dce2e8;stroke-width:1}</style>
+ <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#3781a5" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1440" height="1040" fill="#f3f6f9"/>
+<text x="44" y="57" class="title">600 g • three concepts • pick before CAD</text>
+<text x="44" y="89" class="sub">Four owned steppers · wrist roll · MG90S · black finish · X1E 256 mm cube · remaining spend &lt; $100</text>
+<text x="44" y="118" class="small">Original schematic sketches, not CAD or verified workspaces. Every mass, cost and torque result below uses estimates.</text>
+
+<g transform="translate(34,145)">
+ <rect width="444" height="560" rx="15" fill="white" stroke="#b4c6d5" stroke-width="2"/>
+ <rect width="444" height="7" rx="3" fill="#426581"/>
+ <text x="22" y="43" class="head">A  Conventional articulated</text>
+ <text x="22" y="69" class="small">Moveo-derived · MIT · conventional first option</text>
+ <path d="M60 323H384" stroke="#9ba9b8" stroke-width="5"/>
+ <rect x="89" y="272" width="128" height="50" rx="7" fill="#263646"/>
+ <rect x="105" y="244" width="40" height="30" class="drive"/>
+ <rect x="153" y="244" width="40" height="30" class="drive"/>
+ <text x="110" y="264" class="small">M2</text><text x="158" y="264" class="small">M3</text>
+ <path d="M145 244L218 167L328 209" class="link"/>
+ <path d="M153 239L224 175" class="belt"/>
+ <circle cx="145" cy="244" r="11" class="joint"/><circle cx="218" cy="167" r="11" class="joint"/>
+ <rect x="283" y="183" width="35" height="30" transform="rotate(21 300 198)" class="drive"/>
+ <path d="M328 209l26 10m-3-13l15 6l-6 16l-15-6" fill="none" stroke="#263646" stroke-width="5"/>
+ <circle cx="367" cy="225" r="13" fill="#b7d7c4"/><text x="338" y="260" class="small">600 g</text>
+ <text x="76" y="220" class="small">J2 80:1</text><text x="213" y="139" class="small">J3 48:1</text>
+ <text x="285" y="168" class="small">M4 roll 1:1</text>
+ <text x="99" y="348" class="small">M1 yaw 6:1 · anchored base</text>
+ <text x="22" y="390" class="metric">355 mm reach · 0.783 kg moving</text>
+ <text x="22" y="422" class="label">J2 / J3 demand: 3.412 / 1.746 N·m</text>
+ <text x="22" y="448" class="label">Conditional budget: 6.610 / 3.569 N·m</text>
+ <text x="22" y="480" class="metric">$82–127 estimated</text>
+ <text x="22" y="508" class="small">12–18 h assembly · 26–34 printed pieces</text>
+ <text x="22" y="538" class="small">Risk: belt compliance, running torque, cost</text>
+</g>
+
+<g transform="translate(498,145)">
+ <rect width="444" height="560" rx="15" fill="white" stroke="#d0dbe4"/>
+ <text x="22" y="43" class="head">B  Remote parallelogram</text>
+ <text x="22" y="69" class="small">Moveo-derived support · original linkage</text>
+ <path d="M60 323H384" stroke="#9ba9b8" stroke-width="5"/>
+ <rect x="88" y="274" width="130" height="48" rx="7" fill="#263646"/>
+ <rect x="102" y="245" width="40" height="30" class="drive"/><rect x="151" y="245" width="40" height="30" class="drive"/>
+ <text x="107" y="265" class="small">M2</text><text x="156" y="265" class="small">M3</text>
+ <path d="M143 243L217 163L330 206" class="link"/>
+ <path d="M172 254L246 174M143 243L172 254M217 163L246 174" fill="none" stroke="#3b8f8d" stroke-width="8"/>
+ <circle cx="143" cy="243" r="10" class="joint"/><circle cx="217" cy="163" r="10" class="joint"/>
+ <circle cx="172" cy="254" r="5" fill="white"/><circle cx="246" cy="174" r="5" fill="white"/>
+ <rect x="282" y="181" width="35" height="30" transform="rotate(21 300 196)" class="drive"/>
+ <path d="M330 206l24 10m-3-13l15 6l-6 16l-15-6" fill="none" stroke="#263646" stroke-width="5"/>
+ <circle cx="366" cy="222" r="13" fill="#b7d7c4"/>
+ <text x="224" y="126" class="small">Equal cranks: 60 mm</text>
+ <text x="231" y="279" class="small">Parallel rods: 135 mm</text>
+ <text x="73" y="348" class="small">Both pitch drives 36:1 at yaw platform</text>
+ <text x="22" y="390" class="metric">145–335 mm radial zone*</text>
+ <text x="22" y="422" class="label">J2 / J3 demand: 1.712 / 1.746 N·m</text>
+ <text x="22" y="448" class="label">Conditional budget: 2.974 / 2.974 N·m</text>
+ <text x="22" y="480" class="metric">$91–141 estimated · 0.843 kg</text>
+ <text x="22" y="508" class="small">18–28 h assembly · 30–40 printed pieces</text>
+ <text x="22" y="538" class="small">*40–140° linkage assumption; collisions unknown</text>
+</g>
+
+<g transform="translate(962,145)">
+ <rect width="444" height="560" rx="15" fill="white" stroke="#d0dbe4"/>
+ <text x="22" y="43" class="head">C  Dead-load counterbalance</text>
+ <text x="22" y="69" class="small">Moveo-derived · two adjustable rear masses</text>
+ <path d="M38 323H398" stroke="#9ba9b8" stroke-width="5"/>
+ <rect x="100" y="274" width="125" height="48" rx="7" fill="#263646"/>
+ <rect x="111" y="245" width="40" height="30" class="drive"/><rect x="158" y="245" width="40" height="30" class="drive"/>
+ <text x="116" y="265" class="small">M2</text><text x="163" y="265" class="small">M3</text>
+ <path d="M150 242L232 170L341 211" class="link"/>
+ <path d="M150 242L81 303M232 170L116 126" fill="none" stroke="#af814a" stroke-width="8"/>
+ <rect x="58" y="286" width="43" height="30" rx="3" class="cw"/><rect x="98" y="112" width="34" height="26" rx="3" class="cw"/>
+ <circle cx="150" cy="242" r="10" class="joint"/><circle cx="232" cy="170" r="10" class="joint"/>
+ <rect x="296" y="187" width="35" height="30" transform="rotate(21 312 202)" class="drive"/>
+ <path d="M341 211l24 10m-3-13l15 6l-6 16l-15-6" fill="none" stroke="#263646" stroke-width="5"/>
+ <circle cx="378" cy="228" r="13" fill="#b7d7c4"/>
+ <text x="32" y="98" class="small">0.230 kg equivalent at 200 mm</text>
+ <text x="28" y="348" class="small">0.600 kg equivalent shoulder ballast at 200 mm</text>
+ <text x="22" y="390" class="metric">355 mm reach · 1.613 kg moving</text>
+ <text x="22" y="422" class="label">J2 / J3 demand: 2.089 / 1.294 N·m*</text>
+ <text x="22" y="448" class="label">Conditional budget: 3.966 / 2.379 N·m</text>
+ <text x="22" y="480" class="metric">$90–140 estimated</text>
+ <text x="22" y="508" class="small">16–24 h assembly · J2 48:1 / J3 32:1</text>
+ <text x="22" y="538" class="small">*Ideal balance only; inertia and rear sweep increase</text>
+</g>
+
+<rect x="34" y="727" width="1372" height="147" rx="13" fill="#e5edf4"/>
+<text x="57" y="760" class="head">Shared constraints remain unresolved</text>
+<text x="57" y="792" class="label">Grip: friction-only MG90S screen needs μ ≥ 4.167. Direct roll at 25 mm object eccentricity fails the conditional allowance.</text>
+<text x="57" y="820" class="label">Step-rate requirement, peak channel: A 2,133 Hz · B 1,600 Hz · C 1,422 Hz. Firmware limit is unknown.</text>
+<text x="57" y="848" class="label">Torque uses 0.50 factor, sibling-motor/current estimates and belt losses. Current-convention sensitivity lowers budgets by 29.3%.</text>
+<rect x="34" y="895" width="1372" height="108" rx="13" fill="white" stroke="#d0dbe4"/>
+<text x="57" y="928" class="head">Proposed next comparison: A + B. C is available if you prefer counterweights.</text>
+<text x="57" y="959" class="label">All cost ranges cross $100. Your pick gates new CAD; it does not approve fabrication, purchases or a 600 g rating.</text>
+<text x="57" y="985" class="small">Evidence and equations: research/concepts-600g/note.md · source credit: BCN3D Moveo, MIT · not to scale</text>
+</svg>

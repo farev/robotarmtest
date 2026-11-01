@@ -1,0 +1,12 @@
+id: T113-screening-defaults
+made_by: T113-concept-600g-selection
+text: 'Concept comparison only: retain 0.355 m pad reach, four owned motors, wrist
+  roll and MG90S; use inherited 0.34 N m sibling torque at 0.9 A scaled to historical
+  0.6 A, 0.50 allowance factor, 0.90 estimated belt-stage efficiency, 200 steps/rev
+  and 1/8 microsteps as unverified screening inputs. Compare'
+alternatives:
+- Recalculate from measured owned-motor torque/current, mass and firmware rate
+- Evaluate shorter reach after user selection
+- Use measured task speed and object geometry after selection
+created: '2026-10-30T15:16:11+00:00'
+override: null

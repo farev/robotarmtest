@@ -1,0 +1,20 @@
+id: "T113-concept-600g-selection"
+role: "concept"
+provider: "codex"
+tier: "deep"
+goal: "Present a conventional arm and one or two distinct alternatives for user selection before new CAD."
+brief: |
+  Finish within 20 minutes using T112 prior art and completed T107 analysis; no fresh external research is planned, so scout is false.
+  Option one adapts a proven conventional articulated or parallel-linkage open-source base; add 1-2 real alternatives and credit sources/licences.
+  Keep 600 g, four owned motors, wrist roll, selected MG90S, black finish, X1E 256 mm cube, material exceptions and under-$100 remaining budget explicit.
+  Compare reach, 0.50-factor joint torque budgets, distal motor mass cost, grip/contact limits, anchoring, named bearings/belts/shafts/fasteners, estimated cost and build effort.
+  Use verified equations and source-labelled inputs; never call an infeasible combination compliant. Ask about object/contact geometry or budget only if it prevents a useful choice; gate dependent work on that question.
+  Produce concept sketches and a numbers-backed verification table; add each part-combination option to configs presets with the same option id and valid slot choices. Keep built/selection unchanged until actual selection/build.
+  Call options_present with visuals and evidence, then wait for the pick before CAD. Handoff the chosen design to next-free vN via cad_params_set, cad.build, applicable simulation, deep review/fix loop and build documentation.
+  Every note/summary opens What/Where and ends Not verified and Open decisions; final handoff requires one STL per part, print_list.csv, bom.csv, assembly order and rebuild commands.
+scout: false
+inputs: [".mechy/digest.md", "requirements.yaml", "decisions.md", "research/arm-baseline/note.md", "research/arm-baseline/comparison.svg", "research/arm-baseline/motor-datum.svg", "research/payload-600g/note.md", "research/payload-600g/envelope.svg", "design/configs.yaml", "design/selection.yaml", "docs/config-inventory/summary.md"]
+tools: ["progress_report", "assumption_log", "question_ask", "options_present"]
+outputs: ["research/concepts-600g/note.md", "research/concepts-600g/options.svg", "research/concepts-600g/summary.md", "options/arm-600g-concept.yaml", "design/configs.yaml"]
+depends_on: ["T111-docs-inventory-completion", "T112-research-arm-baselines", "T107-research-600g-feasibility"]
+done_when: "Two or three evidence-backed concepts with visuals and matching registry presets are presented through options_present, with user selection explicitly gating all new CAD."

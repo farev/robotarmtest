@@ -1,0 +1,73 @@
+{
+ "schema": 1,
+ "variant": "v2",
+ "ball_mass_kg": 0.057,
+ "belt_efficiency": 0.9,
+ "note": "Static: worst-case gravity over the joint range, ball in the cup. Accelerating the arm needs more; the catch sim checks that.",
+ "joints": [
+  {
+   "joint": "base",
+   "gear_ratio": 5.625,
+   "motor": "NEMA 17 42x42x40 (17HS4401 class)",
+   "gravity_torque_joint_nm": 0.0,
+   "gravity_torque_pulley_nm": 0.0,
+   "gravity_torque_motor_nm": 0.0,
+   "holding_torque_nm": 0.4,
+   "torque_at_speed_nm": 0.25,
+   "usable_speed_rps": 5.0,
+   "joint_torque_available_nm": 2.025,
+   "safety_factor_static": null,
+   "safety_factor_at_speed": null,
+   "load_inertia_motor_kgm2": 0.0004438,
+   "rotor_inertia_kgm2": 5.4e-06
+  },
+  {
+   "joint": "shoulder",
+   "gear_ratio": 5.625,
+   "motor": "NEMA 17 42x42x40 (17HS4401 class)",
+   "gravity_torque_joint_nm": 0.424,
+   "gravity_torque_pulley_nm": 0.2477,
+   "gravity_torque_motor_nm": 0.0489,
+   "holding_torque_nm": 0.4,
+   "torque_at_speed_nm": 0.25,
+   "usable_speed_rps": 5.0,
+   "joint_torque_available_nm": 2.025,
+   "safety_factor_static": 8.18,
+   "safety_factor_at_speed": 5.11,
+   "load_inertia_motor_kgm2": 0.0001093,
+   "rotor_inertia_kgm2": 5.4e-06
+  },
+  {
+   "joint": "elbow",
+   "gear_ratio": 5.625,
+   "motor": "NEMA 17 42x42x40 (17HS4401 class)",
+   "gravity_torque_joint_nm": 0.1763,
+   "gravity_torque_pulley_nm": 0.1508,
+   "gravity_torque_motor_nm": 0.0298,
+   "holding_torque_nm": 0.4,
+   "torque_at_speed_nm": 0.25,
+   "usable_speed_rps": 5.0,
+   "joint_torque_available_nm": 2.025,
+   "safety_factor_static": 13.43,
+   "safety_factor_at_speed": 8.39,
+   "load_inertia_motor_kgm2": 9.26e-05,
+   "rotor_inertia_kgm2": 5.4e-06
+  },
+  {
+   "joint": "wrist",
+   "gear_ratio": 4.5,
+   "motor": "NEMA 17 42x42x40 (17HS4401 class)",
+   "gravity_torque_joint_nm": 0.0255,
+   "gravity_torque_pulley_nm": 0.0,
+   "gravity_torque_motor_nm": 0.0,
+   "holding_torque_nm": 0.4,
+   "torque_at_speed_nm": 0.25,
+   "usable_speed_rps": 5.0,
+   "joint_torque_available_nm": 1.62,
+   "safety_factor_static": null,
+   "safety_factor_at_speed": null,
+   "load_inertia_motor_kgm2": 0.0,
+   "rotor_inertia_kgm2": 5.4e-06
+  }
+ ]
+}

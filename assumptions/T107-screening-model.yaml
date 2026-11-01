@@ -1,0 +1,11 @@
+id: T107-screening-model
+made_by: T107-research-600g-feasibility
+text: 'Use conditional static screening: estimated mass/COM ranges, payload COM 0/0.025/0.050
+  m beyond pads, and 0.50 torque factor. No friction coefficient or dynamic capacity
+  is assumed; retain four owned motors and under-$100 remaining budget.'
+alternatives:
+- Replace estimates with weighed subassemblies and measured COMs
+- Use measured motor torque/current and jaw-force data
+- Screen a user-specified object and trajectory
+created: '2026-10-30T14:28:25+00:00'
+override: null

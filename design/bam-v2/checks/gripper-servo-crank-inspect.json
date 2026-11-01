@@ -1,0 +1,110 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-servo-crank.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -10.0,
+      -10.0,
+      0.0
+    ],
+    "max": [
+      10.0,
+      10.0,
+      5.0
+    ],
+    "size": [
+      20.0,
+      20.0,
+      5.0
+    ]
+  },
+  "volume_mm3": 936.62,
+  "holes": [
+    {
+      "diameter_mm": 1.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -1.24,
+        -7.9,
+        1.5
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 1.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        7.9,
+        -1.24,
+        1.5
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 1.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -7.9,
+        1.24,
+        1.5
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 1.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        1.24,
+        7.9,
+        1.5
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 5.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        0.75
+      ],
+      "depth_mm": 1.5
+    },
+    {
+      "diameter_mm": 7.3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        3.25
+      ],
+      "depth_mm": 3.5
+    }
+  ],
+  "partial_arcs": []
+}

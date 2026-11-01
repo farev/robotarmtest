@@ -1,0 +1,40 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-servo-spacer-2.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -2.6,
+      -5.0,
+      0.0
+    ],
+    "max": [
+      2.6,
+      5.0,
+      2.4
+    ],
+    "size": [
+      5.2,
+      10.0,
+      2.4
+    ]
+  },
+  "volume_mm3": 112.06,
+  "holes": [
+    {
+      "diameter_mm": 2.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        1.2
+      ],
+      "depth_mm": 2.4
+    }
+  ],
+  "partial_arcs": []
+}

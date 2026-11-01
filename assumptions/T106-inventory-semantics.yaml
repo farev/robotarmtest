@@ -1,0 +1,10 @@
+id: T106-inventory-semantics
+made_by: T106-docs-config-inventory
+text: Treat built as the recorded v1 manifest combination, not proof of fabrication
+  or approval. Preserve assembly/print-list materials and flag conflicting notes;
+  selection is viewing-only.
+alternatives:
+- Leave selection unset pending reconciliation
+- Record historical deadline PLA override as a separate combination later
+created: '2026-10-30T14:28:09+00:00'
+override: null

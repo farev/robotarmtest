@@ -1,0 +1,5 @@
+id: T104-docs-build-guide
+role: docs
+provider: demo
+goal: "Update the build notes for the new forearm."
+depends_on: ["T103-sim-pick-cycle"]

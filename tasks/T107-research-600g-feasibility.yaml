@@ -1,0 +1,20 @@
+id: T107-research-600g-feasibility
+role: research
+provider: codex
+tier: standard
+goal: Bound existing-arm capacity at 600 g and identify limiting joints and gripper.
+brief: |
+  Limit this reproducible screening calculation to 20 minutes; the 104 g forearm and 4.6 s cycle claims are unverified at 600 g.
+  Sweep existing reach including horizontal extension using all moving motors, gripper and hardware masses; label missing inputs and show payload-offset sensitivity.
+  Check shoulder/elbow gravity torque, wrist imbalance, gripping and base tipping against closed-form free-body calculations before drawing conclusions.
+  Compare torque demand with actual motor torque times ratio times efficiency times 0.50; source torque/current evidence and flag extrapolation from 0.9 A to deadline 0.6 A.
+  Check MG90S torque and jaw leverage without assuming an unknown object's friction; static holding torque does not establish dynamic capacity.
+  Use reference-library CSV rows with value_type and primary datasheets; produce a plot and script, no CAD or catching simulation.
+  Keep four owned motors and under-$100 remaining budget as constraints; report upgrade implications without choosing them or inventing prices.
+  Open with What/Where, include Check/Expected/Got/PASS-FAIL verification and evidence labels, and end with Not verified and Open decisions lists.
+scout: false
+inputs: [.mechy/digest.md, requirements.yaml, decisions.md, hw/motors.yaml, hw/drivers.yaml, parts/components.yaml, parts/models/nema17-42shdc.yaml, parts/models/mg90s.yaml, design/v1/assembly.yaml, design/v1/print_list.csv, control/joint_limits.yaml]
+tools: [progress_report, assumption_log]
+outputs: [research/payload-600g/note.md, research/payload-600g/check.py, research/payload-600g/envelope.csv, research/payload-600g/envelope.svg, tasks/summaries/T107-research-600g-feasibility.md]
+depends_on: []
+done_when: A reproducible load-envelope plot and independently checked torque table identify limiting components and distinguish supported bounds from unknowns without certifying 600 g or cycle time.

@@ -1,0 +1,10 @@
+id: gripper-v2-scope
+made_by: chat
+text: Improve the active BAM gripper with broader replaceable soft contact pads, stronger
+  printable fingers and a cleaner form, retaining the existing wrist interface. Dimensions
+  will come from the actual CAD; payload and actuator identity remain open checks.
+alternatives:
+- Design a completely new gripper mechanism
+- Optimize for one specific object
+created: '2026-10-31T01:45:02+00:00'
+override: null

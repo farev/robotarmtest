@@ -1,0 +1,20 @@
+id: T109-controls-uno-blink
+role: controls
+provider: claude
+tier: fast
+goal: Compile, flash and verify a built-in LED blink test on the connected Arduino Uno.
+brief: |
+  Complete this standalone hardware test in under 20 minutes; inbox explicitly requests making the Arduino blink.
+  hw_boards detected Arduino Uno R3, board id uno, USB port /dev/cu.usbmodem2101, serial 75131313832351018082; PlatformIO 6.2.0 is installed.
+  Create firmware/uno-blink/ using LED_BUILTIN, 1000 ms on and 1000 ms off, plus timestamped ON/OFF serial heartbeats at 115200 baud; these are chosen defaults.
+  The project owns a CNC Shield V3 and A4988 drivers: check documented pin sharing before toggling the LED, keep drivers disabled and generate no step pulses; ask only if attached wiring makes this test ambiguous.
+  Recheck board identity with hw.boards before upload; use hw.build then hw.flash for board uno and the confirmed port, then hw.read for at least three complete cycles.
+  Record actual build/upload status and observed serial timing; serial messages verify firmware execution, not physical LED light, so leave visual blink unverified unless observed by the user.
+  Supply source, reproducible build/flash commands and a short README explaining where to look for the LED; this test replaces the loaded sketch and does not implement arm controls.
+  Open the result note with What/Where, include a Check/Expected/Got/PASS-FAIL table and end with Not verified and Open decisions lists; preserve other firmware files.
+scout: false
+inputs: [inbox/20261030-102718.md, .mechy/digest.md, hw/drivers.yaml]
+tools: [progress_report, assumption_log, question_ask, hw.boards, hw.build, hw.flash, hw.read]
+outputs: [firmware/uno-blink/platformio.ini, firmware/uno-blink/src/main.cpp, firmware/uno-blink/README.md, tasks/summaries/T109-controls-uno-blink.md]
+depends_on: []
+done_when: Firmware compiles and uploads to the confirmed Uno and at least three ON/OFF cycles are captured on serial, with physical LED observation separately recorded as confirmed or unverified.

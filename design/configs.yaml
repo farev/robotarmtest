@@ -1,0 +1,2477 @@
+---
+schema_version: 1
+task: T106-docs-config-inventory
+scope: Recorded v1 inventory plus unselected T113 concept presets; no geometry, purchases or firmware changes
+units: SI for new normalized fields; verbatim source names/specs retain labelled original
+  units
+built_semantics: Recorded v1 manifest combination; not evidence of fabrication, procurement
+  or capacity approval
+slots:
+  part.base-shell:
+    kind: printed
+    label: base-shell
+    choices:
+      v1:
+        model: design/v1/printed/base-shell.step
+        assembly_id: base-shell
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=base-shell]
+  part.base-deck:
+    kind: printed
+    label: base-deck
+    choices:
+      v1:
+        model: design/v1/printed/base-deck.step
+        assembly_id: base-deck
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=base-deck]
+  part.bearing-cap:
+    kind: printed
+    label: bearing-cap
+    choices:
+      v1:
+        model: design/v1/printed/bearing-cap.step
+        assembly_id: bearing-cap
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-cap]
+  part.yaw-spacer-outer:
+    kind: printed
+    label: yaw-spacer-outer
+    choices:
+      v1:
+        model: design/v1/printed/yaw-spacer-outer.step
+        assembly_id: yaw-spacer-outer
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=yaw-spacer-outer]
+  part.motor-j1:
+    kind: bought
+    label: motor-j1
+    choices:
+      v1:
+        model: parts/models/nema17-42shdc.step
+        assembly_id: motor-j1
+        component_names:
+        - 42SHDC3026-15B NEMA 17 stepper
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=motor-j1]
+  part.bearing-6806-upper:
+    kind: bought
+    label: bearing-6806-upper
+    choices:
+      v1:
+        model: parts/models/bearing-6806.step
+        assembly_id: bearing-6806-upper
+        component_names:
+        - 6806-2RS (61806-2RS) bearings 30x42x7 (pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-6806-upper]
+  part.bearing-6806-lower:
+    kind: bought
+    label: bearing-6806-lower
+    choices:
+      v1:
+        model: parts/models/bearing-6806.step
+        assembly_id: bearing-6806-lower
+        component_names:
+        - 6806-2RS (61806-2RS) bearings 30x42x7 (pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-6806-lower]
+  part.uno-cnc-shield:
+    kind: bought
+    label: uno-cnc-shield
+    choices:
+      v1:
+        model: parts/models/uno-cnc-shield.step
+        assembly_id: uno-cnc-shield
+        component_names:
+        - Arduino Uno R3
+        - CNC Shield V3 (Protoneer-style clone)
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=uno-cnc-shield]
+  part.turret-hub:
+    kind: printed
+    label: turret-hub
+    choices:
+      v1:
+        model: design/v1/printed/turret-hub.step
+        assembly_id: turret-hub
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=turret-hub]
+  part.yaw-spacer-inner:
+    kind: printed
+    label: yaw-spacer-inner
+    choices:
+      v1:
+        model: design/v1/printed/yaw-spacer-inner.step
+        assembly_id: yaw-spacer-inner
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=yaw-spacer-inner]
+  part.turret-clamp:
+    kind: printed
+    label: turret-clamp
+    choices:
+      v1:
+        model: design/v1/printed/turret-clamp.step
+        assembly_id: turret-clamp
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=turret-clamp]
+  part.shoulder-tower:
+    kind: printed
+    label: shoulder-tower
+    choices:
+      v1:
+        model: design/v1/printed/shoulder-tower.step
+        assembly_id: shoulder-tower
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=shoulder-tower]
+  part.shoulder-pulley-80t:
+    kind: printed
+    label: shoulder-pulley-80t
+    choices:
+      v1:
+        model: design/v1/printed/shoulder-pulley-80t.step
+        assembly_id: shoulder-pulley-80t
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=shoulder-pulley-80t]
+  part.pulley-j1-20t:
+    kind: bought
+    label: pulley-j1-20t
+    choices:
+      v1:
+        model: parts/models/gt2-20t-5mm.step
+        assembly_id: pulley-j1-20t
+        component_names:
+        - GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=pulley-j1-20t]
+  part.belt-j1:
+    kind: bought
+    label: belt-j1
+    choices:
+      v1:
+        model: parts/models/belt-j1-gt2-300.step
+        assembly_id: belt-j1
+        component_names:
+        - 2GT closed loop timing belt 6 mm x 300 mm
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=belt-j1]
+  part.rod-shoulder:
+    kind: bought
+    label: rod-shoulder
+    choices:
+      v1:
+        model: parts/models/rod-8x100.step
+        assembly_id: rod-shoulder
+        component_names:
+        - 8 mm linear rod 150 mm (2-pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=rod-shoulder]
+  part.bearing-shim:
+    kind: printed
+    label: bearing-shim
+    choices:
+      v1:
+        model: design/v1/printed/bearing-shim.step
+        assembly_id: bearing-shim
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-shim]
+  part.collar-shoulder-in:
+    kind: bought
+    label: collar-shoulder-in
+    choices:
+      v1:
+        model: parts/models/collar-8mm.step
+        assembly_id: collar-shoulder-in
+        component_names:
+        - 8 mm bore shaft collars (pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=collar-shoulder-in]
+  part.bearing-shim-2:
+    kind: printed
+    label: bearing-shim-2
+    choices:
+      v1:
+        model: design/v1/printed/bearing-shim.step
+        assembly_id: bearing-shim-2
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-shim-2]
+  part.collar-shoulder-out:
+    kind: bought
+    label: collar-shoulder-out
+    choices:
+      v1:
+        model: parts/models/collar-8mm.step
+        assembly_id: collar-shoulder-out
+        component_names:
+        - 8 mm bore shaft collars (pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=collar-shoulder-out]
+  part.upper-arm:
+    kind: printed
+    label: upper-arm
+    choices:
+      v1:
+        model: design/v1/printed/upper-arm.step
+        assembly_id: upper-arm
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=upper-arm]
+  part.pack-cover:
+    kind: printed
+    label: pack-cover
+    choices:
+      v1:
+        model: design/v1/printed/pack-cover.step
+        assembly_id: pack-cover
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=pack-cover]
+  part.pack-carriage:
+    kind: printed
+    label: pack-carriage
+    choices:
+      v1:
+        model: design/v1/printed/pack-carriage.step
+        assembly_id: pack-carriage
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=pack-carriage]
+  part.bearing-608-sh-1:
+    kind: bought
+    label: bearing-608-sh-1
+    choices:
+      v1:
+        model: parts/models/bearing-608.step
+        assembly_id: bearing-608-sh-1
+        component_names:
+        - 608-2RS bearings 8x22x7 (10-pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-608-sh-1]
+  part.bearing-608-sh-2:
+    kind: bought
+    label: bearing-608-sh-2
+    choices:
+      v1:
+        model: parts/models/bearing-608.step
+        assembly_id: bearing-608-sh-2
+        component_names:
+        - 608-2RS bearings 8x22x7 (10-pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-608-sh-2]
+  part.motor-j2:
+    kind: bought
+    label: motor-j2
+    choices:
+      v1:
+        model: parts/models/nema17-42shdc.step
+        assembly_id: motor-j2
+        component_names:
+        - 42SHDC3026-15B NEMA 17 stepper
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=motor-j2]
+  part.pulley-j2-20t:
+    kind: bought
+    label: pulley-j2-20t
+    choices:
+      v1:
+        model: parts/models/gt2-20t-5mm.step
+        assembly_id: pulley-j2-20t
+        component_names:
+        - GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=pulley-j2-20t]
+  part.rod-intermediate:
+    kind: bought
+    label: rod-intermediate
+    choices:
+      v1:
+        model: parts/models/rod-5x52.step
+        assembly_id: rod-intermediate
+        component_names:
+        - 5 mm linear rod 100 mm
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=rod-intermediate]
+  part.bearing-625-1:
+    kind: bought
+    label: bearing-625-1
+    choices:
+      v1:
+        model: parts/models/bearing-625.step
+        assembly_id: bearing-625-1
+        component_names:
+        - 625-2RS bearings 5x16x5 (10-pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-625-1]
+  part.bearing-625-2:
+    kind: bought
+    label: bearing-625-2
+    choices:
+      v1:
+        model: parts/models/bearing-625.step
+        assembly_id: bearing-625-2
+        component_names:
+        - 625-2RS bearings 5x16x5 (10-pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-625-2]
+  part.pulley-s1-60t:
+    kind: bought
+    label: pulley-s1-60t
+    choices:
+      v1:
+        model: parts/models/gt2-60t-5mm.step
+        assembly_id: pulley-s1-60t
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=pulley-s1-60t]
+  part.pulley-s2-20t:
+    kind: bought
+    label: pulley-s2-20t
+    choices:
+      v1:
+        model: parts/models/gt2-20t-5mm.step
+        assembly_id: pulley-s2-20t
+        component_names:
+        - GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=pulley-s2-20t]
+  part.motor-j3:
+    kind: bought
+    label: motor-j3
+    choices:
+      v1:
+        model: parts/models/nema17-42shdc.step
+        assembly_id: motor-j3
+        component_names:
+        - 42SHDC3026-15B NEMA 17 stepper
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=motor-j3]
+  part.pulley-j3-20t:
+    kind: bought
+    label: pulley-j3-20t
+    choices:
+      v1:
+        model: parts/models/gt2-20t-5mm.step
+        assembly_id: pulley-j3-20t
+        component_names:
+        - GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=pulley-j3-20t]
+  part.belt-s1:
+    kind: bought
+    label: belt-s1
+    choices:
+      v1:
+        model: parts/models/belt-s1-gt2-200.step
+        assembly_id: belt-s1
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=belt-s1]
+  part.belt-s2:
+    kind: bought
+    label: belt-s2
+    choices:
+      v1:
+        model: parts/models/belt-s2-gt2-200.step
+        assembly_id: belt-s2
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=belt-s2]
+  part.belt-j3:
+    kind: bought
+    label: belt-j3
+    choices:
+      v1:
+        model: parts/models/belt-j3-gt2-520.step
+        assembly_id: belt-j3
+        component_names:
+        - GT2 6 mm closed belt 520 mm
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=belt-j3]
+  part.rod-elbow:
+    kind: bought
+    label: rod-elbow
+    choices:
+      v1:
+        model: parts/models/rod-8x113.step
+        assembly_id: rod-elbow
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=rod-elbow]
+  part.collar-elbow-in:
+    kind: bought
+    label: collar-elbow-in
+    choices:
+      v1:
+        model: parts/models/collar-8mm.step
+        assembly_id: collar-elbow-in
+        component_names:
+        - 8 mm bore shaft collars (pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=collar-elbow-in]
+  part.bearing-shim-3:
+    kind: printed
+    label: bearing-shim-3
+    choices:
+      v1:
+        model: design/v1/printed/bearing-shim.step
+        assembly_id: bearing-shim-3
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-shim-3]
+  part.collar-elbow-out:
+    kind: bought
+    label: collar-elbow-out
+    choices:
+      v1:
+        model: parts/models/collar-8mm.step
+        assembly_id: collar-elbow-out
+        component_names:
+        - 8 mm bore shaft collars (pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=collar-elbow-out]
+  part.forearm:
+    kind: printed
+    label: forearm
+    choices:
+      v1:
+        model: design/v1/printed/forearm.step
+        assembly_id: forearm
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=forearm]
+  part.forearm-cover:
+    kind: printed
+    label: forearm-cover
+    choices:
+      v1:
+        model: design/v1/printed/forearm-cover.step
+        assembly_id: forearm-cover
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=forearm-cover]
+  part.bearing-608-el-1:
+    kind: bought
+    label: bearing-608-el-1
+    choices:
+      v1:
+        model: parts/models/bearing-608.step
+        assembly_id: bearing-608-el-1
+        component_names:
+        - 608-2RS bearings 8x22x7 (10-pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-608-el-1]
+  part.bearing-608-el-2:
+    kind: bought
+    label: bearing-608-el-2
+    choices:
+      v1:
+        model: parts/models/bearing-608.step
+        assembly_id: bearing-608-el-2
+        component_names:
+        - 608-2RS bearings 8x22x7 (10-pack)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=bearing-608-el-2]
+  part.motor-j4:
+    kind: bought
+    label: motor-j4
+    choices:
+      v1:
+        model: parts/models/nema17-42shdc.step
+        assembly_id: motor-j4
+        component_names:
+        - 42SHDC3026-15B NEMA 17 stepper
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=motor-j4]
+  part.hub-j4:
+    kind: bought
+    label: hub-j4
+    choices:
+      v1:
+        model: parts/models/flange-coupling-5mm.step
+        assembly_id: hub-j4
+        component_names:
+        - 5 mm rigid flange coupling (22 mm flange)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=hub-j4]
+  part.screw-j2-1:
+    kind: bought
+    label: screw-j2-1
+    choices:
+      v1:
+        model: parts/models/m3x8-shcs.step
+        assembly_id: screw-j2-1
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j2-1]
+  part.screw-j2-2:
+    kind: bought
+    label: screw-j2-2
+    choices:
+      v1:
+        model: parts/models/m3x8-shcs.step
+        assembly_id: screw-j2-2
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j2-2]
+  part.screw-j2-3:
+    kind: bought
+    label: screw-j2-3
+    choices:
+      v1:
+        model: parts/models/m3x8-shcs.step
+        assembly_id: screw-j2-3
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j2-3]
+  part.screw-j2-4:
+    kind: bought
+    label: screw-j2-4
+    choices:
+      v1:
+        model: parts/models/m3x8-shcs.step
+        assembly_id: screw-j2-4
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j2-4]
+  part.screw-carriage-1:
+    kind: bought
+    label: screw-carriage-1
+    choices:
+      v1:
+        model: parts/models/m3x12-shcs.step
+        assembly_id: screw-carriage-1
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-carriage-1]
+  part.screw-carriage-2:
+    kind: bought
+    label: screw-carriage-2
+    choices:
+      v1:
+        model: parts/models/m3x12-shcs.step
+        assembly_id: screw-carriage-2
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-carriage-2]
+  part.screw-tower-foot-1:
+    kind: bought
+    label: screw-tower-foot-1
+    choices:
+      v1:
+        model: parts/models/m3x12-shcs.step
+        assembly_id: screw-tower-foot-1
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-tower-foot-1]
+  part.screw-tower-foot-2:
+    kind: bought
+    label: screw-tower-foot-2
+    choices:
+      v1:
+        model: parts/models/m3x12-shcs.step
+        assembly_id: screw-tower-foot-2
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-tower-foot-2]
+  part.screw-tower-foot-3:
+    kind: bought
+    label: screw-tower-foot-3
+    choices:
+      v1:
+        model: parts/models/m3x12-shcs.step
+        assembly_id: screw-tower-foot-3
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-tower-foot-3]
+  part.screw-tower-foot-4:
+    kind: bought
+    label: screw-tower-foot-4
+    choices:
+      v1:
+        model: parts/models/m3x12-shcs.step
+        assembly_id: screw-tower-foot-4
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-tower-foot-4]
+  part.screw-j1-1:
+    kind: bought
+    label: screw-j1-1
+    choices:
+      v1:
+        model: parts/models/m3x10-shcs.step
+        assembly_id: screw-j1-1
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j1-1]
+  part.screw-j1-2:
+    kind: bought
+    label: screw-j1-2
+    choices:
+      v1:
+        model: parts/models/m3x10-shcs.step
+        assembly_id: screw-j1-2
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j1-2]
+  part.screw-j1-3:
+    kind: bought
+    label: screw-j1-3
+    choices:
+      v1:
+        model: parts/models/m3x10-shcs.step
+        assembly_id: screw-j1-3
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j1-3]
+  part.screw-j1-4:
+    kind: bought
+    label: screw-j1-4
+    choices:
+      v1:
+        model: parts/models/m3x10-shcs.step
+        assembly_id: screw-j1-4
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-j1-4]
+  part.screw-shaft-lock:
+    kind: bought
+    label: screw-shaft-lock
+    choices:
+      v1:
+        model: parts/models/m3x30-shcs.step
+        assembly_id: screw-shaft-lock
+        component_names: []
+        mapping_status: unresolved or composite; see component slots
+    evidence:
+    - design/v1/assembly.yaml#parts[id=screw-shaft-lock]
+  part.gripper-base:
+    kind: printed
+    label: gripper-base
+    choices:
+      v1:
+        model: design/v1/printed/gripper-base.step
+        assembly_id: gripper-base
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=gripper-base]
+  part.gripper-finger-left:
+    kind: printed
+    label: gripper-finger-left
+    choices:
+      v1:
+        model: design/v1/printed/gripper-finger-left.step
+        assembly_id: gripper-finger-left
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=gripper-finger-left]
+  part.gripper-finger-right:
+    kind: printed
+    label: gripper-finger-right
+    choices:
+      v1:
+        model: design/v1/printed/gripper-finger-right.step
+        assembly_id: gripper-finger-right
+        component_names: []
+        mapping_status: printed manifest
+    evidence:
+    - design/v1/assembly.yaml#parts[id=gripper-finger-right]
+  part.servo-gripper:
+    kind: bought
+    label: servo-gripper
+    choices:
+      v1:
+        model: parts/models/mg90s.step
+        assembly_id: servo-gripper
+        component_names:
+        - MG90S metal-gear micro servo (180 deg)
+        mapping_status: model match
+    evidence:
+    - design/v1/assembly.yaml#parts[id=servo-gripper]
+  part.coupon-fits:
+    kind: print_accessory
+    label: coupon-fits
+    choices:
+      v1:
+        stl: design/v1/printed/coupon-fits.stl
+        qty: 1
+    evidence:
+    - design/v1/print_list.csv#coupon-fits
+  material.coupon-fits:
+    kind: material
+    label: coupon-fits material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#coupon-fits
+    evidence:
+    - design/v1/print_list.csv#coupon-fits
+    thermal_verified: false
+  part.coupon-yaw:
+    kind: print_accessory
+    label: coupon-yaw
+    choices:
+      v1:
+        stl: design/v1/printed/coupon-yaw.stl
+        qty: 1
+    evidence:
+    - design/v1/print_list.csv#coupon-yaw
+  material.coupon-yaw:
+    kind: material
+    label: coupon-yaw material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#coupon-yaw
+    evidence:
+    - design/v1/print_list.csv#coupon-yaw
+    thermal_verified: false
+  material.base-shell:
+    kind: material
+    label: base-shell material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#base-shell
+    evidence:
+    - design/v1/print_list.csv#base-shell
+    thermal_verified: false
+  material.base-deck:
+    kind: material
+    label: base-deck material
+    choices:
+      PETG:
+        material: PETG
+        status: manifest pick
+        source: design/v1/print_list.csv#base-deck
+      PLA:
+        material: PLA
+        status: historical deadline exception; thermal performance unverified
+        source: 'decisions.md#2026-10-29 (later): Saturday deadline'
+    evidence:
+    - design/v1/print_list.csv#base-deck
+    thermal_verified: false
+  material.bearing-cap:
+    kind: material
+    label: bearing-cap material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#bearing-cap
+    evidence:
+    - design/v1/print_list.csv#bearing-cap
+    thermal_verified: false
+  material.yaw-spacer-outer:
+    kind: material
+    label: yaw-spacer-outer material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#yaw-spacer-outer
+    evidence:
+    - design/v1/print_list.csv#yaw-spacer-outer
+    thermal_verified: false
+  material.turret-hub:
+    kind: material
+    label: turret-hub material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#turret-hub
+    evidence:
+    - design/v1/print_list.csv#turret-hub
+    thermal_verified: false
+  material.yaw-spacer-inner:
+    kind: material
+    label: yaw-spacer-inner material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#yaw-spacer-inner
+    evidence:
+    - design/v1/print_list.csv#yaw-spacer-inner
+    thermal_verified: false
+  material.turret-clamp:
+    kind: material
+    label: turret-clamp material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#turret-clamp
+    evidence:
+    - design/v1/print_list.csv#turret-clamp
+    thermal_verified: false
+  material.shoulder-tower:
+    kind: material
+    label: shoulder-tower material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#shoulder-tower
+    evidence:
+    - design/v1/print_list.csv#shoulder-tower
+    thermal_verified: false
+  material.shoulder-pulley-80t:
+    kind: material
+    label: shoulder-pulley-80t material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#shoulder-pulley-80t
+    evidence:
+    - design/v1/print_list.csv#shoulder-pulley-80t
+    thermal_verified: false
+  material.bearing-shim:
+    kind: material
+    label: bearing-shim material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#bearing-shim
+    evidence:
+    - design/v1/print_list.csv#bearing-shim
+    thermal_verified: false
+  material.upper-arm:
+    kind: material
+    label: upper-arm material
+    choices:
+      PETG:
+        material: PETG
+        status: manifest pick
+        source: design/v1/print_list.csv#upper-arm
+      PLA:
+        material: PLA
+        status: historical deadline exception; thermal performance unverified
+        source: 'decisions.md#2026-10-29 (later): Saturday deadline'
+    evidence:
+    - design/v1/print_list.csv#upper-arm
+    thermal_verified: false
+  material.pack-cover:
+    kind: material
+    label: pack-cover material
+    choices:
+      PETG:
+        material: PETG
+        status: manifest pick
+        source: design/v1/print_list.csv#pack-cover
+      PLA:
+        material: PLA
+        status: historical deadline exception; thermal performance unverified
+        source: 'decisions.md#2026-10-29 (later): Saturday deadline'
+    evidence:
+    - design/v1/print_list.csv#pack-cover
+    thermal_verified: false
+  material.pack-carriage:
+    kind: material
+    label: pack-carriage material
+    choices:
+      PETG:
+        material: PETG
+        status: manifest pick
+        source: design/v1/print_list.csv#pack-carriage
+      PLA:
+        material: PLA
+        status: historical deadline exception; thermal performance unverified
+        source: 'decisions.md#2026-10-29 (later): Saturday deadline'
+    evidence:
+    - design/v1/print_list.csv#pack-carriage
+    thermal_verified: false
+  material.forearm:
+    kind: material
+    label: forearm material
+    choices:
+      PETG:
+        material: PETG
+        status: manifest pick
+        source: design/v1/print_list.csv#forearm
+      PLA:
+        material: PLA
+        status: historical deadline exception; thermal performance unverified
+        source: 'decisions.md#2026-10-29 (later): Saturday deadline'
+    evidence:
+    - design/v1/print_list.csv#forearm
+    thermal_verified: false
+  material.forearm-cover:
+    kind: material
+    label: forearm-cover material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#forearm-cover
+    evidence:
+    - design/v1/print_list.csv#forearm-cover
+    thermal_verified: false
+  material.gripper-base:
+    kind: material
+    label: gripper-base material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#gripper-base
+    evidence:
+    - design/v1/print_list.csv#gripper-base
+    thermal_verified: false
+  material.gripper-finger-left:
+    kind: material
+    label: gripper-finger-left material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#gripper-finger-left
+    evidence:
+    - design/v1/print_list.csv#gripper-finger-left
+    thermal_verified: false
+  material.gripper-finger-right:
+    kind: material
+    label: gripper-finger-right material
+    choices:
+      PLA:
+        material: PLA
+        status: manifest pick
+        source: design/v1/print_list.csv#gripper-finger-right
+    evidence:
+    - design/v1/print_list.csv#gripper-finger-right
+    thermal_verified: false
+  component.01:
+    kind: component
+    label: 42SHDC3026-15B NEMA 17 stepper
+    choices:
+      manifest:
+        name: 42SHDC3026-15B NEMA 17 stepper
+        function: Joint motors
+        status: owned
+        price_note: owned
+        qty: 4
+        specs:
+        - 4 owned
+        - NEMA 17 42.3 mm face
+        - 0.9 A/phase (user)
+        - "~0.34-0.40 N·m holding (sibling, unverified)"
+        - 4-wire bipolar
+        - 5 mm shaft
+        datasheet: unverified
+        url: https://3dprint.wiki/printers/anet/a8/steppermotor
+        model: parts/models/nema17-42shdc.step
+        model_source: datasheet
+        compat: unverified
+        note: 'Model number from the user. No datasheet found for the -3026-15B variant;
+          values come from the 42SHDC3025-24B sibling (Anet A8 motor, 42 x 42 x 40
+          mm, 0.9 A, 4.4 ohm, 0.4 N·m). Body length (40 mm) and shaft length (24 mm)
+          are ASSUMED until measured: they set the motor pack depth and the pulley
+          fit.'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=42SHDC3026-15B NEMA 17 stepper]
+    assembly_ids:
+    - motor-j1
+    - motor-j2
+    - motor-j3
+    - motor-j4
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.02:
+    kind: component
+    label: Arduino Uno R3
+    choices:
+      manifest:
+        name: Arduino Uno R3
+        function: Controller
+        status: owned
+        price_note: owned
+        qty: 1
+        specs:
+        - ATmega328P
+        - 5 V logic
+        - USB-B
+        - 68.6 x 53.3 mm
+        datasheet: https://docs.arduino.cc/hardware/uno-rev3/
+        model: parts/models/uno-cnc-shield.step
+        model_source: datasheet
+        compat: unverified
+        note: Board named by the user (Arduino IDE / PlatformIO). Model built from
+          the official Eagle file, stacked with the CNC shield.
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=Arduino Uno R3]
+    assembly_ids:
+    - uno-cnc-shield
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.03:
+    kind: component
+    label: CNC Shield V3 (Protoneer-style clone)
+    choices:
+      manifest:
+        name: CNC Shield V3 (Protoneer-style clone)
+        function: Stepper driver board
+        status: owned
+        price_note: owned
+        qty: 1
+        specs:
+        - 4 driver sockets X/Y/Z/A
+        - 12-36 V motor input
+        - GRBL pin-out
+        - stacks on the Uno
+        datasheet: https://blog.protoneer.co.nz/arduino-cnc-shield/
+        model: parts/models/uno-cnc-shield.step
+        model_source: datasheet
+        compat: unverified
+        note: 'Generic V3 clone assumed (user: ''CNC Shield V3''). 4 sockets = exactly
+          the 4 steppers; A axis needs the clone''s D12/D13 jumpers set for 4th-axis
+          step/dir.'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=CNC Shield V3 (Protoneer-style clone)]
+    assembly_ids:
+    - uno-cnc-shield
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.04:
+    kind: component
+    label: A4988 stepper driver module (with heatsink)
+    choices:
+      manifest:
+        name: A4988 stepper driver module (with heatsink)
+        function: Stepper drivers
+        status: owned
+        price_note: owned
+        qty: 4
+        specs:
+        - 8-35 V motor supply
+        - up to 1 A without cooling / 2 A with
+        - 1/16 microstep
+        - Vref sets current
+        datasheet: https://www.pololu.com/product/1182
+        compat: unverified
+        note: Quantity assumed 4 (one per socket). Sense resistor on clones is usually
+          R100 (0.1 ohm); read it before setting Vref.
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=A4988 stepper driver module (with heatsink)]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.05:
+    kind: component
+    label: 100 µF 50 V electrolytic capacitor
+    choices:
+      manifest:
+        name: 100 µF 50 V electrolytic capacitor
+        function: Motor supply decoupling
+        status: owned
+        price_note: owned
+        qty: 1
+        specs:
+        - 100 µF
+        - 50 V
+        datasheet: unverified
+        compat: unverified
+        note: Goes across the shield's 24 V terminal (the shield already has one per
+          driver on most clones).
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=100 µF 50 V electrolytic capacitor]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.06:
+    kind: component
+    label: 24 V 6 A DC power supply
+    choices:
+      manifest:
+        name: 24 V 6 A DC power supply
+        function: Power supply
+        status: owned
+        price_note: owned
+        qty: 1
+        specs:
+        - 24 V DC
+        - 6 A (144 W)
+        - barrel jack / terminal adapter
+        datasheet: unverified
+        compat: unverified
+        note: Barrel plug size not stated; the base has an 11.3 mm hole for a 5.5
+          x 2.1 mm panel jack (assumed).
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=24 V 6 A DC power supply]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.07:
+    kind: component
+    label: M3 x 5.7 brass heat-set inserts
+    choices:
+      manifest:
+        name: M3 x 5.7 brass heat-set inserts
+        function: Fasteners
+        status: owned
+        price_note: Invention Studio stock
+        qty: 35
+        specs:
+        - M3
+        - "~5.7 mm long"
+        - CAD hole 4.0 x 6.7 deep (ruthex / CNC Kitchen size)
+        datasheet: https://www.3djake.com/cnc-kitchen/threaded-inserts-m3-standard
+        compat: unverified
+        compat_note: if the studio's inserts are another size, print coupon row C
+          and tell Mechy the hole that fits
+        note: Counts in docs/v1/build-notes.md §1.
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=M3 x 5.7 brass heat-set inserts]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.08:
+    kind: component
+    label: M3 / M2 / M5 screws, nuts and washers
+    choices:
+      manifest:
+        name: M3 / M2 / M5 screws, nuts and washers
+        function: Fasteners
+        status: owned
+        price_note: Invention Studio stock
+        qty: 1
+        specs:
+        - M3 SHCS x 6/8/10/12/30 (~57)
+        - M3 nuts x 7 (4 gripper, 2 carriage, 1 jam), M3 washers x 8 (J1 motor, 2
+          per screw), 1 M3 12 mm OD fender washer
+        - M2 x 8 + nuts x 2
+        - M5 x 25 wood screws x 4
+        datasheet: unverified
+        compat: unverified
+        compat_note: lengths per docs/v1/build-notes.md §2
+        note: If the studio bins run short, the Invention Studio Store sells a 440-piece
+          M3 machine screw assortment ($10, product 6313); check it has 6-30 mm socket
+          heads and nuts before relying on it.
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=M3 / M2 / M5 screws, nuts and washers]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.09:
+    kind: component
+    label: 608-2RS bearings 8x22x7 (10-pack)
+    choices:
+      manifest:
+        name: 608-2RS bearings 8x22x7 (10-pack)
+        function: Bearings
+        status: preferred
+        qty: 1
+        specs:
+        - 8 x 22 x 7 mm
+        - 2RS sealed
+        - need 4
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B0CX8JPXDW
+        price_usd: 4.99
+        order: Amazon
+        datasheet: https://bearingsdirect.com/608-2rs-sealed-ball-bearing-8x22x7-mr608-2rs/
+        stock_checked: '2026-10-29 US (page: In Stock, $4.99; Prime Saturday Oct 31,
+          otherwise Tue Nov 3)'
+        model: parts/models/bearing-608.step
+        compat: verified
+        compat_note: 8 x 22 x 7 is the standard 608 size; pockets 22.1, 8 mm shafts
+        note: Earlier picks B01M62EBAX and B07H84P2K1 are "Currently unavailable".
+          Same day - any skate shop (608 = skateboard bearing).
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=608-2RS bearings 8x22x7 (10-pack)]
+    assembly_ids:
+    - bearing-608-sh-1
+    - bearing-608-sh-2
+    - bearing-608-el-1
+    - bearing-608-el-2
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.10:
+    kind: component
+    label: 625-2RS bearings 5x16x5 (10-pack)
+    choices:
+      manifest:
+        name: 625-2RS bearings 5x16x5 (10-pack)
+        function: Bearings
+        status: candidate
+        qty: 1
+        specs:
+        - 5 x 16 x 5 mm
+        - 2RS
+        - need 2
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B0BZ2Z5B4W
+        order: Amazon
+        datasheet: https://bearingsdirect.com/625-2rs-sealed-precision-mini-ball-bearing-5x16x5-mr625-2rs/
+        stock_checked: unverified
+        model: parts/models/bearing-625.step
+        compat: verified
+        compat_note: 5 x 16 x 5 standard; carriage pockets 16.1, 5 mm rod
+        note: 'NOT available by Saturday: DOLUNTO shows $29.61, Nov 10-20; backup
+          B08LTLKQ1P $32.29, Nov 10-19; B0815B5D5W Nov 17. Look locally (3D-printer
+          / RC hobby shops stock 625s for Voron/Prusa builds) or order and finish
+          J2 when they arrive.'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=625-2RS bearings 5x16x5 (10-pack)]
+    assembly_ids:
+    - bearing-625-1
+    - bearing-625-2
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.11:
+    kind: component
+    label: 6806-2RS (61806-2RS) bearings 30x42x7 (pack)
+    choices:
+      manifest:
+        name: 6806-2RS (61806-2RS) bearings 30x42x7 (pack)
+        function: Bearings
+        status: candidate
+        qty: 1
+        specs:
+        - 30 x 42 x 7 mm thin-section
+        - 2RS
+        - need 2
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B0G8ZDSXGP
+        price_usd: 5.03
+        order: Amazon
+        datasheet: https://bearingsdirect.com/6806-2rs-ball-bearing-30x42x7-sealed/
+        stock_checked: unverified
+        model: parts/models/bearing-6806.step
+        compat: verified
+        compat_note: 30 x 42 x 7 standard; yaw tube 42.1, spigot 29.85 (coupon-yaw)
+        note: '2-pack "Bottom Bracket Bearing 6806-2RS 30x42x7". The first pick (10-pack
+          B0DFC7TRRH) is $45.23, Nov 10-19. Fastest - a bike shop today: ask for two
+          BB30 bottom-bracket bearings, 6806-2RS (30 x 42 x 7).'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=6806-2RS (61806-2RS) bearings 30x42x7
+      (pack)]
+    assembly_ids:
+    - bearing-6806-upper
+    - bearing-6806-lower
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.12:
+    kind: component
+    label: GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)
+    choices:
+      manifest:
+        name: GT2 pulley kit 2x 60T + 2x 20T + 2x 200 mm belt (5 mm bore)
+        function: Pulleys and belts
+        status: preferred
+        price_usd: 11.89
+        qty: 2
+        specs:
+        - GT2 2 mm pitch
+        - 60T and 20T both 5 mm bore
+        - 2 x 200 mm closed belts
+        - 6 mm; 2 kits = 4 x 20T + 4 x 60T + 4 belts
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B09V5C1F7C
+        order: Amazon
+        datasheet: https://www.amazon.com/dp/B09V5C1F7C
+        stock_checked: '2026-10-29 US (page: In Stock, $11.89; Prime Sunday Nov 1,
+          otherwise Tue Nov 3)'
+        model: parts/models/gt2-20t-5mm.step
+        compat: unverified
+        compat_note: bore 5 mm on both pulleys (listing); envelope not listed (CAD
+          16 mm long, 20T OD 16, 60T flange 42)
+        note: Covers all 4 motor/stage 20T pulleys, the stage-1 60T and both 200 mm
+          belts (J2 stage 1 and 2). Arrives one day after the deadline even with Prime;
+          no faster 5 mm-bore 20T/60T listing found (B0B2LYC617 ships Nov 17-25).
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=GT2 pulley kit 2x 60T + 2x 20T + 2x 200
+      mm belt (5 mm bore)]
+    assembly_ids:
+    - pulley-j1-20t
+    - pulley-j2-20t
+    - pulley-s2-20t
+    - pulley-j3-20t
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.13:
+    kind: component
+    label: 2GT closed loop timing belt 6 mm x 300 mm
+    choices:
+      manifest:
+        name: 2GT closed loop timing belt 6 mm x 300 mm
+        function: Pulleys and belts
+        status: preferred
+        price_usd: 2.0
+        qty: 1
+        specs:
+        - GT2 2 mm pitch
+        - 6 mm wide
+        - 300 mm closed loop (150T)
+        - J1 base belt
+        vendor: Invention Studio Store
+        url: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6296&SINGLESTORE=true
+        order: Invention Studio Store
+        datasheet: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6296&SINGLESTORE=true
+        stock_checked: '2026-10-29 US (user catalog capture: no stock warning; free
+          pickup)'
+        model: parts/models/belt-j1-gt2-300.step
+        compat: verified
+        compat_note: store listing 2GT, 6 mm, 300 mm closed = the J1 loop the CAD
+          is solved for (C 73.07)
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=2GT closed loop timing belt 6 mm x 300
+      mm]
+    assembly_ids:
+    - belt-j1
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.14:
+    kind: component
+    label: GT2 6 mm closed belt 520 mm
+    choices:
+      manifest:
+        name: GT2 6 mm closed belt 520 mm
+        function: Pulleys and belts
+        status: candidate
+        qty: 1
+        specs:
+        - GT2 2 mm pitch
+        - 6 mm
+        - 520 mm (260T) closed loop
+        - 2-pack
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B01GZDU64U
+        order: Amazon
+        datasheet: unverified
+        stock_checked: unverified
+        model: parts/models/belt-j3-gt2-520.step
+        compat: unverified
+        compat_note: elbow centre distance 187.30 solved for 520; fallback 500 mm
+          with L2 = 125 in layout.py
+        note: 'NOT available by Saturday: this listing is $12.88, Nov 12-23; backup
+          B018528Z38 (10-pack) is fastest Nov 4-6. Without it the elbow (J3) cannot
+          be driven; everything else can be assembled and tested first.'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=GT2 6 mm closed belt 520 mm]
+    assembly_ids:
+    - belt-j3
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.15:
+    kind: component
+    label: 8 mm linear rod 150 mm (2-pack)
+    choices:
+      manifest:
+        name: 8 mm linear rod 150 mm (2-pack)
+        function: Shafts and couplings
+        status: preferred
+        price_usd: 6.49
+        qty: 1
+        specs:
+        - 8 mm h8 (-0.005..-0.03)
+        - 150 mm
+        - chrome-plated carbon steel
+        - 2 pcs; cut to 100 and 113 mm
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B0D7M8XBG4
+        order: Amazon
+        datasheet: https://www.amazon.com/dp/B0D7M8XBG4
+        stock_checked: '2026-10-29 US (page: Only 15 left; Prime Saturday Oct 31,
+          Atlanta 30324)'
+        model: parts/models/rod-8x100.step
+        compat: verified
+        compat_note: 8 mm h8 rod; dead shafts in 8.2/8.3 bores and 608 bores; cut
+          at the Invention Studio (hardened - use an abrasive wheel)
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=8 mm linear rod 150 mm (2-pack)]
+    assembly_ids:
+    - rod-shoulder
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.16:
+    kind: component
+    label: 5 mm linear rod 100 mm
+    choices:
+      manifest:
+        name: 5 mm linear rod 100 mm
+        function: Shafts and couplings
+        status: candidate
+        qty: 1
+        specs:
+        - 5 mm
+        - 100 mm
+        - 2 pcs; cut to 52 mm
+        vendor: Amazon
+        url: https://www.amazon.com/s?k=5mm+x+100mm+linear+rod
+        order: Amazon
+        datasheet: unverified
+        stock_checked: unverified
+        model: parts/models/rod-5x52.step
+        compat: unverified
+        compat_note: file a small flat for each pulley set screw
+        note: 'NOT sourced: the earlier pick (B0FXF4RFMP) is $66.52 + $10.50, Nov
+          10-20 - do not buy it. Need one 5 mm ground steel piece >= 52 mm (h6-h8).
+          Fastest - ask the Invention Studio metal shop for 5 mm rod / drill rod,
+          or a hardware store''s 5 mm steel dowel pin >= 55 mm long.'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=5 mm linear rod 100 mm]
+    assembly_ids:
+    - rod-intermediate
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.17:
+    kind: component
+    label: 8 mm bore shaft collars (pack)
+    choices:
+      manifest:
+        name: 8 mm bore shaft collars (pack)
+        function: Shafts and couplings
+        status: preferred
+        price_usd: 7.29
+        qty: 1
+        specs:
+        - uxcell
+        - metric 8 mm bore
+        - 14 mm OD
+        - set screw
+        - 10 pcs
+        - need 4
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B0CQ2S44S4
+        order: Amazon
+        datasheet: https://www.amazon.com/dp/B0CQ2S44S4
+        stock_checked: '2026-10-29 US (page: Only 6 left, $7.29; Prime Sunday Nov
+          1, otherwise Tue Nov 3)'
+        model: parts/models/collar-8mm.step
+        compat: verified
+        compat_note: metric 8 mm bore on the 7.97-7.995 rod; 14 OD (CAD models 16)
+          clears everywhere
+        note: Replaced B0DQKVNBST - its only size is 5/16 in (7.94 mm), smaller than
+          the 8 mm rod. Collars only locate the rods axially (the tower's M3 shaft
+          lock already holds the shoulder rod), so the arm can be assembled without
+          them.
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=8 mm bore shaft collars (pack)]
+    assembly_ids:
+    - collar-shoulder-in
+    - collar-shoulder-out
+    - collar-elbow-in
+    - collar-elbow-out
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.18:
+    kind: component
+    label: 5 mm rigid flange coupling (22 mm flange)
+    choices:
+      manifest:
+        name: 5 mm rigid flange coupling (22 mm flange)
+        function: Shafts and couplings
+        status: preferred
+        price_usd: 8.09
+        qty: 1
+        specs:
+        - 5 mm bore
+        - 22 mm base
+        - base height 2
+        - hub 10 x 10
+        - mounting hole distance 16
+        - 2 pcs
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B07PLB2P4W
+        order: Amazon
+        datasheet: https://www.amazon.com/dp/B07PLB2P4W
+        stock_checked: '2026-10-29 US (page: Only 18 left in stock; delivery shown
+          Sunday Nov 1, ZIP not Atlanta)'
+        model: parts/models/flange-coupling-5mm.step
+        compat: verified
+        compat_note: uxcell listing gives 22 base, 2 thick, 10 x 10 hub, 16 hole distance
+          = the CAD model; gripper nuts behind the flange need hub <= 10.5
+        note: J4 wrist coupling. Whether the flange holes are tapped is not stated;
+          the design uses through-screws + nuts either way.
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=5 mm rigid flange coupling (22 mm flange)]
+    assembly_ids:
+    - hub-j4
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.19:
+    kind: component
+    label: MG90S metal-gear micro servo (180 deg)
+    choices:
+      manifest:
+        name: MG90S metal-gear micro servo (180 deg)
+        function: Gripper servo
+        status: preferred
+        price_usd: 3.5
+        qty: 1
+        specs:
+        - Miuzei MG90S
+        - 9 g class
+        - metal gears
+        - 4.8-6.6 V
+        - horns included
+        vendor: Invention Studio Store
+        url: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6265&SINGLESTORE=true
+        order: Invention Studio Store
+        datasheet: https://www.towerpro.com.tw/product/mg90s-3/
+        stock_checked: '2026-10-29 US (user catalog capture: no stock warning; free
+          pickup)'
+        model: parts/models/mg90s.step
+        compat: unverified
+        compat_note: clone dims vary +-0.5 mm; gripper cut-out has 0.3 per side
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=MG90S metal-gear micro servo (180 deg)]
+    assembly_ids:
+    - servo-gripper
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.20:
+    kind: component
+    label: LM2596 buck converter (set to 6.0 V)
+    choices:
+      manifest:
+        name: LM2596 buck converter (set to 6.0 V)
+        function: Gripper servo supply
+        status: preferred
+        qty: 1
+        specs:
+        - 4-40 V in
+        - adjustable out
+        - 3 A peak / ~2 A continuous
+        - "~43 x 21 mm"
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B08L5VRBZS
+        order: Amazon
+        datasheet: https://www.ti.com/lit/ds/symlink/lm2596.pdf
+        price_usd: 6.99
+        stock_checked: '2026-10-29 US (page: In Stock, $6.99; Prime Saturday Oct 31)'
+        compat: verified
+        compat_note: 24 V in within 40 V; set 6.0 V with a meter before connecting
+          the MG90S (4.8-6.6 V)
+        note: 'Pick (ATNSINC 4-pack; listing 3-40 V in, 1.5-35 V out, 2 A continuous
+          / 3 A max). Factory-set high: turn the trimmer 15-20 turns down and set
+          6.0 V with a meter before connecting the servo. Double-sided tape inside
+          the base.'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=LM2596 buck converter (set to 6.0 V)]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.21:
+    kind: component
+    label: 5.5 x 2.1 mm panel-mount DC jack (DC-022B)
+    choices:
+      manifest:
+        name: 5.5 x 2.1 mm panel-mount DC jack (DC-022B)
+        function: Power entry and protection
+        status: rejected
+        qty: 1
+        specs:
+        - 5.5 x 2.1 mm
+        - 11 mm thread (fits the 11.3 mm hole)
+        - solder lugs
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B08D11S5ZH
+        order: Amazon
+        datasheet: unverified
+        stock_checked: unverified
+        compat: unverified
+        compat_note: check your PSU plug is 5.5 x 2.1 (some are 5.5 x 2.5)
+        note: 'Dropped: the listing ships Nov 17-27 and these jacks are rated 0.5-3
+          A. Use the barrel-jack/terminal adapter that came with your 24 V supply
+          instead: plug the PSU into it inside the base (cable through the 11.3 mm
+          rear hole, knot or zip-tie it as strain relief) and wire its terminals to
+          fuse -> E-stop -> shield.'
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=5.5 x 2.1 mm panel-mount DC jack (DC-022B)]
+    assembly_ids: []
+    built_status: not selected
+  component.22:
+    kind: component
+    label: 22 mm mushroom emergency stop (NC latching)
+    choices:
+      manifest:
+        name: 22 mm mushroom emergency stop (NC latching)
+        function: Power entry and protection
+        status: preferred
+        price_usd: 9.99
+        qty: 1
+        specs:
+        - COMOK ZB2-BE102C
+        - 22 mm
+        - 1 NC contact
+        - latching twist-to-reset
+        - 600 V 10 A (AC)
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B07MJPRMRL
+        order: Amazon
+        datasheet: https://www.amazon.com/dp/B07MJPRMRL
+        stock_checked: '2026-10-29 US (page: In Stock; delivery date shown was out
+          of date)'
+        compat: unverified
+        compat_note: no DC rating listed; ZB2 contact blocks are routinely used at
+          24 V DC, real draw ~2-3 A (est)
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=22 mm mushroom emergency stop (NC latching)]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.23:
+    kind: component
+    label: Inline ATO blade fuse holder (10-pack with 10 A and 15 A fuses)
+    choices:
+      manifest:
+        name: Inline ATO blade fuse holder (10-pack with 10 A and 15 A fuses)
+        function: Power entry and protection
+        status: preferred
+        price_usd: 7.49
+        qty: 1
+        specs:
+        - SIM&NAT
+        - 16 AWG
+        - ATC/ATO standard blade
+        - includes 10 x 10 A + 10 x 15 A fuses
+        vendor: Amazon (or any auto parts store today)
+        url: https://www.amazon.com/dp/B0DG97B5HL
+        order: Amazon
+        datasheet: https://www.amazon.com/dp/B0DG97B5HL
+        stock_checked: '2026-10-29 US (page: In Stock; delivery date shown was out
+          of date)'
+        compat: verified
+        compat_note: fit a 7.5 A or 5 A ATO blade (auto-parts store, est. draw 2-3
+          A); the included 10 A fuses are only a fallback
+        note: One holder needed; 32 V DC blade-fuse rating not stated on the page.
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=Inline ATO blade fuse holder (10-pack
+      with 10 A and 15 A fuses)]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.24:
+    kind: component
+    label: Stepper extension cables 1 m (PH2.0 6-pin to 4-pin Dupont)
+    choices:
+      manifest:
+        name: Stepper extension cables 1 m (PH2.0 6-pin to 4-pin Dupont)
+        function: Wiring
+        status: preferred
+        price_usd: 7.99
+        qty: 1
+        specs:
+        - 1 m
+        - XH2.54 4-pin to PH2.0 6-pin
+        - 6 pcs
+        - need 3 (J2
+        - J3
+        - J4)
+        vendor: Amazon
+        url: https://www.amazon.com/dp/B0D57RRQVP
+        order: Amazon
+        datasheet: https://www.amazon.com/dp/B0D57RRQVP
+        stock_checked: '2026-10-29 US (page: In Stock, $7.99; Prime Saturday Oct 31)'
+        compat: unverified
+        compat_note: check your motors have the 6-pin PH2.0 socket (Anet-style 42SHDC
+          motors do); if they have fixed leads, skip this line
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=Stepper extension cables 1 m (PH2.0 6-pin
+      to 4-pin Dupont)]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.25:
+    kind: component
+    label: Servo lead extension (3-core wire, ~1 m)
+    choices:
+      manifest:
+        name: Servo lead extension (3-core wire, ~1 m)
+        function: Wiring
+        status: owned
+        price_note: Invention Studio stock (hookup wire, solder, heat-shrink)
+        qty: 1
+        specs:
+        - 3 x 22-26 AWG
+        - "~1 m"
+        - solder + heat-shrink
+        - one end to the LM2596 output
+        - signal to Uno A3
+        datasheet: unverified
+        compat: unverified
+        compat_note: extends the MG90S's ~25 cm lead from the wrist to the base; no
+          connector purchase needed
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=Servo lead extension (3-core wire, ~1
+      m)]
+    assembly_ids: []
+    built_status: recorded manifest choice; purchase and installation not confirmed
+  component.26:
+    kind: component
+    label: WEN 10761 digital caliper
+    choices:
+      manifest:
+        name: WEN 10761 digital caliper
+        function: Tools
+        status: candidate
+        price_usd: 11.0
+        qty: 1
+        specs:
+        - 150 mm digital caliper
+        vendor: Invention Studio Store
+        url: https://epay.gatech.edu/C20793_ustores/web/product_detail.jsp?PRODUCTID=6316&SINGLESTORE=true
+        order: Invention Studio Store
+        datasheet: unverified
+        stock_checked: '2026-10-29 US (user catalog capture: no stock warning)'
+        compat: verified
+        compat_note: needed to measure the motors, the coupling and the coupons before
+          printing
+        note: Only if you don't already have calipers (the studio may lend one).
+        quantity_semantics: source purchase/stock quantity; may be pack count, not
+          assembly count
+    evidence:
+    - parts/components.yaml#components[name=WEN 10761 digital caliper]
+    assembly_ids: []
+    built_status: not selected
+  addon.power-adapter:
+    kind: addon
+    label: PSU supplied barrel-jack/terminal adapter
+    choices:
+      supplied:
+        description: Use supplied adapter inside base; rejected panel jack is not
+          selected
+    evidence:
+    - parts/components.yaml#5.5 x 2.1 mm panel-mount DC jack (DC-022B)
+    installation_verified: false
+  addon.homing:
+    kind: addon
+    label: Homing switches
+    choices:
+      lever:
+        description: Lever microswitches for J1/J2/J3
+        qty: 3
+        mapping: No model, source or CAD mounts identified
+    evidence:
+    - parts/build_plan.md#End-stops (homing)
+    installation_verified: false
+  addon.fuse:
+    kind: addon
+    label: ATO fuse rating
+    choices:
+      7.5A:
+        current_a: 7.5
+      5A:
+        current_a: 5
+      10A:
+        current_a: 10
+        status: source fallback only
+    evidence:
+    - parts/build_plan.md#Power entry, switch, fuse; parts/components.yaml#Inline
+      ATO blade fuse holder
+    installation_verified: false
+  addon.usb:
+    kind: addon
+    label: Programming cable
+    choices:
+      usb-a-b:
+        description: USB-A to USB-B
+        ownership: unknown
+    evidence:
+    - parts/build_plan.md#Programming cable
+    installation_verified: false
+  addon.base-fixing:
+    kind: addon
+    label: Base fixing
+    choices:
+      wood-screws:
+        description: M5 x 25 wood screws
+        qty: 4
+      clamps:
+        description: C-clamps
+        qty: 2
+    evidence:
+    - parts/build_plan.md#Base fixing; parts/components.yaml#M3 / M2 / M5 screws,
+      nuts and washers
+    installation_verified: false
+  addon.cable-wrap:
+    kind: addon
+    label: Cable routing
+    choices:
+      spiral-wrap:
+        description: Spiral wrap
+        qty: 
+      zip-ties:
+        description: Zip ties
+        qty: 
+    evidence:
+    - parts/build_plan.md#Cable routing
+    installation_verified: false
+  addon.heat-shrink:
+    kind: addon
+    label: Heat shrink
+    choices:
+      stock:
+        description: Studio stock; size and quantity unresolved
+    evidence:
+    - parts/components.yaml#Servo lead extension
+    installation_verified: false
+  addon.threadlocker:
+    kind: addon
+    label: Threadlocker
+    choices:
+      plastic-safe:
+        description: Plastic-safe; metal-to-metal set screws only; quantity unresolved
+    evidence:
+    - parts/build_plan.md#Consumables
+    installation_verified: false
+  addon.insert-tool:
+    kind: addon
+    label: Insert installation tool
+    choices:
+      iron:
+        description: Soldering iron with insert tip; availability unresolved
+    evidence:
+    - parts/build_plan.md#Tools
+    installation_verified: false
+  addon.hex-keys:
+    kind: addon
+    label: Hex keys
+    choices:
+      metric:
+        sizes_m:
+        - 0.0015
+        - 0.002
+        - 0.0025
+        availability: unresolved
+    evidence:
+    - parts/build_plan.md#Tools
+    installation_verified: false
+  addon.rod-cutting:
+    kind: addon
+    label: Rod cutting tool
+    choices:
+      hacksaw:
+        description: Hacksaw; suitability unverified
+      rotary:
+        description: Rotary tool / abrasive wheel; availability unresolved
+    evidence:
+    - parts/build_plan.md#Tools; parts/components.yaml#8 mm linear rod
+    installation_verified: false
+  addon.gripper:
+    kind: addon
+    label: End effector
+    choices:
+      mg90s-claw:
+        description: Existing MG90S two-finger claw
+        parts:
+        - gripper-base
+        - gripper-finger-left
+        - gripper-finger-right
+        - servo-gripper
+    evidence:
+    - task card T106; design/v1/assembly.yaml
+    installation_verified: false
+  addon.finish:
+    kind: addon
+    label: Printed-part finish
+    choices:
+      black:
+        color: black
+        application: requested finish; existing CAD colors unchanged
+    evidence:
+    - task card T106
+    installation_verified: false
+  fastener.M3x6:
+    kind: fastener
+    label: M3x6
+    choices:
+      studio-stock:
+        description: M3x6
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M3x8:
+    kind: fastener
+    label: M3x8
+    choices:
+      studio-stock:
+        description: M3x8
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M3x10:
+    kind: fastener
+    label: M3x10
+    choices:
+      studio-stock:
+        description: M3x10
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M3x12:
+    kind: fastener
+    label: M3x12
+    choices:
+      studio-stock:
+        description: M3x12
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M3x30:
+    kind: fastener
+    label: M3x30
+    choices:
+      studio-stock:
+        description: M3x30
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M3-nut:
+    kind: fastener
+    label: M3-nut
+    choices:
+      studio-stock:
+        description: M3-nut
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M3-washer:
+    kind: fastener
+    label: M3-washer
+    choices:
+      studio-stock:
+        description: M3-washer
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M3-fender-washer-12mm-OD:
+    kind: fastener
+    label: M3-fender-washer-12mm-OD
+    choices:
+      studio-stock:
+        description: M3-fender-washer-12mm-OD
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M2x8:
+    kind: fastener
+    label: M2x8
+    choices:
+      studio-stock:
+        description: M2x8
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  fastener.M2-nut:
+    kind: fastener
+    label: M2-nut
+    choices:
+      studio-stock:
+        description: M2-nut
+        qty: 
+        quantity_status: See grouped source counts; complete per-size allocation unresolved
+    evidence:
+    - parts/components.yaml#M3 / M2 / M5 screws, nuts and washers
+  concept.structure:
+    kind: concept-part-group
+    label: Unbuilt arm structure
+    choices:
+      articulated:
+        description: Moveo-derived serial supported links; black; 0.135 m upper and 0.220 m elbow-to-pad
+        source: research/concepts-600g/note.md
+        licence: MIT; BCN3D Technologies; retain notice when assets are copied
+        model: null
+        status: proposed_not_built
+      parallelogram:
+        description: Moveo-derived supports with original equal-crank four-bar; 0.135 m rods and 0.060 m cranks; forearm follows output crank
+        source: research/concepts-600g/note.md
+        licence: MIT for reused Moveo details; original linkage sketch
+        model: null
+        status: proposed_not_built
+      counterbalanced:
+        description: Moveo-derived serial structure with two rear ballast tails; 0.200 m effective levers
+        source: research/concepts-600g/note.md
+        licence: MIT for reused Moveo details; original balance adaptation
+        model: null
+        status: proposed_not_built
+  concept.transmission:
+    kind: concept-part-group
+    label: Complete proposed four-axis transmission
+    choices:
+      A:
+        ratios: [6, 80, 48, 1]
+        description: GT2 yaw 20-120; shoulder 20-40,20-100,20-160; elbow 20-60,20-80,20-80 plus equal-65T transfer; direct wrist
+        loops_m: [0.200, 0.300, 0.400]
+        loaded_pitch_belt_width_m: 0.012
+        local_wrist_motor: true
+        status: proposed_not_verified
+      B:
+        ratios: [6, 36, 36, 1]
+        description: GT2 yaw 20-120; both pitch drives 20-60,20-60,20-80; forearm through linkage; direct wrist
+        loops_m: [0.200, 0.300]
+        loaded_pitch_belt_width_m: 0.012
+        local_wrist_motor: true
+        status: proposed_not_verified
+      C:
+        ratios: [6, 48, 32, 1]
+        description: GT2 yaw 20-120; shoulder 20-40,20-80,20-120; elbow 20-40,20-80,20-80 plus equal-65T transfer; direct wrist
+        loops_m: [0.200, 0.300, 0.400]
+        loaded_pitch_belt_width_m: 0.012
+        local_wrist_motor: true
+        status: proposed_not_verified
+  concept.balance:
+    kind: concept-part-group
+    label: Dead-load compensation
+    choices:
+      none:
+        description: No counterbalance
+      dead-load:
+        description: Trim effective carrier/tail/ballast moments after weighing; no payload compensation
+        forearm_effective_mass_kg: 0.230395
+        shoulder_effective_mass_kg: 0.599531625
+        effective_lever_m: 0.200
+        value_type: computed_from_estimates
+        status: proposed_not_verified
+  concept.supports:
+    kind: concept-part-group
+    label: Bearing, shaft and fastener candidates
+    choices:
+      serial:
+        description: Paired 6806-2RS yaw, 608-2RS pitch on 0.008 m shafts, 625-2RS intermediates on 0.005 m shafts; M3x8/x10/x12/x30 and M4x20 through fasteners
+        quantity_verified: false
+      linkage:
+        description: Serial support candidates plus four-bar pivots with 608-2RS and 0.008 m shafts; added through fasteners
+        quantity_verified: false
+      balanced:
+        description: Serial support candidates plus captive ballast bolts and guards; rear-tail load path needs sizing
+        quantity_verified: false
+  concept.grip-contact:
+    kind: concept-part-group
+    label: MG90S contact and wrist load qualification
+    choices:
+      pending-object:
+        description: Retain selected MG90S claw; friction-only 600 g hold unsupported; obtain geometry for under-support/form closure before dependent CAD
+        roll: direct
+        capacity_verified: false
+        dependent_cad_gate: object geometry, contact and COM required
+  concept.material-plan:
+    kind: concept-part-group
+    label: Black PLA with preserved PETG exceptions
+    choices:
+      five-petg:
+        description: Preserve PETG base-deck, upper-arm, pack-cover, pack-carriage and forearm or functional successors; PLA elsewhere subject to review
+        max_print_target_m: [0.240, 0.240, 0.240]
+        printer_cube_m: [0.256, 0.256, 0.256]
+        orientation_plan: Links/rods long axis XY; pulleys face-down; clamps axis vertical; deck flat; motor cradles on load-bearing side
+        envelope_verified: false
+        thermal_verified: false
+  concept.anchoring:
+    kind: concept-part-group
+    label: Proposed bench load path
+    choices:
+      through-bolts:
+        description: Four M6x40 candidates with large washers/backing plate; actual length and table strength to verify
+        nominal_row_span_m: 0.160
+        installation_verified: false
+  concept.electrical:
+    kind: concept-part-group
+    label: Proposed servo rail and homing integration
+    choices:
+      pending-validation:
+        description: Three ZW12-3 lever switches; manual roll index; LM2596 proposed at 4.8 V subject to clone checks; four independent steppers plus servo require firmware validation
+        motor_supply_v: 24
+        motor_supply_a: 6
+        servo_rail_v: 4.8
+        max_step_rate_hz: null
+        current_setting_changed: false
+        installation_verified: false
+built:
+  v1:
+    status: viewing_only_unverified_at_600g
+    approved: false
+    picks:
+      part.base-shell: v1
+      part.base-deck: v1
+      part.bearing-cap: v1
+      part.yaw-spacer-outer: v1
+      part.motor-j1: v1
+      part.bearing-6806-upper: v1
+      part.bearing-6806-lower: v1
+      part.uno-cnc-shield: v1
+      part.turret-hub: v1
+      part.yaw-spacer-inner: v1
+      part.turret-clamp: v1
+      part.shoulder-tower: v1
+      part.shoulder-pulley-80t: v1
+      part.pulley-j1-20t: v1
+      part.belt-j1: v1
+      part.rod-shoulder: v1
+      part.bearing-shim: v1
+      part.collar-shoulder-in: v1
+      part.bearing-shim-2: v1
+      part.collar-shoulder-out: v1
+      part.upper-arm: v1
+      part.pack-cover: v1
+      part.pack-carriage: v1
+      part.bearing-608-sh-1: v1
+      part.bearing-608-sh-2: v1
+      part.motor-j2: v1
+      part.pulley-j2-20t: v1
+      part.rod-intermediate: v1
+      part.bearing-625-1: v1
+      part.bearing-625-2: v1
+      part.pulley-s1-60t: v1
+      part.pulley-s2-20t: v1
+      part.motor-j3: v1
+      part.pulley-j3-20t: v1
+      part.belt-s1: v1
+      part.belt-s2: v1
+      part.belt-j3: v1
+      part.rod-elbow: v1
+      part.collar-elbow-in: v1
+      part.bearing-shim-3: v1
+      part.collar-elbow-out: v1
+      part.forearm: v1
+      part.forearm-cover: v1
+      part.bearing-608-el-1: v1
+      part.bearing-608-el-2: v1
+      part.motor-j4: v1
+      part.hub-j4: v1
+      part.screw-j2-1: v1
+      part.screw-j2-2: v1
+      part.screw-j2-3: v1
+      part.screw-j2-4: v1
+      part.screw-carriage-1: v1
+      part.screw-carriage-2: v1
+      part.screw-tower-foot-1: v1
+      part.screw-tower-foot-2: v1
+      part.screw-tower-foot-3: v1
+      part.screw-tower-foot-4: v1
+      part.screw-j1-1: v1
+      part.screw-j1-2: v1
+      part.screw-j1-3: v1
+      part.screw-j1-4: v1
+      part.screw-shaft-lock: v1
+      part.gripper-base: v1
+      part.gripper-finger-left: v1
+      part.gripper-finger-right: v1
+      part.servo-gripper: v1
+      part.coupon-fits: v1
+      material.coupon-fits: PLA
+      part.coupon-yaw: v1
+      material.coupon-yaw: PLA
+      material.base-shell: PLA
+      material.base-deck: PETG
+      material.bearing-cap: PLA
+      material.yaw-spacer-outer: PLA
+      material.turret-hub: PLA
+      material.yaw-spacer-inner: PLA
+      material.turret-clamp: PLA
+      material.shoulder-tower: PLA
+      material.shoulder-pulley-80t: PLA
+      material.bearing-shim: PLA
+      material.upper-arm: PETG
+      material.pack-cover: PETG
+      material.pack-carriage: PETG
+      material.forearm: PETG
+      material.forearm-cover: PLA
+      material.gripper-base: PLA
+      material.gripper-finger-left: PLA
+      material.gripper-finger-right: PLA
+      component.01: manifest
+      component.02: manifest
+      component.03: manifest
+      component.04: manifest
+      component.05: manifest
+      component.06: manifest
+      component.07: manifest
+      component.08: manifest
+      component.09: manifest
+      component.10: manifest
+      component.11: manifest
+      component.12: manifest
+      component.13: manifest
+      component.14: manifest
+      component.15: manifest
+      component.16: manifest
+      component.17: manifest
+      component.18: manifest
+      component.19: manifest
+      component.20: manifest
+      component.21: 
+      component.22: manifest
+      component.23: manifest
+      component.24: manifest
+      component.25: manifest
+      component.26: 
+      addon.power-adapter: supplied
+      addon.homing: lever
+      addon.fuse: 7.5A
+      addon.usb: usb-a-b
+      addon.base-fixing: wood-screws
+      addon.cable-wrap: 
+      addon.heat-shrink: stock
+      addon.threadlocker: plastic-safe
+      addon.insert-tool: 
+      addon.hex-keys: 
+      addon.rod-cutting: 
+      addon.gripper: mg90s-claw
+      addon.finish: black
+      fastener.M3x6: studio-stock
+      fastener.M3x8: studio-stock
+      fastener.M3x10: studio-stock
+      fastener.M3x12: studio-stock
+      fastener.M3x30: studio-stock
+      fastener.M3-nut: studio-stock
+      fastener.M3-washer: studio-stock
+      fastener.M3-fender-washer-12mm-OD: studio-stock
+      fastener.M2x8: studio-stock
+      fastener.M2-nut: studio-stock
+unresolved_mappings:
+- 'Material count conflict: decisions/digest/build plan say 4 motor-clamping parts;
+  print list and assembly explicitly assign PETG to 5: base-deck, upper-arm, pack-cover,
+  pack-carriage, forearm. Preserve these 5 manifest picks; do not certify heat performance.'
+- Historical deadline decision permits PLA everywhere at 0.6 A; compatibility.yaml
+  instead discusses 0.7 A. Neither is a validated thermal/current prescription at
+  0.6 kg.
+- build_plan.md and compatibility torque calculations use 100 g; superseded by requested
+  600 g. No capacity approval or new concept selection.
+- Composite uno-cnc-shield model maps both controller and shield; drivers/capacitor
+  and multiple electrical items lack discrete assembly instances.
+- Pulley kit must cover 4 x 20T, 1 x 60T and 2 x 200 mm belts; kit purchase quantity
+  is 2, not installed quantity. 60T and belt-s1/s2 models need explicit kit mapping.
+- Elbow rod model is 8x113; manifest 8 mm rod model is 8x100. Both cuts are stated
+  in build plan; no unique model match for elbow.
+- 'Fasteners are partly modelled and partly grouped: source says about 57 M3 screws;
+  full per-size counts unresolved. M3 washer count conflicts: components 8, build
+  plan 4.'
+- 'Homing switches: 3 specified but no models, mounting geometry or sourced selection.
+  Optional cable routing/tool choices are unresolved, represented by null picks.'
+- Old build plan panel jack and 16 mm switch are superseded by supplied adapter and
+  22 mm mushroom; DC interrupt rating and fuse rating remain unverified. 7.5 A fuse
+  is recorded from plan, not safety approval.
+- Motor exact datasheet/body/shaft dimensions and MG90S clone fit remain unverified;
+  preserve component notes and compatibility statuses without upgrading them.
+- 520 mm elbow belt is v1. Documented 500 mm fallback requires L2=0.125 m; not interchangeable
+  without geometry change and not selected.
+- 'No complete current cost total: component order subtotals USD 83.10 + 5.50 exclude
+  unresolved local items; prices are historical, not checked. Under USD 100 remaining
+  budget is unverified.'
+- Keepout geometry is excluded from swappable physical inventory. Print coupons are
+  included. built records design intent only, not fabricated stock.
+- No registry schema or configuration tool exposed in available tools; this is an
+  explicit YAML inventory schema. Viewer integration is not verified.
+- Licences of reused designs are not identified in allowed inputs; no new designs
+  imported.
+source_compatibility: parts/compatibility.yaml; claims preserved as historical evidence
+  only
+presets:
+  arm-600g-A:
+    option_id: arm-600g-A
+    options_id: arm-600g-concept
+    label: A - Conventional articulated belt arm
+    task: T113-concept-600g-selection
+    status: proposed_awaiting_user_selection
+    scope: Concept part groups and retained owned hardware; not an assembly manifest
+    merge_with_built: false
+    complete_build_configuration: false
+    selected: false
+    approved: false
+    capacity_verified: false
+    budget_verified: false
+    cad_gate: user selection; exact motor/contact/budget qualification remains required
+    evidence: research/concepts-600g/note.md
+    image: research/concepts-600g/options.svg
+    picks:
+      concept.structure: articulated
+      concept.transmission: A
+      concept.balance: none
+      concept.supports: serial
+      concept.grip-contact: pending-object
+      concept.material-plan: five-petg
+      concept.anchoring: through-bolts
+      concept.electrical: pending-validation
+      component.01: manifest
+      component.02: manifest
+      component.03: manifest
+      component.04: manifest
+      component.05: manifest
+      component.06: manifest
+      component.19: manifest
+      addon.gripper: mg90s-claw
+      addon.finish: black
+  arm-600g-B:
+    option_id: arm-600g-B
+    options_id: arm-600g-concept
+    label: B - Remote parallelogram drive
+    task: T113-concept-600g-selection
+    status: proposed_awaiting_user_selection
+    scope: Concept part groups and retained owned hardware; not an assembly manifest
+    merge_with_built: false
+    complete_build_configuration: false
+    selected: false
+    approved: false
+    capacity_verified: false
+    budget_verified: false
+    cad_gate: user selection; loop closure, contact, motor and budget qualification required
+    evidence: research/concepts-600g/note.md
+    image: research/concepts-600g/options.svg
+    picks:
+      concept.structure: parallelogram
+      concept.transmission: B
+      concept.balance: none
+      concept.supports: linkage
+      concept.grip-contact: pending-object
+      concept.material-plan: five-petg
+      concept.anchoring: through-bolts
+      concept.electrical: pending-validation
+      component.01: manifest
+      component.02: manifest
+      component.03: manifest
+      component.04: manifest
+      component.05: manifest
+      component.06: manifest
+      component.19: manifest
+      addon.gripper: mg90s-claw
+      addon.finish: black
+  arm-600g-C:
+    option_id: arm-600g-C
+    options_id: arm-600g-concept
+    label: C - Dead-load counterbalanced arm
+    task: T113-concept-600g-selection
+    status: proposed_awaiting_user_selection
+    scope: Concept part groups and retained owned hardware; not an assembly manifest
+    merge_with_built: false
+    complete_build_configuration: false
+    selected: false
+    approved: false
+    capacity_verified: false
+    budget_verified: false
+    cad_gate: user selection; balance moments, contact, motor and budget qualification required
+    evidence: research/concepts-600g/note.md
+    image: research/concepts-600g/options.svg
+    picks:
+      concept.structure: counterbalanced
+      concept.transmission: C
+      concept.balance: dead-load
+      concept.supports: balanced
+      concept.grip-contact: pending-object
+      concept.material-plan: five-petg
+      concept.anchoring: through-bolts
+      concept.electrical: pending-validation
+      component.01: manifest
+      component.02: manifest
+      component.03: manifest
+      component.04: manifest
+      component.05: manifest
+      component.06: manifest
+      component.19: manifest
+      addon.gripper: mg90s-claw
+      addon.finish: black

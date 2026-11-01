@@ -1,0 +1,12 @@
+id: bam-v2-base-style
+made_by: chat
+text: Base redesigned as one enclosed round PETG housing (vent slots, 40° anchor skirt,
+  rear cable port) plus a closed bearing cover screwed into heat-set inserts; motor
+  turned 180° so its plug faces the port. Anchors shown as M4x12; real length depends
+  on your bench.
+alternatives:
+- Square housing to match the main body
+- Add a bottom plate to close the motor bay fully
+- Nut traps instead of heat-set inserts for the cover
+created: '2026-10-30T23:42:22+00:00'
+override: null

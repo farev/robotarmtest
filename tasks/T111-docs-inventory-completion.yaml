@@ -1,0 +1,18 @@
+id: "T111-docs-inventory-completion"
+role: "docs"
+provider: "codex"
+tier: "fast"
+goal: "Validate the existing configuration inventory and supply its missing completion summary."
+brief: |
+  Finish within 10 minutes; T106 failed solely because the runner could not find summary.md, although requirements and registry were written.
+  Reuse the T106 handoff and current registry; check slot references and built.v1/selection consistency, not a new inventory research pass.
+  Preserve 600 g, under-$100 remaining budget, black finish, MG90S, four steppers, PLA preference and five manifest PETG assignments with the four-versus-five conflict noted.
+  Keep v1 viewing-only, never capacity approval; preserve unresolved mappings instead of inventing fit, quantities or prices.
+  Correct only demonstrated registry/reference errors, documenting each; do not modify the failed T106 card or its completion state.
+  Produce docs/config-inventory/summary.md opening with What/Where and ending with Not verified and Open decisions.
+scout: false
+inputs: [".mechy/digest.md", "requirements.yaml", "design/configs.yaml", "design/selection.yaml", "tasks/summaries/T106-docs-config-inventory.md"]
+tools: ["progress_report", "assumption_log"]
+outputs: ["docs/config-inventory/summary.md", "design/configs.yaml", "design/selection.yaml"]
+depends_on: []
+done_when: "A discoverable summary.md documents registry consistency checks and all unresolved picks while retaining viewing-only v1 and the 600 g gate."

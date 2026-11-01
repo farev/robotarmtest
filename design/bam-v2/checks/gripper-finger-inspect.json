@@ -1,0 +1,248 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-finger.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -14.0,
+      0.0,
+      0.0
+    ],
+    "max": [
+      14.0,
+      30.0,
+      33.1
+    ],
+    "size": [
+      28.0,
+      30.0,
+      33.1
+    ]
+  },
+  "volume_mm3": 7742.39,
+  "holes": [
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "center": [
+        7.0,
+        8.5,
+        22.1
+      ],
+      "depth_mm": 4.0
+    },
+    {
+      "diameter_mm": 1.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -2.0,
+        14.74,
+        2.15
+      ],
+      "depth_mm": 4.3
+    },
+    {
+      "diameter_mm": 2.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -2.0,
+        19.24,
+        3.65
+      ],
+      "depth_mm": 7.3
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "center": [
+        -7.0,
+        8.5,
+        22.1
+      ],
+      "depth_mm": 4.0
+    }
+  ],
+  "partial_arcs": [
+    {
+      "diameter_mm": 13.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        2.0,
+        19.24,
+        11.05
+      ],
+      "depth_mm": 3.5,
+      "sweep_deg": 42.62
+    },
+    {
+      "diameter_mm": 61.46,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "center": [
+        8.81,
+        27.73,
+        41.03
+      ],
+      "depth_mm": 2.25,
+      "sweep_deg": 24.65
+    },
+    {
+      "diameter_mm": 10.0,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "center": [
+        9.64,
+        1.0,
+        1.96
+      ],
+      "depth_mm": 2.43,
+      "sweep_deg": 50.19
+    },
+    {
+      "diameter_mm": 10.0,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "center": [
+        -9.64,
+        1.0,
+        1.96
+      ],
+      "depth_mm": 2.43,
+      "sweep_deg": 50.19
+    },
+    {
+      "diameter_mm": 2.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -3.79,
+        15.66,
+        5.8
+      ],
+      "depth_mm": 3.0,
+      "sweep_deg": 96.31
+    },
+    {
+      "diameter_mm": 61.46,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "center": [
+        -8.81,
+        27.73,
+        41.03
+      ],
+      "depth_mm": 2.25,
+      "sweep_deg": 24.65
+    },
+    {
+      "diameter_mm": 13.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -2.0,
+        19.24,
+        10.05
+      ],
+      "depth_mm": 5.5,
+      "sweep_deg": 271.24
+    },
+    {
+      "diameter_mm": 2.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.97,
+        15.89,
+        5.8
+      ],
+      "depth_mm": 3.0,
+      "sweep_deg": 90.0
+    },
+    {
+      "diameter_mm": 21.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        -0.26,
+        4.65
+      ],
+      "depth_mm": 9.3,
+      "sweep_deg": 106.79
+    },
+    {
+      "diameter_mm": 6.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -4.12,
+        9.0,
+        10.33
+      ],
+      "depth_mm": 1.05,
+      "sweep_deg": 33.56
+    },
+    {
+      "diameter_mm": 6.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        4.12,
+        9.0,
+        10.33
+      ],
+      "depth_mm": 1.05,
+      "sweep_deg": 33.56
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "units": "kg, m, kg m^2; body axes = world axes at q = 0",
+  "bodies": {
+    "base": {
+      "mass": 0.451152,
+      "com": [
+        8.6e-05,
+        0.0,
+        -0.019013
+      ],
+      "inertia": [
+        [
+          0.00031269,
+          0.0,
+          1.617e-06
+        ],
+        [
+          0.0,
+          0.000309316,
+          0.0
+        ],
+        [
+          1.617e-06,
+          0.0,
+          0.000286353
+        ]
+      ],
+      "parts": 20
+    },
+    "turntable": {
+      "mass": 0.725529,
+      "com": [
+        -0.000339,
+        -0.000222,
+        0.051462
+      ],
+      "inertia": [
+        [
+          0.001446166,
+          -1.89e-06,
+          6.28e-06
+        ],
+        [
+          -1.89e-06,
+          0.000325362,
+          6.384e-06
+        ],
+        [
+          6.28e-06,
+          6.384e-06,
+          0.001335048
+        ]
+      ],
+      "parts": 54
+    },
+    "upper_arm": {
+      "mass": 0.055064,
+      "com": [
+        0.037659,
+        -0.009387,
+        0.002187
+      ],
+      "inertia": [
+        [
+          1.2463e-05,
+          -6.877e-06,
+          -8.35e-07
+        ],
+        [
+          -6.877e-06,
+          0.000134487,
+          2.351e-06
+        ],
+        [
+          -8.35e-07,
+          2.351e-06,
+          0.000135973
+        ]
+      ],
+      "parts": 8
+    },
+    "forearm": {
+      "mass": 0.046787,
+      "com": [
+        -0.026683,
+        0.001784,
+        0.003707
+      ],
+      "inertia": [
+        [
+          1.6394e-05,
+          5.4152e-05,
+          -1.9508e-05
+        ],
+        [
+          5.4152e-05,
+          0.000568823,
+          4.857e-06
+        ],
+        [
+          -1.9508e-05,
+          4.857e-06,
+          0.000570815
+        ]
+      ],
+      "parts": 8
+    },
+    "hand": {
+      "mass": 0.048166,
+      "com": [
+        -0.074631,
+        -0.007355,
+        0.003514
+      ],
+      "inertia": [
+        [
+          1.2506e-05,
+          -1.9221e-05,
+          6.88e-06
+        ],
+        [
+          -1.9221e-05,
+          0.000278276,
+          2.511e-06
+        ],
+        [
+          6.88e-06,
+          2.511e-06,
+          0.000284432
+        ]
+      ],
+      "parts": 17
+    },
+    "cup": {
+      "mass": 0.04986,
+      "com": [
+        -0.016939,
+        -0.001759,
+        -0.015448
+      ],
+      "inertia": [
+        [
+          1.3354e-05,
+          -1.96e-06,
+          -1.123e-06
+        ],
+        [
+          -1.96e-06,
+          2.5771e-05,
+          2.04e-07
+        ],
+        [
+          -1.123e-06,
+          2.04e-07,
+          3.0853e-05
+        ]
+      ],
+      "parts": 8
+    }
+  },
+  "origins_m": {
+    "base": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "turntable": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "upper_arm": [
+      1.1e-05,
+      0.0,
+      0.0897
+    ],
+    "forearm": [
+      0.140011,
+      0.0,
+      0.0897
+    ],
+    "hand": [
+      0.280011,
+      0.0,
+      0.0897
+    ],
+    "cup": [
+      0.334011,
+      0.0,
+      0.1097
+    ]
+  },
+  "kinematics": "parallel_level",
+  "tool_offset_m": {
+    "radial": 0.054,
+    "z": 0.02
+  },
+  "homing": [
+    {
+      "joint": "base",
+      "sensor": "endstop microswitch (vendor, on the socket)",
+      "mount": "new pedestal: bracket unresolved",
+      "trigger": "new cam unresolved",
+      "homes": "Do not home yaw until bracket, cam and steps are calibrated",
+      "home_deg": 0.0,
+      "coordinate": "q0"
+    },
+    {
+      "joint": "shoulder",
+      "sensor": "endstop microswitch (vendor)",
+      "mount": "main body",
+      "trigger": "lower shank",
+      "homes": "a1 = q1 at the Y endstop; recalibrate with tool_shank_calibrator_140",
+      "home_deg": 137.4,
+      "coordinate": "a1 = q1"
+    },
+    {
+      "joint": "elbow",
+      "sensor": "endstop microswitch (vendor)",
+      "mount": "main body",
+      "trigger": "lever",
+      "homes": "a2 = q1+q2 at the X endstop; recalibrate with the calibrator",
+      "home_deg": 26.0,
+      "coordinate": "a2 = q1+q2"
+    },
+    {
+      "joint": "wrist",
+      "sensor": "none (passive joint: the linkage holds q3 = -(q1+q2))",
+      "mount": "-",
+      "trigger": "-",
+      "homes": "not homed (no motor)",
+      "home_deg": 0.0,
+      "coordinate": "q3"
+    }
+  ],
+  "homing_order": [
+    "shoulder",
+    "elbow",
+    "base",
+    "wrist"
+  ],
+  "motor_map_note": "a=(q0,q1,q1+q2,q123); ratios [1,5.625,5.625,4.5]; wrist passive",
+  "params_hash": "14633c9f3bc3",
+  "motor_map": {
+    "coupling": "passthrough",
+    "joint_names": [
+      "base",
+      "shoulder",
+      "elbow",
+      "wrist"
+    ],
+    "coupling_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "gear_ratio": [
+      1.0,
+      5.625,
+      5.625,
+      4.5
+    ],
+    "microsteps": 8,
+    "steps_per_rad": [
+      254.6479,
+      1432.3945,
+      1432.3945,
+      1145.9156
+    ],
+    "steps_per_deg": [
+      4.44444,
+      25.0,
+      25.0,
+      20.0
+    ],
+    "formula": "motor_angle = gear_ratio * (C @ q); steps = round(steps_per_rad * (C @ q)); q = C^-1 @ (motor_angle / gear_ratio); motor torque = (C^-T tau_joint) / gear_ratio",
+    "inverse": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        1.0
+      ]
+    ],
+    "note": "belt pass-through: the elbow motor sets the forearm's absolute pitch q1+q2 and the wrist motor the hand's q1+q2+q3; moving the shoulder alone keeps forearm and cup pitch fixed"
+  },
+  "estimate_note": "Catalog motor masses and shell/infill estimates; new base hardware envelopes."
+}

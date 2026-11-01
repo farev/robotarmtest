@@ -1,0 +1,152 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/yaw-turntable-adapter.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -23.0,
+      -23.0,
+      0.0
+    ],
+    "max": [
+      23.0,
+      23.0,
+      4.5
+    ],
+    "size": [
+      46.0,
+      46.0,
+      4.5
+    ]
+  },
+  "volume_mm3": 6944.04,
+  "holes": [
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -13.5,
+        13.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        13.5,
+        13.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -13.5,
+        -13.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 5.4,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        13.5,
+        -13.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -5.66,
+        5.66,
+        3.0
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        5.66,
+        5.66,
+        3.0
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -5.66,
+        -5.66,
+        3.0
+      ],
+      "depth_mm": 3.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        5.66,
+        -5.66,
+        3.0
+      ],
+      "depth_mm": 3.0
+    }
+  ],
+  "partial_arcs": []
+}

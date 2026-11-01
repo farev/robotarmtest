@@ -1,0 +1,40 @@
+item,qty,spec,used_for,source,est_unit_usd,modeled_in_cad
+Arduino Uno R3,1,"ATmega328P, USB-B (user's)",controller,user's stock / BAM bom,12.0,
+CNC Shield V3,1,"Protoneer-style, 4 driver sockets X/Y/Z/A (user's)",controller,user's stock / BAM bom,5.0,
+A4988 stepper driver,3,with heatsink; Vref for ~0.8 A (user's),"X=upper, Y=lower, Z=yaw motors (vendor pinout_uno.h)",user's stock / BAM bom,2.0,
+A4988 stepper driver (spare),1,A socket,open decision: vendor rail module or wrist servo,user's stock / BAM bom,2.0,
+NEMA 17 stepper 42SHDC3026-15B,3,"bipolar 4-wire, 0.9 A/phase, ~0.30 N·m holding (ASSUMED)","base yaw, lower arm, upper arm",user's stock / BAM bom,12.0,
+NEMA 17 stepper 42SHDC3026-15B (spare),1,4th motor owned,open decision: rail or wrist servo,user's stock / BAM bom,12.0,
+Power supply 24 V 6 A,1,user's; A4988 VMOT <= 35 V so 24 V is fine,motor power,user's stock / BAM bom,18.0,
+Electrolytic capacitor 100 uF 50 V,1,across the shield's motor power input (user's),,user's stock / BAM bom,0.3,
+GT2 pulley 20T,2,"6 mm belt, 5 mm bore",shoulder and elbow only; yaw is direct drive,user's stock / BAM bom,1.5,2 (vendor solids)
+GT2 closed belt 200 mm,2,6 mm wide closed loop,shoulder and elbow only; yaw is direct drive,user's stock / BAM bom,2.0,2
+51105 thrust bearing,1,25x42x11,direct-drive housing deck to spindle axial support,user's stock / BAM bom,3.0,1
+F624ZZ flanged bearing,6,4x13x5,"M4 link pivots: pleuel x2, lower levelling link x2, upper levelling link x2",user's stock / BAM bom,0.4,6
+F686ZZ flanged bearing,12,6x13x5,"M6 axles: shoulder 5, elbow 3, wrist 2 seats modeled; 2 extra in vendor count",user's stock / BAM bom,0.4,"10: shoulder 5, elbow 3, wrist 2"
+Endstop microswitch,3,NO to GND,X/Y homing retained; yaw needs a new bracket/cam and calibration,user's stock / BAM bom,0.5,
+Servo MG90S (gripper toolhead),1,9 g metal gear; only with toolhead: gripper,gripper,user's stock / BAM bom,3.0,
+M2x10 screw + nut,6,,endstops,user's stock / BAM bom,0.1,
+M3x6 screw,36,,arm fasteners,user's stock / BAM bom,0.1,"20: 8 motor, 4 stabilizer, 4 endstop bracket, 8 pulley-to-link (vendor solids)"
+M3 nut,8,,,user's stock / BAM bom,0.05,
+M4x10 screw,6,,arm,user's stock / BAM bom,0.1,1
+M4x16 screw,8,,arm,user's stock / BAM bom,0.1,2
+M4x20 screw,6,,arm,user's stock / BAM bom,0.1,3
+M4 nut,14,,arm,user's stock / BAM bom,0.05,4
+M6x20 screw,1,,belt-drive yaw socket axle; not used by the direct-drive base,user's stock / BAM bom,0.2,0 (not needed)
+M6x40 screw,2,,arm,user's stock / BAM bom,0.2,2
+M6x50 screw,1,,arm,user's stock / BAM bom,0.2,1
+M6 nut,4,,arm,user's stock / BAM bom,0.05,3
+Stepper cable,3,"4-wire, 1 m",motor wiring,user's stock / BAM bom,1.5,
+Silicone wire 18 AWG,2,"red/black, 1 m",supply to shield,user's stock / BAM bom,1.0,
+5 mm flange coupling,1,22 mm flange; 16 mm PCD and 2 mm flange thickness UNVERIFIED,direct yaw shaft to turntable,existing parts/models/flange-coupling-5mm.yaml; VXB page checked 2026-10-30,,1
+M3x10 socket head screw,4,4.5 mm nominal motor thread engagement; verify actual thread depth,yaw motor to housing deck,design quantity,,4
+M3x10 countersunk screw,4,90 degree flat head,flange coupling to adapter,design quantity,,4
+M3x12 socket head screw,4,28.197 mm original counterbore seat; 0.5 mm thread beyond nut,main body through adapter/spindle,replaces original yaw attachment screws,,4
+M3x25 socket head screw,4,"heads in the cover lip counterbores; full insert engagement, tip 1.2 mm past it",bearing cover to housing deck,design quantity,,4
+"M3 heat-set insert, 5.7 mm long",4,about 4.6 mm knurl OD into 4.0 mm deck holes; check the insert maker's hole size,housing deck top,design quantity; exact insert not selected,,4
+M3 nut (direct-drive base),8,4 coupling + 4 upper attachment; 5.5 AF x 2.4,direct-drive fasteners,design quantity,,8
+M3x12 socket head screw (toolhead),3,from under the manipulator into the gripper base 2.4 mm holes,gripper base to manipulator,vendor holes,,3
+M2x8 screw (gripper servo),2,MG90S tabs to the gripper base,gripper,owned studio stock,,2
+Shim ring DIN 988 6x12x0.5,5,steel; buy a 10-pack for spares,"shoulder axle x3, wrist axle x2: take up axial slack at the bearing inner rings",design quantity,,5
+M4 base anchor screw,4,"4.8 mm holes through the housing foot ring; shown as M4x12, length and type depend on the support",base restraint,unresolved bench attachment; no purchase selected,,4

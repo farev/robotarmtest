@@ -1,0 +1,278 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/BAM Direct Drive Prebake/design/bam-v2/printed/yaw-motor-pedestal.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -42.0,
+      -42.0,
+      0.0
+    ],
+    "max": [
+      42.0,
+      42.0,
+      55.0
+    ],
+    "size": [
+      84.0,
+      84.0,
+      55.0
+    ]
+  },
+  "volume_mm3": 95759.97,
+  "holes": [
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        35.5,
+        5.0
+      ],
+      "depth_mm": 10.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -35.5,
+        0.0,
+        5.0
+      ],
+      "depth_mm": 10.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -15.5,
+        15.5,
+        7.25
+      ],
+      "depth_mm": 5.5
+    },
+    {
+      "diameter_mm": 22.4,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        8.22
+      ],
+      "depth_mm": 3.55
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        15.5,
+        15.5,
+        7.25
+      ],
+      "depth_mm": 5.5
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        35.5,
+        0.0,
+        5.0
+      ],
+      "depth_mm": 10.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -15.5,
+        -15.5,
+        7.25
+      ],
+      "depth_mm": 5.5
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        -35.5,
+        5.0
+      ],
+      "depth_mm": 10.0
+    },
+    {
+      "diameter_mm": 3.6,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        15.5,
+        -15.5,
+        7.25
+      ],
+      "depth_mm": 5.5
+    },
+    {
+      "diameter_mm": 4.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -34.0,
+        34.0,
+        27.5
+      ],
+      "depth_mm": 55.0
+    },
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -15.5,
+        15.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 25.3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.0,
+        2.55
+      ],
+      "depth_mm": 5.1
+    },
+    {
+      "diameter_mm": 4.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        34.0,
+        34.0,
+        27.5
+      ],
+      "depth_mm": 55.0
+    },
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        15.5,
+        15.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -15.5,
+        -15.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 4.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -34.0,
+        -34.0,
+        27.5
+      ],
+      "depth_mm": 55.0
+    },
+    {
+      "diameter_mm": 6.5,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        15.5,
+        -15.5,
+        2.25
+      ],
+      "depth_mm": 4.5
+    },
+    {
+      "diameter_mm": 4.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        34.0,
+        -34.0,
+        27.5
+      ],
+      "depth_mm": 55.0
+    }
+  ],
+  "partial_arcs": []
+}

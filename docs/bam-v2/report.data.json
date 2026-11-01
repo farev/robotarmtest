@@ -1,0 +1,218 @@
+{
+ "meta": {
+  "project": "Mechy Demo",
+  "variant": "bam-v2",
+  "date": "2026-10-30",
+  "params_hash": "b03a5e546b30",
+  "paper": "#FFFFFF",
+  "doc": "Design report",
+  "footer": "mechy doc build bam-v2 \u00b7 SI units"
+ },
+ "title": "Mechy Demo bam-v2",
+ "cover_image": "img/cover.png",
+ "headline": null,
+ "stats": [
+  {
+   "l": "reach",
+   "v": "0.334 m",
+   "note": "computed"
+  },
+  {
+   "l": "purchased parts",
+   "v": "$131",
+   "note": "estimate"
+  }
+ ],
+ "findings": [
+  "Weakest motor: shoulder at 5.11x the 50% torque budget, arm stretched horizontally with the ball (computed)."
+ ],
+ "requirements": [
+  {
+   "req": "Catch rate",
+   "target": ">= 80%",
+   "result": "not simulated",
+   "status": "OPEN",
+   "source": "no catch simulation for this variant"
+  },
+  {
+   "req": "Ball fits the cup",
+   "target": "ball 67 mm",
+   "result": "cup 95 mm inside the liner",
+   "status": "PASS",
+   "source": "design/bam-v2/params.yaml"
+  },
+  {
+   "req": "Torque budget, shoulder motor",
+   "target": ">= 1.0x of 50% budget",
+   "result": "5.11x (0.248 of 1.266 N m)",
+   "status": "PASS",
+   "source": "computed (ArmModel, mass_props.json)"
+  },
+  {
+   "req": "Torque budget, elbow motor",
+   "target": ">= 1.0x of 50% budget",
+   "result": "8.39x (0.151 of 1.266 N m)",
+   "status": "PASS",
+   "source": "computed (ArmModel, mass_props.json)"
+  },
+  {
+   "req": "Vision",
+   "target": "? fps, 0 ms",
+   "result": "modelled in the sim (camera noise + latency)",
+   "status": "INFO",
+   "source": "requirements.yaml"
+  }
+ ],
+ "sims": [],
+ "figs": {
+  "torque": "img/torque_margin.svg"
+ },
+ "catch_notes": [],
+ "pick": null,
+ "torque": [
+  {
+   "joint": "base",
+   "ratio": 5.625,
+   "gravity_nm": 0.0,
+   "joint_gravity_nm": 0.0,
+   "holding_x_ratio_nm": 2.531,
+   "budget_50pct_nm": 1.266,
+   "margin": null,
+   "pullout_at_max_speed_nm": 2.355,
+   "max_joint_speed_dps": 80.0
+  },
+  {
+   "joint": "shoulder",
+   "ratio": 5.625,
+   "gravity_nm": 0.248,
+   "joint_gravity_nm": 0.424,
+   "holding_x_ratio_nm": 2.531,
+   "budget_50pct_nm": 1.266,
+   "margin": 5.11,
+   "pullout_at_max_speed_nm": 2.355,
+   "max_joint_speed_dps": 80.0
+  },
+  {
+   "joint": "elbow",
+   "ratio": 5.625,
+   "gravity_nm": 0.151,
+   "joint_gravity_nm": 0.176,
+   "holding_x_ratio_nm": 2.531,
+   "budget_50pct_nm": 1.266,
+   "margin": 8.39,
+   "pullout_at_max_speed_nm": 2.355,
+   "max_joint_speed_dps": 80.0
+  },
+  {
+   "joint": "wrist",
+   "ratio": 4.5,
+   "gravity_nm": 0.0,
+   "joint_gravity_nm": 0.025,
+   "holding_x_ratio_nm": 2.025,
+   "budget_50pct_nm": 1.012,
+   "margin": null,
+   "pullout_at_max_speed_nm": 1.884,
+   "max_joint_speed_dps": 100.0
+  }
+ ],
+ "torque_notes": [
+  "Static case: arm stretched horizontally with the ball in the cup, the worst gravity load (computed from the CAD masses).",
+  "With belt pass-through each motor holds the motor-side torque C^-T tau, not the joint torque (see mass_props.json motor_map).",
+  "Budget = holding torque x ratio x 50% (standards rule 4). Holding torque is assumed until the motor model is confirmed."
+ ],
+ "decisions": [
+  {
+   "date": "2026-10-30",
+   "text": "Correct requirements to 600 g and gate new CAD on capacity screening and user concept selection (why: explicit payload answer supersedes 100 g; existing performance is not verified at 600 g).",
+   "why": "",
+   "evidence": ".mechy/digest.md"
+  },
+  {
+   "date": "2026-10-30",
+   "text": "Add an independent Uno built-in LED blink test using board id uno; default to 1 second on/off and a serial heartbeat (why: the user explicitly requests a board test, independent of the arm firmware handled by their friend).",
+   "why": "",
+   "evidence": "inbox/20261030-102718.md"
+  },
+  {
+   "date": "2026-10-30",
+   "text": "Supersede queued demo tasks T101-T104 and blocked T108 with T111 inventory completion, T112 missing prior art and T113 concept selection (why: baseline T105 is absent, T106 lacks a completion summary, and 600 g screening fails; no heavy CAD before selection).",
+   "why": "",
+   "evidence": "research/payload-600g/summary.md"
+  },
+  {
+   "date": "2026-10-30",
+   "text": "Schedule T110 to recheck the connected Uno and restore the existing blink only if needed (why: the new inbox request postdates the completed T109 test; reuse its verified defaults).",
+   "why": "",
+   "evidence": "inbox/20261030-111114.md"
+  }
+ ],
+ "open_decisions": [
+  {
+   "source": "design/bam-v2/summary.md",
+   "text": "the 4th motor/driver \u2014 vendor rail module or a wrist servo (spare)."
+  },
+  {
+   "source": "options/arm-600g-concept.yaml",
+   "text": "Choose a concept to develop for the 600 g arm. A is the conventional first option; A and B are the proposed CAD/simulation comparison pair, with C available if you prefer counterweights. No new CAD until your pick. All retain four owned motors, wrist roll, MG90S, black finish, X1E fit target and PETG exceptions. Grip, exact motor/step-rate capability and delivered cost below $100 remain unverified; choosing a concept does not approve fabrication or a budget increase."
+  }
+ ],
+ "not_verified": [
+  {
+   "source": "design/bam-v2/summary.md",
+   "text": "belt tensioning and tooth skipping, printed-surface quality, joint stiffness/backlash, infill-based masses (estimate \u2014 weigh the parts), home sensor positions (estimates, calibrate). Open decisions: the 4th motor/driver \u2014 vendor rail module or a wrist servo (spare)."
+  }
+ ],
+ "estimates": [
+  {
+   "quantity": "Catch rate",
+   "value": "-",
+   "label": "computed",
+   "source": "-"
+  },
+  {
+   "quantity": "Motor holding torque",
+   "value": "? N m",
+   "label": "assumed",
+   "source": "hw/motors.yaml: -"
+  },
+  {
+   "quantity": "Motor torque curve",
+   "value": "0 points",
+   "label": "estimate",
+   "source": "hw/motors.yaml: -"
+  },
+  {
+   "quantity": "Step rate cap",
+   "value": "4000 Hz",
+   "label": "assumed",
+   "source": "hw/drivers.yaml: default"
+  },
+  {
+   "quantity": "Printed mass",
+   "value": "206 g",
+   "label": "computed",
+   "source": "volume x density x shell/infill (estimate until weighed)"
+  },
+  {
+   "quantity": "Purchased parts",
+   "value": "$131",
+   "label": "estimate",
+   "source": "design/bam-v2/bom.csv"
+  },
+  {
+   "quantity": "Cup liner restitution",
+   "value": "0.15",
+   "label": "estimate",
+   "source": "params.yaml catcher.liner = net_pocket; drop-test it"
+  },
+  {
+   "quantity": "Vision noise",
+   "value": "4 mm",
+   "label": "assumed",
+   "source": "requirements.yaml vision.noise_m"
+  }
+ ],
+ "estimate_notes": [
+  "Labels: COMPUTED = derived by the engine from other files; DATASHEET = vendor figure; ASSUMED / ESTIMATE = not measured, change it when you measure."
+ ]
+}

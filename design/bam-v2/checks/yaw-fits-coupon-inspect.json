@@ -1,0 +1,138 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/yaw-fits-coupon.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -68.0,
+      -37.0,
+      0.0
+    ],
+    "max": [
+      68.0,
+      37.0,
+      9.0
+    ],
+    "size": [
+      136.0,
+      74.0,
+      9.0
+    ]
+  },
+  "volume_mm3": 36278.83,
+  "holes": [
+    {
+      "diameter_mm": 25.1,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -51.0,
+        -18.0,
+        2.0
+      ],
+      "depth_mm": 4.0
+    },
+    {
+      "diameter_mm": 25.2,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -17.0,
+        -18.0,
+        2.0
+      ],
+      "depth_mm": 4.0
+    },
+    {
+      "diameter_mm": 25.3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        17.0,
+        -18.0,
+        2.0
+      ],
+      "depth_mm": 4.0
+    },
+    {
+      "diameter_mm": 25.4,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        51.0,
+        -18.0,
+        2.0
+      ],
+      "depth_mm": 4.0
+    },
+    {
+      "diameter_mm": 14.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -51.0,
+        18.0,
+        4.5
+      ],
+      "depth_mm": 9.0
+    },
+    {
+      "diameter_mm": 14.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -17.0,
+        18.0,
+        4.5
+      ],
+      "depth_mm": 9.0
+    },
+    {
+      "diameter_mm": 14.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        17.0,
+        18.0,
+        4.5
+      ],
+      "depth_mm": 9.0
+    },
+    {
+      "diameter_mm": 14.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        51.0,
+        18.0,
+        4.5
+      ],
+      "depth_mm": 9.0
+    }
+  ],
+  "partial_arcs": []
+}

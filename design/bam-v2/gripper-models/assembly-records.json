@@ -1,0 +1,566 @@
+[
+  {
+    "id": "gripper-servo-carrier",
+    "model": "design/bam-v2/gripper-models/gripper-servo-carrier.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#64748b",
+    "frame": "hand-local mm",
+    "note": "Original STEP dovetail rails retained; motor web, clearance pocket, separate 2.4 mm servo spacers and captive mount nuts revised.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-servo-carrier.step",
+    "print_stl": "design/bam-v2/printed/gripper-servo-carrier.stl",
+    "print_position": [
+      45.998515397000006,
+      -0.49500470299999755,
+      9.000278346559298
+    ],
+    "print_rotation": [
+      180,
+      0,
+      0
+    ],
+    "print_orientation": "top mounting face on bed; guide rails up"
+  },
+  {
+    "id": "gripper-servo-crank",
+    "model": "design/bam-v2/gripper-models/gripper-servo-crank.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#fbbf24",
+    "frame": "hand-local mm",
+    "note": "20 mm cam, 12 mm hub; measured servo STL sizes with original four wire-hole axes; OEM horn notch estimated.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-servo-crank.step",
+    "print_stl": "design/bam-v2/printed/gripper-servo-crank.stl",
+    "print_position": [
+      53.998515397000006,
+      -0.4950047029999993,
+      -1.4997216540000124
+    ],
+    "print_rotation": [
+      0,
+      0,
+      0
+    ],
+    "print_orientation": "flat flange face on bed"
+  },
+  {
+    "id": "gripper-servo-guard",
+    "model": "design/bam-v2/gripper-models/gripper-servo-guard.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#303945",
+    "frame": "hand-local mm",
+    "note": "Open-top protective collar, cable notch, 2.4 mm walls; seats on servo tabs, two M2x12 screws.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-servo-guard.step",
+    "print_stl": "design/bam-v2/printed/gripper-servo-guard.stl",
+    "print_position": [
+      48.79851539700002,
+      -0.4950047029999993,
+      13.900278345999993
+    ],
+    "print_rotation": [
+      0,
+      0,
+      0
+    ],
+    "print_orientation": "flat flange face on bed"
+  },
+  {
+    "id": "gripper-mg90s",
+    "model": "design/bam-v2/gripper-models/gripper-mg90s.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#263445",
+    "frame": "hand-local mm",
+    "note": "Existing parts/models/mg90s.step; variant-specific measurements still required.",
+    "mass_kg_estimate": 0.0134
+  },
+  {
+    "id": "gripper-oem-horn",
+    "model": "design/bam-v2/gripper-models/gripper-oem-horn.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#e2e8f0",
+    "frame": "hand-local mm",
+    "note": "Estimated trimmed OEM horn envelope, not a purchase or a printable spline.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-link-left",
+    "model": "design/bam-v2/gripper-models/gripper-link-left.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "Original STEP solid44 bent steel link, mirrored for right. Diameter1.5 mm;21 mm end-axis spacing; source guide says approximately20 mm.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-link-right",
+    "model": "design/bam-v2/gripper-models/gripper-link-right.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "Original STEP solid44 bent steel link, mirrored for right. Diameter1.5 mm;21 mm end-axis spacing; source guide says approximately20 mm.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-wire-retainer-left",
+    "model": "design/bam-v2/gripper-models/gripper-wire-retainer-left.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#64748b",
+    "frame": "hand-local mm",
+    "note": "12 mm washer captures bent-wire pin; M3 head access counterbore.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-wire-retainer-left.step",
+    "print_stl": "design/bam-v2/printed/gripper-wire-retainer-left.stl",
+    "print_position": [
+      51.79140861600001,
+      -24.644684245,
+      -6.9997216540000124
+    ],
+    "print_rotation": [
+      0,
+      0,
+      0
+    ],
+    "print_orientation": "flat flange face on bed"
+  },
+  {
+    "id": "gripper-retainer-m3x6-left",
+    "model": "design/bam-v2/gripper-models/gripper-retainer-m3x6-left.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3x6 into2.8 mm finger pilot;5 mm nominal polymer engagement.",
+    "mass_kg_estimate": 0.0012
+  },
+  {
+    "id": "gripper-wire-retainer-right",
+    "model": "design/bam-v2/gripper-models/gripper-wire-retainer-right.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#64748b",
+    "frame": "hand-local mm",
+    "note": "12 mm washer captures bent-wire pin; M3 head access counterbore.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-wire-retainer-right.step",
+    "print_stl": "design/bam-v2/printed/gripper-wire-retainer-right.stl",
+    "print_position": [
+      56.205622178,
+      23.654674838999995,
+      -6.9997216540000124
+    ],
+    "print_rotation": [
+      0,
+      0,
+      0
+    ],
+    "print_orientation": "flat flange face on bed"
+  },
+  {
+    "id": "gripper-retainer-m3x6-right",
+    "model": "design/bam-v2/gripper-models/gripper-retainer-m3x6-right.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3x6 into2.8 mm finger pilot;5 mm nominal polymer engagement.",
+    "mass_kg_estimate": 0.0012
+  },
+  {
+    "id": "gripper-crank-keeper",
+    "model": "design/bam-v2/gripper-models/gripper-crank-keeper.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#303945",
+    "frame": "hand-local mm",
+    "note": "1.7 mm retaining plate under crank; OEM horn screw clamps the stack. Check actual screw/head/thread before print.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-crank-keeper.step",
+    "print_stl": "design/bam-v2/printed/gripper-crank-keeper.stl",
+    "print_position": [
+      53.998515397000006,
+      -0.4950047029999993,
+      -3.199721654000001
+    ],
+    "print_rotation": [
+      0,
+      0,
+      0
+    ],
+    "print_orientation": "flat flange face on bed"
+  },
+  {
+    "id": "gripper-oem-retaining-screw",
+    "model": "design/bam-v2/gripper-models/gripper-oem-retaining-screw.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#303945",
+    "frame": "hand-local mm",
+    "note": "Envelope only for servo-supplied retaining screw; exact diameter and length unverified.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-mount-m3x16-1",
+    "model": "design/bam-v2/gripper-models/gripper-mount-m3x16-1.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3x16 from underside of manipulator; tip 1.3 mm past captive nut.",
+    "mass_kg_estimate": 0.0018
+  },
+  {
+    "id": "gripper-mount-m3-nut-1",
+    "model": "design/bam-v2/gripper-models/gripper-mount-m3-nut-1.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3 plain nut in accessible top hex pocket.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-mount-m3x16-2",
+    "model": "design/bam-v2/gripper-models/gripper-mount-m3x16-2.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3x16 from underside of manipulator; tip 1.3 mm past captive nut.",
+    "mass_kg_estimate": 0.0018
+  },
+  {
+    "id": "gripper-mount-m3-nut-2",
+    "model": "design/bam-v2/gripper-models/gripper-mount-m3-nut-2.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3 plain nut in accessible top hex pocket.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-mount-m3x16-3",
+    "model": "design/bam-v2/gripper-models/gripper-mount-m3x16-3.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3x16 from underside of manipulator; tip 1.3 mm past captive nut.",
+    "mass_kg_estimate": 0.0018
+  },
+  {
+    "id": "gripper-mount-m3-nut-3",
+    "model": "design/bam-v2/gripper-models/gripper-mount-m3-nut-3.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M3 plain nut in accessible top hex pocket.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-servo-spacer-1",
+    "model": "design/bam-v2/gripper-models/gripper-servo-spacer-1.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#64748b",
+    "frame": "hand-local mm",
+    "note": "2.4 mm thick; separate flat print keeps the carrier supportless.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-servo-spacer-1.step",
+    "print_stl": "design/bam-v2/printed/gripper-servo-spacer-1.stl",
+    "print_position": [
+      34.54851539700002,
+      -0.4950047029999993,
+      9.000278346000002
+    ],
+    "print_rotation": [
+      0,
+      0,
+      0
+    ],
+    "print_orientation": "flat flange face on bed"
+  },
+  {
+    "id": "gripper-servo-m2x12-1",
+    "model": "design/bam-v2/gripper-models/gripper-servo-m2x12-1.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M2x12 through2 mm guard,2.5 mm tab and2.4 mm spacer;5.1 mm pilot engagement. Length availability unverified.",
+    "mass_kg_estimate": 0.0005
+  },
+  {
+    "id": "gripper-servo-spacer-2",
+    "model": "design/bam-v2/gripper-models/gripper-servo-spacer-2.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "printed",
+    "color": "#64748b",
+    "frame": "hand-local mm",
+    "note": "2.4 mm thick; separate flat print keeps the carrier supportless.",
+    "material": "PLA",
+    "print_model": "design/bam-v2/printed/gripper-servo-spacer-2.step",
+    "print_stl": "design/bam-v2/printed/gripper-servo-spacer-2.stl",
+    "print_position": [
+      63.04851539700002,
+      -0.4950047029999993,
+      9.000278346000002
+    ],
+    "print_rotation": [
+      0,
+      0,
+      0
+    ],
+    "print_orientation": "flat flange face on bed"
+  },
+  {
+    "id": "gripper-servo-m2x12-2",
+    "model": "design/bam-v2/gripper-models/gripper-servo-m2x12-2.step",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "joint_node": "hand",
+    "kind": "bought",
+    "color": "#cbd5e1",
+    "frame": "hand-local mm",
+    "note": "M2x12 through2 mm guard,2.5 mm tab and2.4 mm spacer;5.1 mm pilot engagement. Length availability unverified.",
+    "mass_kg_estimate": 0.0005
+  }
+]

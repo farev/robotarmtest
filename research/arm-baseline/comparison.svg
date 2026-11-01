@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<title>600 g arm concept comparison</title><desc>Original non-scale mechanism sketches. Three proposals, none selected or verified for capacity.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#172b42}.title{font-size:28px;font-weight:bold}.head{font-size:21px;font-weight:bold}.body{font-size:17px}.small{font-size:15px}.link{stroke:#365873;stroke-width:14;fill:none;stroke-linecap:round}.belt{stroke:#00847c;stroke-width:3;fill:none}.joint{fill:#fff;stroke:#365873;stroke-width:4}.motor{fill:#e69738;stroke:#8d581d;stroke-width:2}</style>
+<rect width="1200" height="760" fill="#f3f6fa"/>
+<text x="32" y="45" class="title">600 g target · mechanisms to compare before CAD</text>
+<text x="32" y="75" class="body">Schematic only • no selected concept • no verified capacity • four owned steppers + MG90S</text>
+<rect x="25" y="100" width="375" height="410" rx="14" fill="white"/>
+<rect x="412" y="100" width="375" height="410" rx="14" fill="white"/>
+<rect x="799" y="100" width="375" height="410" rx="14" fill="white"/>
+<text x="43" y="133" class="head">A · Articulated belts</text><text x="43" y="157" class="small">Conventional first · Moveo-derived</text>
+<path d="M90 320 L145 205 L282 246" class="link"/><path d="M75 335 H155" stroke="#365873" stroke-width="14"/>
+<circle cx="90" cy="320" r="12" class="joint"/><circle cx="145" cy="205" r="12" class="joint"/>
+<rect x="70" y="279" width="28" height="27" class="motor"/><rect x="102" y="288" width="28" height="27" class="motor"/>
+<path d="M90 284 L137 208 M98 288 L150 213" class="belt"/>
+<rect x="261" y="231" width="34" height="30" class="motor"/><path d="M296 248 H322 M322 248 l20 -14 M322 248 l20 14" stroke="#365873" stroke-width="5" fill="none"/>
+<text x="166" y="296" class="small">Local roll motor</text>
+<text x="43" y="373" class="body">Belt-reduced shoulder / elbow</text><text x="43" y="402" class="body">T107: 3.091 / 1.745 N·m demand*</text><text x="43" y="431" class="body">Remote pitch drives proposed</text><text x="43" y="460" class="body">Motor mounts require redesign</text><text x="43" y="488" class="small">Budget and complete print fit: unknown</text>
+<text x="430" y="133" class="head">B · Remote linkage</text><text x="430" y="157" class="small">Proposed derivative · not vendor CAD</text>
+<path d="M470 320 L524 205 L668 245 M490 326 L544 211 L688 251 M470 320 L490 326 M524 205 L544 211" class="link" style="stroke-width:7"/>
+<path d="M450 338 H535" stroke="#365873" stroke-width="14"/><circle cx="470" cy="320" r="10" class="joint"/><circle cx="524" cy="205" r="10" class="joint"/><circle cx="668" cy="245" r="10" class="joint"/>
+<rect x="450" y="279" width="27" height="27" class="motor"/><rect x="481" y="286" width="27" height="27" class="motor"/><rect x="512" y="294" width="27" height="27" class="motor"/>
+<path d="M526 294 L539 219 L681 255" class="belt"/><path d="M683 249 H709 M709 249 l18 -13 M709 249 l18 13" stroke="#365873" stroke-width="5" fill="none"/>
+<text x="563" y="302" class="small">Remote roll drive</text>
+<text x="430" y="373" class="body">Keep pitch motors on yaw base</text><text x="430" y="402" class="body">Gross J4 saving*: 0.185 / 0.127 kg</text><text x="430" y="431" class="body">Added drive mass reduces saving</text><text x="430" y="460" class="body">Check singularities + roll coupling</text><text x="430" y="488" class="small">Budget and complete print fit: unknown</text>
+<text x="817" y="133" class="head">C · Counterbalanced</text><text x="817" y="157" class="small">Articulated chain + unsized assistance</text>
+<path d="M863 320 L923 205 L1067 245" class="link"/><path d="M845 338 H929" stroke="#365873" stroke-width="14"/>
+<circle cx="863" cy="320" r="11" class="joint"/><circle cx="923" cy="205" r="11" class="joint"/>
+<rect x="844" y="280" width="28" height="27" class="motor"/><rect x="878" y="290" width="28" height="27" class="motor"/><rect x="1050" y="230" width="34" height="30" class="motor"/>
+<path d="M923 205 L939 230 L924 237 L942 247 L927 257 L944 267 L931 277 L949 289 L940 320" stroke="#9961a9" stroke-width="4" fill="none"/>
+<path d="M1084 247 H1107 M1107 247 l20 -14 M1107 247 l20 14" stroke="#365873" stroke-width="5" fill="none"/>
+<text x="969" y="302" class="small">Spring: unsized</text>
+<text x="817" y="373" class="body">May reduce shoulder demand</text><text x="817" y="402" class="body">Elbow still fails*: 1.745 &gt; 0.612 N·m</text><text x="817" y="431" class="body">Does not fix MG90S gripping</text><text x="817" y="460" class="body">Extra anchors and stored energy</text><text x="817" y="488" class="small">Budget and complete print fit: unknown</text>
+<rect x="25" y="527" width="1149" height="150" rx="12" fill="#e3ebf4"/>
+<text x="43" y="555" class="head">Licensed source anchors · details and links in note.md</text>
+<text x="43" y="585" class="body">Moveo · MIT</text><text x="43" y="611" class="small">Reach / payload unknown</text><text x="43" y="636" class="small">Mixed motors; T5 belts + gearbox</text>
+<text x="430" y="585" class="body">Thor · CC BY-SA 4.0</text><text x="430" y="611" class="small">Author lift: 0.750 kg including tool</text><text x="430" y="636" class="small">Horizontal reach unknown; 7 motors</text>
+<text x="817" y="585" class="body">PAROL6 · GPL-3.0</text><text x="817" y="611" class="small">Claim: 0.5 kg across workspace</text><text x="817" y="636" class="small">0.400 m reach; planetary + belts</text>
+<text x="32" y="706" class="small">*Inherited T107 estimates, not new capacity results. Savings are shoulder / elbow payload equivalents.</text>
+<text x="32" y="734" class="small">Orange = motor; teal = remote transmission. Base yaw omitted in side sketches. Geometry is not to scale.</text>
+</svg>

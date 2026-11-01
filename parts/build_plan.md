@@ -31,3 +31,20 @@ Payload target: 100 g (assumed). Ship-to: US (assumed).
 
 Tools the user may lack: soldering iron with an insert tip (heat-set inserts), 1.5/2/2.5 mm hex keys,
 hacksaw or rotary tool to cut the steel rods, calipers.
+
+## Gripper improvement — 2026-10-30
+
+Existing arm functions and wrist remain unchanged. Keep the existing MG90S selection; correct the viewer's legacy 28BYJ model.
+
+| Function | Status | Part / target |
+|---|---|---|
+| Actuator | buy, existing shortlist | MG90S; clone dimensions and payload unverified |
+| Parallel guidance and drive | print | Reuse measured dovetail and wire-link geometry; servo carrier corrected to wrist holes |
+| Fingers | print ×2 | Reinforced jaw, 28 mm width, 33.5 mm below guide datum |
+| Contact pads | print ×2 | Replaceable TPU95A, 26 ×22 mm, 6.5 mm thickness with shallow V relief; filament availability unverified |
+| Pad fasteners | owned stock, verify count | 4 M3×10 screws + 4 M3 nuts |
+| Wrist attachment | buy / verify stock | 3 M3×16 screws; 3 M3 nuts from existing stock |
+| Servo mounting and links | owned stock, verify count | M2 hardware, two formed wire links; horn included with servo |
+| Power, control, cable | existing build plan | External regulated servo supply, common ground; current and endpoint calibration remain open |
+
+No new controller, actuator upgrade, or payload increase is implied. Existing 600 g target is unverified.

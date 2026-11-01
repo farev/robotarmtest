@@ -1,0 +1,7 @@
+{
+  "state": "cancelled",
+  "started": null,
+  "finished": "2026-10-30T15:12:11.666696+00:00",
+  "summary": null,
+  "error": "Superseded by T111-T113: missing baseline/completion artifacts and required 600 g concept-selection gate."
+}

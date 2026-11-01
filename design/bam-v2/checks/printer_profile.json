@@ -1,0 +1,14 @@
+{
+  "name": "Bambu Lab (default)",
+  "bed_mm": [
+    256,
+    256,
+    256
+  ],
+  "nozzle_mm": 0.4,
+  "material": "PLA",
+  "density_g_cm3": 1.24,
+  "min_wall_mm": 1.2,
+  "max_overhang_deg": 45,
+  "source": "default"
+}

@@ -1,0 +1,7 @@
+{
+  "state": "blocked",
+  "started": null,
+  "finished": "2026-10-30T15:12:19+00:00",
+  "summary": null,
+  "error": "dependency not done: T106-docs-config-inventory, T105-research-arm-baseline"
+}

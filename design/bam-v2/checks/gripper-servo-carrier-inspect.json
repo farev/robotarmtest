@@ -1,0 +1,185 @@
+{
+  "file": "/Users/Carlo/Empire/Projects/BAM/Imported Arm Projects/a16z Demo/design/bam-v2/printed/gripper-servo-carrier.step",
+  "solids": 1,
+  "non_solid_bodies": 0,
+  "bbox_mm": {
+    "min": [
+      -25.0,
+      -30.0,
+      0.0
+    ],
+    "max": [
+      25.0,
+      30.0,
+      10.0
+    ],
+    "size": [
+      50.0,
+      60.0,
+      10.0
+    ]
+  },
+  "volume_mm3": 18697.96,
+  "holes": [
+    {
+      "diameter_mm": 1.7,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        17.05,
+        0.0,
+        2.5
+      ],
+      "depth_mm": 5.0
+    },
+    {
+      "diameter_mm": 2.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        -17.5,
+        4.75
+      ],
+      "depth_mm": 1.5
+    },
+    {
+      "diameter_mm": 1.7,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -11.45,
+        0.0,
+        2.5
+      ],
+      "depth_mm": 5.0
+    },
+    {
+      "diameter_mm": 2.8,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        0.0,
+        17.5,
+        4.75
+      ],
+      "depth_mm": 1.5
+    },
+    {
+      "diameter_mm": 4.3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -19.0,
+        15.0,
+        6.1
+      ],
+      "depth_mm": 6.8
+    },
+    {
+      "diameter_mm": 4.3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -19.0,
+        0.0,
+        6.1
+      ],
+      "depth_mm": 6.8
+    },
+    {
+      "diameter_mm": 4.3,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -19.0,
+        -15.0,
+        6.1
+      ],
+      "depth_mm": 6.8
+    }
+  ],
+  "partial_arcs": [
+    {
+      "diameter_mm": 18.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        8.0,
+        0.0,
+        4.75
+      ],
+      "depth_mm": 1.5,
+      "sweep_deg": 251.33
+    },
+    {
+      "diameter_mm": 10.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -18.41,
+        26.5,
+        5.0
+      ],
+      "depth_mm": 9.0,
+      "sweep_deg": 45.0
+    },
+    {
+      "diameter_mm": 10.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        -18.41,
+        -26.5,
+        5.0
+      ],
+      "depth_mm": 9.0,
+      "sweep_deg": 45.0
+    },
+    {
+      "diameter_mm": 25.0,
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "center": [
+        8.0,
+        0.0,
+        7.75
+      ],
+      "depth_mm": 3.5,
+      "sweep_deg": 55.74
+    }
+  ]
+}
