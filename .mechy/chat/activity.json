@@ -1,11 +1,11 @@
 {
   "request": "20261030-162351.md",
   "provider": "claude",
-  "status": "running",
+  "status": "complete",
   "attempt": 0,
   "started": 1793391831.365622,
-  "updated": 1793393105.367989,
-  "ended": null,
+  "updated": 1793393106.804439,
+  "ended": 1793393106.8044338,
   "error": null,
   "usage": {
     "tool_calls": 129,

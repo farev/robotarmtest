@@ -1,9 +1,15 @@
-note: '4-DOF belt arm: base yaw, shoulder, elbow (relative joints), wrist roll. Frames
-  from design/v1/make_assembly.py: shoulder axis 187 mm up, L2 135, elbow to coupling
-  face 145. Gripper fingers are fixed in the closed pose (no gripper joint).'
+note: '4-DOF belt arm (yaw, shoulder, elbow, wrist roll) + servo gripper whose geared
+  fingers mirror each other. Belts are rigid with the link that carries them (they
+  do not stretch in the viewer). Joint frames come from make_assembly.py (yaw Rz(q1)
+  at the origin; shoulder Ry(-q2) at z 187; elbow Ry(-q3) 135 mm along the upper arm;
+  wrist Rx(q4) at the coupling face 145 mm along the forearm). The pose snapshots
+  are not listed: each adds a table keep-out that the home file leaves out, so rig-check
+  counts them as build views and cannot compare them. Their joint values are stretched
+  (0,0,0,0), up (0,90,0,0), folded (0,90,-135,0), reach-table (0,0,-43,0), shoulder-down
+  (90,-30,8,0), elbow-up (0,30,120,0), yaw-150 (150,45,-90,180), soft-limit (0,20,-84,0).'
 joints:
 - id: yaw
-  label: Base yaw (J1)
+  label: J1 base yaw
   type: revolute
   parent: null
   origin:
@@ -36,7 +42,7 @@ joints:
   - -150
   - 150
 - id: shoulder
-  label: Shoulder (J2)
+  label: J2 shoulder
   type: revolute
   parent: yaw
   origin:
@@ -82,7 +88,7 @@ joints:
   - -30
   - 90
 - id: elbow
-  label: Elbow (J3)
+  label: J3 elbow
   type: revolute
   parent: shoulder
   origin:
@@ -96,6 +102,7 @@ joints:
   parts:
   - forearm
   - forearm-cover
+  - elbow-pulley-120t
   - bearing-608-el-1
   - bearing-608-el-2
   - motor-j4
@@ -106,102 +113,66 @@ joints:
   - -135
   - 120
 - id: wrist
-  label: Wrist roll (J4)
+  label: J4 wrist roll
   type: revolute
   parent: elbow
   origin:
-  - 197.9889
+  - 197.9895
   - 0
-  - 179.9299
+  - 179.9295
   axis:
-  - 0.70710678
+  - 0.707107
   - 0
-  - -0.70710678
+  - -0.707107
   parts:
   - gripper-base
-  - gripper-finger-left
-  - gripper-finger-right
   - servo-gripper
   - servo-cable-keepout
   home: 0
   limits:
   - -180
   - 180
-poses:
-- name: elbow-up
-  values:
-    yaw: 0
-    shoulder: 30
-    elbow: 120
-    wrist: 0
-- name: folded
-  values:
-    yaw: 0
-    shoulder: 90
-    elbow: -135
-    wrist: 0
-- name: reach-table
-  values:
-    yaw: 0
-    shoulder: 0
-    elbow: -43
-    wrist: 0
-- name: shoulder-down
-  values:
-    yaw: 90
-    shoulder: -30
-    elbow: 8
-    wrist: 0
-- name: soft-limit
-  values:
-    yaw: 0
-    shoulder: 20
-    elbow: -84
-    wrist: 0
-- name: stretched
-  values:
-    yaw: 0
-    shoulder: 0
-    elbow: 0
-    wrist: 0
-- name: up
-  values:
-    yaw: 0
-    shoulder: 90
-    elbow: 0
-    wrist: 0
-- name: yaw-150
-  values:
-    yaw: 150
-    shoulder: 45
-    elbow: -90
-    wrist: 180
-assembly_sha256: ea7f717c99f8efcb8aaf6430f4f65bec7208074650cdb25a65c6ce20dfcfeb1e
-glb_sha256: eeb5d7a7d14a0d4a136a7fa1a7d089de1fd459aeae10c0805001257b89c4d985
+- id: finger-l
+  label: Gripper open
+  type: revolute
+  parent: wrist
+  origin:
+  - 214.9601
+  - 15
+  - 162.9589
+  axis:
+  - 0.707107
+  - 0
+  - 0.707107
+  parts:
+  - gripper-finger-left
+  home: 0
+  limits:
+  - 0
+  - 30
+- id: finger-r
+  type: revolute
+  parent: wrist
+  origin:
+  - 214.9601
+  - -15
+  - 162.9589
+  axis:
+  - 0.707107
+  - 0
+  - 0.707107
+  parts:
+  - gripper-finger-right
+  home: 0
+  limits:
+  - -30
+  - 0
+  coupled:
+  - joint: finger-l
+    ratio: -1
+poses: []
+assembly_sha256: 8a9999f2830716e24af30a45aab652651220f2841095b512f52c73498559cf4c
+glb_sha256: 66297e848471f88347fcb7c003cff08a3c024d77a69f4e61a7ef2e33752ca938
 checked:
   ok: true
-  poses:
-  - name: elbow-up
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
-  - name: folded
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
-  - name: reach-table
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
-  - name: shoulder-down
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
-  - name: soft-limit
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
-  - name: stretched
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
-  - name: up
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
-  - name: yaw-150
-    max_pos_err_mm: 0.0001
-    max_rot_err_deg: 0.0
+  poses: []
